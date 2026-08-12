@@ -83,6 +83,10 @@ models:
 
   - name: warning_coverage_report
     description: "Final report of alert coverage, incidents, and response posture by region, hazard, and severity."
+    semantic_model:
+      enabled: true
+      name: warning_coverage_report
+    agg_time_dimension: metric_date
     config:
       meta:
         primary_key: warning_coverage_key
@@ -90,14 +94,28 @@ models:
       - name: warning_coverage_key
         description: "Surrogate key for region, alert type, and severity."
         data_tests: [not_null, unique]
+        entity:
+          type: primary
+          name: warning_coverage
+      - name: metric_date
+        description: "Current date used as the warning coverage metric date."
+        granularity: day
+        dimension:
+          type: time
       - name: region
         description: "Operational weather-service region."
+        dimension:
+          type: categorical
         data_tests: [not_null]
       - name: alert_type
         description: "Alert hazard type."
+        dimension:
+          type: categorical
         data_tests: [not_null]
       - name: severity
         description: "Alert severity level."
+        dimension:
+          type: categorical
         data_tests:
           - accepted_values:
               arguments:
@@ -138,12 +156,39 @@ models:
         description: "Average severity-weighted impact score across alerts in the segment."
       - name: highest_response_tier
         description: "Highest response tier observed in the segment."
+        dimension:
+          type: categorical
       - name: incidents_per_100k_population
         description: "Observed incidents per 100,000 affected residents."
         data_tests:
           - dbt_expectations.expect_column_values_to_be_between:
               arguments:
                 min_value: 0
+    metrics:
+      - name: warning_alert_count
+        description: "Count of warning alerts."
+        type: simple
+        label: "Warning alert count"
+        agg: sum
+        expr: alert_count
+      - name: warning_incident_count
+        description: "Observed incident count in warning reports."
+        type: simple
+        label: "Warning incident count"
+        agg: sum
+        expr: observed_incidents
+      - name: warning_affected_population
+        description: "Estimated affected population in warning reports."
+        type: simple
+        label: "Warning affected population"
+        agg: sum
+        expr: affected_population_estimate
+      - name: warning_weighted_impact
+        description: "Average weighted impact score in warning reports."
+        type: simple
+        label: "Warning weighted impact"
+        agg: average
+        expr: average_weighted_impact_score
 
   - name: daily_resilience_station_posture
     description: "Station-day resilience posture base combining warning coverage with observed weather conditions."
@@ -226,6 +271,10 @@ models:
 
   - name: daily_resilience_posture_report
     description: "Daily resilience posture report by region, combining warning outcomes and observed conditions."
+    semantic_model:
+      enabled: true
+      name: daily_resilience_posture_report
+    agg_time_dimension: posture_date
     config:
       meta:
         primary_key: daily_resilience_posture_key
@@ -233,11 +282,19 @@ models:
       - name: daily_resilience_posture_key
         description: "Surrogate key for posture date and region."
         data_tests: [not_null, unique]
+        entity:
+          type: primary
+          name: daily_resilience_posture
       - name: posture_date
         description: "Date of the resilience posture summary."
+        granularity: day
+        dimension:
+          type: time
         data_tests: [not_null]
       - name: region
         description: "Operational weather-service region."
+        dimension:
+          type: categorical
         data_tests: [not_null]
       - name: station_count
         description: "Number of distinct stations included in the posture summary."
@@ -269,6 +326,8 @@ models:
         description: "Maximum severity-weighted impact score in the posture summary."
       - name: highest_resilience_posture
         description: "Highest resilience response posture observed in the summary."
+        dimension:
+          type: categorical
         data_tests:
           - accepted_values:
               arguments:

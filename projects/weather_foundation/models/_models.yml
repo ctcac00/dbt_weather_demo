@@ -529,6 +529,10 @@ models:
   - name: fct_forecast_accuracy
     description: "Public forecast accuracy fact at one row per forecast and valid timestamp."
     latest_version: 1
+    semantic_model:
+      enabled: true
+      name: forecast_accuracy
+    agg_time_dimension: forecast_valid_date
     config:
       meta:
         primary_key: forecast_accuracy_key
@@ -543,6 +547,9 @@ models:
         description: "Surrogate key for the forecast accuracy record."
         data_type: varchar
         data_tests: [not_null, unique]
+        entity:
+          type: primary
+          name: forecast_accuracy
       - name: forecast_id
         description: "Stable forecast identifier."
         data_type: varchar
@@ -550,6 +557,9 @@ models:
       - name: station_id
         description: "Station for the forecast point."
         data_type: varchar
+        entity:
+          type: foreign
+          name: station
         data_tests:
           - not_null
           - relationships:
@@ -559,12 +569,18 @@ models:
       - name: region
         description: "Operational weather-service region."
         data_type: varchar
+        dimension:
+          type: categorical
       - name: station_type
         description: "Station operating context."
         data_type: varchar
+        dimension:
+          type: categorical
       - name: sector_focus
         description: "Primary sector supported by the station."
         data_type: varchar
+        dimension:
+          type: categorical
       - name: issued_at
         description: "Timestamp the forecast was issued."
         data_type: timestamp_ntz
@@ -574,9 +590,14 @@ models:
       - name: forecast_valid_date
         description: "Date the forecast was valid for."
         data_type: date
+        granularity: day
+        dimension:
+          type: time
       - name: horizon_hours
         description: "Forecast horizon in hours."
         data_type: number(10, 0)
+        dimension:
+          type: categorical
       - name: model_run_id
         description: "Weather forecast model run identifier."
         data_type: varchar
@@ -628,10 +649,33 @@ models:
       - name: precipitation_error_ratio
         description: "Absolute precipitation error divided by observed precipitation, null when not applicable."
         data_type: float
+    metrics:
+      - name: forecast_count
+        description: "Count of forecast accuracy records."
+        type: simple
+        label: "Forecast count"
+        agg: count
+        expr: forecast_accuracy_key
+      - name: average_temperature_error_c
+        description: "Average absolute temperature forecast error in Celsius."
+        type: simple
+        label: "Average temperature error (C)"
+        agg: average
+        expr: absolute_temperature_error_c
+      - name: average_precipitation_error_mm
+        description: "Average absolute precipitation forecast error in millimetres."
+        type: simple
+        label: "Average precipitation error (mm)"
+        agg: average
+        expr: absolute_precipitation_error_mm
 
   - name: fct_weather_alert_impact
     description: "Public alert impact fact at one row per issued weather alert."
     latest_version: 1
+    semantic_model:
+      enabled: true
+      name: weather_alert_impact
+    agg_time_dimension: valid_from
     config:
       meta:
         primary_key: alert_impact_key
@@ -646,6 +690,9 @@ models:
         description: "Surrogate key for the alert impact record."
         data_type: varchar
         data_tests: [not_null, unique]
+        entity:
+          type: primary
+          name: alert_impact
       - name: alert_id
         description: "Stable alert identifier."
         data_type: varchar
@@ -653,6 +700,9 @@ models:
       - name: station_id
         description: "Station most directly associated with the alert."
         data_type: varchar
+        entity:
+          type: foreign
+          name: station
         data_tests:
           - not_null
           - relationships:
@@ -665,6 +715,8 @@ models:
       - name: region
         description: "Operational weather-service region."
         data_type: varchar
+        dimension:
+          type: categorical
       - name: station_type
         description: "Station operating context."
         data_type: varchar
@@ -677,6 +729,9 @@ models:
       - name: valid_from
         description: "Timestamp the alert validity window starts."
         data_type: timestamp_ntz
+        granularity: day
+        dimension:
+          type: time
       - name: valid_to
         description: "Timestamp the alert validity window ends."
         data_type: timestamp_ntz
@@ -686,6 +741,8 @@ models:
       - name: severity
         description: "Alert severity level."
         data_type: varchar
+        dimension:
+          type: categorical
         data_tests:
           - accepted_values:
               arguments:
@@ -693,9 +750,13 @@ models:
       - name: alert_type
         description: "Alert hazard type."
         data_type: varchar
+        dimension:
+          type: categorical
       - name: status
         description: "Current alert lifecycle status."
         data_type: varchar
+        dimension:
+          type: categorical
         data_tests:
           - accepted_values:
               arguments:
@@ -746,6 +807,31 @@ models:
       - name: weighted_impact_score
         description: "Expected impact score multiplied by severity weight."
         data_type: float
+    metrics:
+      - name: alert_count
+        description: "Count of weather alerts."
+        type: simple
+        label: "Alert count"
+        agg: count
+        expr: alert_impact_key
+      - name: incident_count
+        description: "Observed incident count associated with weather alerts."
+        type: simple
+        label: "Incident count"
+        agg: sum
+        expr: observed_incidents
+      - name: affected_population
+        description: "Estimated population affected by weather alerts."
+        type: simple
+        label: "Affected population"
+        agg: sum
+        expr: affected_population_estimate
+      - name: weighted_impact
+        description: "Severity-weighted expected impact score."
+        type: simple
+        label: "Weighted impact"
+        agg: sum
+        expr: weighted_impact_score
 
   - name: fct_station_daily_conditions
     description: "Public station-day fact of observed weather conditions enriched with station context."
@@ -856,6 +942,10 @@ models:
   - name: fct_service_subscription_activity
     description: "Public subscription-level service activity fact for weather data-service consumers."
     latest_version: 1
+    semantic_model:
+      enabled: true
+      name: service_subscription_activity
+    agg_time_dimension: started_at
     config:
       meta:
         primary_key: subscription_activity_key
@@ -870,6 +960,9 @@ models:
         description: "Surrogate key for the service subscription."
         data_type: varchar
         data_tests: [not_null, unique]
+        entity:
+          type: primary
+          name: service_subscription
       - name: subscription_id
         description: "Stable subscription identifier."
         data_type: varchar
@@ -877,18 +970,26 @@ models:
       - name: customer_segment
         description: "Fictional customer segment receiving weather data services."
         data_type: varchar
+        dimension:
+          type: categorical
         data_tests: [not_null]
       - name: sector
         description: "Sector served by the subscription."
         data_type: varchar
+        dimension:
+          type: categorical
         data_tests: [not_null]
       - name: region
         description: "Primary service region for the subscription."
         data_type: varchar
+        dimension:
+          type: categorical
         data_tests: [not_null]
       - name: service_tier
         description: "Subscription service tier."
         data_type: varchar
+        dimension:
+          type: categorical
         data_tests:
           - accepted_values:
               arguments:
@@ -896,9 +997,14 @@ models:
       - name: started_at
         description: "Date the subscription started."
         data_type: date
+        granularity: day
+        dimension:
+          type: time
       - name: status
         description: "Subscription lifecycle status."
         data_type: varchar
+        dimension:
+          type: categorical
         data_tests:
           - accepted_values:
               arguments:
@@ -940,3 +1046,28 @@ models:
           - dbt_expectations.expect_column_values_to_be_between:
               arguments:
                 min_value: 0
+    metrics:
+      - name: subscription_count
+        description: "Count of service subscriptions."
+        type: simple
+        label: "Subscription count"
+        agg: count
+        expr: subscription_activity_key
+      - name: active_subscription_count
+        description: "Count of active service subscriptions."
+        type: simple
+        label: "Active subscription count"
+        agg: sum
+        expr: case when is_active_subscription then 1 else 0 end
+      - name: monthly_fee_units
+        description: "Monthly subscription fee units."
+        type: simple
+        label: "Monthly fee units"
+        agg: sum
+        expr: monthly_fee_units
+      - name: active_api_calls_30d
+        description: "API call volume from active subscriptions over the prior 30 days."
+        type: simple
+        label: "Active API calls 30d"
+        agg: sum
+        expr: active_api_calls_30d

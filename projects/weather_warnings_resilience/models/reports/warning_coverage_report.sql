@@ -1,5 +1,6 @@
 select
     {{ dbt_utils.generate_surrogate_key(['region', 'alert_type', 'severity']) }} as warning_coverage_key,
+    current_date as metric_date,
     region,
     alert_type,
     severity,
@@ -17,4 +18,4 @@ select
     max(resilience_response_tier) as highest_response_tier,
     {{ safe_divide('sum(observed_incidents) * 100000', 'sum(affected_population_estimate)') }} as incidents_per_100k_population
 from {{ ref('warning_station_alerts') }}
-group by region, alert_type, severity
+group by current_date, region, alert_type, severity

@@ -1,101 +1,11 @@
 version: 2
 
-semantic_models:
-  - name: warning_coverage_report
-    description: "Semantic model for warning coverage and impact reporting."
-    model: ref('warning_coverage_report')
-    defaults:
-      agg_time_dimension: metric_date
-    entities:
-      - name: warning_coverage
-        type: primary
-        expr: warning_coverage_key
-    dimensions:
-      - name: metric_date
-        type: time
-        expr: current_date
-        type_params:
-          time_granularity: day
-      - name: region
-        type: categorical
-      - name: alert_type
-        type: categorical
-      - name: severity
-        type: categorical
-      - name: highest_response_tier
-        type: categorical
-    measures:
-      - name: warning_alert_count
-        description: "Count of warning alerts."
-        agg: sum
-        expr: alert_count
-      - name: warning_incident_count
-        description: "Observed incident count in warning reports."
-        agg: sum
-        expr: observed_incidents
-      - name: warning_affected_population
-        description: "Estimated affected population in warning reports."
-        agg: sum
-        expr: affected_population_estimate
-      - name: warning_weighted_impact
-        description: "Average weighted impact score in warning reports."
-        agg: average
-        expr: average_weighted_impact_score
-
-  - name: daily_resilience_posture_report
-    description: "Semantic model for daily resilience posture reporting."
-    model: ref('daily_resilience_posture_report')
-    defaults:
-      agg_time_dimension: posture_date
-    entities:
-      - name: daily_resilience_posture
-        type: primary
-        expr: daily_resilience_posture_key
-    dimensions:
-      - name: posture_date
-        type: time
-        type_params:
-          time_granularity: day
-      - name: region
-        type: categorical
-      - name: highest_resilience_posture
-        type: categorical
-    measures:
-      - name: daily_resilience_alert_count
-        description: "Daily alert count in resilience posture reporting."
-        agg: sum
-        expr: alert_count
-      - name: daily_resilience_incident_count
-        description: "Daily incident count in resilience posture reporting."
-        agg: sum
-        expr: observed_incidents
-      - name: daily_resilience_affected_population
-        description: "Daily affected population in resilience posture reporting."
-        agg: sum
-        expr: affected_population_estimate
-
-metrics:
-  - name: warning_alert_count
-    description: "Count of warning alerts."
-    type: simple
-    label: "Warning alert count"
-    type_params:
-      measure: warning_alert_count
-  - name: warning_incident_count
-    description: "Observed incident count in warning reports."
-    type: simple
-    label: "Warning incident count"
-    type_params:
-      measure: warning_incident_count
-  - name: warning_affected_population
-    description: "Estimated affected population in warning reports."
-    type: simple
-    label: "Warning affected population"
-    type_params:
-      measure: warning_affected_population
-  - name: warning_weighted_impact
-    description: "Average weighted impact score in warning reports."
-    type: simple
-    label: "Warning weighted impact"
-    type_params:
-      measure: warning_weighted_impact
+models:
+  - name: metricflow_time_spine
+    description: "Daily time spine for MetricFlow semantic layer queries."
+    time_spine:
+      standard_granularity_column: date_day
+    columns:
+      - name: date_day
+        description: "Daily date spine for time-based semantic aggregations."
+        granularity: day

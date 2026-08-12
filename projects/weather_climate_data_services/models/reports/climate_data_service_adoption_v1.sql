@@ -1,5 +1,6 @@
 select
     {{ dbt_utils.generate_surrogate_key(['region']) }} as data_service_adoption_key,
+    current_date as metric_date,
     region,
     active_subscription_count,
     total_subscription_count,

@@ -1,98 +1,11 @@
 version: 2
 
-semantic_models:
-  - name: climate_data_service_adoption
-    description: "Semantic model for regional climate data-service adoption."
-    model: ref('climate_data_service_adoption')
-    defaults:
-      agg_time_dimension: metric_date
-    entities:
-      - name: data_service_adoption
-        type: primary
-        expr: data_service_adoption_key
-    dimensions:
-      - name: metric_date
-        type: time
-        expr: current_date
-        type_params:
-          time_granularity: day
-      - name: region
-        type: categorical
-      - name: adoption_band
-        type: categorical
-    measures:
-      - name: active_subscriptions
-        description: "Active subscriptions represented in the regional report."
-        agg: sum
-        expr: active_subscription_count
-      - name: active_api_calls
-        description: "API calls from active subscriptions over the prior 30 days."
-        agg: sum
-        expr: active_api_calls_30d
-      - name: monthly_fee_units
-        description: "Monthly service unit total for active subscriptions."
-        agg: sum
-        expr: active_monthly_fee_units
-      - name: average_alert_opt_in_rate
-        description: "Average regional alert opt-in rate."
-        agg: average
-        expr: alert_opt_in_rate
-
-  - name: climate_data_service_sector_scorecard
-    description: "Semantic model for sector and customer scorecard outcomes."
-    model: ref('climate_data_service_sector_scorecard')
-    defaults:
-      agg_time_dimension: metric_date
-    entities:
-      - name: sector_scorecard
-        type: primary
-        expr: sector_scorecard_key
-    dimensions:
-      - name: metric_date
-        type: time
-        expr: current_date
-        type_params:
-          time_granularity: day
-      - name: sector
-        type: categorical
-      - name: customer_segment
-        type: categorical
-      - name: region
-        type: categorical
-      - name: service_engagement_band
-        type: categorical
-    measures:
-      - name: scorecard_active_subscriptions
-        description: "Active subscriptions represented in the sector scorecard."
-        agg: sum
-        expr: active_subscription_count
-      - name: scorecard_active_api_calls
-        description: "API calls from active subscriptions in the sector scorecard."
-        agg: sum
-        expr: active_api_calls_30d
-
-metrics:
-  - name: active_subscriptions
-    description: "Active subscriptions represented in climate data-service reports."
-    type: simple
-    label: "Active subscriptions"
-    type_params:
-      measure: active_subscriptions
-  - name: active_api_calls
-    description: "API calls from active subscriptions over the prior 30 days."
-    type: simple
-    label: "Active API calls"
-    type_params:
-      measure: active_api_calls
-  - name: monthly_fee_units
-    description: "Monthly service unit total for active subscriptions."
-    type: simple
-    label: "Monthly fee units"
-    type_params:
-      measure: monthly_fee_units
-  - name: average_alert_opt_in_rate
-    description: "Average alert opt-in rate across reported segments."
-    type: simple
-    label: "Average alert opt-in rate"
-    type_params:
-      measure: average_alert_opt_in_rate
+models:
+  - name: metricflow_time_spine
+    description: "Daily time spine for MetricFlow semantic layer queries."
+    time_spine:
+      standard_granularity_column: date_day
+    columns:
+      - name: date_day
+        description: "Daily date spine for time-based semantic aggregations."
+        granularity: day

@@ -1,5 +1,6 @@
 select
     {{ dbt_utils.generate_surrogate_key(['sector', 'customer_segment', 'region']) }} as sector_scorecard_key,
+    current_date as metric_date,
     sector,
     customer_segment,
     region,

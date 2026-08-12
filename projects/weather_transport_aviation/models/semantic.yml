@@ -1,66 +1,11 @@
 version: 2
 
-semantic_models:
-  - name: transport_aviation_daily_operating_posture
-    description: "Semantic model for daily transport and aviation operating posture."
-    model: ref('transport_aviation_daily_operating_posture')
-    defaults:
-      agg_time_dimension: posture_date
-    entities:
-      - name: daily_operating_posture
-        type: primary
-        expr: daily_operating_posture_key
-    dimensions:
-      - name: posture_date
-        type: time
-        type_params:
-          time_granularity: day
-      - name: region
-        type: categorical
-      - name: operating_sector
-        type: categorical
-      - name: disruption_posture
-        type: categorical
-    measures:
-      - name: average_operating_posture_score
-        description: "Average operating posture score."
-        agg: average
-        expr: average_operating_posture_score
-      - name: maximum_operating_posture_score
-        description: "Maximum operating posture score."
-        agg: max
-        expr: maximum_operating_posture_score
-      - name: station_coverage
-        description: "Station count included in daily operating posture."
-        agg: sum
-        expr: station_count
-      - name: disruption_posture_count
-        description: "Count of daily posture segments."
-        agg: count
-        expr: daily_operating_posture_key
-
-metrics:
-  - name: average_operating_posture_score
-    description: "Average daily operating posture score."
-    type: simple
-    label: "Average operating posture score"
-    type_params:
-      measure: average_operating_posture_score
-  - name: maximum_operating_posture_score
-    description: "Maximum daily operating posture score."
-    type: simple
-    label: "Maximum operating posture score"
-    type_params:
-      measure: maximum_operating_posture_score
-  - name: station_coverage
-    description: "Stations represented in daily transport and aviation posture reporting."
-    type: simple
-    label: "Station coverage"
-    type_params:
-      measure: station_coverage
-  - name: disruption_posture_count
-    description: "Count of daily posture segments for disruption posture analysis."
-    type: simple
-    label: "Disruption posture count"
-    type_params:
-      measure: disruption_posture_count
+models:
+  - name: metricflow_time_spine
+    description: "Daily time spine for MetricFlow semantic layer queries."
+    time_spine:
+      standard_granularity_column: date_day
+    columns:
+      - name: date_day
+        description: "Daily date spine for time-based semantic aggregations."
+        granularity: day

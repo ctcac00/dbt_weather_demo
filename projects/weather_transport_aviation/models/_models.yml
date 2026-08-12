@@ -210,6 +210,10 @@ models:
 
   - name: transport_aviation_daily_operating_posture
     description: "Daily transport and aviation operating posture report by region and operating sector."
+    semantic_model:
+      enabled: true
+      name: transport_aviation_daily_operating_posture
+    agg_time_dimension: posture_date
     config:
       meta:
         primary_key: daily_operating_posture_key
@@ -217,14 +221,24 @@ models:
       - name: daily_operating_posture_key
         description: "Surrogate key for posture date, region, and operating sector."
         data_tests: [not_null, unique]
+        entity:
+          type: primary
+          name: daily_operating_posture
       - name: posture_date
         description: "Date of the operating posture summary."
+        granularity: day
+        dimension:
+          type: time
         data_tests: [not_null]
       - name: region
         description: "Operational weather-service region."
+        dimension:
+          type: categorical
         data_tests: [not_null]
       - name: operating_sector
         description: "Transport operating sector for the posture summary."
+        dimension:
+          type: categorical
         data_tests:
           - accepted_values:
               arguments:
@@ -263,7 +277,34 @@ models:
         description: "Average station operating posture score in the summary."
       - name: disruption_posture
         description: "Named disruption posture for operational planning."
+        dimension:
+          type: categorical
         data_tests:
           - accepted_values:
               arguments:
                 values: ['normal_operations', 'heightened_watch', 'disruption_likely']
+    metrics:
+      - name: average_operating_posture_score
+        description: "Average daily operating posture score."
+        type: simple
+        label: "Average operating posture score"
+        agg: average
+        expr: average_operating_posture_score
+      - name: maximum_operating_posture_score
+        description: "Maximum daily operating posture score."
+        type: simple
+        label: "Maximum operating posture score"
+        agg: max
+        expr: maximum_operating_posture_score
+      - name: station_coverage
+        description: "Stations represented in daily transport and aviation posture reporting."
+        type: simple
+        label: "Station coverage"
+        agg: sum
+        expr: station_count
+      - name: disruption_posture_count
+        description: "Count of daily posture segments for disruption posture analysis."
+        type: simple
+        label: "Disruption posture count"
+        agg: count
+        expr: daily_operating_posture_key
