@@ -1,0 +1,20 @@
+version: 2
+
+exposures:
+  - name: climate_data_service_adoption_analysis
+    label: "Climate data-service adoption analysis"
+    type: analysis
+    maturity: medium
+    url: https://example.org/weather-demo/climate-data-service-adoption
+    description: "Demo analysis for reviewing regional adoption, alert opt-in, and sector scorecard trends across climate data services."
+    depends_on:
+      - ref('climate_data_service_adoption')
+      - ref('climate_data_service_sector_scorecard')
+    owner:
+      name: Weather Data Services Team
+      email: data-services@example.org
+    config:
+      tags: ['demo', 'exposure', 'climate', 'data_services']
+      meta:
+        domain: climate_data_services
+        audience: data_service_leadership

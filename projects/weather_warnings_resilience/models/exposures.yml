@@ -1,0 +1,20 @@
+version: 2
+
+exposures:
+  - name: resilience_warning_investigation_notebook
+    label: "Resilience warning investigation notebook"
+    type: notebook
+    maturity: medium
+    url: https://example.org/weather-demo/resilience-warning-investigation
+    description: "Demo notebook used by resilience analysts to investigate warning coverage, incident outcomes, and daily posture patterns."
+    depends_on:
+      - ref('warning_coverage_report')
+      - ref('daily_resilience_posture_report')
+    owner:
+      name: Weather Resilience Analytics Team
+      email: resilience-analytics@example.org
+    config:
+      tags: ['demo', 'exposure', 'warnings', 'resilience']
+      meta:
+        domain: warnings_resilience
+        audience: resilience_analysts

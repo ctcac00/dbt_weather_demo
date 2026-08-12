@@ -1,0 +1,38 @@
+version: 2
+
+exposures:
+  - name: transport_aviation_operating_risk_dashboard
+    label: "Transport and aviation operating risk dashboard"
+    type: dashboard
+    maturity: high
+    url: https://example.org/weather-demo/transport-aviation-operating-risk
+    description: "Demo dashboard for transport and aviation teams monitoring operating risk, disruption posture, and station coverage."
+    depends_on:
+      - ref('transport_aviation_operating_risk')
+      - ref('transport_aviation_daily_operating_posture')
+    owner:
+      name: Weather Transport Operations Team
+      email: transport-ops@example.org
+    config:
+      tags: ['demo', 'exposure', 'transport', 'aviation']
+      meta:
+        domain: transport_aviation
+        audience: operations_leadership
+
+  - name: operational_weather_service_portal
+    label: "Operational weather-service portal"
+    type: application
+    maturity: medium
+    url: https://example.org/weather-demo/operational-weather-service-portal
+    description: "Demo application surfacing operating-risk summaries and regional data-service adoption context for weather-service users."
+    depends_on:
+      - ref('transport_aviation_operating_risk')
+      - ref('weather_climate_data_services', 'climate_data_service_adoption')
+    owner:
+      name: Weather Service Product Team
+      email: weather-product@example.org
+    config:
+      tags: ['demo', 'exposure', 'application', 'operations']
+      meta:
+        domain: weather_services
+        audience: service_users

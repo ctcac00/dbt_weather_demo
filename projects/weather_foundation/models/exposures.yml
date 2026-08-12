@@ -1,0 +1,20 @@
+version: 2
+
+exposures:
+  - name: forecast_alert_impact_risk_scoring_model
+    label: "Forecast and alert impact risk scoring model"
+    type: ml
+    maturity: low
+    url: https://example.org/weather-demo/forecast-alert-impact-risk-scoring
+    description: "Demo ML scoring workflow that combines forecast accuracy and alert impact facts for impact-risk prioritisation."
+    depends_on:
+      - ref('fct_forecast_accuracy')
+      - ref('fct_weather_alert_impact')
+    owner:
+      name: Weather Data Science Team
+      email: data-science@example.org
+    config:
+      tags: ['demo', 'exposure', 'ml', 'risk_scoring']
+      meta:
+        domain: weather_foundation
+        audience: data_science
