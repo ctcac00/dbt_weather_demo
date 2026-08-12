@@ -2,7 +2,8 @@
   config(
     materialized='incremental',
     unique_key='forecast_accuracy_key',
-    incremental_strategy='merge'
+    incremental_strategy='merge',
+    on_schema_change='append_new_columns'
   )
 }}
 

@@ -512,7 +512,7 @@ models:
         data_type: float
       - name: elevation_m
         description: "Station elevation in metres."
-        data_type: number
+        data_type: number(10, 0)
       - name: station_type
         description: "Station operating context."
         data_type: varchar
@@ -682,7 +682,7 @@ models:
         data_type: timestamp_ntz
       - name: alert_duration_hours
         description: "Alert validity duration in hours."
-        data_type: number
+        data_type: number(10, 0)
       - name: severity
         description: "Alert severity level."
         data_type: varchar
@@ -709,29 +709,29 @@ models:
                 min_value: 0
       - name: observed_incidents
         description: "Observed incident count associated with the alert."
-        data_type: number
+        data_type: number(10, 0)
         data_tests:
           - dbt_expectations.expect_column_values_to_be_between:
               arguments:
                 min_value: 0
       - name: affected_population_estimate
         description: "Estimated population covered by the alert."
-        data_type: number
+        data_type: number(18, 0)
       - name: incidents_per_100k_population
         description: "Observed incidents per 100,000 affected residents."
         data_type: float
       - name: active_subscription_count
         description: "Active data-service subscriptions in the alert region."
-        data_type: number
+        data_type: number(18, 0)
       - name: total_subscription_count
         description: "Total subscriptions in the alert region."
-        data_type: number
+        data_type: number(18, 0)
       - name: active_monthly_fee_units
         description: "Monthly service unit total for active subscriptions in the alert region."
-        data_type: number
+        data_type: number(18, 2)
       - name: active_api_calls_30d
         description: "API calls from active subscriptions in the prior 30 days."
-        data_type: number
+        data_type: number(18, 0)
       - name: alert_opt_in_rate
         description: "Share of regional subscriptions opted into alert notifications."
         data_type: float
@@ -742,7 +742,7 @@ models:
                 max_value: 1
       - name: severity_weight
         description: "Numeric weight applied to alert severity."
-        data_type: number
+        data_type: number(10, 0)
       - name: weighted_impact_score
         description: "Expected impact score multiplied by severity weight."
         data_type: float

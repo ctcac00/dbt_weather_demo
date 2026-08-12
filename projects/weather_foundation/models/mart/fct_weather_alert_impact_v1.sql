@@ -16,12 +16,12 @@ select
     expected_impact_score,
     observed_incidents,
     affected_population_estimate,
-    incidents_per_100k_population,
+    cast(incidents_per_100k_population as float) as incidents_per_100k_population,
     active_subscription_count,
     total_subscription_count,
     active_monthly_fee_units,
     active_api_calls_30d,
-    alert_opt_in_rate,
+    cast(alert_opt_in_rate as float) as alert_opt_in_rate,
     severity_weight,
     expected_impact_score * severity_weight as weighted_impact_score
 from {{ ref('int_alerts_enriched') }}

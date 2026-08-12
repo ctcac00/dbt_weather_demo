@@ -20,7 +20,7 @@ select
     coalesce(adoption.total_subscription_count, 0) as total_subscription_count,
     coalesce(adoption.active_monthly_fee_units, 0) as active_monthly_fee_units,
     coalesce(adoption.active_api_calls_30d, 0) as active_api_calls_30d,
-    coalesce(adoption.alert_opt_in_rate, 0) as alert_opt_in_rate,
+    cast(coalesce(adoption.alert_opt_in_rate, 0.0) as float) as alert_opt_in_rate,
     case
         when alerts.severity = 'red' then 3
         when alerts.severity = 'amber' then 2

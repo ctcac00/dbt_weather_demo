@@ -4,6 +4,12 @@ config-version: 2
 
 profile: 'weather'
 
+dbt-cloud:
+  project-id: 18519
+  defer-env-id: 70565
+  account_id: 664
+  account-host: sa318.eu1.dbt.com
+
 model-paths: ["models"]
 test-paths: ["tests"]
 macro-paths: ["macros"]

@@ -1,3 +1,3 @@
 {% macro safe_divide(numerator, denominator) -%}
-  ({{ numerator }} / nullif({{ denominator }}, 0))
+  (cast({{ numerator }} as float) / nullif({{ denominator }}, 0))
 {%- endmacro %}
