@@ -1,0 +1,15 @@
+target/
+dbt_packages/
+logs/
+.env
+profiles.yml
+
+# Terraform local state, plans, logs, and secrets
+**/.terraform/*
+*.tfstate
+*.tfstate.*
+crash.log
+crash.*.log
+*.tfplan
+*.tfvars
+*.tfvars.json

@@ -1,0 +1,122 @@
+version: 2
+
+models:
+  - name: warning_station_alerts
+    description: "Warning resilience reporting base built only from public foundation marts."
+    config:
+      meta:
+        primary_key: alert_impact_key
+    columns:
+      - name: alert_impact_key
+        description: "Foundation alert impact surrogate key."
+        data_tests: [not_null, unique]
+      - name: alert_id
+        description: "Stable alert identifier from the foundation alert impact fact."
+        data_tests: [not_null, unique]
+      - name: station_key
+        description: "Foundation station surrogate key."
+        data_tests: [not_null]
+      - name: station_id
+        description: "Station most directly associated with the alert."
+        data_tests: [not_null]
+      - name: station_name
+        description: "Human-readable station name."
+      - name: region
+        description: "Operational weather-service region."
+        data_tests: [not_null]
+      - name: station_type
+        description: "Station operating context."
+      - name: sector_focus
+        description: "Primary sector supported by the station."
+      - name: issued_at
+        description: "Timestamp the alert was issued."
+      - name: valid_from
+        description: "Timestamp the alert validity window starts."
+      - name: valid_to
+        description: "Timestamp the alert validity window ends."
+      - name: alert_duration_hours
+        description: "Alert validity duration in hours."
+      - name: severity
+        description: "Alert severity level."
+        data_tests:
+          - accepted_values:
+              arguments:
+                values: ['yellow', 'amber', 'red']
+      - name: alert_type
+        description: "Alert hazard type."
+      - name: status
+        description: "Current alert lifecycle status."
+        data_tests:
+          - accepted_values:
+              arguments:
+                values: ['issued', 'expired', 'cancelled']
+      - name: expected_impact_score
+        description: "Expected service impact score."
+      - name: observed_incidents
+        description: "Observed incident count associated with the alert."
+      - name: affected_population_estimate
+        description: "Estimated population covered by the alert."
+      - name: incidents_per_100k_population
+        description: "Observed incidents per 100,000 affected residents."
+      - name: active_subscription_count
+        description: "Active data-service subscriptions in the alert region."
+      - name: alert_opt_in_rate
+        description: "Share of regional subscriptions opted into alert notifications."
+      - name: weighted_impact_score
+        description: "Expected impact score multiplied by severity weight."
+      - name: resilience_response_tier
+        description: "Operational response tier for resilience teams."
+        data_tests:
+          - accepted_values:
+              arguments:
+                values: ['standard_monitoring', 'enhanced_monitoring', 'major_incident_ready']
+
+  - name: warning_coverage_report
+    description: "Final report of alert coverage, incidents, and response posture by region, hazard, and severity."
+    config:
+      meta:
+        primary_key: warning_coverage_key
+    columns:
+      - name: warning_coverage_key
+        description: "Surrogate key for region, alert type, and severity."
+        data_tests: [not_null, unique]
+      - name: region
+        description: "Operational weather-service region."
+        data_tests: [not_null]
+      - name: alert_type
+        description: "Alert hazard type."
+        data_tests: [not_null]
+      - name: severity
+        description: "Alert severity level."
+        data_tests:
+          - accepted_values:
+              arguments:
+                values: ['yellow', 'amber', 'red']
+      - name: alert_count
+        description: "Number of alerts in the segment."
+        data_tests:
+          - dbt_expectations.expect_column_values_to_be_between:
+              arguments:
+                min_value: 1
+      - name: station_count
+        description: "Number of distinct stations covered by the segment."
+        data_tests:
+          - dbt_expectations.expect_column_values_to_be_between:
+              arguments:
+                min_value: 1
+      - name: observed_incidents
+        description: "Total observed incidents in the segment."
+      - name: affected_population_estimate
+        description: "Estimated affected population across the segment."
+      - name: average_expected_impact_score
+        description: "Average expected impact score across alerts in the segment."
+      - name: average_weighted_impact_score
+        description: "Average severity-weighted impact score across alerts in the segment."
+      - name: highest_response_tier
+        description: "Highest response tier observed in the segment."
+      - name: incidents_per_100k_population
+        description: "Observed incidents per 100,000 affected residents."
+        data_tests:
+          - dbt_expectations.expect_column_values_to_be_between:
+              arguments:
+                min_value: 0

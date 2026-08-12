@@ -1,0 +1,278 @@
+version: 2
+
+seeds:
+  - name: raw_stations
+    description: "Fictional weather station inventory used as the operational geography spine."
+    config:
+      meta:
+        primary_key: station_id
+    columns:
+      - name: station_id
+        description: "Stable station identifier."
+        data_tests: [not_null, unique]
+      - name: station_name
+        description: "Human-readable station name."
+        data_tests: [not_null]
+      - name: region
+        description: "Operational region served by the station."
+        data_tests: [not_null]
+      - name: country_code
+        description: "Fictional demo country code."
+        data_tests: [not_null]
+      - name: latitude
+        description: "Station latitude."
+        data_tests:
+          - dbt_expectations.expect_column_values_to_be_between:
+              arguments:
+                min_value: -90
+                max_value: 90
+      - name: longitude
+        description: "Station longitude."
+        data_tests:
+          - dbt_expectations.expect_column_values_to_be_between:
+              arguments:
+                min_value: -180
+                max_value: 180
+      - name: elevation_m
+        description: "Station elevation in metres."
+      - name: station_type
+        description: "Station operating context."
+        data_tests:
+          - accepted_values:
+              arguments:
+                values: ['coastal', 'urban', 'upland', 'airport', 'hydrology', 'transport', 'rural']
+      - name: sector_focus
+        description: "Primary sector supported by the station."
+        data_tests: [not_null]
+      - name: opened_date
+        description: "Date the station opened."
+      - name: is_active
+        description: "Whether the station currently participates in service reporting."
+
+  - name: raw_observations
+    description: "Observed weather measurements from fictional station telemetry."
+    config:
+      meta:
+        primary_key: observation_id
+    columns:
+      - name: observation_id
+        description: "Stable observation identifier."
+        data_tests: [not_null, unique]
+      - name: station_id
+        description: "Station that produced the observation."
+        data_tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('raw_stations')
+                field: station_id
+      - name: observed_at
+        description: "Timestamp when the observation was recorded."
+        data_tests: [not_null]
+      - name: temperature_c
+        description: "Observed air temperature in Celsius."
+      - name: precipitation_mm
+        description: "Observed precipitation in millimetres."
+        data_tests:
+          - dbt_expectations.expect_column_values_to_be_between:
+              arguments:
+                min_value: 0
+      - name: wind_speed_kph
+        description: "Observed sustained wind speed in kilometres per hour."
+        data_tests:
+          - dbt_expectations.expect_column_values_to_be_between:
+              arguments:
+                min_value: 0
+      - name: wind_gust_kph
+        description: "Observed wind gust speed in kilometres per hour."
+        data_tests:
+          - dbt_expectations.expect_column_values_to_be_between:
+              arguments:
+                min_value: 0
+      - name: visibility_km
+        description: "Observed visibility in kilometres."
+        data_tests:
+          - dbt_expectations.expect_column_values_to_be_between:
+              arguments:
+                min_value: 0
+      - name: humidity_pct
+        description: "Observed relative humidity percentage."
+        data_tests:
+          - dbt_expectations.expect_column_values_to_be_between:
+              arguments:
+                min_value: 0
+                max_value: 100
+      - name: pressure_hpa
+        description: "Observed atmospheric pressure in hectopascals."
+
+  - name: raw_forecasts
+    description: "Historical forecast outcomes paired with observed values for accuracy reporting."
+    config:
+      meta:
+        primary_key: forecast_id
+    columns:
+      - name: forecast_id
+        description: "Stable forecast identifier."
+        data_tests: [not_null, unique]
+      - name: station_id
+        description: "Station for the forecast point."
+        data_tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('raw_stations')
+                field: station_id
+      - name: issued_at
+        description: "Timestamp the forecast was issued."
+        data_tests: [not_null]
+      - name: valid_at
+        description: "Timestamp the forecast was valid for."
+        data_tests: [not_null]
+      - name: horizon_hours
+        description: "Forecast horizon in hours."
+        data_tests:
+          - dbt_expectations.expect_column_values_to_be_between:
+              arguments:
+                min_value: 1
+                max_value: 240
+      - name: forecast_temperature_c
+        description: "Forecast temperature in Celsius."
+      - name: observed_temperature_c
+        description: "Observed temperature in Celsius."
+      - name: forecast_precipitation_mm
+        description: "Forecast precipitation in millimetres."
+        data_tests:
+          - dbt_expectations.expect_column_values_to_be_between:
+              arguments:
+                min_value: 0
+      - name: observed_precipitation_mm
+        description: "Observed precipitation in millimetres."
+        data_tests:
+          - dbt_expectations.expect_column_values_to_be_between:
+              arguments:
+                min_value: 0
+      - name: forecast_wind_gust_kph
+        description: "Forecast wind gust speed in kilometres per hour."
+        data_tests:
+          - dbt_expectations.expect_column_values_to_be_between:
+              arguments:
+                min_value: 0
+      - name: observed_wind_gust_kph
+        description: "Observed wind gust speed in kilometres per hour."
+        data_tests:
+          - dbt_expectations.expect_column_values_to_be_between:
+              arguments:
+                min_value: 0
+      - name: model_run_id
+        description: "Weather forecast model run identifier."
+        data_tests: [not_null]
+
+  - name: raw_weather_alerts
+    description: "Weather alert events issued for stations and regions."
+    config:
+      meta:
+        primary_key: alert_id
+    columns:
+      - name: alert_id
+        description: "Stable alert identifier."
+        data_tests: [not_null, unique]
+      - name: station_id
+        description: "Station most directly associated with the alert."
+        data_tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('raw_stations')
+                field: station_id
+      - name: region
+        description: "Operational weather-service region for the alert."
+        data_tests: [not_null]
+      - name: issued_at
+        description: "Timestamp the alert was issued."
+        data_tests: [not_null]
+      - name: valid_from
+        description: "Timestamp the alert validity window starts."
+        data_tests: [not_null]
+      - name: valid_to
+        description: "Timestamp the alert validity window ends."
+        data_tests: [not_null]
+      - name: severity
+        description: "Alert severity level."
+        data_tests:
+          - accepted_values:
+              arguments:
+                values: ['yellow', 'amber', 'red']
+      - name: alert_type
+        description: "Alert hazard type."
+        data_tests: [not_null]
+      - name: status
+        description: "Current alert lifecycle status."
+        data_tests:
+          - accepted_values:
+              arguments:
+                values: ['issued', 'expired', 'cancelled']
+      - name: expected_impact_score
+        description: "Expected service impact score."
+        data_tests:
+          - dbt_expectations.expect_column_values_to_be_between:
+              arguments:
+                min_value: 0
+      - name: observed_incidents
+        description: "Observed incident count associated with the alert."
+        data_tests:
+          - dbt_expectations.expect_column_values_to_be_between:
+              arguments:
+                min_value: 0
+      - name: affected_population_estimate
+        description: "Estimated population covered by the alert."
+        data_tests:
+          - dbt_expectations.expect_column_values_to_be_between:
+              arguments:
+                min_value: 0
+
+  - name: raw_service_subscriptions
+    description: "Fictional data-service subscriptions used to demonstrate service adoption reporting."
+    config:
+      meta:
+        primary_key: subscription_id
+    columns:
+      - name: subscription_id
+        description: "Stable subscription identifier."
+        data_tests: [not_null, unique]
+      - name: customer_segment
+        description: "Fictional customer segment receiving weather data services."
+        data_tests: [not_null]
+      - name: sector
+        description: "Sector served by the subscription."
+        data_tests: [not_null]
+      - name: region
+        description: "Primary service region for the subscription."
+        data_tests: [not_null]
+      - name: service_tier
+        description: "Subscription service tier."
+        data_tests:
+          - accepted_values:
+              arguments:
+                values: ['standard', 'professional', 'enterprise']
+      - name: started_at
+        description: "Date the subscription started."
+      - name: status
+        description: "Subscription lifecycle status."
+        data_tests:
+          - accepted_values:
+              arguments:
+                values: ['active', 'paused', 'trial']
+      - name: monthly_fee_units
+        description: "Monthly subscription fee in neutral demo service units."
+        data_tests:
+          - dbt_expectations.expect_column_values_to_be_between:
+              arguments:
+                min_value: 0
+      - name: api_calls_30d
+        description: "API call volume over the prior 30 days."
+        data_tests:
+          - dbt_expectations.expect_column_values_to_be_between:
+              arguments:
+                min_value: 0
+      - name: alert_opt_in
+        description: "Whether the subscription receives alert notifications."

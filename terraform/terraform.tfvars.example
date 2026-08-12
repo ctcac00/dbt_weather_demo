@@ -1,0 +1,18 @@
+dbt_cloud_account_id    = 123456
+dbt_cloud_access_url    = "https://cloud.getdbt.com/api"
+dbt_cloud_service_token = "dbtc_placeholder_service_token"
+git_clone_strategy      = "github_app"
+github_installation_id  = 12345678
+dbt_version             = "fusion-stable"
+dbt_threads             = 4
+enable_daily_build      = true
+enable_slim_ci          = true
+
+snowflake_account   = "xy12345.us-east-1"
+snowflake_database  = "WEATHER_DEMO"
+snowflake_warehouse = "TRANSFORMING_WH"
+snowflake_role      = "TRANSFORMER"
+snowflake_user      = "DBT_CLOUD_SERVICE_USER"
+snowflake_private_key_path       = "/path/to/rsa_key.p8"
+snowflake_private_key_version    = 1
+snowflake_private_key_passphrase = null

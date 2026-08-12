@@ -1,0 +1,13 @@
+alert_id,station_id,region,issued_at,valid_from,valid_to,severity,alert_type,status,expected_impact_score,observed_incidents,affected_population_estimate
+ALT001,STN001,North Coast,2026-01-09 18:00:00,2026-01-10 00:00:00,2026-01-10 18:00:00,amber,wind,expired,62,8,125000
+ALT002,STN003,Highlands,2026-01-09 20:00:00,2026-01-10 03:00:00,2026-01-10 21:00:00,red,snow,expired,86,21,42000
+ALT003,STN005,South Coast,2026-01-10 14:00:00,2026-01-11 02:00:00,2026-01-11 20:00:00,amber,rain,expired,71,13,138000
+ALT004,STN006,Western Hills,2026-01-11 06:00:00,2026-01-12 00:00:00,2026-01-12 18:00:00,yellow,rain,expired,48,6,83000
+ALT005,STN007,North Coast,2026-01-11 11:00:00,2026-01-12 04:00:00,2026-01-12 16:00:00,yellow,wind,expired,42,3,67000
+ALT006,STN010,Highlands,2026-01-13 03:00:00,2026-01-14 00:00:00,2026-01-14 23:00:00,red,ice,expired,91,28,36000
+ALT007,STN004,East Plains,2026-02-01 05:00:00,2026-02-01 10:00:00,2026-02-01 21:00:00,yellow,fog,issued,37,0,97000
+ALT008,STN008,Central Valley,2026-02-01 06:00:00,2026-02-01 09:00:00,2026-02-01 18:00:00,yellow,fog,issued,34,0,188000
+ALT009,STN002,Central Valley,2026-07-14 09:00:00,2026-07-15 00:00:00,2026-07-16 00:00:00,amber,heat,issued,66,0,315000
+ALT010,STN011,Central Valley,2026-07-14 09:30:00,2026-07-15 00:00:00,2026-07-16 00:00:00,amber,heat,issued,69,0,280000
+ALT011,STN009,East Plains,2026-08-03 12:00:00,2026-08-04 04:00:00,2026-08-04 22:00:00,yellow,thunderstorm,issued,44,0,54000
+ALT012,STN012,Western Hills,2026-08-04 13:00:00,2026-08-05 01:00:00,2026-08-05 15:00:00,yellow,rain,cancelled,28,0,22000

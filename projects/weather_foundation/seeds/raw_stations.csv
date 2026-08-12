@@ -1,0 +1,13 @@
+station_id,station_name,region,country_code,latitude,longitude,elevation_m,station_type,sector_focus,opened_date,is_active
+STN001,Harbor Point Coastal Station,North Coast,WX,55.012,-1.421,12,coastal,marine,2010-04-01,true
+STN002,Rivergate Urban Observatory,Central Valley,WX,52.483,-1.894,118,urban,resilience,2008-09-15,true
+STN003,Highmoor Upland Station,Highlands,WX,56.771,-4.044,612,upland,aviation,2012-06-20,true
+STN004,Eastfield Aviation Weather Site,East Plains,WX,52.211,0.174,31,airport,aviation,2016-03-12,true
+STN005,Southport Tide Watch,South Coast,WX,50.819,-1.087,8,coastal,marine,2014-01-07,true
+STN006,Westbridge Reservoir Station,Western Hills,WX,53.412,-2.992,74,hydrology,resilience,2011-11-03,true
+STN007,Northlink Rail Corridor Mast,North Coast,WX,54.693,-1.214,46,transport,rail,2018-08-28,true
+STN008,Metro Airport North Array,Central Valley,WX,52.701,-1.512,93,airport,aviation,2019-05-19,true
+STN009,Lowfen Agricultural Climate Site,East Plains,WX,51.991,0.913,22,rural,agriculture,2007-02-10,true
+STN010,Greenfell Mountain Pass,Highlands,WX,57.221,-3.791,701,upland,road,2015-12-02,true
+STN011,Canal Quarter Heat Sensor,Central Valley,WX,52.501,-1.811,102,urban,health,2020-07-14,true
+STN012,Old Quarry Legacy Station,Western Hills,WX,53.884,-2.403,211,rural,climate,2001-10-30,false

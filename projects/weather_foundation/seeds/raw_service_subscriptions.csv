@@ -1,0 +1,16 @@
+subscription_id,customer_segment,sector,region,service_tier,started_at,status,monthly_fee_units,api_calls_30d,alert_opt_in
+SUB001,regional_resilience_forum,resilience,Central Valley,enterprise,2024-03-01,active,4200,184000,true
+SUB002,coastal_port_operator,marine,North Coast,professional,2024-05-15,active,1800,92000,true
+SUB003,national_air_navigation,aviation,East Plains,enterprise,2023-11-20,active,6100,240000,true
+SUB004,regional_airport_group,aviation,Central Valley,enterprise,2025-01-10,active,5400,210000,true
+SUB005,rail_operations_centre,rail,North Coast,professional,2024-09-01,active,2200,118000,true
+SUB006,highway_winter_service,road,Highlands,professional,2024-10-12,active,2600,101000,true
+SUB007,water_catchment_board,resilience,Western Hills,professional,2023-06-17,active,2300,87000,true
+SUB008,agricultural_advisory_network,agriculture,East Plains,standard,2025-04-01,active,900,42000,false
+SUB009,public_health_partnership,health,Central Valley,standard,2025-06-11,active,1200,38000,true
+SUB010,climate_research_unit,climate,Western Hills,standard,2022-02-05,active,1100,51000,false
+SUB011,regional_freight_operator,road,South Coast,professional,2025-03-22,active,1900,74000,true
+SUB012,coastal_ferry_network,marine,South Coast,professional,2024-07-18,active,2100,83000,true
+SUB013,heritage_weather_archive,climate,Highlands,standard,2021-12-08,paused,600,7000,false
+SUB014,small_airfield_collective,aviation,Highlands,standard,2025-05-09,active,950,31000,true
+SUB015,city_event_planning_team,resilience,Central Valley,standard,2026-01-03,trial,0,9000,true
