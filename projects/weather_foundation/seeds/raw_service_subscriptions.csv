@@ -14,3 +14,988 @@ SUB012,coastal_ferry_network,marine,South Coast,professional,2024-07-18,active,2
 SUB013,heritage_weather_archive,climate,Highlands,standard,2021-12-08,paused,600,7000,false
 SUB014,small_airfield_collective,aviation,Highlands,standard,2025-05-09,active,950,31000,true
 SUB015,city_event_planning_team,resilience,Central Valley,standard,2026-01-03,trial,0,9000,true
+SUB016,airport_rail_operations_016,rail,Western Hills,professional,2025-01-25,paused,2692,131704,true
+SUB017,transport_agriculture_resilience_017,agriculture,North Coast,enterprise,2026-04-02,trial,5829,139623,true
+SUB018,utility_road_forecasting_018,road,Central Valley,standard,2021-07-07,active,1416,147542,true
+SUB019,research_health_planning_019,health,Highlands,professional,2022-10-12,paused,2803,155461,true
+SUB020,regional_climate_monitoring_020,climate,East Plains,enterprise,2023-01-17,trial,0,163380,false
+SUB021,coastal_marine_response_021,marine,South Coast,standard,2024-04-22,active,1527,171299,true
+SUB022,urban_resilience_analytics_022,resilience,Western Hills,professional,2025-07-27,paused,2914,179218,true
+SUB023,national_aviation_logistics_023,aviation,North Coast,enterprise,2026-10-04,trial,6051,187137,true
+SUB024,rural_rail_operations_024,rail,Central Valley,standard,2021-01-09,active,1638,195056,true
+SUB025,highland_agriculture_resilience_025,agriculture,Highlands,professional,2022-04-14,paused,2125,202975,false
+SUB026,airport_road_forecasting_026,road,East Plains,enterprise,2023-07-19,trial,5262,210894,true
+SUB027,transport_health_planning_027,health,South Coast,standard,2024-10-24,active,849,218813,true
+SUB028,utility_climate_monitoring_028,climate,Western Hills,professional,2025-01-01,paused,2236,226732,true
+SUB029,research_marine_response_029,marine,North Coast,enterprise,2026-04-06,trial,5373,234651,true
+SUB030,regional_resilience_analytics_030,resilience,Central Valley,standard,2021-07-11,active,960,242570,false
+SUB031,coastal_aviation_logistics_031,aviation,Highlands,professional,2022-10-16,paused,2347,5489,true
+SUB032,urban_rail_operations_032,rail,East Plains,enterprise,2023-01-21,trial,0,13408,true
+SUB033,national_agriculture_resilience_033,agriculture,South Coast,standard,2024-04-26,active,1071,21327,true
+SUB034,rural_road_forecasting_034,road,Western Hills,professional,2025-07-03,paused,2458,29246,true
+SUB035,highland_health_planning_035,health,North Coast,enterprise,2026-10-08,trial,5595,37165,false
+SUB036,airport_climate_monitoring_036,climate,Central Valley,standard,2021-01-13,active,1182,45084,true
+SUB037,transport_marine_response_037,marine,Highlands,professional,2022-04-18,paused,2569,53003,true
+SUB038,utility_resilience_analytics_038,resilience,East Plains,enterprise,2023-07-23,trial,5706,60922,true
+SUB039,research_aviation_logistics_039,aviation,South Coast,standard,2024-10-28,active,1293,68841,true
+SUB040,regional_rail_operations_040,rail,Western Hills,professional,2025-01-05,paused,2680,76760,false
+SUB041,coastal_agriculture_resilience_041,agriculture,North Coast,enterprise,2026-04-10,trial,5817,84679,true
+SUB042,urban_road_forecasting_042,road,Central Valley,standard,2021-07-15,active,1404,92598,true
+SUB043,national_health_planning_043,health,Highlands,professional,2022-10-20,paused,2791,100517,true
+SUB044,rural_climate_monitoring_044,climate,East Plains,enterprise,2023-01-25,trial,0,108436,true
+SUB045,highland_marine_response_045,marine,South Coast,standard,2024-04-02,active,1515,116355,false
+SUB046,airport_resilience_analytics_046,resilience,Western Hills,professional,2025-07-07,paused,2902,124274,true
+SUB047,transport_aviation_logistics_047,aviation,North Coast,enterprise,2026-10-12,trial,6039,132193,true
+SUB048,utility_rail_operations_048,rail,Central Valley,standard,2021-01-17,active,1626,140112,true
+SUB049,research_agriculture_resilience_049,agriculture,Highlands,professional,2022-04-22,paused,2113,148031,true
+SUB050,regional_road_forecasting_050,road,East Plains,enterprise,2023-07-27,trial,5250,155950,false
+SUB051,coastal_health_planning_051,health,South Coast,standard,2024-10-04,active,837,163869,true
+SUB052,urban_climate_monitoring_052,climate,Western Hills,professional,2025-01-09,paused,2224,171788,true
+SUB053,national_marine_response_053,marine,North Coast,enterprise,2026-04-14,trial,5361,179707,true
+SUB054,rural_resilience_analytics_054,resilience,Central Valley,standard,2021-07-19,active,948,187626,true
+SUB055,highland_aviation_logistics_055,aviation,Highlands,professional,2022-10-24,paused,2335,195545,false
+SUB056,airport_rail_operations_056,rail,East Plains,enterprise,2023-01-01,trial,0,203464,true
+SUB057,transport_agriculture_resilience_057,agriculture,South Coast,standard,2024-04-06,active,1059,211383,true
+SUB058,utility_road_forecasting_058,road,Western Hills,professional,2025-07-11,paused,2446,219302,true
+SUB059,research_health_planning_059,health,North Coast,enterprise,2026-10-16,trial,5583,227221,true
+SUB060,regional_climate_monitoring_060,climate,Central Valley,standard,2021-01-21,active,1170,235140,false
+SUB061,coastal_marine_response_061,marine,Highlands,professional,2022-04-26,paused,2557,243059,true
+SUB062,urban_resilience_analytics_062,resilience,East Plains,enterprise,2023-07-03,trial,5694,5978,true
+SUB063,national_aviation_logistics_063,aviation,South Coast,standard,2024-10-08,active,1281,13897,true
+SUB064,rural_rail_operations_064,rail,Western Hills,professional,2025-01-13,paused,2668,21816,true
+SUB065,highland_agriculture_resilience_065,agriculture,North Coast,enterprise,2026-04-18,trial,5805,29735,false
+SUB066,airport_road_forecasting_066,road,Central Valley,standard,2021-07-23,active,1392,37654,true
+SUB067,transport_health_planning_067,health,Highlands,professional,2022-10-28,paused,2779,45573,true
+SUB068,utility_climate_monitoring_068,climate,East Plains,enterprise,2023-01-05,trial,0,53492,true
+SUB069,research_marine_response_069,marine,South Coast,standard,2024-04-10,active,1503,61411,true
+SUB070,regional_resilience_analytics_070,resilience,Western Hills,professional,2025-07-15,paused,2890,69330,false
+SUB071,coastal_aviation_logistics_071,aviation,North Coast,enterprise,2026-10-20,trial,6027,77249,true
+SUB072,urban_rail_operations_072,rail,Central Valley,standard,2021-01-25,active,1614,85168,true
+SUB073,national_agriculture_resilience_073,agriculture,Highlands,professional,2022-04-02,paused,2101,93087,true
+SUB074,rural_road_forecasting_074,road,East Plains,enterprise,2023-07-07,trial,5238,101006,true
+SUB075,highland_health_planning_075,health,South Coast,standard,2024-10-12,active,825,108925,false
+SUB076,airport_climate_monitoring_076,climate,Western Hills,professional,2025-01-17,paused,2212,116844,true
+SUB077,transport_marine_response_077,marine,North Coast,enterprise,2026-04-22,trial,5349,124763,true
+SUB078,utility_resilience_analytics_078,resilience,Central Valley,standard,2021-07-27,active,936,132682,true
+SUB079,research_aviation_logistics_079,aviation,Highlands,professional,2022-10-04,paused,2323,140601,true
+SUB080,regional_rail_operations_080,rail,East Plains,enterprise,2023-01-09,trial,0,148520,false
+SUB081,coastal_agriculture_resilience_081,agriculture,South Coast,standard,2024-04-14,active,1047,156439,true
+SUB082,urban_road_forecasting_082,road,Western Hills,professional,2025-07-19,paused,2434,164358,true
+SUB083,national_health_planning_083,health,North Coast,enterprise,2026-10-24,trial,5571,172277,true
+SUB084,rural_climate_monitoring_084,climate,Central Valley,standard,2021-01-01,active,1158,180196,true
+SUB085,highland_marine_response_085,marine,Highlands,professional,2022-04-06,paused,2545,188115,false
+SUB086,airport_resilience_analytics_086,resilience,East Plains,enterprise,2023-07-11,trial,5682,196034,true
+SUB087,transport_aviation_logistics_087,aviation,South Coast,standard,2024-10-16,active,1269,203953,true
+SUB088,utility_rail_operations_088,rail,Western Hills,professional,2025-01-21,paused,2656,211872,true
+SUB089,research_agriculture_resilience_089,agriculture,North Coast,enterprise,2026-04-26,trial,5793,219791,true
+SUB090,regional_road_forecasting_090,road,Central Valley,standard,2021-07-03,active,1380,227710,false
+SUB091,coastal_health_planning_091,health,Highlands,professional,2022-10-08,paused,2767,235629,true
+SUB092,urban_climate_monitoring_092,climate,East Plains,enterprise,2023-01-13,trial,0,243548,true
+SUB093,national_marine_response_093,marine,South Coast,standard,2024-04-18,active,1491,6467,true
+SUB094,rural_resilience_analytics_094,resilience,Western Hills,professional,2025-07-23,paused,2878,14386,true
+SUB095,highland_aviation_logistics_095,aviation,North Coast,enterprise,2026-10-28,trial,6015,22305,false
+SUB096,airport_rail_operations_096,rail,Central Valley,standard,2021-01-05,active,1602,30224,true
+SUB097,transport_agriculture_resilience_097,agriculture,Highlands,professional,2022-04-10,paused,2989,38143,true
+SUB098,utility_road_forecasting_098,road,East Plains,enterprise,2023-07-15,trial,5226,46062,true
+SUB099,research_health_planning_099,health,South Coast,standard,2024-10-20,active,813,53981,true
+SUB100,regional_climate_monitoring_100,climate,Western Hills,professional,2025-01-25,paused,2200,61900,false
+SUB101,coastal_marine_response_101,marine,North Coast,enterprise,2026-04-02,trial,5337,69819,true
+SUB102,urban_resilience_analytics_102,resilience,Central Valley,standard,2021-07-07,active,924,77738,true
+SUB103,national_aviation_logistics_103,aviation,Highlands,professional,2022-10-12,paused,2311,85657,true
+SUB104,rural_rail_operations_104,rail,East Plains,enterprise,2023-01-17,trial,0,93576,true
+SUB105,highland_agriculture_resilience_105,agriculture,South Coast,standard,2024-04-22,active,1035,101495,false
+SUB106,airport_road_forecasting_106,road,Western Hills,professional,2025-07-27,paused,2422,109414,true
+SUB107,transport_health_planning_107,health,North Coast,enterprise,2026-10-04,trial,5559,117333,true
+SUB108,utility_climate_monitoring_108,climate,Central Valley,standard,2021-01-09,active,1146,125252,true
+SUB109,research_marine_response_109,marine,Highlands,professional,2022-04-14,paused,2533,133171,true
+SUB110,regional_resilience_analytics_110,resilience,East Plains,enterprise,2023-07-19,trial,5670,141090,false
+SUB111,coastal_aviation_logistics_111,aviation,South Coast,standard,2024-10-24,active,1257,149009,true
+SUB112,urban_rail_operations_112,rail,Western Hills,professional,2025-01-01,paused,2644,156928,true
+SUB113,national_agriculture_resilience_113,agriculture,North Coast,enterprise,2026-04-06,trial,5781,164847,true
+SUB114,rural_road_forecasting_114,road,Central Valley,standard,2021-07-11,active,1368,172766,true
+SUB115,highland_health_planning_115,health,Highlands,professional,2022-10-16,paused,2755,180685,false
+SUB116,airport_climate_monitoring_116,climate,East Plains,enterprise,2023-01-21,trial,0,188604,true
+SUB117,transport_marine_response_117,marine,South Coast,standard,2024-04-26,active,1479,196523,true
+SUB118,utility_resilience_analytics_118,resilience,Western Hills,professional,2025-07-03,paused,2866,204442,true
+SUB119,research_aviation_logistics_119,aviation,North Coast,enterprise,2026-10-08,trial,6003,212361,true
+SUB120,regional_rail_operations_120,rail,Central Valley,standard,2021-01-13,active,1590,220280,false
+SUB121,coastal_agriculture_resilience_121,agriculture,Highlands,professional,2022-04-18,paused,2977,228199,true
+SUB122,urban_road_forecasting_122,road,East Plains,enterprise,2023-07-23,trial,5214,236118,true
+SUB123,national_health_planning_123,health,South Coast,standard,2024-10-28,active,801,244037,true
+SUB124,rural_climate_monitoring_124,climate,Western Hills,professional,2025-01-05,paused,2188,6956,true
+SUB125,highland_marine_response_125,marine,North Coast,enterprise,2026-04-10,trial,5325,14875,false
+SUB126,airport_resilience_analytics_126,resilience,Central Valley,standard,2021-07-15,active,912,22794,true
+SUB127,transport_aviation_logistics_127,aviation,Highlands,professional,2022-10-20,paused,2299,30713,true
+SUB128,utility_rail_operations_128,rail,East Plains,enterprise,2023-01-25,trial,0,38632,true
+SUB129,research_agriculture_resilience_129,agriculture,South Coast,standard,2024-04-02,active,1023,46551,true
+SUB130,regional_road_forecasting_130,road,Western Hills,professional,2025-07-07,paused,2410,54470,false
+SUB131,coastal_health_planning_131,health,North Coast,enterprise,2026-10-12,trial,5547,62389,true
+SUB132,urban_climate_monitoring_132,climate,Central Valley,standard,2021-01-17,active,1134,70308,true
+SUB133,national_marine_response_133,marine,Highlands,professional,2022-04-22,paused,2521,78227,true
+SUB134,rural_resilience_analytics_134,resilience,East Plains,enterprise,2023-07-27,trial,5658,86146,true
+SUB135,highland_aviation_logistics_135,aviation,South Coast,standard,2024-10-04,active,1245,94065,false
+SUB136,airport_rail_operations_136,rail,Western Hills,professional,2025-01-09,paused,2632,101984,true
+SUB137,transport_agriculture_resilience_137,agriculture,North Coast,enterprise,2026-04-14,trial,5769,109903,true
+SUB138,utility_road_forecasting_138,road,Central Valley,standard,2021-07-19,active,1356,117822,true
+SUB139,research_health_planning_139,health,Highlands,professional,2022-10-24,paused,2743,125741,true
+SUB140,regional_climate_monitoring_140,climate,East Plains,enterprise,2023-01-01,trial,0,133660,false
+SUB141,coastal_marine_response_141,marine,South Coast,standard,2024-04-06,active,1467,141579,true
+SUB142,urban_resilience_analytics_142,resilience,Western Hills,professional,2025-07-11,paused,2854,149498,true
+SUB143,national_aviation_logistics_143,aviation,North Coast,enterprise,2026-10-16,trial,5991,157417,true
+SUB144,rural_rail_operations_144,rail,Central Valley,standard,2021-01-21,active,1578,165336,true
+SUB145,highland_agriculture_resilience_145,agriculture,Highlands,professional,2022-04-26,paused,2965,173255,false
+SUB146,airport_road_forecasting_146,road,East Plains,enterprise,2023-07-03,trial,5202,181174,true
+SUB147,transport_health_planning_147,health,South Coast,standard,2024-10-08,active,789,189093,true
+SUB148,utility_climate_monitoring_148,climate,Western Hills,professional,2025-01-13,paused,2176,197012,true
+SUB149,research_marine_response_149,marine,North Coast,enterprise,2026-04-18,trial,5313,204931,true
+SUB150,regional_resilience_analytics_150,resilience,Central Valley,standard,2021-07-23,active,900,212850,false
+SUB151,coastal_aviation_logistics_151,aviation,Highlands,professional,2022-10-28,paused,2287,220769,true
+SUB152,urban_rail_operations_152,rail,East Plains,enterprise,2023-01-05,trial,0,228688,true
+SUB153,national_agriculture_resilience_153,agriculture,South Coast,standard,2024-04-10,active,1011,236607,true
+SUB154,rural_road_forecasting_154,road,Western Hills,professional,2025-07-15,paused,2398,244526,true
+SUB155,highland_health_planning_155,health,North Coast,enterprise,2026-10-20,trial,5535,7445,false
+SUB156,airport_climate_monitoring_156,climate,Central Valley,standard,2021-01-25,active,1122,15364,true
+SUB157,transport_marine_response_157,marine,Highlands,professional,2022-04-02,paused,2509,23283,true
+SUB158,utility_resilience_analytics_158,resilience,East Plains,enterprise,2023-07-07,trial,5646,31202,true
+SUB159,research_aviation_logistics_159,aviation,South Coast,standard,2024-10-12,active,1233,39121,true
+SUB160,regional_rail_operations_160,rail,Western Hills,professional,2025-01-17,paused,2620,47040,false
+SUB161,coastal_agriculture_resilience_161,agriculture,North Coast,enterprise,2026-04-22,trial,5757,54959,true
+SUB162,urban_road_forecasting_162,road,Central Valley,standard,2021-07-27,active,1344,62878,true
+SUB163,national_health_planning_163,health,Highlands,professional,2022-10-04,paused,2731,70797,true
+SUB164,rural_climate_monitoring_164,climate,East Plains,enterprise,2023-01-09,trial,0,78716,true
+SUB165,highland_marine_response_165,marine,South Coast,standard,2024-04-14,active,1455,86635,false
+SUB166,airport_resilience_analytics_166,resilience,Western Hills,professional,2025-07-19,paused,2842,94554,true
+SUB167,transport_aviation_logistics_167,aviation,North Coast,enterprise,2026-10-24,trial,5979,102473,true
+SUB168,utility_rail_operations_168,rail,Central Valley,standard,2021-01-01,active,1566,110392,true
+SUB169,research_agriculture_resilience_169,agriculture,Highlands,professional,2022-04-06,paused,2953,118311,true
+SUB170,regional_road_forecasting_170,road,East Plains,enterprise,2023-07-11,trial,6090,126230,false
+SUB171,coastal_health_planning_171,health,South Coast,standard,2024-10-16,active,777,134149,true
+SUB172,urban_climate_monitoring_172,climate,Western Hills,professional,2025-01-21,paused,2164,142068,true
+SUB173,national_marine_response_173,marine,North Coast,enterprise,2026-04-26,trial,5301,149987,true
+SUB174,rural_resilience_analytics_174,resilience,Central Valley,standard,2021-07-03,active,888,157906,true
+SUB175,highland_aviation_logistics_175,aviation,Highlands,professional,2022-10-08,paused,2275,165825,false
+SUB176,airport_rail_operations_176,rail,East Plains,enterprise,2023-01-13,trial,0,173744,true
+SUB177,transport_agriculture_resilience_177,agriculture,South Coast,standard,2024-04-18,active,999,181663,true
+SUB178,utility_road_forecasting_178,road,Western Hills,professional,2025-07-23,paused,2386,189582,true
+SUB179,research_health_planning_179,health,North Coast,enterprise,2026-10-28,trial,5523,197501,true
+SUB180,regional_climate_monitoring_180,climate,Central Valley,standard,2021-01-05,active,1110,205420,false
+SUB181,coastal_marine_response_181,marine,Highlands,professional,2022-04-10,paused,2497,213339,true
+SUB182,urban_resilience_analytics_182,resilience,East Plains,enterprise,2023-07-15,trial,5634,221258,true
+SUB183,national_aviation_logistics_183,aviation,South Coast,standard,2024-10-20,active,1221,229177,true
+SUB184,rural_rail_operations_184,rail,Western Hills,professional,2025-01-25,paused,2608,237096,true
+SUB185,highland_agriculture_resilience_185,agriculture,North Coast,enterprise,2026-04-02,trial,5745,245015,false
+SUB186,airport_road_forecasting_186,road,Central Valley,standard,2021-07-07,active,1332,7934,true
+SUB187,transport_health_planning_187,health,Highlands,professional,2022-10-12,paused,2719,15853,true
+SUB188,utility_climate_monitoring_188,climate,East Plains,enterprise,2023-01-17,trial,0,23772,true
+SUB189,research_marine_response_189,marine,South Coast,standard,2024-04-22,active,1443,31691,true
+SUB190,regional_resilience_analytics_190,resilience,Western Hills,professional,2025-07-27,paused,2830,39610,false
+SUB191,coastal_aviation_logistics_191,aviation,North Coast,enterprise,2026-10-04,trial,5967,47529,true
+SUB192,urban_rail_operations_192,rail,Central Valley,standard,2021-01-09,active,1554,55448,true
+SUB193,national_agriculture_resilience_193,agriculture,Highlands,professional,2022-04-14,paused,2941,63367,true
+SUB194,rural_road_forecasting_194,road,East Plains,enterprise,2023-07-19,trial,6078,71286,true
+SUB195,highland_health_planning_195,health,South Coast,standard,2024-10-24,active,765,79205,false
+SUB196,airport_climate_monitoring_196,climate,Western Hills,professional,2025-01-01,paused,2152,87124,true
+SUB197,transport_marine_response_197,marine,North Coast,enterprise,2026-04-06,trial,5289,95043,true
+SUB198,utility_resilience_analytics_198,resilience,Central Valley,standard,2021-07-11,active,876,102962,true
+SUB199,research_aviation_logistics_199,aviation,Highlands,professional,2022-10-16,paused,2263,110881,true
+SUB200,regional_rail_operations_200,rail,East Plains,enterprise,2023-01-21,trial,0,118800,false
+SUB201,coastal_agriculture_resilience_201,agriculture,South Coast,standard,2024-04-26,active,987,126719,true
+SUB202,urban_road_forecasting_202,road,Western Hills,professional,2025-07-03,paused,2374,134638,true
+SUB203,national_health_planning_203,health,North Coast,enterprise,2026-10-08,trial,5511,142557,true
+SUB204,rural_climate_monitoring_204,climate,Central Valley,standard,2021-01-13,active,1098,150476,true
+SUB205,highland_marine_response_205,marine,Highlands,professional,2022-04-18,paused,2485,158395,false
+SUB206,airport_resilience_analytics_206,resilience,East Plains,enterprise,2023-07-23,trial,5622,166314,true
+SUB207,transport_aviation_logistics_207,aviation,South Coast,standard,2024-10-28,active,1209,174233,true
+SUB208,utility_rail_operations_208,rail,Western Hills,professional,2025-01-05,paused,2596,182152,true
+SUB209,research_agriculture_resilience_209,agriculture,North Coast,enterprise,2026-04-10,trial,5733,190071,true
+SUB210,regional_road_forecasting_210,road,Central Valley,standard,2021-07-15,active,1320,197990,false
+SUB211,coastal_health_planning_211,health,Highlands,professional,2022-10-20,paused,2707,205909,true
+SUB212,urban_climate_monitoring_212,climate,East Plains,enterprise,2023-01-25,trial,0,213828,true
+SUB213,national_marine_response_213,marine,South Coast,standard,2024-04-02,active,1431,221747,true
+SUB214,rural_resilience_analytics_214,resilience,Western Hills,professional,2025-07-07,paused,2818,229666,true
+SUB215,highland_aviation_logistics_215,aviation,North Coast,enterprise,2026-10-12,trial,5955,237585,false
+SUB216,airport_rail_operations_216,rail,Central Valley,standard,2021-01-17,active,1542,245504,true
+SUB217,transport_agriculture_resilience_217,agriculture,Highlands,professional,2022-04-22,paused,2929,8423,true
+SUB218,utility_road_forecasting_218,road,East Plains,enterprise,2023-07-27,trial,6066,16342,true
+SUB219,research_health_planning_219,health,South Coast,standard,2024-10-04,active,753,24261,true
+SUB220,regional_climate_monitoring_220,climate,Western Hills,professional,2025-01-09,paused,2140,32180,false
+SUB221,coastal_marine_response_221,marine,North Coast,enterprise,2026-04-14,trial,5277,40099,true
+SUB222,urban_resilience_analytics_222,resilience,Central Valley,standard,2021-07-19,active,864,48018,true
+SUB223,national_aviation_logistics_223,aviation,Highlands,professional,2022-10-24,paused,2251,55937,true
+SUB224,rural_rail_operations_224,rail,East Plains,enterprise,2023-01-01,trial,0,63856,true
+SUB225,highland_agriculture_resilience_225,agriculture,South Coast,standard,2024-04-06,active,975,71775,false
+SUB226,airport_road_forecasting_226,road,Western Hills,professional,2025-07-11,paused,2362,79694,true
+SUB227,transport_health_planning_227,health,North Coast,enterprise,2026-10-16,trial,5499,87613,true
+SUB228,utility_climate_monitoring_228,climate,Central Valley,standard,2021-01-21,active,1086,95532,true
+SUB229,research_marine_response_229,marine,Highlands,professional,2022-04-26,paused,2473,103451,true
+SUB230,regional_resilience_analytics_230,resilience,East Plains,enterprise,2023-07-03,trial,5610,111370,false
+SUB231,coastal_aviation_logistics_231,aviation,South Coast,standard,2024-10-08,active,1197,119289,true
+SUB232,urban_rail_operations_232,rail,Western Hills,professional,2025-01-13,paused,2584,127208,true
+SUB233,national_agriculture_resilience_233,agriculture,North Coast,enterprise,2026-04-18,trial,5721,135127,true
+SUB234,rural_road_forecasting_234,road,Central Valley,standard,2021-07-23,active,1308,143046,true
+SUB235,highland_health_planning_235,health,Highlands,professional,2022-10-28,paused,2695,150965,false
+SUB236,airport_climate_monitoring_236,climate,East Plains,enterprise,2023-01-05,trial,0,158884,true
+SUB237,transport_marine_response_237,marine,South Coast,standard,2024-04-10,active,1419,166803,true
+SUB238,utility_resilience_analytics_238,resilience,Western Hills,professional,2025-07-15,paused,2806,174722,true
+SUB239,research_aviation_logistics_239,aviation,North Coast,enterprise,2026-10-20,trial,5943,182641,true
+SUB240,regional_rail_operations_240,rail,Central Valley,standard,2021-01-25,active,1530,190560,false
+SUB241,coastal_agriculture_resilience_241,agriculture,Highlands,professional,2022-04-02,paused,2917,198479,true
+SUB242,urban_road_forecasting_242,road,East Plains,enterprise,2023-07-07,trial,6054,206398,true
+SUB243,national_health_planning_243,health,South Coast,standard,2024-10-12,active,1641,214317,true
+SUB244,rural_climate_monitoring_244,climate,Western Hills,professional,2025-01-17,paused,2128,222236,true
+SUB245,highland_marine_response_245,marine,North Coast,enterprise,2026-04-22,trial,5265,230155,false
+SUB246,airport_resilience_analytics_246,resilience,Central Valley,standard,2021-07-27,active,852,238074,true
+SUB247,transport_aviation_logistics_247,aviation,Highlands,professional,2022-10-04,paused,2239,245993,true
+SUB248,utility_rail_operations_248,rail,East Plains,enterprise,2023-01-09,trial,0,8912,true
+SUB249,research_agriculture_resilience_249,agriculture,South Coast,standard,2024-04-14,active,963,16831,true
+SUB250,regional_road_forecasting_250,road,Western Hills,professional,2025-07-19,paused,2350,24750,false
+SUB251,coastal_health_planning_251,health,North Coast,enterprise,2026-10-24,trial,5487,32669,true
+SUB252,urban_climate_monitoring_252,climate,Central Valley,standard,2021-01-01,active,1074,40588,true
+SUB253,national_marine_response_253,marine,Highlands,professional,2022-04-06,paused,2461,48507,true
+SUB254,rural_resilience_analytics_254,resilience,East Plains,enterprise,2023-07-11,trial,5598,56426,true
+SUB255,highland_aviation_logistics_255,aviation,South Coast,standard,2024-10-16,active,1185,64345,false
+SUB256,airport_rail_operations_256,rail,Western Hills,professional,2025-01-21,paused,2572,72264,true
+SUB257,transport_agriculture_resilience_257,agriculture,North Coast,enterprise,2026-04-26,trial,5709,80183,true
+SUB258,utility_road_forecasting_258,road,Central Valley,standard,2021-07-03,active,1296,88102,true
+SUB259,research_health_planning_259,health,Highlands,professional,2022-10-08,paused,2683,96021,true
+SUB260,regional_climate_monitoring_260,climate,East Plains,enterprise,2023-01-13,trial,0,103940,false
+SUB261,coastal_marine_response_261,marine,South Coast,standard,2024-04-18,active,1407,111859,true
+SUB262,urban_resilience_analytics_262,resilience,Western Hills,professional,2025-07-23,paused,2794,119778,true
+SUB263,national_aviation_logistics_263,aviation,North Coast,enterprise,2026-10-28,trial,5931,127697,true
+SUB264,rural_rail_operations_264,rail,Central Valley,standard,2021-01-05,active,1518,135616,true
+SUB265,highland_agriculture_resilience_265,agriculture,Highlands,professional,2022-04-10,paused,2905,143535,false
+SUB266,airport_road_forecasting_266,road,East Plains,enterprise,2023-07-15,trial,6042,151454,true
+SUB267,transport_health_planning_267,health,South Coast,standard,2024-10-20,active,1629,159373,true
+SUB268,utility_climate_monitoring_268,climate,Western Hills,professional,2025-01-25,paused,2116,167292,true
+SUB269,research_marine_response_269,marine,North Coast,enterprise,2026-04-02,trial,5253,175211,true
+SUB270,regional_resilience_analytics_270,resilience,Central Valley,standard,2021-07-07,active,840,183130,false
+SUB271,coastal_aviation_logistics_271,aviation,Highlands,professional,2022-10-12,paused,2227,191049,true
+SUB272,urban_rail_operations_272,rail,East Plains,enterprise,2023-01-17,trial,0,198968,true
+SUB273,national_agriculture_resilience_273,agriculture,South Coast,standard,2024-04-22,active,951,206887,true
+SUB274,rural_road_forecasting_274,road,Western Hills,professional,2025-07-27,paused,2338,214806,true
+SUB275,highland_health_planning_275,health,North Coast,enterprise,2026-10-04,trial,5475,222725,false
+SUB276,airport_climate_monitoring_276,climate,Central Valley,standard,2021-01-09,active,1062,230644,true
+SUB277,transport_marine_response_277,marine,Highlands,professional,2022-04-14,paused,2449,238563,true
+SUB278,utility_resilience_analytics_278,resilience,East Plains,enterprise,2023-07-19,trial,5586,246482,true
+SUB279,research_aviation_logistics_279,aviation,South Coast,standard,2024-10-24,active,1173,9401,true
+SUB280,regional_rail_operations_280,rail,Western Hills,professional,2025-01-01,paused,2560,17320,false
+SUB281,coastal_agriculture_resilience_281,agriculture,North Coast,enterprise,2026-04-06,trial,5697,25239,true
+SUB282,urban_road_forecasting_282,road,Central Valley,standard,2021-07-11,active,1284,33158,true
+SUB283,national_health_planning_283,health,Highlands,professional,2022-10-16,paused,2671,41077,true
+SUB284,rural_climate_monitoring_284,climate,East Plains,enterprise,2023-01-21,trial,0,48996,true
+SUB285,highland_marine_response_285,marine,South Coast,standard,2024-04-26,active,1395,56915,false
+SUB286,airport_resilience_analytics_286,resilience,Western Hills,professional,2025-07-03,paused,2782,64834,true
+SUB287,transport_aviation_logistics_287,aviation,North Coast,enterprise,2026-10-08,trial,5919,72753,true
+SUB288,utility_rail_operations_288,rail,Central Valley,standard,2021-01-13,active,1506,80672,true
+SUB289,research_agriculture_resilience_289,agriculture,Highlands,professional,2022-04-18,paused,2893,88591,true
+SUB290,regional_road_forecasting_290,road,East Plains,enterprise,2023-07-23,trial,6030,96510,false
+SUB291,coastal_health_planning_291,health,South Coast,standard,2024-10-28,active,1617,104429,true
+SUB292,urban_climate_monitoring_292,climate,Western Hills,professional,2025-01-05,paused,2104,112348,true
+SUB293,national_marine_response_293,marine,North Coast,enterprise,2026-04-10,trial,5241,120267,true
+SUB294,rural_resilience_analytics_294,resilience,Central Valley,standard,2021-07-15,active,828,128186,true
+SUB295,highland_aviation_logistics_295,aviation,Highlands,professional,2022-10-20,paused,2215,136105,false
+SUB296,airport_rail_operations_296,rail,East Plains,enterprise,2023-01-25,trial,0,144024,true
+SUB297,transport_agriculture_resilience_297,agriculture,South Coast,standard,2024-04-02,active,939,151943,true
+SUB298,utility_road_forecasting_298,road,Western Hills,professional,2025-07-07,paused,2326,159862,true
+SUB299,research_health_planning_299,health,North Coast,enterprise,2026-10-12,trial,5463,167781,true
+SUB300,regional_climate_monitoring_300,climate,Central Valley,standard,2021-01-17,active,1050,175700,false
+SUB301,coastal_marine_response_301,marine,Highlands,professional,2022-04-22,paused,2437,183619,true
+SUB302,urban_resilience_analytics_302,resilience,East Plains,enterprise,2023-07-27,trial,5574,191538,true
+SUB303,national_aviation_logistics_303,aviation,South Coast,standard,2024-10-04,active,1161,199457,true
+SUB304,rural_rail_operations_304,rail,Western Hills,professional,2025-01-09,paused,2548,207376,true
+SUB305,highland_agriculture_resilience_305,agriculture,North Coast,enterprise,2026-04-14,trial,5685,215295,false
+SUB306,airport_road_forecasting_306,road,Central Valley,standard,2021-07-19,active,1272,223214,true
+SUB307,transport_health_planning_307,health,Highlands,professional,2022-10-24,paused,2659,231133,true
+SUB308,utility_climate_monitoring_308,climate,East Plains,enterprise,2023-01-01,trial,0,239052,true
+SUB309,research_marine_response_309,marine,South Coast,standard,2024-04-06,active,1383,246971,true
+SUB310,regional_resilience_analytics_310,resilience,Western Hills,professional,2025-07-11,paused,2770,9890,false
+SUB311,coastal_aviation_logistics_311,aviation,North Coast,enterprise,2026-10-16,trial,5907,17809,true
+SUB312,urban_rail_operations_312,rail,Central Valley,standard,2021-01-21,active,1494,25728,true
+SUB313,national_agriculture_resilience_313,agriculture,Highlands,professional,2022-04-26,paused,2881,33647,true
+SUB314,rural_road_forecasting_314,road,East Plains,enterprise,2023-07-03,trial,6018,41566,true
+SUB315,highland_health_planning_315,health,South Coast,standard,2024-10-08,active,1605,49485,false
+SUB316,airport_climate_monitoring_316,climate,Western Hills,professional,2025-01-13,paused,2992,57404,true
+SUB317,transport_marine_response_317,marine,North Coast,enterprise,2026-04-18,trial,5229,65323,true
+SUB318,utility_resilience_analytics_318,resilience,Central Valley,standard,2021-07-23,active,816,73242,true
+SUB319,research_aviation_logistics_319,aviation,Highlands,professional,2022-10-28,paused,2203,81161,true
+SUB320,regional_rail_operations_320,rail,East Plains,enterprise,2023-01-05,trial,0,89080,false
+SUB321,coastal_agriculture_resilience_321,agriculture,South Coast,standard,2024-04-10,active,927,96999,true
+SUB322,urban_road_forecasting_322,road,Western Hills,professional,2025-07-15,paused,2314,104918,true
+SUB323,national_health_planning_323,health,North Coast,enterprise,2026-10-20,trial,5451,112837,true
+SUB324,rural_climate_monitoring_324,climate,Central Valley,standard,2021-01-25,active,1038,120756,true
+SUB325,highland_marine_response_325,marine,Highlands,professional,2022-04-02,paused,2425,128675,false
+SUB326,airport_resilience_analytics_326,resilience,East Plains,enterprise,2023-07-07,trial,5562,136594,true
+SUB327,transport_aviation_logistics_327,aviation,South Coast,standard,2024-10-12,active,1149,144513,true
+SUB328,utility_rail_operations_328,rail,Western Hills,professional,2025-01-17,paused,2536,152432,true
+SUB329,research_agriculture_resilience_329,agriculture,North Coast,enterprise,2026-04-22,trial,5673,160351,true
+SUB330,regional_road_forecasting_330,road,Central Valley,standard,2021-07-27,active,1260,168270,false
+SUB331,coastal_health_planning_331,health,Highlands,professional,2022-10-04,paused,2647,176189,true
+SUB332,urban_climate_monitoring_332,climate,East Plains,enterprise,2023-01-09,trial,0,184108,true
+SUB333,national_marine_response_333,marine,South Coast,standard,2024-04-14,active,1371,192027,true
+SUB334,rural_resilience_analytics_334,resilience,Western Hills,professional,2025-07-19,paused,2758,199946,true
+SUB335,highland_aviation_logistics_335,aviation,North Coast,enterprise,2026-10-24,trial,5895,207865,false
+SUB336,airport_rail_operations_336,rail,Central Valley,standard,2021-01-01,active,1482,215784,true
+SUB337,transport_agriculture_resilience_337,agriculture,Highlands,professional,2022-04-06,paused,2869,223703,true
+SUB338,utility_road_forecasting_338,road,East Plains,enterprise,2023-07-11,trial,6006,231622,true
+SUB339,research_health_planning_339,health,South Coast,standard,2024-10-16,active,1593,239541,true
+SUB340,regional_climate_monitoring_340,climate,Western Hills,professional,2025-01-21,paused,2980,247460,false
+SUB341,coastal_marine_response_341,marine,North Coast,enterprise,2026-04-26,trial,5217,10379,true
+SUB342,urban_resilience_analytics_342,resilience,Central Valley,standard,2021-07-03,active,804,18298,true
+SUB343,national_aviation_logistics_343,aviation,Highlands,professional,2022-10-08,paused,2191,26217,true
+SUB344,rural_rail_operations_344,rail,East Plains,enterprise,2023-01-13,trial,0,34136,true
+SUB345,highland_agriculture_resilience_345,agriculture,South Coast,standard,2024-04-18,active,915,42055,false
+SUB346,airport_road_forecasting_346,road,Western Hills,professional,2025-07-23,paused,2302,49974,true
+SUB347,transport_health_planning_347,health,North Coast,enterprise,2026-10-28,trial,5439,57893,true
+SUB348,utility_climate_monitoring_348,climate,Central Valley,standard,2021-01-05,active,1026,65812,true
+SUB349,research_marine_response_349,marine,Highlands,professional,2022-04-10,paused,2413,73731,true
+SUB350,regional_resilience_analytics_350,resilience,East Plains,enterprise,2023-07-15,trial,5550,81650,false
+SUB351,coastal_aviation_logistics_351,aviation,South Coast,standard,2024-10-20,active,1137,89569,true
+SUB352,urban_rail_operations_352,rail,Western Hills,professional,2025-01-25,paused,2524,97488,true
+SUB353,national_agriculture_resilience_353,agriculture,North Coast,enterprise,2026-04-02,trial,5661,105407,true
+SUB354,rural_road_forecasting_354,road,Central Valley,standard,2021-07-07,active,1248,113326,true
+SUB355,highland_health_planning_355,health,Highlands,professional,2022-10-12,paused,2635,121245,false
+SUB356,airport_climate_monitoring_356,climate,East Plains,enterprise,2023-01-17,trial,0,129164,true
+SUB357,transport_marine_response_357,marine,South Coast,standard,2024-04-22,active,1359,137083,true
+SUB358,utility_resilience_analytics_358,resilience,Western Hills,professional,2025-07-27,paused,2746,145002,true
+SUB359,research_aviation_logistics_359,aviation,North Coast,enterprise,2026-10-04,trial,5883,152921,true
+SUB360,regional_rail_operations_360,rail,Central Valley,standard,2021-01-09,active,1470,160840,false
+SUB361,coastal_agriculture_resilience_361,agriculture,Highlands,professional,2022-04-14,paused,2857,168759,true
+SUB362,urban_road_forecasting_362,road,East Plains,enterprise,2023-07-19,trial,5994,176678,true
+SUB363,national_health_planning_363,health,South Coast,standard,2024-10-24,active,1581,184597,true
+SUB364,rural_climate_monitoring_364,climate,Western Hills,professional,2025-01-01,paused,2968,192516,true
+SUB365,highland_marine_response_365,marine,North Coast,enterprise,2026-04-06,trial,5205,200435,false
+SUB366,airport_resilience_analytics_366,resilience,Central Valley,standard,2021-07-11,active,792,208354,true
+SUB367,transport_aviation_logistics_367,aviation,Highlands,professional,2022-10-16,paused,2179,216273,true
+SUB368,utility_rail_operations_368,rail,East Plains,enterprise,2023-01-21,trial,0,224192,true
+SUB369,research_agriculture_resilience_369,agriculture,South Coast,standard,2024-04-26,active,903,232111,true
+SUB370,regional_road_forecasting_370,road,Western Hills,professional,2025-07-03,paused,2290,240030,false
+SUB371,coastal_health_planning_371,health,North Coast,enterprise,2026-10-08,trial,5427,247949,true
+SUB372,urban_climate_monitoring_372,climate,Central Valley,standard,2021-01-13,active,1014,10868,true
+SUB373,national_marine_response_373,marine,Highlands,professional,2022-04-18,paused,2401,18787,true
+SUB374,rural_resilience_analytics_374,resilience,East Plains,enterprise,2023-07-23,trial,5538,26706,true
+SUB375,highland_aviation_logistics_375,aviation,South Coast,standard,2024-10-28,active,1125,34625,false
+SUB376,airport_rail_operations_376,rail,Western Hills,professional,2025-01-05,paused,2512,42544,true
+SUB377,transport_agriculture_resilience_377,agriculture,North Coast,enterprise,2026-04-10,trial,5649,50463,true
+SUB378,utility_road_forecasting_378,road,Central Valley,standard,2021-07-15,active,1236,58382,true
+SUB379,research_health_planning_379,health,Highlands,professional,2022-10-20,paused,2623,66301,true
+SUB380,regional_climate_monitoring_380,climate,East Plains,enterprise,2023-01-25,trial,0,74220,false
+SUB381,coastal_marine_response_381,marine,South Coast,standard,2024-04-02,active,1347,82139,true
+SUB382,urban_resilience_analytics_382,resilience,Western Hills,professional,2025-07-07,paused,2734,90058,true
+SUB383,national_aviation_logistics_383,aviation,North Coast,enterprise,2026-10-12,trial,5871,97977,true
+SUB384,rural_rail_operations_384,rail,Central Valley,standard,2021-01-17,active,1458,105896,true
+SUB385,highland_agriculture_resilience_385,agriculture,Highlands,professional,2022-04-22,paused,2845,113815,false
+SUB386,airport_road_forecasting_386,road,East Plains,enterprise,2023-07-27,trial,5982,121734,true
+SUB387,transport_health_planning_387,health,South Coast,standard,2024-10-04,active,1569,129653,true
+SUB388,utility_climate_monitoring_388,climate,Western Hills,professional,2025-01-09,paused,2956,137572,true
+SUB389,research_marine_response_389,marine,North Coast,enterprise,2026-04-14,trial,6093,145491,true
+SUB390,regional_resilience_analytics_390,resilience,Central Valley,standard,2021-07-19,active,780,153410,false
+SUB391,coastal_aviation_logistics_391,aviation,Highlands,professional,2022-10-24,paused,2167,161329,true
+SUB392,urban_rail_operations_392,rail,East Plains,enterprise,2023-01-01,trial,0,169248,true
+SUB393,national_agriculture_resilience_393,agriculture,South Coast,standard,2024-04-06,active,891,177167,true
+SUB394,rural_road_forecasting_394,road,Western Hills,professional,2025-07-11,paused,2278,185086,true
+SUB395,highland_health_planning_395,health,North Coast,enterprise,2026-10-16,trial,5415,193005,false
+SUB396,airport_climate_monitoring_396,climate,Central Valley,standard,2021-01-21,active,1002,200924,true
+SUB397,transport_marine_response_397,marine,Highlands,professional,2022-04-26,paused,2389,208843,true
+SUB398,utility_resilience_analytics_398,resilience,East Plains,enterprise,2023-07-03,trial,5526,216762,true
+SUB399,research_aviation_logistics_399,aviation,South Coast,standard,2024-10-08,active,1113,224681,true
+SUB400,regional_rail_operations_400,rail,Western Hills,professional,2025-01-13,paused,2500,232600,false
+SUB401,coastal_agriculture_resilience_401,agriculture,North Coast,enterprise,2026-04-18,trial,5637,240519,true
+SUB402,urban_road_forecasting_402,road,Central Valley,standard,2021-07-23,active,1224,248438,true
+SUB403,national_health_planning_403,health,Highlands,professional,2022-10-28,paused,2611,11357,true
+SUB404,rural_climate_monitoring_404,climate,East Plains,enterprise,2023-01-05,trial,0,19276,true
+SUB405,highland_marine_response_405,marine,South Coast,standard,2024-04-10,active,1335,27195,false
+SUB406,airport_resilience_analytics_406,resilience,Western Hills,professional,2025-07-15,paused,2722,35114,true
+SUB407,transport_aviation_logistics_407,aviation,North Coast,enterprise,2026-10-20,trial,5859,43033,true
+SUB408,utility_rail_operations_408,rail,Central Valley,standard,2021-01-25,active,1446,50952,true
+SUB409,research_agriculture_resilience_409,agriculture,Highlands,professional,2022-04-02,paused,2833,58871,true
+SUB410,regional_road_forecasting_410,road,East Plains,enterprise,2023-07-07,trial,5970,66790,false
+SUB411,coastal_health_planning_411,health,South Coast,standard,2024-10-12,active,1557,74709,true
+SUB412,urban_climate_monitoring_412,climate,Western Hills,professional,2025-01-17,paused,2944,82628,true
+SUB413,national_marine_response_413,marine,North Coast,enterprise,2026-04-22,trial,6081,90547,true
+SUB414,rural_resilience_analytics_414,resilience,Central Valley,standard,2021-07-27,active,768,98466,true
+SUB415,highland_aviation_logistics_415,aviation,Highlands,professional,2022-10-04,paused,2155,106385,false
+SUB416,airport_rail_operations_416,rail,East Plains,enterprise,2023-01-09,trial,0,114304,true
+SUB417,transport_agriculture_resilience_417,agriculture,South Coast,standard,2024-04-14,active,879,122223,true
+SUB418,utility_road_forecasting_418,road,Western Hills,professional,2025-07-19,paused,2266,130142,true
+SUB419,research_health_planning_419,health,North Coast,enterprise,2026-10-24,trial,5403,138061,true
+SUB420,regional_climate_monitoring_420,climate,Central Valley,standard,2021-01-01,active,990,145980,false
+SUB421,coastal_marine_response_421,marine,Highlands,professional,2022-04-06,paused,2377,153899,true
+SUB422,urban_resilience_analytics_422,resilience,East Plains,enterprise,2023-07-11,trial,5514,161818,true
+SUB423,national_aviation_logistics_423,aviation,South Coast,standard,2024-10-16,active,1101,169737,true
+SUB424,rural_rail_operations_424,rail,Western Hills,professional,2025-01-21,paused,2488,177656,true
+SUB425,highland_agriculture_resilience_425,agriculture,North Coast,enterprise,2026-04-26,trial,5625,185575,false
+SUB426,airport_road_forecasting_426,road,Central Valley,standard,2021-07-03,active,1212,193494,true
+SUB427,transport_health_planning_427,health,Highlands,professional,2022-10-08,paused,2599,201413,true
+SUB428,utility_climate_monitoring_428,climate,East Plains,enterprise,2023-01-13,trial,0,209332,true
+SUB429,research_marine_response_429,marine,South Coast,standard,2024-04-18,active,1323,217251,true
+SUB430,regional_resilience_analytics_430,resilience,Western Hills,professional,2025-07-23,paused,2710,225170,false
+SUB431,coastal_aviation_logistics_431,aviation,North Coast,enterprise,2026-10-28,trial,5847,233089,true
+SUB432,urban_rail_operations_432,rail,Central Valley,standard,2021-01-05,active,1434,241008,true
+SUB433,national_agriculture_resilience_433,agriculture,Highlands,professional,2022-04-10,paused,2821,248927,true
+SUB434,rural_road_forecasting_434,road,East Plains,enterprise,2023-07-15,trial,5958,11846,true
+SUB435,highland_health_planning_435,health,South Coast,standard,2024-10-20,active,1545,19765,false
+SUB436,airport_climate_monitoring_436,climate,Western Hills,professional,2025-01-25,paused,2932,27684,true
+SUB437,transport_marine_response_437,marine,North Coast,enterprise,2026-04-02,trial,6069,35603,true
+SUB438,utility_resilience_analytics_438,resilience,Central Valley,standard,2021-07-07,active,756,43522,true
+SUB439,research_aviation_logistics_439,aviation,Highlands,professional,2022-10-12,paused,2143,51441,true
+SUB440,regional_rail_operations_440,rail,East Plains,enterprise,2023-01-17,trial,0,59360,false
+SUB441,coastal_agriculture_resilience_441,agriculture,South Coast,standard,2024-04-22,active,867,67279,true
+SUB442,urban_road_forecasting_442,road,Western Hills,professional,2025-07-27,paused,2254,75198,true
+SUB443,national_health_planning_443,health,North Coast,enterprise,2026-10-04,trial,5391,83117,true
+SUB444,rural_climate_monitoring_444,climate,Central Valley,standard,2021-01-09,active,978,91036,true
+SUB445,highland_marine_response_445,marine,Highlands,professional,2022-04-14,paused,2365,98955,false
+SUB446,airport_resilience_analytics_446,resilience,East Plains,enterprise,2023-07-19,trial,5502,106874,true
+SUB447,transport_aviation_logistics_447,aviation,South Coast,standard,2024-10-24,active,1089,114793,true
+SUB448,utility_rail_operations_448,rail,Western Hills,professional,2025-01-01,paused,2476,122712,true
+SUB449,research_agriculture_resilience_449,agriculture,North Coast,enterprise,2026-04-06,trial,5613,130631,true
+SUB450,regional_road_forecasting_450,road,Central Valley,standard,2021-07-11,active,1200,138550,false
+SUB451,coastal_health_planning_451,health,Highlands,professional,2022-10-16,paused,2587,146469,true
+SUB452,urban_climate_monitoring_452,climate,East Plains,enterprise,2023-01-21,trial,0,154388,true
+SUB453,national_marine_response_453,marine,South Coast,standard,2024-04-26,active,1311,162307,true
+SUB454,rural_resilience_analytics_454,resilience,Western Hills,professional,2025-07-03,paused,2698,170226,true
+SUB455,highland_aviation_logistics_455,aviation,North Coast,enterprise,2026-10-08,trial,5835,178145,false
+SUB456,airport_rail_operations_456,rail,Central Valley,standard,2021-01-13,active,1422,186064,true
+SUB457,transport_agriculture_resilience_457,agriculture,Highlands,professional,2022-04-18,paused,2809,193983,true
+SUB458,utility_road_forecasting_458,road,East Plains,enterprise,2023-07-23,trial,5946,201902,true
+SUB459,research_health_planning_459,health,South Coast,standard,2024-10-28,active,1533,209821,true
+SUB460,regional_climate_monitoring_460,climate,Western Hills,professional,2025-01-05,paused,2920,217740,false
+SUB461,coastal_marine_response_461,marine,North Coast,enterprise,2026-04-10,trial,6057,225659,true
+SUB462,urban_resilience_analytics_462,resilience,Central Valley,standard,2021-07-15,active,1644,233578,true
+SUB463,national_aviation_logistics_463,aviation,Highlands,professional,2022-10-20,paused,2131,241497,true
+SUB464,rural_rail_operations_464,rail,East Plains,enterprise,2023-01-25,trial,0,249416,true
+SUB465,highland_agriculture_resilience_465,agriculture,South Coast,standard,2024-04-02,active,855,12335,false
+SUB466,airport_road_forecasting_466,road,Western Hills,professional,2025-07-07,paused,2242,20254,true
+SUB467,transport_health_planning_467,health,North Coast,enterprise,2026-10-12,trial,5379,28173,true
+SUB468,utility_climate_monitoring_468,climate,Central Valley,standard,2021-01-17,active,966,36092,true
+SUB469,research_marine_response_469,marine,Highlands,professional,2022-04-22,paused,2353,44011,true
+SUB470,regional_resilience_analytics_470,resilience,East Plains,enterprise,2023-07-27,trial,5490,51930,false
+SUB471,coastal_aviation_logistics_471,aviation,South Coast,standard,2024-10-04,active,1077,59849,true
+SUB472,urban_rail_operations_472,rail,Western Hills,professional,2025-01-09,paused,2464,67768,true
+SUB473,national_agriculture_resilience_473,agriculture,North Coast,enterprise,2026-04-14,trial,5601,75687,true
+SUB474,rural_road_forecasting_474,road,Central Valley,standard,2021-07-19,active,1188,83606,true
+SUB475,highland_health_planning_475,health,Highlands,professional,2022-10-24,paused,2575,91525,false
+SUB476,airport_climate_monitoring_476,climate,East Plains,enterprise,2023-01-01,trial,0,99444,true
+SUB477,transport_marine_response_477,marine,South Coast,standard,2024-04-06,active,1299,107363,true
+SUB478,utility_resilience_analytics_478,resilience,Western Hills,professional,2025-07-11,paused,2686,115282,true
+SUB479,research_aviation_logistics_479,aviation,North Coast,enterprise,2026-10-16,trial,5823,123201,true
+SUB480,regional_rail_operations_480,rail,Central Valley,standard,2021-01-21,active,1410,131120,false
+SUB481,coastal_agriculture_resilience_481,agriculture,Highlands,professional,2022-04-26,paused,2797,139039,true
+SUB482,urban_road_forecasting_482,road,East Plains,enterprise,2023-07-03,trial,5934,146958,true
+SUB483,national_health_planning_483,health,South Coast,standard,2024-10-08,active,1521,154877,true
+SUB484,rural_climate_monitoring_484,climate,Western Hills,professional,2025-01-13,paused,2908,162796,true
+SUB485,highland_marine_response_485,marine,North Coast,enterprise,2026-04-18,trial,6045,170715,false
+SUB486,airport_resilience_analytics_486,resilience,Central Valley,standard,2021-07-23,active,1632,178634,true
+SUB487,transport_aviation_logistics_487,aviation,Highlands,professional,2022-10-28,paused,2119,186553,true
+SUB488,utility_rail_operations_488,rail,East Plains,enterprise,2023-01-05,trial,0,194472,true
+SUB489,research_agriculture_resilience_489,agriculture,South Coast,standard,2024-04-10,active,843,202391,true
+SUB490,regional_road_forecasting_490,road,Western Hills,professional,2025-07-15,paused,2230,210310,false
+SUB491,coastal_health_planning_491,health,North Coast,enterprise,2026-10-20,trial,5367,218229,true
+SUB492,urban_climate_monitoring_492,climate,Central Valley,standard,2021-01-25,active,954,226148,true
+SUB493,national_marine_response_493,marine,Highlands,professional,2022-04-02,paused,2341,234067,true
+SUB494,rural_resilience_analytics_494,resilience,East Plains,enterprise,2023-07-07,trial,5478,241986,true
+SUB495,highland_aviation_logistics_495,aviation,South Coast,standard,2024-10-12,active,1065,249905,false
+SUB496,airport_rail_operations_496,rail,Western Hills,professional,2025-01-17,paused,2452,12824,true
+SUB497,transport_agriculture_resilience_497,agriculture,North Coast,enterprise,2026-04-22,trial,5589,20743,true
+SUB498,utility_road_forecasting_498,road,Central Valley,standard,2021-07-27,active,1176,28662,true
+SUB499,research_health_planning_499,health,Highlands,professional,2022-10-04,paused,2563,36581,true
+SUB500,regional_climate_monitoring_500,climate,East Plains,enterprise,2023-01-09,trial,0,44500,false
+SUB501,coastal_marine_response_501,marine,South Coast,standard,2024-04-14,active,1287,52419,true
+SUB502,urban_resilience_analytics_502,resilience,Western Hills,professional,2025-07-19,paused,2674,60338,true
+SUB503,national_aviation_logistics_503,aviation,North Coast,enterprise,2026-10-24,trial,5811,68257,true
+SUB504,rural_rail_operations_504,rail,Central Valley,standard,2021-01-01,active,1398,76176,true
+SUB505,highland_agriculture_resilience_505,agriculture,Highlands,professional,2022-04-06,paused,2785,84095,false
+SUB506,airport_road_forecasting_506,road,East Plains,enterprise,2023-07-11,trial,5922,92014,true
+SUB507,transport_health_planning_507,health,South Coast,standard,2024-10-16,active,1509,99933,true
+SUB508,utility_climate_monitoring_508,climate,Western Hills,professional,2025-01-21,paused,2896,107852,true
+SUB509,research_marine_response_509,marine,North Coast,enterprise,2026-04-26,trial,6033,115771,true
+SUB510,regional_resilience_analytics_510,resilience,Central Valley,standard,2021-07-03,active,1620,123690,false
+SUB511,coastal_aviation_logistics_511,aviation,Highlands,professional,2022-10-08,paused,2107,131609,true
+SUB512,urban_rail_operations_512,rail,East Plains,enterprise,2023-01-13,trial,0,139528,true
+SUB513,national_agriculture_resilience_513,agriculture,South Coast,standard,2024-04-18,active,831,147447,true
+SUB514,rural_road_forecasting_514,road,Western Hills,professional,2025-07-23,paused,2218,155366,true
+SUB515,highland_health_planning_515,health,North Coast,enterprise,2026-10-28,trial,5355,163285,false
+SUB516,airport_climate_monitoring_516,climate,Central Valley,standard,2021-01-05,active,942,171204,true
+SUB517,transport_marine_response_517,marine,Highlands,professional,2022-04-10,paused,2329,179123,true
+SUB518,utility_resilience_analytics_518,resilience,East Plains,enterprise,2023-07-15,trial,5466,187042,true
+SUB519,research_aviation_logistics_519,aviation,South Coast,standard,2024-10-20,active,1053,194961,true
+SUB520,regional_rail_operations_520,rail,Western Hills,professional,2025-01-25,paused,2440,202880,false
+SUB521,coastal_agriculture_resilience_521,agriculture,North Coast,enterprise,2026-04-02,trial,5577,210799,true
+SUB522,urban_road_forecasting_522,road,Central Valley,standard,2021-07-07,active,1164,218718,true
+SUB523,national_health_planning_523,health,Highlands,professional,2022-10-12,paused,2551,226637,true
+SUB524,rural_climate_monitoring_524,climate,East Plains,enterprise,2023-01-17,trial,0,234556,true
+SUB525,highland_marine_response_525,marine,South Coast,standard,2024-04-22,active,1275,242475,false
+SUB526,airport_resilience_analytics_526,resilience,Western Hills,professional,2025-07-27,paused,2662,5394,true
+SUB527,transport_aviation_logistics_527,aviation,North Coast,enterprise,2026-10-04,trial,5799,13313,true
+SUB528,utility_rail_operations_528,rail,Central Valley,standard,2021-01-09,active,1386,21232,true
+SUB529,research_agriculture_resilience_529,agriculture,Highlands,professional,2022-04-14,paused,2773,29151,true
+SUB530,regional_road_forecasting_530,road,East Plains,enterprise,2023-07-19,trial,5910,37070,false
+SUB531,coastal_health_planning_531,health,South Coast,standard,2024-10-24,active,1497,44989,true
+SUB532,urban_climate_monitoring_532,climate,Western Hills,professional,2025-01-01,paused,2884,52908,true
+SUB533,national_marine_response_533,marine,North Coast,enterprise,2026-04-06,trial,6021,60827,true
+SUB534,rural_resilience_analytics_534,resilience,Central Valley,standard,2021-07-11,active,1608,68746,true
+SUB535,highland_aviation_logistics_535,aviation,Highlands,professional,2022-10-16,paused,2995,76665,false
+SUB536,airport_rail_operations_536,rail,East Plains,enterprise,2023-01-21,trial,0,84584,true
+SUB537,transport_agriculture_resilience_537,agriculture,South Coast,standard,2024-04-26,active,819,92503,true
+SUB538,utility_road_forecasting_538,road,Western Hills,professional,2025-07-03,paused,2206,100422,true
+SUB539,research_health_planning_539,health,North Coast,enterprise,2026-10-08,trial,5343,108341,true
+SUB540,regional_climate_monitoring_540,climate,Central Valley,standard,2021-01-13,active,930,116260,false
+SUB541,coastal_marine_response_541,marine,Highlands,professional,2022-04-18,paused,2317,124179,true
+SUB542,urban_resilience_analytics_542,resilience,East Plains,enterprise,2023-07-23,trial,5454,132098,true
+SUB543,national_aviation_logistics_543,aviation,South Coast,standard,2024-10-28,active,1041,140017,true
+SUB544,rural_rail_operations_544,rail,Western Hills,professional,2025-01-05,paused,2428,147936,true
+SUB545,highland_agriculture_resilience_545,agriculture,North Coast,enterprise,2026-04-10,trial,5565,155855,false
+SUB546,airport_road_forecasting_546,road,Central Valley,standard,2021-07-15,active,1152,163774,true
+SUB547,transport_health_planning_547,health,Highlands,professional,2022-10-20,paused,2539,171693,true
+SUB548,utility_climate_monitoring_548,climate,East Plains,enterprise,2023-01-25,trial,0,179612,true
+SUB549,research_marine_response_549,marine,South Coast,standard,2024-04-02,active,1263,187531,true
+SUB550,regional_resilience_analytics_550,resilience,Western Hills,professional,2025-07-07,paused,2650,195450,false
+SUB551,coastal_aviation_logistics_551,aviation,North Coast,enterprise,2026-10-12,trial,5787,203369,true
+SUB552,urban_rail_operations_552,rail,Central Valley,standard,2021-01-17,active,1374,211288,true
+SUB553,national_agriculture_resilience_553,agriculture,Highlands,professional,2022-04-22,paused,2761,219207,true
+SUB554,rural_road_forecasting_554,road,East Plains,enterprise,2023-07-27,trial,5898,227126,true
+SUB555,highland_health_planning_555,health,South Coast,standard,2024-10-04,active,1485,235045,false
+SUB556,airport_climate_monitoring_556,climate,Western Hills,professional,2025-01-09,paused,2872,242964,true
+SUB557,transport_marine_response_557,marine,North Coast,enterprise,2026-04-14,trial,6009,5883,true
+SUB558,utility_resilience_analytics_558,resilience,Central Valley,standard,2021-07-19,active,1596,13802,true
+SUB559,research_aviation_logistics_559,aviation,Highlands,professional,2022-10-24,paused,2983,21721,true
+SUB560,regional_rail_operations_560,rail,East Plains,enterprise,2023-01-01,trial,0,29640,false
+SUB561,coastal_agriculture_resilience_561,agriculture,South Coast,standard,2024-04-06,active,807,37559,true
+SUB562,urban_road_forecasting_562,road,Western Hills,professional,2025-07-11,paused,2194,45478,true
+SUB563,national_health_planning_563,health,North Coast,enterprise,2026-10-16,trial,5331,53397,true
+SUB564,rural_climate_monitoring_564,climate,Central Valley,standard,2021-01-21,active,918,61316,true
+SUB565,highland_marine_response_565,marine,Highlands,professional,2022-04-26,paused,2305,69235,false
+SUB566,airport_resilience_analytics_566,resilience,East Plains,enterprise,2023-07-03,trial,5442,77154,true
+SUB567,transport_aviation_logistics_567,aviation,South Coast,standard,2024-10-08,active,1029,85073,true
+SUB568,utility_rail_operations_568,rail,Western Hills,professional,2025-01-13,paused,2416,92992,true
+SUB569,research_agriculture_resilience_569,agriculture,North Coast,enterprise,2026-04-18,trial,5553,100911,true
+SUB570,regional_road_forecasting_570,road,Central Valley,standard,2021-07-23,active,1140,108830,false
+SUB571,coastal_health_planning_571,health,Highlands,professional,2022-10-28,paused,2527,116749,true
+SUB572,urban_climate_monitoring_572,climate,East Plains,enterprise,2023-01-05,trial,0,124668,true
+SUB573,national_marine_response_573,marine,South Coast,standard,2024-04-10,active,1251,132587,true
+SUB574,rural_resilience_analytics_574,resilience,Western Hills,professional,2025-07-15,paused,2638,140506,true
+SUB575,highland_aviation_logistics_575,aviation,North Coast,enterprise,2026-10-20,trial,5775,148425,false
+SUB576,airport_rail_operations_576,rail,Central Valley,standard,2021-01-25,active,1362,156344,true
+SUB577,transport_agriculture_resilience_577,agriculture,Highlands,professional,2022-04-02,paused,2749,164263,true
+SUB578,utility_road_forecasting_578,road,East Plains,enterprise,2023-07-07,trial,5886,172182,true
+SUB579,research_health_planning_579,health,South Coast,standard,2024-10-12,active,1473,180101,true
+SUB580,regional_climate_monitoring_580,climate,Western Hills,professional,2025-01-17,paused,2860,188020,false
+SUB581,coastal_marine_response_581,marine,North Coast,enterprise,2026-04-22,trial,5997,195939,true
+SUB582,urban_resilience_analytics_582,resilience,Central Valley,standard,2021-07-27,active,1584,203858,true
+SUB583,national_aviation_logistics_583,aviation,Highlands,professional,2022-10-04,paused,2971,211777,true
+SUB584,rural_rail_operations_584,rail,East Plains,enterprise,2023-01-09,trial,0,219696,true
+SUB585,highland_agriculture_resilience_585,agriculture,South Coast,standard,2024-04-14,active,795,227615,false
+SUB586,airport_road_forecasting_586,road,Western Hills,professional,2025-07-19,paused,2182,235534,true
+SUB587,transport_health_planning_587,health,North Coast,enterprise,2026-10-24,trial,5319,243453,true
+SUB588,utility_climate_monitoring_588,climate,Central Valley,standard,2021-01-01,active,906,6372,true
+SUB589,research_marine_response_589,marine,Highlands,professional,2022-04-06,paused,2293,14291,true
+SUB590,regional_resilience_analytics_590,resilience,East Plains,enterprise,2023-07-11,trial,5430,22210,false
+SUB591,coastal_aviation_logistics_591,aviation,South Coast,standard,2024-10-16,active,1017,30129,true
+SUB592,urban_rail_operations_592,rail,Western Hills,professional,2025-01-21,paused,2404,38048,true
+SUB593,national_agriculture_resilience_593,agriculture,North Coast,enterprise,2026-04-26,trial,5541,45967,true
+SUB594,rural_road_forecasting_594,road,Central Valley,standard,2021-07-03,active,1128,53886,true
+SUB595,highland_health_planning_595,health,Highlands,professional,2022-10-08,paused,2515,61805,false
+SUB596,airport_climate_monitoring_596,climate,East Plains,enterprise,2023-01-13,trial,0,69724,true
+SUB597,transport_marine_response_597,marine,South Coast,standard,2024-04-18,active,1239,77643,true
+SUB598,utility_resilience_analytics_598,resilience,Western Hills,professional,2025-07-23,paused,2626,85562,true
+SUB599,research_aviation_logistics_599,aviation,North Coast,enterprise,2026-10-28,trial,5763,93481,true
+SUB600,regional_rail_operations_600,rail,Central Valley,standard,2021-01-05,active,1350,101400,false
+SUB601,coastal_agriculture_resilience_601,agriculture,Highlands,professional,2022-04-10,paused,2737,109319,true
+SUB602,urban_road_forecasting_602,road,East Plains,enterprise,2023-07-15,trial,5874,117238,true
+SUB603,national_health_planning_603,health,South Coast,standard,2024-10-20,active,1461,125157,true
+SUB604,rural_climate_monitoring_604,climate,Western Hills,professional,2025-01-25,paused,2848,133076,true
+SUB605,highland_marine_response_605,marine,North Coast,enterprise,2026-04-02,trial,5985,140995,false
+SUB606,airport_resilience_analytics_606,resilience,Central Valley,standard,2021-07-07,active,1572,148914,true
+SUB607,transport_aviation_logistics_607,aviation,Highlands,professional,2022-10-12,paused,2959,156833,true
+SUB608,utility_rail_operations_608,rail,East Plains,enterprise,2023-01-17,trial,0,164752,true
+SUB609,research_agriculture_resilience_609,agriculture,South Coast,standard,2024-04-22,active,783,172671,true
+SUB610,regional_road_forecasting_610,road,Western Hills,professional,2025-07-27,paused,2170,180590,false
+SUB611,coastal_health_planning_611,health,North Coast,enterprise,2026-10-04,trial,5307,188509,true
+SUB612,urban_climate_monitoring_612,climate,Central Valley,standard,2021-01-09,active,894,196428,true
+SUB613,national_marine_response_613,marine,Highlands,professional,2022-04-14,paused,2281,204347,true
+SUB614,rural_resilience_analytics_614,resilience,East Plains,enterprise,2023-07-19,trial,5418,212266,true
+SUB615,highland_aviation_logistics_615,aviation,South Coast,standard,2024-10-24,active,1005,220185,false
+SUB616,airport_rail_operations_616,rail,Western Hills,professional,2025-01-01,paused,2392,228104,true
+SUB617,transport_agriculture_resilience_617,agriculture,North Coast,enterprise,2026-04-06,trial,5529,236023,true
+SUB618,utility_road_forecasting_618,road,Central Valley,standard,2021-07-11,active,1116,243942,true
+SUB619,research_health_planning_619,health,Highlands,professional,2022-10-16,paused,2503,6861,true
+SUB620,regional_climate_monitoring_620,climate,East Plains,enterprise,2023-01-21,trial,0,14780,false
+SUB621,coastal_marine_response_621,marine,South Coast,standard,2024-04-26,active,1227,22699,true
+SUB622,urban_resilience_analytics_622,resilience,Western Hills,professional,2025-07-03,paused,2614,30618,true
+SUB623,national_aviation_logistics_623,aviation,North Coast,enterprise,2026-10-08,trial,5751,38537,true
+SUB624,rural_rail_operations_624,rail,Central Valley,standard,2021-01-13,active,1338,46456,true
+SUB625,highland_agriculture_resilience_625,agriculture,Highlands,professional,2022-04-18,paused,2725,54375,false
+SUB626,airport_road_forecasting_626,road,East Plains,enterprise,2023-07-23,trial,5862,62294,true
+SUB627,transport_health_planning_627,health,South Coast,standard,2024-10-28,active,1449,70213,true
+SUB628,utility_climate_monitoring_628,climate,Western Hills,professional,2025-01-05,paused,2836,78132,true
+SUB629,research_marine_response_629,marine,North Coast,enterprise,2026-04-10,trial,5973,86051,true
+SUB630,regional_resilience_analytics_630,resilience,Central Valley,standard,2021-07-15,active,1560,93970,false
+SUB631,coastal_aviation_logistics_631,aviation,Highlands,professional,2022-10-20,paused,2947,101889,true
+SUB632,urban_rail_operations_632,rail,East Plains,enterprise,2023-01-25,trial,0,109808,true
+SUB633,national_agriculture_resilience_633,agriculture,South Coast,standard,2024-04-02,active,771,117727,true
+SUB634,rural_road_forecasting_634,road,Western Hills,professional,2025-07-07,paused,2158,125646,true
+SUB635,highland_health_planning_635,health,North Coast,enterprise,2026-10-12,trial,5295,133565,false
+SUB636,airport_climate_monitoring_636,climate,Central Valley,standard,2021-01-17,active,882,141484,true
+SUB637,transport_marine_response_637,marine,Highlands,professional,2022-04-22,paused,2269,149403,true
+SUB638,utility_resilience_analytics_638,resilience,East Plains,enterprise,2023-07-27,trial,5406,157322,true
+SUB639,research_aviation_logistics_639,aviation,South Coast,standard,2024-10-04,active,993,165241,true
+SUB640,regional_rail_operations_640,rail,Western Hills,professional,2025-01-09,paused,2380,173160,false
+SUB641,coastal_agriculture_resilience_641,agriculture,North Coast,enterprise,2026-04-14,trial,5517,181079,true
+SUB642,urban_road_forecasting_642,road,Central Valley,standard,2021-07-19,active,1104,188998,true
+SUB643,national_health_planning_643,health,Highlands,professional,2022-10-24,paused,2491,196917,true
+SUB644,rural_climate_monitoring_644,climate,East Plains,enterprise,2023-01-01,trial,0,204836,true
+SUB645,highland_marine_response_645,marine,South Coast,standard,2024-04-06,active,1215,212755,false
+SUB646,airport_resilience_analytics_646,resilience,Western Hills,professional,2025-07-11,paused,2602,220674,true
+SUB647,transport_aviation_logistics_647,aviation,North Coast,enterprise,2026-10-16,trial,5739,228593,true
+SUB648,utility_rail_operations_648,rail,Central Valley,standard,2021-01-21,active,1326,236512,true
+SUB649,research_agriculture_resilience_649,agriculture,Highlands,professional,2022-04-26,paused,2713,244431,true
+SUB650,regional_road_forecasting_650,road,East Plains,enterprise,2023-07-03,trial,5850,7350,false
+SUB651,coastal_health_planning_651,health,South Coast,standard,2024-10-08,active,1437,15269,true
+SUB652,urban_climate_monitoring_652,climate,Western Hills,professional,2025-01-13,paused,2824,23188,true
+SUB653,national_marine_response_653,marine,North Coast,enterprise,2026-04-18,trial,5961,31107,true
+SUB654,rural_resilience_analytics_654,resilience,Central Valley,standard,2021-07-23,active,1548,39026,true
+SUB655,highland_aviation_logistics_655,aviation,Highlands,professional,2022-10-28,paused,2935,46945,false
+SUB656,airport_rail_operations_656,rail,East Plains,enterprise,2023-01-05,trial,0,54864,true
+SUB657,transport_agriculture_resilience_657,agriculture,South Coast,standard,2024-04-10,active,759,62783,true
+SUB658,utility_road_forecasting_658,road,Western Hills,professional,2025-07-15,paused,2146,70702,true
+SUB659,research_health_planning_659,health,North Coast,enterprise,2026-10-20,trial,5283,78621,true
+SUB660,regional_climate_monitoring_660,climate,Central Valley,standard,2021-01-25,active,870,86540,false
+SUB661,coastal_marine_response_661,marine,Highlands,professional,2022-04-02,paused,2257,94459,true
+SUB662,urban_resilience_analytics_662,resilience,East Plains,enterprise,2023-07-07,trial,5394,102378,true
+SUB663,national_aviation_logistics_663,aviation,South Coast,standard,2024-10-12,active,981,110297,true
+SUB664,rural_rail_operations_664,rail,Western Hills,professional,2025-01-17,paused,2368,118216,true
+SUB665,highland_agriculture_resilience_665,agriculture,North Coast,enterprise,2026-04-22,trial,5505,126135,false
+SUB666,airport_road_forecasting_666,road,Central Valley,standard,2021-07-27,active,1092,134054,true
+SUB667,transport_health_planning_667,health,Highlands,professional,2022-10-04,paused,2479,141973,true
+SUB668,utility_climate_monitoring_668,climate,East Plains,enterprise,2023-01-09,trial,0,149892,true
+SUB669,research_marine_response_669,marine,South Coast,standard,2024-04-14,active,1203,157811,true
+SUB670,regional_resilience_analytics_670,resilience,Western Hills,professional,2025-07-19,paused,2590,165730,false
+SUB671,coastal_aviation_logistics_671,aviation,North Coast,enterprise,2026-10-24,trial,5727,173649,true
+SUB672,urban_rail_operations_672,rail,Central Valley,standard,2021-01-01,active,1314,181568,true
+SUB673,national_agriculture_resilience_673,agriculture,Highlands,professional,2022-04-06,paused,2701,189487,true
+SUB674,rural_road_forecasting_674,road,East Plains,enterprise,2023-07-11,trial,5838,197406,true
+SUB675,highland_health_planning_675,health,South Coast,standard,2024-10-16,active,1425,205325,false
+SUB676,airport_climate_monitoring_676,climate,Western Hills,professional,2025-01-21,paused,2812,213244,true
+SUB677,transport_marine_response_677,marine,North Coast,enterprise,2026-04-26,trial,5949,221163,true
+SUB678,utility_resilience_analytics_678,resilience,Central Valley,standard,2021-07-03,active,1536,229082,true
+SUB679,research_aviation_logistics_679,aviation,Highlands,professional,2022-10-08,paused,2923,237001,true
+SUB680,regional_rail_operations_680,rail,East Plains,enterprise,2023-01-13,trial,0,244920,false
+SUB681,coastal_agriculture_resilience_681,agriculture,South Coast,standard,2024-04-18,active,1647,7839,true
+SUB682,urban_road_forecasting_682,road,Western Hills,professional,2025-07-23,paused,2134,15758,true
+SUB683,national_health_planning_683,health,North Coast,enterprise,2026-10-28,trial,5271,23677,true
+SUB684,rural_climate_monitoring_684,climate,Central Valley,standard,2021-01-05,active,858,31596,true
+SUB685,highland_marine_response_685,marine,Highlands,professional,2022-04-10,paused,2245,39515,false
+SUB686,airport_resilience_analytics_686,resilience,East Plains,enterprise,2023-07-15,trial,5382,47434,true
+SUB687,transport_aviation_logistics_687,aviation,South Coast,standard,2024-10-20,active,969,55353,true
+SUB688,utility_rail_operations_688,rail,Western Hills,professional,2025-01-25,paused,2356,63272,true
+SUB689,research_agriculture_resilience_689,agriculture,North Coast,enterprise,2026-04-02,trial,5493,71191,true
+SUB690,regional_road_forecasting_690,road,Central Valley,standard,2021-07-07,active,1080,79110,false
+SUB691,coastal_health_planning_691,health,Highlands,professional,2022-10-12,paused,2467,87029,true
+SUB692,urban_climate_monitoring_692,climate,East Plains,enterprise,2023-01-17,trial,0,94948,true
+SUB693,national_marine_response_693,marine,South Coast,standard,2024-04-22,active,1191,102867,true
+SUB694,rural_resilience_analytics_694,resilience,Western Hills,professional,2025-07-27,paused,2578,110786,true
+SUB695,highland_aviation_logistics_695,aviation,North Coast,enterprise,2026-10-04,trial,5715,118705,false
+SUB696,airport_rail_operations_696,rail,Central Valley,standard,2021-01-09,active,1302,126624,true
+SUB697,transport_agriculture_resilience_697,agriculture,Highlands,professional,2022-04-14,paused,2689,134543,true
+SUB698,utility_road_forecasting_698,road,East Plains,enterprise,2023-07-19,trial,5826,142462,true
+SUB699,research_health_planning_699,health,South Coast,standard,2024-10-24,active,1413,150381,true
+SUB700,regional_climate_monitoring_700,climate,Western Hills,professional,2025-01-01,paused,2800,158300,false
+SUB701,coastal_marine_response_701,marine,North Coast,enterprise,2026-04-06,trial,5937,166219,true
+SUB702,urban_resilience_analytics_702,resilience,Central Valley,standard,2021-07-11,active,1524,174138,true
+SUB703,national_aviation_logistics_703,aviation,Highlands,professional,2022-10-16,paused,2911,182057,true
+SUB704,rural_rail_operations_704,rail,East Plains,enterprise,2023-01-21,trial,0,189976,true
+SUB705,highland_agriculture_resilience_705,agriculture,South Coast,standard,2024-04-26,active,1635,197895,false
+SUB706,airport_road_forecasting_706,road,Western Hills,professional,2025-07-03,paused,2122,205814,true
+SUB707,transport_health_planning_707,health,North Coast,enterprise,2026-10-08,trial,5259,213733,true
+SUB708,utility_climate_monitoring_708,climate,Central Valley,standard,2021-01-13,active,846,221652,true
+SUB709,research_marine_response_709,marine,Highlands,professional,2022-04-18,paused,2233,229571,true
+SUB710,regional_resilience_analytics_710,resilience,East Plains,enterprise,2023-07-23,trial,5370,237490,false
+SUB711,coastal_aviation_logistics_711,aviation,South Coast,standard,2024-10-28,active,957,245409,true
+SUB712,urban_rail_operations_712,rail,Western Hills,professional,2025-01-05,paused,2344,8328,true
+SUB713,national_agriculture_resilience_713,agriculture,North Coast,enterprise,2026-04-10,trial,5481,16247,true
+SUB714,rural_road_forecasting_714,road,Central Valley,standard,2021-07-15,active,1068,24166,true
+SUB715,highland_health_planning_715,health,Highlands,professional,2022-10-20,paused,2455,32085,false
+SUB716,airport_climate_monitoring_716,climate,East Plains,enterprise,2023-01-25,trial,0,40004,true
+SUB717,transport_marine_response_717,marine,South Coast,standard,2024-04-02,active,1179,47923,true
+SUB718,utility_resilience_analytics_718,resilience,Western Hills,professional,2025-07-07,paused,2566,55842,true
+SUB719,research_aviation_logistics_719,aviation,North Coast,enterprise,2026-10-12,trial,5703,63761,true
+SUB720,regional_rail_operations_720,rail,Central Valley,standard,2021-01-17,active,1290,71680,false
+SUB721,coastal_agriculture_resilience_721,agriculture,Highlands,professional,2022-04-22,paused,2677,79599,true
+SUB722,urban_road_forecasting_722,road,East Plains,enterprise,2023-07-27,trial,5814,87518,true
+SUB723,national_health_planning_723,health,South Coast,standard,2024-10-04,active,1401,95437,true
+SUB724,rural_climate_monitoring_724,climate,Western Hills,professional,2025-01-09,paused,2788,103356,true
+SUB725,highland_marine_response_725,marine,North Coast,enterprise,2026-04-14,trial,5925,111275,false
+SUB726,airport_resilience_analytics_726,resilience,Central Valley,standard,2021-07-19,active,1512,119194,true
+SUB727,transport_aviation_logistics_727,aviation,Highlands,professional,2022-10-24,paused,2899,127113,true
+SUB728,utility_rail_operations_728,rail,East Plains,enterprise,2023-01-01,trial,0,135032,true
+SUB729,research_agriculture_resilience_729,agriculture,South Coast,standard,2024-04-06,active,1623,142951,true
+SUB730,regional_road_forecasting_730,road,Western Hills,professional,2025-07-11,paused,2110,150870,false
+SUB731,coastal_health_planning_731,health,North Coast,enterprise,2026-10-16,trial,5247,158789,true
+SUB732,urban_climate_monitoring_732,climate,Central Valley,standard,2021-01-21,active,834,166708,true
+SUB733,national_marine_response_733,marine,Highlands,professional,2022-04-26,paused,2221,174627,true
+SUB734,rural_resilience_analytics_734,resilience,East Plains,enterprise,2023-07-03,trial,5358,182546,true
+SUB735,highland_aviation_logistics_735,aviation,South Coast,standard,2024-10-08,active,945,190465,false
+SUB736,airport_rail_operations_736,rail,Western Hills,professional,2025-01-13,paused,2332,198384,true
+SUB737,transport_agriculture_resilience_737,agriculture,North Coast,enterprise,2026-04-18,trial,5469,206303,true
+SUB738,utility_road_forecasting_738,road,Central Valley,standard,2021-07-23,active,1056,214222,true
+SUB739,research_health_planning_739,health,Highlands,professional,2022-10-28,paused,2443,222141,true
+SUB740,regional_climate_monitoring_740,climate,East Plains,enterprise,2023-01-05,trial,0,230060,false
+SUB741,coastal_marine_response_741,marine,South Coast,standard,2024-04-10,active,1167,237979,true
+SUB742,urban_resilience_analytics_742,resilience,Western Hills,professional,2025-07-15,paused,2554,245898,true
+SUB743,national_aviation_logistics_743,aviation,North Coast,enterprise,2026-10-20,trial,5691,8817,true
+SUB744,rural_rail_operations_744,rail,Central Valley,standard,2021-01-25,active,1278,16736,true
+SUB745,highland_agriculture_resilience_745,agriculture,Highlands,professional,2022-04-02,paused,2665,24655,false
+SUB746,airport_road_forecasting_746,road,East Plains,enterprise,2023-07-07,trial,5802,32574,true
+SUB747,transport_health_planning_747,health,South Coast,standard,2024-10-12,active,1389,40493,true
+SUB748,utility_climate_monitoring_748,climate,Western Hills,professional,2025-01-17,paused,2776,48412,true
+SUB749,research_marine_response_749,marine,North Coast,enterprise,2026-04-22,trial,5913,56331,true
+SUB750,regional_resilience_analytics_750,resilience,Central Valley,standard,2021-07-27,active,1500,64250,false
+SUB751,coastal_aviation_logistics_751,aviation,Highlands,professional,2022-10-04,paused,2887,72169,true
+SUB752,urban_rail_operations_752,rail,East Plains,enterprise,2023-01-09,trial,0,80088,true
+SUB753,national_agriculture_resilience_753,agriculture,South Coast,standard,2024-04-14,active,1611,88007,true
+SUB754,rural_road_forecasting_754,road,Western Hills,professional,2025-07-19,paused,2998,95926,true
+SUB755,highland_health_planning_755,health,North Coast,enterprise,2026-10-24,trial,5235,103845,false
+SUB756,airport_climate_monitoring_756,climate,Central Valley,standard,2021-01-01,active,822,111764,true
+SUB757,transport_marine_response_757,marine,Highlands,professional,2022-04-06,paused,2209,119683,true
+SUB758,utility_resilience_analytics_758,resilience,East Plains,enterprise,2023-07-11,trial,5346,127602,true
+SUB759,research_aviation_logistics_759,aviation,South Coast,standard,2024-10-16,active,933,135521,true
+SUB760,regional_rail_operations_760,rail,Western Hills,professional,2025-01-21,paused,2320,143440,false
+SUB761,coastal_agriculture_resilience_761,agriculture,North Coast,enterprise,2026-04-26,trial,5457,151359,true
+SUB762,urban_road_forecasting_762,road,Central Valley,standard,2021-07-03,active,1044,159278,true
+SUB763,national_health_planning_763,health,Highlands,professional,2022-10-08,paused,2431,167197,true
+SUB764,rural_climate_monitoring_764,climate,East Plains,enterprise,2023-01-13,trial,0,175116,true
+SUB765,highland_marine_response_765,marine,South Coast,standard,2024-04-18,active,1155,183035,false
+SUB766,airport_resilience_analytics_766,resilience,Western Hills,professional,2025-07-23,paused,2542,190954,true
+SUB767,transport_aviation_logistics_767,aviation,North Coast,enterprise,2026-10-28,trial,5679,198873,true
+SUB768,utility_rail_operations_768,rail,Central Valley,standard,2021-01-05,active,1266,206792,true
+SUB769,research_agriculture_resilience_769,agriculture,Highlands,professional,2022-04-10,paused,2653,214711,true
+SUB770,regional_road_forecasting_770,road,East Plains,enterprise,2023-07-15,trial,5790,222630,false
+SUB771,coastal_health_planning_771,health,South Coast,standard,2024-10-20,active,1377,230549,true
+SUB772,urban_climate_monitoring_772,climate,Western Hills,professional,2025-01-25,paused,2764,238468,true
+SUB773,national_marine_response_773,marine,North Coast,enterprise,2026-04-02,trial,5901,246387,true
+SUB774,rural_resilience_analytics_774,resilience,Central Valley,standard,2021-07-07,active,1488,9306,true
+SUB775,highland_aviation_logistics_775,aviation,Highlands,professional,2022-10-12,paused,2875,17225,false
+SUB776,airport_rail_operations_776,rail,East Plains,enterprise,2023-01-17,trial,0,25144,true
+SUB777,transport_agriculture_resilience_777,agriculture,South Coast,standard,2024-04-22,active,1599,33063,true
+SUB778,utility_road_forecasting_778,road,Western Hills,professional,2025-07-27,paused,2986,40982,true
+SUB779,research_health_planning_779,health,North Coast,enterprise,2026-10-04,trial,5223,48901,true
+SUB780,regional_climate_monitoring_780,climate,Central Valley,standard,2021-01-09,active,810,56820,false
+SUB781,coastal_marine_response_781,marine,Highlands,professional,2022-04-14,paused,2197,64739,true
+SUB782,urban_resilience_analytics_782,resilience,East Plains,enterprise,2023-07-19,trial,5334,72658,true
+SUB783,national_aviation_logistics_783,aviation,South Coast,standard,2024-10-24,active,921,80577,true
+SUB784,rural_rail_operations_784,rail,Western Hills,professional,2025-01-01,paused,2308,88496,true
+SUB785,highland_agriculture_resilience_785,agriculture,North Coast,enterprise,2026-04-06,trial,5445,96415,false
+SUB786,airport_road_forecasting_786,road,Central Valley,standard,2021-07-11,active,1032,104334,true
+SUB787,transport_health_planning_787,health,Highlands,professional,2022-10-16,paused,2419,112253,true
+SUB788,utility_climate_monitoring_788,climate,East Plains,enterprise,2023-01-21,trial,0,120172,true
+SUB789,research_marine_response_789,marine,South Coast,standard,2024-04-26,active,1143,128091,true
+SUB790,regional_resilience_analytics_790,resilience,Western Hills,professional,2025-07-03,paused,2530,136010,false
+SUB791,coastal_aviation_logistics_791,aviation,North Coast,enterprise,2026-10-08,trial,5667,143929,true
+SUB792,urban_rail_operations_792,rail,Central Valley,standard,2021-01-13,active,1254,151848,true
+SUB793,national_agriculture_resilience_793,agriculture,Highlands,professional,2022-04-18,paused,2641,159767,true
+SUB794,rural_road_forecasting_794,road,East Plains,enterprise,2023-07-23,trial,5778,167686,true
+SUB795,highland_health_planning_795,health,South Coast,standard,2024-10-28,active,1365,175605,false
+SUB796,airport_climate_monitoring_796,climate,Western Hills,professional,2025-01-05,paused,2752,183524,true
+SUB797,transport_marine_response_797,marine,North Coast,enterprise,2026-04-10,trial,5889,191443,true
+SUB798,utility_resilience_analytics_798,resilience,Central Valley,standard,2021-07-15,active,1476,199362,true
+SUB799,research_aviation_logistics_799,aviation,Highlands,professional,2022-10-20,paused,2863,207281,true
+SUB800,regional_rail_operations_800,rail,East Plains,enterprise,2023-01-25,trial,0,215200,false
+SUB801,coastal_agriculture_resilience_801,agriculture,South Coast,standard,2024-04-02,active,1587,223119,true
+SUB802,urban_road_forecasting_802,road,Western Hills,professional,2025-07-07,paused,2974,231038,true
+SUB803,national_health_planning_803,health,North Coast,enterprise,2026-10-12,trial,5211,238957,true
+SUB804,rural_climate_monitoring_804,climate,Central Valley,standard,2021-01-17,active,798,246876,true
+SUB805,highland_marine_response_805,marine,Highlands,professional,2022-04-22,paused,2185,9795,false
+SUB806,airport_resilience_analytics_806,resilience,East Plains,enterprise,2023-07-27,trial,5322,17714,true
+SUB807,transport_aviation_logistics_807,aviation,South Coast,standard,2024-10-04,active,909,25633,true
+SUB808,utility_rail_operations_808,rail,Western Hills,professional,2025-01-09,paused,2296,33552,true
+SUB809,research_agriculture_resilience_809,agriculture,North Coast,enterprise,2026-04-14,trial,5433,41471,true
+SUB810,regional_road_forecasting_810,road,Central Valley,standard,2021-07-19,active,1020,49390,false
+SUB811,coastal_health_planning_811,health,Highlands,professional,2022-10-24,paused,2407,57309,true
+SUB812,urban_climate_monitoring_812,climate,East Plains,enterprise,2023-01-01,trial,0,65228,true
+SUB813,national_marine_response_813,marine,South Coast,standard,2024-04-06,active,1131,73147,true
+SUB814,rural_resilience_analytics_814,resilience,Western Hills,professional,2025-07-11,paused,2518,81066,true
+SUB815,highland_aviation_logistics_815,aviation,North Coast,enterprise,2026-10-16,trial,5655,88985,false
+SUB816,airport_rail_operations_816,rail,Central Valley,standard,2021-01-21,active,1242,96904,true
+SUB817,transport_agriculture_resilience_817,agriculture,Highlands,professional,2022-04-26,paused,2629,104823,true
+SUB818,utility_road_forecasting_818,road,East Plains,enterprise,2023-07-03,trial,5766,112742,true
+SUB819,research_health_planning_819,health,South Coast,standard,2024-10-08,active,1353,120661,true
+SUB820,regional_climate_monitoring_820,climate,Western Hills,professional,2025-01-13,paused,2740,128580,false
+SUB821,coastal_marine_response_821,marine,North Coast,enterprise,2026-04-18,trial,5877,136499,true
+SUB822,urban_resilience_analytics_822,resilience,Central Valley,standard,2021-07-23,active,1464,144418,true
+SUB823,national_aviation_logistics_823,aviation,Highlands,professional,2022-10-28,paused,2851,152337,true
+SUB824,rural_rail_operations_824,rail,East Plains,enterprise,2023-01-05,trial,0,160256,true
+SUB825,highland_agriculture_resilience_825,agriculture,South Coast,standard,2024-04-10,active,1575,168175,false
+SUB826,airport_road_forecasting_826,road,Western Hills,professional,2025-07-15,paused,2962,176094,true
+SUB827,transport_health_planning_827,health,North Coast,enterprise,2026-10-20,trial,6099,184013,true
+SUB828,utility_climate_monitoring_828,climate,Central Valley,standard,2021-01-25,active,786,191932,true
+SUB829,research_marine_response_829,marine,Highlands,professional,2022-04-02,paused,2173,199851,true
+SUB830,regional_resilience_analytics_830,resilience,East Plains,enterprise,2023-07-07,trial,5310,207770,false
+SUB831,coastal_aviation_logistics_831,aviation,South Coast,standard,2024-10-12,active,897,215689,true
+SUB832,urban_rail_operations_832,rail,Western Hills,professional,2025-01-17,paused,2284,223608,true
+SUB833,national_agriculture_resilience_833,agriculture,North Coast,enterprise,2026-04-22,trial,5421,231527,true
+SUB834,rural_road_forecasting_834,road,Central Valley,standard,2021-07-27,active,1008,239446,true
+SUB835,highland_health_planning_835,health,Highlands,professional,2022-10-04,paused,2395,247365,false
+SUB836,airport_climate_monitoring_836,climate,East Plains,enterprise,2023-01-09,trial,0,10284,true
+SUB837,transport_marine_response_837,marine,South Coast,standard,2024-04-14,active,1119,18203,true
+SUB838,utility_resilience_analytics_838,resilience,Western Hills,professional,2025-07-19,paused,2506,26122,true
+SUB839,research_aviation_logistics_839,aviation,North Coast,enterprise,2026-10-24,trial,5643,34041,true
+SUB840,regional_rail_operations_840,rail,Central Valley,standard,2021-01-01,active,1230,41960,false
+SUB841,coastal_agriculture_resilience_841,agriculture,Highlands,professional,2022-04-06,paused,2617,49879,true
+SUB842,urban_road_forecasting_842,road,East Plains,enterprise,2023-07-11,trial,5754,57798,true
+SUB843,national_health_planning_843,health,South Coast,standard,2024-10-16,active,1341,65717,true
+SUB844,rural_climate_monitoring_844,climate,Western Hills,professional,2025-01-21,paused,2728,73636,true
+SUB845,highland_marine_response_845,marine,North Coast,enterprise,2026-04-26,trial,5865,81555,false
+SUB846,airport_resilience_analytics_846,resilience,Central Valley,standard,2021-07-03,active,1452,89474,true
+SUB847,transport_aviation_logistics_847,aviation,Highlands,professional,2022-10-08,paused,2839,97393,true
+SUB848,utility_rail_operations_848,rail,East Plains,enterprise,2023-01-13,trial,0,105312,true
+SUB849,research_agriculture_resilience_849,agriculture,South Coast,standard,2024-04-18,active,1563,113231,true
+SUB850,regional_road_forecasting_850,road,Western Hills,professional,2025-07-23,paused,2950,121150,false
+SUB851,coastal_health_planning_851,health,North Coast,enterprise,2026-10-28,trial,6087,129069,true
+SUB852,urban_climate_monitoring_852,climate,Central Valley,standard,2021-01-05,active,774,136988,true
+SUB853,national_marine_response_853,marine,Highlands,professional,2022-04-10,paused,2161,144907,true
+SUB854,rural_resilience_analytics_854,resilience,East Plains,enterprise,2023-07-15,trial,5298,152826,true
+SUB855,highland_aviation_logistics_855,aviation,South Coast,standard,2024-10-20,active,885,160745,false
+SUB856,airport_rail_operations_856,rail,Western Hills,professional,2025-01-25,paused,2272,168664,true
+SUB857,transport_agriculture_resilience_857,agriculture,North Coast,enterprise,2026-04-02,trial,5409,176583,true
+SUB858,utility_road_forecasting_858,road,Central Valley,standard,2021-07-07,active,996,184502,true
+SUB859,research_health_planning_859,health,Highlands,professional,2022-10-12,paused,2383,192421,true
+SUB860,regional_climate_monitoring_860,climate,East Plains,enterprise,2023-01-17,trial,0,200340,false
+SUB861,coastal_marine_response_861,marine,South Coast,standard,2024-04-22,active,1107,208259,true
+SUB862,urban_resilience_analytics_862,resilience,Western Hills,professional,2025-07-27,paused,2494,216178,true
+SUB863,national_aviation_logistics_863,aviation,North Coast,enterprise,2026-10-04,trial,5631,224097,true
+SUB864,rural_rail_operations_864,rail,Central Valley,standard,2021-01-09,active,1218,232016,true
+SUB865,highland_agriculture_resilience_865,agriculture,Highlands,professional,2022-04-14,paused,2605,239935,false
+SUB866,airport_road_forecasting_866,road,East Plains,enterprise,2023-07-19,trial,5742,247854,true
+SUB867,transport_health_planning_867,health,South Coast,standard,2024-10-24,active,1329,10773,true
+SUB868,utility_climate_monitoring_868,climate,Western Hills,professional,2025-01-01,paused,2716,18692,true
+SUB869,research_marine_response_869,marine,North Coast,enterprise,2026-04-06,trial,5853,26611,true
+SUB870,regional_resilience_analytics_870,resilience,Central Valley,standard,2021-07-11,active,1440,34530,false
+SUB871,coastal_aviation_logistics_871,aviation,Highlands,professional,2022-10-16,paused,2827,42449,true
+SUB872,urban_rail_operations_872,rail,East Plains,enterprise,2023-01-21,trial,0,50368,true
+SUB873,national_agriculture_resilience_873,agriculture,South Coast,standard,2024-04-26,active,1551,58287,true
+SUB874,rural_road_forecasting_874,road,Western Hills,professional,2025-07-03,paused,2938,66206,true
+SUB875,highland_health_planning_875,health,North Coast,enterprise,2026-10-08,trial,6075,74125,false
+SUB876,airport_climate_monitoring_876,climate,Central Valley,standard,2021-01-13,active,762,82044,true
+SUB877,transport_marine_response_877,marine,Highlands,professional,2022-04-18,paused,2149,89963,true
+SUB878,utility_resilience_analytics_878,resilience,East Plains,enterprise,2023-07-23,trial,5286,97882,true
+SUB879,research_aviation_logistics_879,aviation,South Coast,standard,2024-10-28,active,873,105801,true
+SUB880,regional_rail_operations_880,rail,Western Hills,professional,2025-01-05,paused,2260,113720,false
+SUB881,coastal_agriculture_resilience_881,agriculture,North Coast,enterprise,2026-04-10,trial,5397,121639,true
+SUB882,urban_road_forecasting_882,road,Central Valley,standard,2021-07-15,active,984,129558,true
+SUB883,national_health_planning_883,health,Highlands,professional,2022-10-20,paused,2371,137477,true
+SUB884,rural_climate_monitoring_884,climate,East Plains,enterprise,2023-01-25,trial,0,145396,true
+SUB885,highland_marine_response_885,marine,South Coast,standard,2024-04-02,active,1095,153315,false
+SUB886,airport_resilience_analytics_886,resilience,Western Hills,professional,2025-07-07,paused,2482,161234,true
+SUB887,transport_aviation_logistics_887,aviation,North Coast,enterprise,2026-10-12,trial,5619,169153,true
+SUB888,utility_rail_operations_888,rail,Central Valley,standard,2021-01-17,active,1206,177072,true
+SUB889,research_agriculture_resilience_889,agriculture,Highlands,professional,2022-04-22,paused,2593,184991,true
+SUB890,regional_road_forecasting_890,road,East Plains,enterprise,2023-07-27,trial,5730,192910,false
+SUB891,coastal_health_planning_891,health,South Coast,standard,2024-10-04,active,1317,200829,true
+SUB892,urban_climate_monitoring_892,climate,Western Hills,professional,2025-01-09,paused,2704,208748,true
+SUB893,national_marine_response_893,marine,North Coast,enterprise,2026-04-14,trial,5841,216667,true
+SUB894,rural_resilience_analytics_894,resilience,Central Valley,standard,2021-07-19,active,1428,224586,true
+SUB895,highland_aviation_logistics_895,aviation,Highlands,professional,2022-10-24,paused,2815,232505,false
+SUB896,airport_rail_operations_896,rail,East Plains,enterprise,2023-01-01,trial,0,240424,true
+SUB897,transport_agriculture_resilience_897,agriculture,South Coast,standard,2024-04-06,active,1539,248343,true
+SUB898,utility_road_forecasting_898,road,Western Hills,professional,2025-07-11,paused,2926,11262,true
+SUB899,research_health_planning_899,health,North Coast,enterprise,2026-10-16,trial,6063,19181,true
+SUB900,regional_climate_monitoring_900,climate,Central Valley,standard,2021-01-21,active,750,27100,false
+SUB901,coastal_marine_response_901,marine,Highlands,professional,2022-04-26,paused,2137,35019,true
+SUB902,urban_resilience_analytics_902,resilience,East Plains,enterprise,2023-07-03,trial,5274,42938,true
+SUB903,national_aviation_logistics_903,aviation,South Coast,standard,2024-10-08,active,861,50857,true
+SUB904,rural_rail_operations_904,rail,Western Hills,professional,2025-01-13,paused,2248,58776,true
+SUB905,highland_agriculture_resilience_905,agriculture,North Coast,enterprise,2026-04-18,trial,5385,66695,false
+SUB906,airport_road_forecasting_906,road,Central Valley,standard,2021-07-23,active,972,74614,true
+SUB907,transport_health_planning_907,health,Highlands,professional,2022-10-28,paused,2359,82533,true
+SUB908,utility_climate_monitoring_908,climate,East Plains,enterprise,2023-01-05,trial,0,90452,true
+SUB909,research_marine_response_909,marine,South Coast,standard,2024-04-10,active,1083,98371,true
+SUB910,regional_resilience_analytics_910,resilience,Western Hills,professional,2025-07-15,paused,2470,106290,false
+SUB911,coastal_aviation_logistics_911,aviation,North Coast,enterprise,2026-10-20,trial,5607,114209,true
+SUB912,urban_rail_operations_912,rail,Central Valley,standard,2021-01-25,active,1194,122128,true
+SUB913,national_agriculture_resilience_913,agriculture,Highlands,professional,2022-04-02,paused,2581,130047,true
+SUB914,rural_road_forecasting_914,road,East Plains,enterprise,2023-07-07,trial,5718,137966,true
+SUB915,highland_health_planning_915,health,South Coast,standard,2024-10-12,active,1305,145885,false
+SUB916,airport_climate_monitoring_916,climate,Western Hills,professional,2025-01-17,paused,2692,153804,true
+SUB917,transport_marine_response_917,marine,North Coast,enterprise,2026-04-22,trial,5829,161723,true
+SUB918,utility_resilience_analytics_918,resilience,Central Valley,standard,2021-07-27,active,1416,169642,true
+SUB919,research_aviation_logistics_919,aviation,Highlands,professional,2022-10-04,paused,2803,177561,true
+SUB920,regional_rail_operations_920,rail,East Plains,enterprise,2023-01-09,trial,0,185480,false
+SUB921,coastal_agriculture_resilience_921,agriculture,South Coast,standard,2024-04-14,active,1527,193399,true
+SUB922,urban_road_forecasting_922,road,Western Hills,professional,2025-07-19,paused,2914,201318,true
+SUB923,national_health_planning_923,health,North Coast,enterprise,2026-10-24,trial,6051,209237,true
+SUB924,rural_climate_monitoring_924,climate,Central Valley,standard,2021-01-01,active,1638,217156,true
+SUB925,highland_marine_response_925,marine,Highlands,professional,2022-04-06,paused,2125,225075,false
+SUB926,airport_resilience_analytics_926,resilience,East Plains,enterprise,2023-07-11,trial,5262,232994,true
+SUB927,transport_aviation_logistics_927,aviation,South Coast,standard,2024-10-16,active,849,240913,true
+SUB928,utility_rail_operations_928,rail,Western Hills,professional,2025-01-21,paused,2236,248832,true
+SUB929,research_agriculture_resilience_929,agriculture,North Coast,enterprise,2026-04-26,trial,5373,11751,true
+SUB930,regional_road_forecasting_930,road,Central Valley,standard,2021-07-03,active,960,19670,false
+SUB931,coastal_health_planning_931,health,Highlands,professional,2022-10-08,paused,2347,27589,true
+SUB932,urban_climate_monitoring_932,climate,East Plains,enterprise,2023-01-13,trial,0,35508,true
+SUB933,national_marine_response_933,marine,South Coast,standard,2024-04-18,active,1071,43427,true
+SUB934,rural_resilience_analytics_934,resilience,Western Hills,professional,2025-07-23,paused,2458,51346,true
+SUB935,highland_aviation_logistics_935,aviation,North Coast,enterprise,2026-10-28,trial,5595,59265,false
+SUB936,airport_rail_operations_936,rail,Central Valley,standard,2021-01-05,active,1182,67184,true
+SUB937,transport_agriculture_resilience_937,agriculture,Highlands,professional,2022-04-10,paused,2569,75103,true
+SUB938,utility_road_forecasting_938,road,East Plains,enterprise,2023-07-15,trial,5706,83022,true
+SUB939,research_health_planning_939,health,South Coast,standard,2024-10-20,active,1293,90941,true
+SUB940,regional_climate_monitoring_940,climate,Western Hills,professional,2025-01-25,paused,2680,98860,false
+SUB941,coastal_marine_response_941,marine,North Coast,enterprise,2026-04-02,trial,5817,106779,true
+SUB942,urban_resilience_analytics_942,resilience,Central Valley,standard,2021-07-07,active,1404,114698,true
+SUB943,national_aviation_logistics_943,aviation,Highlands,professional,2022-10-12,paused,2791,122617,true
+SUB944,rural_rail_operations_944,rail,East Plains,enterprise,2023-01-17,trial,0,130536,true
+SUB945,highland_agriculture_resilience_945,agriculture,South Coast,standard,2024-04-22,active,1515,138455,false
+SUB946,airport_road_forecasting_946,road,Western Hills,professional,2025-07-27,paused,2902,146374,true
+SUB947,transport_health_planning_947,health,North Coast,enterprise,2026-10-04,trial,6039,154293,true
+SUB948,utility_climate_monitoring_948,climate,Central Valley,standard,2021-01-09,active,1626,162212,true
+SUB949,research_marine_response_949,marine,Highlands,professional,2022-04-14,paused,2113,170131,true
+SUB950,regional_resilience_analytics_950,resilience,East Plains,enterprise,2023-07-19,trial,5250,178050,false
+SUB951,coastal_aviation_logistics_951,aviation,South Coast,standard,2024-10-24,active,837,185969,true
+SUB952,urban_rail_operations_952,rail,Western Hills,professional,2025-01-01,paused,2224,193888,true
+SUB953,national_agriculture_resilience_953,agriculture,North Coast,enterprise,2026-04-06,trial,5361,201807,true
+SUB954,rural_road_forecasting_954,road,Central Valley,standard,2021-07-11,active,948,209726,true
+SUB955,highland_health_planning_955,health,Highlands,professional,2022-10-16,paused,2335,217645,false
+SUB956,airport_climate_monitoring_956,climate,East Plains,enterprise,2023-01-21,trial,0,225564,true
+SUB957,transport_marine_response_957,marine,South Coast,standard,2024-04-26,active,1059,233483,true
+SUB958,utility_resilience_analytics_958,resilience,Western Hills,professional,2025-07-03,paused,2446,241402,true
+SUB959,research_aviation_logistics_959,aviation,North Coast,enterprise,2026-10-08,trial,5583,249321,true
+SUB960,regional_rail_operations_960,rail,Central Valley,standard,2021-01-13,active,1170,12240,false
+SUB961,coastal_agriculture_resilience_961,agriculture,Highlands,professional,2022-04-18,paused,2557,20159,true
+SUB962,urban_road_forecasting_962,road,East Plains,enterprise,2023-07-23,trial,5694,28078,true
+SUB963,national_health_planning_963,health,South Coast,standard,2024-10-28,active,1281,35997,true
+SUB964,rural_climate_monitoring_964,climate,Western Hills,professional,2025-01-05,paused,2668,43916,true
+SUB965,highland_marine_response_965,marine,North Coast,enterprise,2026-04-10,trial,5805,51835,false
+SUB966,airport_resilience_analytics_966,resilience,Central Valley,standard,2021-07-15,active,1392,59754,true
+SUB967,transport_aviation_logistics_967,aviation,Highlands,professional,2022-10-20,paused,2779,67673,true
+SUB968,utility_rail_operations_968,rail,East Plains,enterprise,2023-01-25,trial,0,75592,true
+SUB969,research_agriculture_resilience_969,agriculture,South Coast,standard,2024-04-02,active,1503,83511,true
+SUB970,regional_road_forecasting_970,road,Western Hills,professional,2025-07-07,paused,2890,91430,false
+SUB971,coastal_health_planning_971,health,North Coast,enterprise,2026-10-12,trial,6027,99349,true
+SUB972,urban_climate_monitoring_972,climate,Central Valley,standard,2021-01-17,active,1614,107268,true
+SUB973,national_marine_response_973,marine,Highlands,professional,2022-04-22,paused,2101,115187,true
+SUB974,rural_resilience_analytics_974,resilience,East Plains,enterprise,2023-07-27,trial,5238,123106,true
+SUB975,highland_aviation_logistics_975,aviation,South Coast,standard,2024-10-04,active,825,131025,false
+SUB976,airport_rail_operations_976,rail,Western Hills,professional,2025-01-09,paused,2212,138944,true
+SUB977,transport_agriculture_resilience_977,agriculture,North Coast,enterprise,2026-04-14,trial,5349,146863,true
+SUB978,utility_road_forecasting_978,road,Central Valley,standard,2021-07-19,active,936,154782,true
+SUB979,research_health_planning_979,health,Highlands,professional,2022-10-24,paused,2323,162701,true
+SUB980,regional_climate_monitoring_980,climate,East Plains,enterprise,2023-01-01,trial,0,170620,false
+SUB981,coastal_marine_response_981,marine,South Coast,standard,2024-04-06,active,1047,178539,true
+SUB982,urban_resilience_analytics_982,resilience,Western Hills,professional,2025-07-11,paused,2434,186458,true
+SUB983,national_aviation_logistics_983,aviation,North Coast,enterprise,2026-10-16,trial,5571,194377,true
+SUB984,rural_rail_operations_984,rail,Central Valley,standard,2021-01-21,active,1158,202296,true
+SUB985,highland_agriculture_resilience_985,agriculture,Highlands,professional,2022-04-26,paused,2545,210215,false
+SUB986,airport_road_forecasting_986,road,East Plains,enterprise,2023-07-03,trial,5682,218134,true
+SUB987,transport_health_planning_987,health,South Coast,standard,2024-10-08,active,1269,226053,true
+SUB988,utility_climate_monitoring_988,climate,Western Hills,professional,2025-01-13,paused,2656,233972,true
+SUB989,research_marine_response_989,marine,North Coast,enterprise,2026-04-18,trial,5793,241891,true
+SUB990,regional_resilience_analytics_990,resilience,Central Valley,standard,2021-07-23,active,1380,249810,false
+SUB991,coastal_aviation_logistics_991,aviation,Highlands,professional,2022-10-28,paused,2767,12729,true
+SUB992,urban_rail_operations_992,rail,East Plains,enterprise,2023-01-05,trial,0,20648,true
+SUB993,national_agriculture_resilience_993,agriculture,South Coast,standard,2024-04-10,active,1491,28567,true
+SUB994,rural_road_forecasting_994,road,Western Hills,professional,2025-07-15,paused,2878,36486,true
+SUB995,highland_health_planning_995,health,North Coast,enterprise,2026-10-20,trial,6015,44405,false
+SUB996,airport_climate_monitoring_996,climate,Central Valley,standard,2021-01-25,active,1602,52324,true
+SUB997,transport_marine_response_997,marine,Highlands,professional,2022-04-02,paused,2989,60243,true
+SUB998,utility_resilience_analytics_998,resilience,East Plains,enterprise,2023-07-07,trial,5226,68162,true
+SUB999,research_aviation_logistics_999,aviation,South Coast,standard,2024-10-12,active,813,76081,true
+SUB1000,regional_rail_operations_1000,rail,Western Hills,professional,2025-01-17,paused,2200,84000,false

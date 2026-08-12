@@ -11,3 +11,991 @@ STN009,Lowfen Agricultural Climate Site,East Plains,WX,51.991,0.913,22,rural,agr
 STN010,Greenfell Mountain Pass,Highlands,WX,57.221,-3.791,701,upland,road,2015-12-02,true
 STN011,Canal Quarter Heat Sensor,Central Valley,WX,52.501,-1.811,102,urban,health,2020-07-14,true
 STN012,Old Quarry Legacy Station,Western Hills,WX,53.884,-2.403,211,rural,climate,2001-10-30,false
+STN013,North Coast Valley Climate Mast 013,North Coast,WX,54.560,-2.480,226,transport,climate,2013-06-08,true
+STN014,Central Valley Summit Sensor Array 014,Central Valley,WX,54.930,-2.190,243,rural,marine,2014-11-15,true
+STN015,Highlands River Station 015,Highlands,WX,55.300,-1.900,260,coastal,resilience,2015-04-22,true
+STN016,East Plains Meadow Observatory 016,East Plains,WX,55.670,-1.610,277,urban,aviation,2016-09-01,true
+STN017,South Coast Airfield Weather Site 017,South Coast,WX,56.040,-1.320,294,upland,rail,2017-02-08,true
+STN018,Western Hills Causeway Climate Mast 018,Western Hills,WX,56.410,-1.030,311,airport,agriculture,2018-07-15,true
+STN019,North Coast Reservoir Sensor Array 019,North Coast,WX,56.780,-0.740,328,hydrology,road,2019-12-22,false
+STN020,Central Valley Beacon Station 020,Central Valley,WX,57.150,-0.450,345,transport,health,2020-05-01,true
+STN021,Highlands Ridge Observatory 021,Highlands,WX,57.520,-0.160,362,rural,climate,2021-10-08,true
+STN022,East Plains Harbor Weather Site 022,East Plains,WX,57.890,0.130,379,coastal,marine,2022-03-15,true
+STN023,South Coast Valley Climate Mast 023,South Coast,WX,49.860,0.420,396,urban,resilience,2023-08-22,true
+STN024,Western Hills Summit Sensor Array 024,Western Hills,WX,50.230,0.710,413,upland,aviation,2024-01-01,true
+STN025,North Coast River Station 025,North Coast,WX,50.600,1.000,430,airport,rail,2025-06-08,true
+STN026,Central Valley Meadow Observatory 026,Central Valley,WX,50.970,1.290,447,hydrology,agriculture,2000-11-15,true
+STN027,Highlands Airfield Weather Site 027,Highlands,WX,51.340,1.580,464,transport,road,2001-04-22,true
+STN028,East Plains Causeway Climate Mast 028,East Plains,WX,51.710,1.870,481,rural,health,2002-09-01,true
+STN029,South Coast Reservoir Sensor Array 029,South Coast,WX,52.080,-6.240,498,coastal,climate,2003-02-08,true
+STN030,Western Hills Beacon Station 030,Western Hills,WX,52.450,-5.950,515,urban,marine,2004-07-15,true
+STN031,North Coast Ridge Observatory 031,North Coast,WX,52.820,-5.660,532,upland,resilience,2005-12-22,true
+STN032,Central Valley Harbor Weather Site 032,Central Valley,WX,53.190,-5.370,549,airport,aviation,2006-05-01,true
+STN033,Highlands Valley Climate Mast 033,Highlands,WX,53.560,-5.080,566,hydrology,rail,2007-10-08,true
+STN034,East Plains Summit Sensor Array 034,East Plains,WX,53.930,-4.790,583,transport,agriculture,2008-03-15,true
+STN035,South Coast River Station 035,South Coast,WX,54.300,-4.500,600,rural,road,2009-08-22,true
+STN036,Western Hills Meadow Observatory 036,Western Hills,WX,54.670,-4.210,617,coastal,health,2010-01-01,true
+STN037,North Coast Airfield Weather Site 037,North Coast,WX,55.040,-3.920,634,urban,climate,2011-06-08,true
+STN038,Central Valley Causeway Climate Mast 038,Central Valley,WX,55.410,-3.630,651,upland,marine,2012-11-15,false
+STN039,Highlands Reservoir Sensor Array 039,Highlands,WX,55.780,-3.340,668,airport,resilience,2013-04-22,true
+STN040,East Plains Beacon Station 040,East Plains,WX,56.150,-3.050,685,hydrology,aviation,2014-09-01,true
+STN041,South Coast Ridge Observatory 041,South Coast,WX,56.520,-2.760,702,transport,rail,2015-02-08,true
+STN042,Western Hills Harbor Weather Site 042,Western Hills,WX,56.890,-2.470,719,rural,agriculture,2016-07-15,true
+STN043,North Coast Valley Climate Mast 043,North Coast,WX,57.260,-2.180,736,coastal,road,2017-12-22,true
+STN044,Central Valley Summit Sensor Array 044,Central Valley,WX,57.630,-1.890,753,urban,health,2018-05-01,true
+STN045,Highlands River Station 045,Highlands,WX,58.000,-1.600,770,upland,climate,2019-10-08,true
+STN046,East Plains Meadow Observatory 046,East Plains,WX,49.970,-1.310,7,airport,marine,2020-03-15,true
+STN047,South Coast Airfield Weather Site 047,South Coast,WX,50.340,-1.020,24,hydrology,resilience,2021-08-22,true
+STN048,Western Hills Causeway Climate Mast 048,Western Hills,WX,50.710,-0.730,41,transport,aviation,2022-01-01,true
+STN049,North Coast Reservoir Sensor Array 049,North Coast,WX,51.080,-0.440,58,rural,rail,2023-06-08,true
+STN050,Central Valley Beacon Station 050,Central Valley,WX,51.450,-0.150,75,coastal,agriculture,2024-11-15,true
+STN051,Highlands Ridge Observatory 051,Highlands,WX,51.820,0.140,92,urban,road,2025-04-22,true
+STN052,East Plains Harbor Weather Site 052,East Plains,WX,52.190,0.430,109,upland,health,2000-09-01,true
+STN053,South Coast Valley Climate Mast 053,South Coast,WX,52.560,0.720,126,airport,climate,2001-02-08,true
+STN054,Western Hills Summit Sensor Array 054,Western Hills,WX,52.930,1.010,143,hydrology,marine,2002-07-15,true
+STN055,North Coast River Station 055,North Coast,WX,53.300,1.300,160,transport,resilience,2003-12-22,true
+STN056,Central Valley Meadow Observatory 056,Central Valley,WX,53.670,1.590,177,rural,aviation,2004-05-01,true
+STN057,Highlands Airfield Weather Site 057,Highlands,WX,54.040,1.880,194,coastal,rail,2005-10-08,false
+STN058,East Plains Causeway Climate Mast 058,East Plains,WX,54.410,-6.230,211,urban,agriculture,2006-03-15,true
+STN059,South Coast Reservoir Sensor Array 059,South Coast,WX,54.780,-5.940,228,upland,road,2007-08-22,true
+STN060,Western Hills Beacon Station 060,Western Hills,WX,55.150,-5.650,245,airport,health,2008-01-01,true
+STN061,North Coast Ridge Observatory 061,North Coast,WX,55.520,-5.360,262,hydrology,climate,2009-06-08,true
+STN062,Central Valley Harbor Weather Site 062,Central Valley,WX,55.890,-5.070,279,transport,marine,2010-11-15,true
+STN063,Highlands Valley Climate Mast 063,Highlands,WX,56.260,-4.780,296,rural,resilience,2011-04-22,true
+STN064,East Plains Summit Sensor Array 064,East Plains,WX,56.630,-4.490,313,coastal,aviation,2012-09-01,true
+STN065,South Coast River Station 065,South Coast,WX,57.000,-4.200,330,urban,rail,2013-02-08,true
+STN066,Western Hills Meadow Observatory 066,Western Hills,WX,57.370,-3.910,347,upland,agriculture,2014-07-15,true
+STN067,North Coast Airfield Weather Site 067,North Coast,WX,57.740,-3.620,364,airport,road,2015-12-22,true
+STN068,Central Valley Causeway Climate Mast 068,Central Valley,WX,58.110,-3.330,381,hydrology,health,2016-05-01,true
+STN069,Highlands Reservoir Sensor Array 069,Highlands,WX,50.080,-3.040,398,transport,climate,2017-10-08,true
+STN070,East Plains Beacon Station 070,East Plains,WX,50.450,-2.750,415,rural,marine,2018-03-15,true
+STN071,South Coast Ridge Observatory 071,South Coast,WX,50.820,-2.460,432,coastal,resilience,2019-08-22,true
+STN072,Western Hills Harbor Weather Site 072,Western Hills,WX,51.190,-2.170,449,urban,aviation,2020-01-01,true
+STN073,North Coast Valley Climate Mast 073,North Coast,WX,51.560,-1.880,466,upland,rail,2021-06-08,true
+STN074,Central Valley Summit Sensor Array 074,Central Valley,WX,51.930,-1.590,483,airport,agriculture,2022-11-15,true
+STN075,Highlands River Station 075,Highlands,WX,52.300,-1.300,500,hydrology,road,2023-04-22,true
+STN076,East Plains Meadow Observatory 076,East Plains,WX,52.670,-1.010,517,transport,health,2024-09-01,false
+STN077,South Coast Airfield Weather Site 077,South Coast,WX,53.040,-0.720,534,rural,climate,2025-02-08,true
+STN078,Western Hills Causeway Climate Mast 078,Western Hills,WX,53.410,-0.430,551,coastal,marine,2000-07-15,true
+STN079,North Coast Reservoir Sensor Array 079,North Coast,WX,53.780,-0.140,568,urban,resilience,2001-12-22,true
+STN080,Central Valley Beacon Station 080,Central Valley,WX,54.150,0.150,585,upland,aviation,2002-05-01,true
+STN081,Highlands Ridge Observatory 081,Highlands,WX,54.520,0.440,602,airport,rail,2003-10-08,true
+STN082,East Plains Harbor Weather Site 082,East Plains,WX,54.890,0.730,619,hydrology,agriculture,2004-03-15,true
+STN083,South Coast Valley Climate Mast 083,South Coast,WX,55.260,1.020,636,transport,road,2005-08-22,true
+STN084,Western Hills Summit Sensor Array 084,Western Hills,WX,55.630,1.310,653,rural,health,2006-01-01,true
+STN085,North Coast River Station 085,North Coast,WX,56.000,1.600,670,coastal,climate,2007-06-08,true
+STN086,Central Valley Meadow Observatory 086,Central Valley,WX,56.370,1.890,687,urban,marine,2008-11-15,true
+STN087,Highlands Airfield Weather Site 087,Highlands,WX,56.740,-6.220,704,upland,resilience,2009-04-22,true
+STN088,East Plains Causeway Climate Mast 088,East Plains,WX,57.110,-5.930,721,airport,aviation,2010-09-01,true
+STN089,South Coast Reservoir Sensor Array 089,South Coast,WX,57.480,-5.640,738,hydrology,rail,2011-02-08,true
+STN090,Western Hills Beacon Station 090,Western Hills,WX,57.850,-5.350,755,transport,agriculture,2012-07-15,true
+STN091,North Coast Ridge Observatory 091,North Coast,WX,49.820,-5.060,772,rural,road,2013-12-22,true
+STN092,Central Valley Harbor Weather Site 092,Central Valley,WX,50.190,-4.770,9,coastal,health,2014-05-01,true
+STN093,Highlands Valley Climate Mast 093,Highlands,WX,50.560,-4.480,26,urban,climate,2015-10-08,true
+STN094,East Plains Summit Sensor Array 094,East Plains,WX,50.930,-4.190,43,upland,marine,2016-03-15,true
+STN095,South Coast River Station 095,South Coast,WX,51.300,-3.900,60,airport,resilience,2017-08-22,false
+STN096,Western Hills Meadow Observatory 096,Western Hills,WX,51.670,-3.610,77,hydrology,aviation,2018-01-01,true
+STN097,North Coast Airfield Weather Site 097,North Coast,WX,52.040,-3.320,94,transport,rail,2019-06-08,true
+STN098,Central Valley Causeway Climate Mast 098,Central Valley,WX,52.410,-3.030,111,rural,agriculture,2020-11-15,true
+STN099,Highlands Reservoir Sensor Array 099,Highlands,WX,52.780,-2.740,128,coastal,road,2021-04-22,true
+STN100,East Plains Beacon Station 100,East Plains,WX,53.150,-2.450,145,urban,health,2022-09-01,true
+STN101,South Coast Ridge Observatory 101,South Coast,WX,53.520,-2.160,162,upland,climate,2023-02-08,true
+STN102,Western Hills Harbor Weather Site 102,Western Hills,WX,53.890,-1.870,179,airport,marine,2024-07-15,true
+STN103,North Coast Valley Climate Mast 103,North Coast,WX,54.260,-1.580,196,hydrology,resilience,2025-12-22,true
+STN104,Central Valley Summit Sensor Array 104,Central Valley,WX,54.630,-1.290,213,transport,aviation,2000-05-01,true
+STN105,Highlands River Station 105,Highlands,WX,55.000,-1.000,230,rural,rail,2001-10-08,true
+STN106,East Plains Meadow Observatory 106,East Plains,WX,55.370,-0.710,247,coastal,agriculture,2002-03-15,true
+STN107,South Coast Airfield Weather Site 107,South Coast,WX,55.740,-0.420,264,urban,road,2003-08-22,true
+STN108,Western Hills Causeway Climate Mast 108,Western Hills,WX,56.110,-0.130,281,upland,health,2004-01-01,true
+STN109,North Coast Reservoir Sensor Array 109,North Coast,WX,56.480,0.160,298,airport,climate,2005-06-08,true
+STN110,Central Valley Beacon Station 110,Central Valley,WX,56.850,0.450,315,hydrology,marine,2006-11-15,true
+STN111,Highlands Ridge Observatory 111,Highlands,WX,57.220,0.740,332,transport,resilience,2007-04-22,true
+STN112,East Plains Harbor Weather Site 112,East Plains,WX,57.590,1.030,349,rural,aviation,2008-09-01,true
+STN113,South Coast Valley Climate Mast 113,South Coast,WX,57.960,1.320,366,coastal,rail,2009-02-08,true
+STN114,Western Hills Summit Sensor Array 114,Western Hills,WX,49.930,1.610,383,urban,agriculture,2010-07-15,false
+STN115,North Coast River Station 115,North Coast,WX,50.300,1.900,400,upland,road,2011-12-22,true
+STN116,Central Valley Meadow Observatory 116,Central Valley,WX,50.670,-6.210,417,airport,health,2012-05-01,true
+STN117,Highlands Airfield Weather Site 117,Highlands,WX,51.040,-5.920,434,hydrology,climate,2013-10-08,true
+STN118,East Plains Causeway Climate Mast 118,East Plains,WX,51.410,-5.630,451,transport,marine,2014-03-15,true
+STN119,South Coast Reservoir Sensor Array 119,South Coast,WX,51.780,-5.340,468,rural,resilience,2015-08-22,true
+STN120,Western Hills Beacon Station 120,Western Hills,WX,52.150,-5.050,485,coastal,aviation,2016-01-01,true
+STN121,North Coast Ridge Observatory 121,North Coast,WX,52.520,-4.760,502,urban,rail,2017-06-08,true
+STN122,Central Valley Harbor Weather Site 122,Central Valley,WX,52.890,-4.470,519,upland,agriculture,2018-11-15,true
+STN123,Highlands Valley Climate Mast 123,Highlands,WX,53.260,-4.180,536,airport,road,2019-04-22,true
+STN124,East Plains Summit Sensor Array 124,East Plains,WX,53.630,-3.890,553,hydrology,health,2020-09-01,true
+STN125,South Coast River Station 125,South Coast,WX,54.000,-3.600,570,transport,climate,2021-02-08,true
+STN126,Western Hills Meadow Observatory 126,Western Hills,WX,54.370,-3.310,587,rural,marine,2022-07-15,true
+STN127,North Coast Airfield Weather Site 127,North Coast,WX,54.740,-3.020,604,coastal,resilience,2023-12-22,true
+STN128,Central Valley Causeway Climate Mast 128,Central Valley,WX,55.110,-2.730,621,urban,aviation,2024-05-01,true
+STN129,Highlands Reservoir Sensor Array 129,Highlands,WX,55.480,-2.440,638,upland,rail,2025-10-08,true
+STN130,East Plains Beacon Station 130,East Plains,WX,55.850,-2.150,655,airport,agriculture,2000-03-15,true
+STN131,South Coast Ridge Observatory 131,South Coast,WX,56.220,-1.860,672,hydrology,road,2001-08-22,true
+STN132,Western Hills Harbor Weather Site 132,Western Hills,WX,56.590,-1.570,689,transport,health,2002-01-01,true
+STN133,North Coast Valley Climate Mast 133,North Coast,WX,56.960,-1.280,706,rural,climate,2003-06-08,false
+STN134,Central Valley Summit Sensor Array 134,Central Valley,WX,57.330,-0.990,723,coastal,marine,2004-11-15,true
+STN135,Highlands River Station 135,Highlands,WX,57.700,-0.700,740,urban,resilience,2005-04-22,true
+STN136,East Plains Meadow Observatory 136,East Plains,WX,58.070,-0.410,757,upland,aviation,2006-09-01,true
+STN137,South Coast Airfield Weather Site 137,South Coast,WX,50.040,-0.120,774,airport,rail,2007-02-08,true
+STN138,Western Hills Causeway Climate Mast 138,Western Hills,WX,50.410,0.170,11,hydrology,agriculture,2008-07-15,true
+STN139,North Coast Reservoir Sensor Array 139,North Coast,WX,50.780,0.460,28,transport,road,2009-12-22,true
+STN140,Central Valley Beacon Station 140,Central Valley,WX,51.150,0.750,45,rural,health,2010-05-01,true
+STN141,Highlands Ridge Observatory 141,Highlands,WX,51.520,1.040,62,coastal,climate,2011-10-08,true
+STN142,East Plains Harbor Weather Site 142,East Plains,WX,51.890,1.330,79,urban,marine,2012-03-15,true
+STN143,South Coast Valley Climate Mast 143,South Coast,WX,52.260,1.620,96,upland,resilience,2013-08-22,true
+STN144,Western Hills Summit Sensor Array 144,Western Hills,WX,52.630,1.910,113,airport,aviation,2014-01-01,true
+STN145,North Coast River Station 145,North Coast,WX,53.000,-6.200,130,hydrology,rail,2015-06-08,true
+STN146,Central Valley Meadow Observatory 146,Central Valley,WX,53.370,-5.910,147,transport,agriculture,2016-11-15,true
+STN147,Highlands Airfield Weather Site 147,Highlands,WX,53.740,-5.620,164,rural,road,2017-04-22,true
+STN148,East Plains Causeway Climate Mast 148,East Plains,WX,54.110,-5.330,181,coastal,health,2018-09-01,true
+STN149,South Coast Reservoir Sensor Array 149,South Coast,WX,54.480,-5.040,198,urban,climate,2019-02-08,true
+STN150,Western Hills Beacon Station 150,Western Hills,WX,54.850,-4.750,215,upland,marine,2020-07-15,true
+STN151,North Coast Ridge Observatory 151,North Coast,WX,55.220,-4.460,232,airport,resilience,2021-12-22,true
+STN152,Central Valley Harbor Weather Site 152,Central Valley,WX,55.590,-4.170,249,hydrology,aviation,2022-05-01,false
+STN153,Highlands Valley Climate Mast 153,Highlands,WX,55.960,-3.880,266,transport,rail,2023-10-08,true
+STN154,East Plains Summit Sensor Array 154,East Plains,WX,56.330,-3.590,283,rural,agriculture,2024-03-15,true
+STN155,South Coast River Station 155,South Coast,WX,56.700,-3.300,300,coastal,road,2025-08-22,true
+STN156,Western Hills Meadow Observatory 156,Western Hills,WX,57.070,-3.010,317,urban,health,2000-01-01,true
+STN157,North Coast Airfield Weather Site 157,North Coast,WX,57.440,-2.720,334,upland,climate,2001-06-08,true
+STN158,Central Valley Causeway Climate Mast 158,Central Valley,WX,57.810,-2.430,351,airport,marine,2002-11-15,true
+STN159,Highlands Reservoir Sensor Array 159,Highlands,WX,49.780,-2.140,368,hydrology,resilience,2003-04-22,true
+STN160,East Plains Beacon Station 160,East Plains,WX,50.150,-1.850,385,transport,aviation,2004-09-01,true
+STN161,South Coast Ridge Observatory 161,South Coast,WX,50.520,-1.560,402,rural,rail,2005-02-08,true
+STN162,Western Hills Harbor Weather Site 162,Western Hills,WX,50.890,-1.270,419,coastal,agriculture,2006-07-15,true
+STN163,North Coast Valley Climate Mast 163,North Coast,WX,51.260,-0.980,436,urban,road,2007-12-22,true
+STN164,Central Valley Summit Sensor Array 164,Central Valley,WX,51.630,-0.690,453,upland,health,2008-05-01,true
+STN165,Highlands River Station 165,Highlands,WX,52.000,-0.400,470,airport,climate,2009-10-08,true
+STN166,East Plains Meadow Observatory 166,East Plains,WX,52.370,-0.110,487,hydrology,marine,2010-03-15,true
+STN167,South Coast Airfield Weather Site 167,South Coast,WX,52.740,0.180,504,transport,resilience,2011-08-22,true
+STN168,Western Hills Causeway Climate Mast 168,Western Hills,WX,53.110,0.470,521,rural,aviation,2012-01-01,true
+STN169,North Coast Reservoir Sensor Array 169,North Coast,WX,53.480,0.760,538,coastal,rail,2013-06-08,true
+STN170,Central Valley Beacon Station 170,Central Valley,WX,53.850,1.050,555,urban,agriculture,2014-11-15,true
+STN171,Highlands Ridge Observatory 171,Highlands,WX,54.220,1.340,572,upland,road,2015-04-22,false
+STN172,East Plains Harbor Weather Site 172,East Plains,WX,54.590,1.630,589,airport,health,2016-09-01,true
+STN173,South Coast Valley Climate Mast 173,South Coast,WX,54.960,1.920,606,hydrology,climate,2017-02-08,true
+STN174,Western Hills Summit Sensor Array 174,Western Hills,WX,55.330,-6.190,623,transport,marine,2018-07-15,true
+STN175,North Coast River Station 175,North Coast,WX,55.700,-5.900,640,rural,resilience,2019-12-22,true
+STN176,Central Valley Meadow Observatory 176,Central Valley,WX,56.070,-5.610,657,coastal,aviation,2020-05-01,true
+STN177,Highlands Airfield Weather Site 177,Highlands,WX,56.440,-5.320,674,urban,rail,2021-10-08,true
+STN178,East Plains Causeway Climate Mast 178,East Plains,WX,56.810,-5.030,691,upland,agriculture,2022-03-15,true
+STN179,South Coast Reservoir Sensor Array 179,South Coast,WX,57.180,-4.740,708,airport,road,2023-08-22,true
+STN180,Western Hills Beacon Station 180,Western Hills,WX,57.550,-4.450,725,hydrology,health,2024-01-01,true
+STN181,North Coast Ridge Observatory 181,North Coast,WX,57.920,-4.160,742,transport,climate,2025-06-08,true
+STN182,Central Valley Harbor Weather Site 182,Central Valley,WX,49.890,-3.870,759,rural,marine,2000-11-15,true
+STN183,Highlands Valley Climate Mast 183,Highlands,WX,50.260,-3.580,776,coastal,resilience,2001-04-22,true
+STN184,East Plains Summit Sensor Array 184,East Plains,WX,50.630,-3.290,13,urban,aviation,2002-09-01,true
+STN185,South Coast River Station 185,South Coast,WX,51.000,-3.000,30,upland,rail,2003-02-08,true
+STN186,Western Hills Meadow Observatory 186,Western Hills,WX,51.370,-2.710,47,airport,agriculture,2004-07-15,true
+STN187,North Coast Airfield Weather Site 187,North Coast,WX,51.740,-2.420,64,hydrology,road,2005-12-22,true
+STN188,Central Valley Causeway Climate Mast 188,Central Valley,WX,52.110,-2.130,81,transport,health,2006-05-01,true
+STN189,Highlands Reservoir Sensor Array 189,Highlands,WX,52.480,-1.840,98,rural,climate,2007-10-08,true
+STN190,East Plains Beacon Station 190,East Plains,WX,52.850,-1.550,115,coastal,marine,2008-03-15,false
+STN191,South Coast Ridge Observatory 191,South Coast,WX,53.220,-1.260,132,urban,resilience,2009-08-22,true
+STN192,Western Hills Harbor Weather Site 192,Western Hills,WX,53.590,-0.970,149,upland,aviation,2010-01-01,true
+STN193,North Coast Valley Climate Mast 193,North Coast,WX,53.960,-0.680,166,airport,rail,2011-06-08,true
+STN194,Central Valley Summit Sensor Array 194,Central Valley,WX,54.330,-0.390,183,hydrology,agriculture,2012-11-15,true
+STN195,Highlands River Station 195,Highlands,WX,54.700,-0.100,200,transport,road,2013-04-22,true
+STN196,East Plains Meadow Observatory 196,East Plains,WX,55.070,0.190,217,rural,health,2014-09-01,true
+STN197,South Coast Airfield Weather Site 197,South Coast,WX,55.440,0.480,234,coastal,climate,2015-02-08,true
+STN198,Western Hills Causeway Climate Mast 198,Western Hills,WX,55.810,0.770,251,urban,marine,2016-07-15,true
+STN199,North Coast Reservoir Sensor Array 199,North Coast,WX,56.180,1.060,268,upland,resilience,2017-12-22,true
+STN200,Central Valley Beacon Station 200,Central Valley,WX,56.550,1.350,285,airport,aviation,2018-05-01,true
+STN201,Highlands Ridge Observatory 201,Highlands,WX,56.920,1.640,302,hydrology,rail,2019-10-08,true
+STN202,East Plains Harbor Weather Site 202,East Plains,WX,57.290,1.930,319,transport,agriculture,2020-03-15,true
+STN203,South Coast Valley Climate Mast 203,South Coast,WX,57.660,-6.180,336,rural,road,2021-08-22,true
+STN204,Western Hills Summit Sensor Array 204,Western Hills,WX,58.030,-5.890,353,coastal,health,2022-01-01,true
+STN205,North Coast River Station 205,North Coast,WX,50.000,-5.600,370,urban,climate,2023-06-08,true
+STN206,Central Valley Meadow Observatory 206,Central Valley,WX,50.370,-5.310,387,upland,marine,2024-11-15,true
+STN207,Highlands Airfield Weather Site 207,Highlands,WX,50.740,-5.020,404,airport,resilience,2025-04-22,true
+STN208,East Plains Causeway Climate Mast 208,East Plains,WX,51.110,-4.730,421,hydrology,aviation,2000-09-01,true
+STN209,South Coast Reservoir Sensor Array 209,South Coast,WX,51.480,-4.440,438,transport,rail,2001-02-08,false
+STN210,Western Hills Beacon Station 210,Western Hills,WX,51.850,-4.150,455,rural,agriculture,2002-07-15,true
+STN211,North Coast Ridge Observatory 211,North Coast,WX,52.220,-3.860,472,coastal,road,2003-12-22,true
+STN212,Central Valley Harbor Weather Site 212,Central Valley,WX,52.590,-3.570,489,urban,health,2004-05-01,true
+STN213,Highlands Valley Climate Mast 213,Highlands,WX,52.960,-3.280,506,upland,climate,2005-10-08,true
+STN214,East Plains Summit Sensor Array 214,East Plains,WX,53.330,-2.990,523,airport,marine,2006-03-15,true
+STN215,South Coast River Station 215,South Coast,WX,53.700,-2.700,540,hydrology,resilience,2007-08-22,true
+STN216,Western Hills Meadow Observatory 216,Western Hills,WX,54.070,-2.410,557,transport,aviation,2008-01-01,true
+STN217,North Coast Airfield Weather Site 217,North Coast,WX,54.440,-2.120,574,rural,rail,2009-06-08,true
+STN218,Central Valley Causeway Climate Mast 218,Central Valley,WX,54.810,-1.830,591,coastal,agriculture,2010-11-15,true
+STN219,Highlands Reservoir Sensor Array 219,Highlands,WX,55.180,-1.540,608,urban,road,2011-04-22,true
+STN220,East Plains Beacon Station 220,East Plains,WX,55.550,-1.250,625,upland,health,2012-09-01,true
+STN221,South Coast Ridge Observatory 221,South Coast,WX,55.920,-0.960,642,airport,climate,2013-02-08,true
+STN222,Western Hills Harbor Weather Site 222,Western Hills,WX,56.290,-0.670,659,hydrology,marine,2014-07-15,true
+STN223,North Coast Valley Climate Mast 223,North Coast,WX,56.660,-0.380,676,transport,resilience,2015-12-22,true
+STN224,Central Valley Summit Sensor Array 224,Central Valley,WX,57.030,-0.090,693,rural,aviation,2016-05-01,true
+STN225,Highlands River Station 225,Highlands,WX,57.400,0.200,710,coastal,rail,2017-10-08,true
+STN226,East Plains Meadow Observatory 226,East Plains,WX,57.770,0.490,727,urban,agriculture,2018-03-15,true
+STN227,South Coast Airfield Weather Site 227,South Coast,WX,58.140,0.780,744,upland,road,2019-08-22,true
+STN228,Western Hills Causeway Climate Mast 228,Western Hills,WX,50.110,1.070,761,airport,health,2020-01-01,false
+STN229,North Coast Reservoir Sensor Array 229,North Coast,WX,50.480,1.360,778,hydrology,climate,2021-06-08,true
+STN230,Central Valley Beacon Station 230,Central Valley,WX,50.850,1.650,15,transport,marine,2022-11-15,true
+STN231,Highlands Ridge Observatory 231,Highlands,WX,51.220,1.940,32,rural,resilience,2023-04-22,true
+STN232,East Plains Harbor Weather Site 232,East Plains,WX,51.590,-6.170,49,coastal,aviation,2024-09-01,true
+STN233,South Coast Valley Climate Mast 233,South Coast,WX,51.960,-5.880,66,urban,rail,2025-02-08,true
+STN234,Western Hills Summit Sensor Array 234,Western Hills,WX,52.330,-5.590,83,upland,agriculture,2000-07-15,true
+STN235,North Coast River Station 235,North Coast,WX,52.700,-5.300,100,airport,road,2001-12-22,true
+STN236,Central Valley Meadow Observatory 236,Central Valley,WX,53.070,-5.010,117,hydrology,health,2002-05-01,true
+STN237,Highlands Airfield Weather Site 237,Highlands,WX,53.440,-4.720,134,transport,climate,2003-10-08,true
+STN238,East Plains Causeway Climate Mast 238,East Plains,WX,53.810,-4.430,151,rural,marine,2004-03-15,true
+STN239,South Coast Reservoir Sensor Array 239,South Coast,WX,54.180,-4.140,168,coastal,resilience,2005-08-22,true
+STN240,Western Hills Beacon Station 240,Western Hills,WX,54.550,-3.850,185,urban,aviation,2006-01-01,true
+STN241,North Coast Ridge Observatory 241,North Coast,WX,54.920,-3.560,202,upland,rail,2007-06-08,true
+STN242,Central Valley Harbor Weather Site 242,Central Valley,WX,55.290,-3.270,219,airport,agriculture,2008-11-15,true
+STN243,Highlands Valley Climate Mast 243,Highlands,WX,55.660,-2.980,236,hydrology,road,2009-04-22,true
+STN244,East Plains Summit Sensor Array 244,East Plains,WX,56.030,-2.690,253,transport,health,2010-09-01,true
+STN245,South Coast River Station 245,South Coast,WX,56.400,-2.400,270,rural,climate,2011-02-08,true
+STN246,Western Hills Meadow Observatory 246,Western Hills,WX,56.770,-2.110,287,coastal,marine,2012-07-15,true
+STN247,North Coast Airfield Weather Site 247,North Coast,WX,57.140,-1.820,304,urban,resilience,2013-12-22,false
+STN248,Central Valley Causeway Climate Mast 248,Central Valley,WX,57.510,-1.530,321,upland,aviation,2014-05-01,true
+STN249,Highlands Reservoir Sensor Array 249,Highlands,WX,57.880,-1.240,338,airport,rail,2015-10-08,true
+STN250,East Plains Beacon Station 250,East Plains,WX,49.850,-0.950,355,hydrology,agriculture,2016-03-15,true
+STN251,South Coast Ridge Observatory 251,South Coast,WX,50.220,-0.660,372,transport,road,2017-08-22,true
+STN252,Western Hills Harbor Weather Site 252,Western Hills,WX,50.590,-0.370,389,rural,health,2018-01-01,true
+STN253,North Coast Valley Climate Mast 253,North Coast,WX,50.960,-0.080,406,coastal,climate,2019-06-08,true
+STN254,Central Valley Summit Sensor Array 254,Central Valley,WX,51.330,0.210,423,urban,marine,2020-11-15,true
+STN255,Highlands River Station 255,Highlands,WX,51.700,0.500,440,upland,resilience,2021-04-22,true
+STN256,East Plains Meadow Observatory 256,East Plains,WX,52.070,0.790,457,airport,aviation,2022-09-01,true
+STN257,South Coast Airfield Weather Site 257,South Coast,WX,52.440,1.080,474,hydrology,rail,2023-02-08,true
+STN258,Western Hills Causeway Climate Mast 258,Western Hills,WX,52.810,1.370,491,transport,agriculture,2024-07-15,true
+STN259,North Coast Reservoir Sensor Array 259,North Coast,WX,53.180,1.660,508,rural,road,2025-12-22,true
+STN260,Central Valley Beacon Station 260,Central Valley,WX,53.550,1.950,525,coastal,health,2000-05-01,true
+STN261,Highlands Ridge Observatory 261,Highlands,WX,53.920,-6.160,542,urban,climate,2001-10-08,true
+STN262,East Plains Harbor Weather Site 262,East Plains,WX,54.290,-5.870,559,upland,marine,2002-03-15,true
+STN263,South Coast Valley Climate Mast 263,South Coast,WX,54.660,-5.580,576,airport,resilience,2003-08-22,true
+STN264,Western Hills Summit Sensor Array 264,Western Hills,WX,55.030,-5.290,593,hydrology,aviation,2004-01-01,true
+STN265,North Coast River Station 265,North Coast,WX,55.400,-5.000,610,transport,rail,2005-06-08,true
+STN266,Central Valley Meadow Observatory 266,Central Valley,WX,55.770,-4.710,627,rural,agriculture,2006-11-15,false
+STN267,Highlands Airfield Weather Site 267,Highlands,WX,56.140,-4.420,644,coastal,road,2007-04-22,true
+STN268,East Plains Causeway Climate Mast 268,East Plains,WX,56.510,-4.130,661,urban,health,2008-09-01,true
+STN269,South Coast Reservoir Sensor Array 269,South Coast,WX,56.880,-3.840,678,upland,climate,2009-02-08,true
+STN270,Western Hills Beacon Station 270,Western Hills,WX,57.250,-3.550,695,airport,marine,2010-07-15,true
+STN271,North Coast Ridge Observatory 271,North Coast,WX,57.620,-3.260,712,hydrology,resilience,2011-12-22,true
+STN272,Central Valley Harbor Weather Site 272,Central Valley,WX,57.990,-2.970,729,transport,aviation,2012-05-01,true
+STN273,Highlands Valley Climate Mast 273,Highlands,WX,49.960,-2.680,746,rural,rail,2013-10-08,true
+STN274,East Plains Summit Sensor Array 274,East Plains,WX,50.330,-2.390,763,coastal,agriculture,2014-03-15,true
+STN275,South Coast River Station 275,South Coast,WX,50.700,-2.100,780,urban,road,2015-08-22,true
+STN276,Western Hills Meadow Observatory 276,Western Hills,WX,51.070,-1.810,17,upland,health,2016-01-01,true
+STN277,North Coast Airfield Weather Site 277,North Coast,WX,51.440,-1.520,34,airport,climate,2017-06-08,true
+STN278,Central Valley Causeway Climate Mast 278,Central Valley,WX,51.810,-1.230,51,hydrology,marine,2018-11-15,true
+STN279,Highlands Reservoir Sensor Array 279,Highlands,WX,52.180,-0.940,68,transport,resilience,2019-04-22,true
+STN280,East Plains Beacon Station 280,East Plains,WX,52.550,-0.650,85,rural,aviation,2020-09-01,true
+STN281,South Coast Ridge Observatory 281,South Coast,WX,52.920,-0.360,102,coastal,rail,2021-02-08,true
+STN282,Western Hills Harbor Weather Site 282,Western Hills,WX,53.290,-0.070,119,urban,agriculture,2022-07-15,true
+STN283,North Coast Valley Climate Mast 283,North Coast,WX,53.660,0.220,136,upland,road,2023-12-22,true
+STN284,Central Valley Summit Sensor Array 284,Central Valley,WX,54.030,0.510,153,airport,health,2024-05-01,true
+STN285,Highlands River Station 285,Highlands,WX,54.400,0.800,170,hydrology,climate,2025-10-08,false
+STN286,East Plains Meadow Observatory 286,East Plains,WX,54.770,1.090,187,transport,marine,2000-03-15,true
+STN287,South Coast Airfield Weather Site 287,South Coast,WX,55.140,1.380,204,rural,resilience,2001-08-22,true
+STN288,Western Hills Causeway Climate Mast 288,Western Hills,WX,55.510,1.670,221,coastal,aviation,2002-01-01,true
+STN289,North Coast Reservoir Sensor Array 289,North Coast,WX,55.880,1.960,238,urban,rail,2003-06-08,true
+STN290,Central Valley Beacon Station 290,Central Valley,WX,56.250,-6.150,255,upland,agriculture,2004-11-15,true
+STN291,Highlands Ridge Observatory 291,Highlands,WX,56.620,-5.860,272,airport,road,2005-04-22,true
+STN292,East Plains Harbor Weather Site 292,East Plains,WX,56.990,-5.570,289,hydrology,health,2006-09-01,true
+STN293,South Coast Valley Climate Mast 293,South Coast,WX,57.360,-5.280,306,transport,climate,2007-02-08,true
+STN294,Western Hills Summit Sensor Array 294,Western Hills,WX,57.730,-4.990,323,rural,marine,2008-07-15,true
+STN295,North Coast River Station 295,North Coast,WX,58.100,-4.700,340,coastal,resilience,2009-12-22,true
+STN296,Central Valley Meadow Observatory 296,Central Valley,WX,50.070,-4.410,357,urban,aviation,2010-05-01,true
+STN297,Highlands Airfield Weather Site 297,Highlands,WX,50.440,-4.120,374,upland,rail,2011-10-08,true
+STN298,East Plains Causeway Climate Mast 298,East Plains,WX,50.810,-3.830,391,airport,agriculture,2012-03-15,true
+STN299,South Coast Reservoir Sensor Array 299,South Coast,WX,51.180,-3.540,408,hydrology,road,2013-08-22,true
+STN300,Western Hills Beacon Station 300,Western Hills,WX,51.550,-3.250,425,transport,health,2014-01-01,true
+STN301,North Coast Ridge Observatory 301,North Coast,WX,51.920,-2.960,442,rural,climate,2015-06-08,true
+STN302,Central Valley Harbor Weather Site 302,Central Valley,WX,52.290,-2.670,459,coastal,marine,2016-11-15,true
+STN303,Highlands Valley Climate Mast 303,Highlands,WX,52.660,-2.380,476,urban,resilience,2017-04-22,true
+STN304,East Plains Summit Sensor Array 304,East Plains,WX,53.030,-2.090,493,upland,aviation,2018-09-01,false
+STN305,South Coast River Station 305,South Coast,WX,53.400,-1.800,510,airport,rail,2019-02-08,true
+STN306,Western Hills Meadow Observatory 306,Western Hills,WX,53.770,-1.510,527,hydrology,agriculture,2020-07-15,true
+STN307,North Coast Airfield Weather Site 307,North Coast,WX,54.140,-1.220,544,transport,road,2021-12-22,true
+STN308,Central Valley Causeway Climate Mast 308,Central Valley,WX,54.510,-0.930,561,rural,health,2022-05-01,true
+STN309,Highlands Reservoir Sensor Array 309,Highlands,WX,54.880,-0.640,578,coastal,climate,2023-10-08,true
+STN310,East Plains Beacon Station 310,East Plains,WX,55.250,-0.350,595,urban,marine,2024-03-15,true
+STN311,South Coast Ridge Observatory 311,South Coast,WX,55.620,-0.060,612,upland,resilience,2025-08-22,true
+STN312,Western Hills Harbor Weather Site 312,Western Hills,WX,55.990,0.230,629,airport,aviation,2000-01-01,true
+STN313,North Coast Valley Climate Mast 313,North Coast,WX,56.360,0.520,646,hydrology,rail,2001-06-08,true
+STN314,Central Valley Summit Sensor Array 314,Central Valley,WX,56.730,0.810,663,transport,agriculture,2002-11-15,true
+STN315,Highlands River Station 315,Highlands,WX,57.100,1.100,680,rural,road,2003-04-22,true
+STN316,East Plains Meadow Observatory 316,East Plains,WX,57.470,1.390,697,coastal,health,2004-09-01,true
+STN317,South Coast Airfield Weather Site 317,South Coast,WX,57.840,1.680,714,urban,climate,2005-02-08,true
+STN318,Western Hills Causeway Climate Mast 318,Western Hills,WX,49.810,1.970,731,upland,marine,2006-07-15,true
+STN319,North Coast Reservoir Sensor Array 319,North Coast,WX,50.180,-6.140,748,airport,resilience,2007-12-22,true
+STN320,Central Valley Beacon Station 320,Central Valley,WX,50.550,-5.850,765,hydrology,aviation,2008-05-01,true
+STN321,Highlands Ridge Observatory 321,Highlands,WX,50.920,-5.560,782,transport,rail,2009-10-08,true
+STN322,East Plains Harbor Weather Site 322,East Plains,WX,51.290,-5.270,19,rural,agriculture,2010-03-15,true
+STN323,South Coast Valley Climate Mast 323,South Coast,WX,51.660,-4.980,36,coastal,road,2011-08-22,false
+STN324,Western Hills Summit Sensor Array 324,Western Hills,WX,52.030,-4.690,53,urban,health,2012-01-01,true
+STN325,North Coast River Station 325,North Coast,WX,52.400,-4.400,70,upland,climate,2013-06-08,true
+STN326,Central Valley Meadow Observatory 326,Central Valley,WX,52.770,-4.110,87,airport,marine,2014-11-15,true
+STN327,Highlands Airfield Weather Site 327,Highlands,WX,53.140,-3.820,104,hydrology,resilience,2015-04-22,true
+STN328,East Plains Causeway Climate Mast 328,East Plains,WX,53.510,-3.530,121,transport,aviation,2016-09-01,true
+STN329,South Coast Reservoir Sensor Array 329,South Coast,WX,53.880,-3.240,138,rural,rail,2017-02-08,true
+STN330,Western Hills Beacon Station 330,Western Hills,WX,54.250,-2.950,155,coastal,agriculture,2018-07-15,true
+STN331,North Coast Ridge Observatory 331,North Coast,WX,54.620,-2.660,172,urban,road,2019-12-22,true
+STN332,Central Valley Harbor Weather Site 332,Central Valley,WX,54.990,-2.370,189,upland,health,2020-05-01,true
+STN333,Highlands Valley Climate Mast 333,Highlands,WX,55.360,-2.080,206,airport,climate,2021-10-08,true
+STN334,East Plains Summit Sensor Array 334,East Plains,WX,55.730,-1.790,223,hydrology,marine,2022-03-15,true
+STN335,South Coast River Station 335,South Coast,WX,56.100,-1.500,240,transport,resilience,2023-08-22,true
+STN336,Western Hills Meadow Observatory 336,Western Hills,WX,56.470,-1.210,257,rural,aviation,2024-01-01,true
+STN337,North Coast Airfield Weather Site 337,North Coast,WX,56.840,-0.920,274,coastal,rail,2025-06-08,true
+STN338,Central Valley Causeway Climate Mast 338,Central Valley,WX,57.210,-0.630,291,urban,agriculture,2000-11-15,true
+STN339,Highlands Reservoir Sensor Array 339,Highlands,WX,57.580,-0.340,308,upland,road,2001-04-22,true
+STN340,East Plains Beacon Station 340,East Plains,WX,57.950,-0.050,325,airport,health,2002-09-01,true
+STN341,South Coast Ridge Observatory 341,South Coast,WX,49.920,0.240,342,hydrology,climate,2003-02-08,true
+STN342,Western Hills Harbor Weather Site 342,Western Hills,WX,50.290,0.530,359,transport,marine,2004-07-15,false
+STN343,North Coast Valley Climate Mast 343,North Coast,WX,50.660,0.820,376,rural,resilience,2005-12-22,true
+STN344,Central Valley Summit Sensor Array 344,Central Valley,WX,51.030,1.110,393,coastal,aviation,2006-05-01,true
+STN345,Highlands River Station 345,Highlands,WX,51.400,1.400,410,urban,rail,2007-10-08,true
+STN346,East Plains Meadow Observatory 346,East Plains,WX,51.770,1.690,427,upland,agriculture,2008-03-15,true
+STN347,South Coast Airfield Weather Site 347,South Coast,WX,52.140,1.980,444,airport,road,2009-08-22,true
+STN348,Western Hills Causeway Climate Mast 348,Western Hills,WX,52.510,-6.130,461,hydrology,health,2010-01-01,true
+STN349,North Coast Reservoir Sensor Array 349,North Coast,WX,52.880,-5.840,478,transport,climate,2011-06-08,true
+STN350,Central Valley Beacon Station 350,Central Valley,WX,53.250,-5.550,495,rural,marine,2012-11-15,true
+STN351,Highlands Ridge Observatory 351,Highlands,WX,53.620,-5.260,512,coastal,resilience,2013-04-22,true
+STN352,East Plains Harbor Weather Site 352,East Plains,WX,53.990,-4.970,529,urban,aviation,2014-09-01,true
+STN353,South Coast Valley Climate Mast 353,South Coast,WX,54.360,-4.680,546,upland,rail,2015-02-08,true
+STN354,Western Hills Summit Sensor Array 354,Western Hills,WX,54.730,-4.390,563,airport,agriculture,2016-07-15,true
+STN355,North Coast River Station 355,North Coast,WX,55.100,-4.100,580,hydrology,road,2017-12-22,true
+STN356,Central Valley Meadow Observatory 356,Central Valley,WX,55.470,-3.810,597,transport,health,2018-05-01,true
+STN357,Highlands Airfield Weather Site 357,Highlands,WX,55.840,-3.520,614,rural,climate,2019-10-08,true
+STN358,East Plains Causeway Climate Mast 358,East Plains,WX,56.210,-3.230,631,coastal,marine,2020-03-15,true
+STN359,South Coast Reservoir Sensor Array 359,South Coast,WX,56.580,-2.940,648,urban,resilience,2021-08-22,true
+STN360,Western Hills Beacon Station 360,Western Hills,WX,56.950,-2.650,665,upland,aviation,2022-01-01,true
+STN361,North Coast Ridge Observatory 361,North Coast,WX,57.320,-2.360,682,airport,rail,2023-06-08,false
+STN362,Central Valley Harbor Weather Site 362,Central Valley,WX,57.690,-2.070,699,hydrology,agriculture,2024-11-15,true
+STN363,Highlands Valley Climate Mast 363,Highlands,WX,58.060,-1.780,716,transport,road,2025-04-22,true
+STN364,East Plains Summit Sensor Array 364,East Plains,WX,50.030,-1.490,733,rural,health,2000-09-01,true
+STN365,South Coast River Station 365,South Coast,WX,50.400,-1.200,750,coastal,climate,2001-02-08,true
+STN366,Western Hills Meadow Observatory 366,Western Hills,WX,50.770,-0.910,767,urban,marine,2002-07-15,true
+STN367,North Coast Airfield Weather Site 367,North Coast,WX,51.140,-0.620,784,upland,resilience,2003-12-22,true
+STN368,Central Valley Causeway Climate Mast 368,Central Valley,WX,51.510,-0.330,21,airport,aviation,2004-05-01,true
+STN369,Highlands Reservoir Sensor Array 369,Highlands,WX,51.880,-0.040,38,hydrology,rail,2005-10-08,true
+STN370,East Plains Beacon Station 370,East Plains,WX,52.250,0.250,55,transport,agriculture,2006-03-15,true
+STN371,South Coast Ridge Observatory 371,South Coast,WX,52.620,0.540,72,rural,road,2007-08-22,true
+STN372,Western Hills Harbor Weather Site 372,Western Hills,WX,52.990,0.830,89,coastal,health,2008-01-01,true
+STN373,North Coast Valley Climate Mast 373,North Coast,WX,53.360,1.120,106,urban,climate,2009-06-08,true
+STN374,Central Valley Summit Sensor Array 374,Central Valley,WX,53.730,1.410,123,upland,marine,2010-11-15,true
+STN375,Highlands River Station 375,Highlands,WX,54.100,1.700,140,airport,resilience,2011-04-22,true
+STN376,East Plains Meadow Observatory 376,East Plains,WX,54.470,1.990,157,hydrology,aviation,2012-09-01,true
+STN377,South Coast Airfield Weather Site 377,South Coast,WX,54.840,-6.120,174,transport,rail,2013-02-08,true
+STN378,Western Hills Causeway Climate Mast 378,Western Hills,WX,55.210,-5.830,191,rural,agriculture,2014-07-15,true
+STN379,North Coast Reservoir Sensor Array 379,North Coast,WX,55.580,-5.540,208,coastal,road,2015-12-22,true
+STN380,Central Valley Beacon Station 380,Central Valley,WX,55.950,-5.250,225,urban,health,2016-05-01,false
+STN381,Highlands Ridge Observatory 381,Highlands,WX,56.320,-4.960,242,upland,climate,2017-10-08,true
+STN382,East Plains Harbor Weather Site 382,East Plains,WX,56.690,-4.670,259,airport,marine,2018-03-15,true
+STN383,South Coast Valley Climate Mast 383,South Coast,WX,57.060,-4.380,276,hydrology,resilience,2019-08-22,true
+STN384,Western Hills Summit Sensor Array 384,Western Hills,WX,57.430,-4.090,293,transport,aviation,2020-01-01,true
+STN385,North Coast River Station 385,North Coast,WX,57.800,-3.800,310,rural,rail,2021-06-08,true
+STN386,Central Valley Meadow Observatory 386,Central Valley,WX,49.770,-3.510,327,coastal,agriculture,2022-11-15,true
+STN387,Highlands Airfield Weather Site 387,Highlands,WX,50.140,-3.220,344,urban,road,2023-04-22,true
+STN388,East Plains Causeway Climate Mast 388,East Plains,WX,50.510,-2.930,361,upland,health,2024-09-01,true
+STN389,South Coast Reservoir Sensor Array 389,South Coast,WX,50.880,-2.640,378,airport,climate,2025-02-08,true
+STN390,Western Hills Beacon Station 390,Western Hills,WX,51.250,-2.350,395,hydrology,marine,2000-07-15,true
+STN391,North Coast Ridge Observatory 391,North Coast,WX,51.620,-2.060,412,transport,resilience,2001-12-22,true
+STN392,Central Valley Harbor Weather Site 392,Central Valley,WX,51.990,-1.770,429,rural,aviation,2002-05-01,true
+STN393,Highlands Valley Climate Mast 393,Highlands,WX,52.360,-1.480,446,coastal,rail,2003-10-08,true
+STN394,East Plains Summit Sensor Array 394,East Plains,WX,52.730,-1.190,463,urban,agriculture,2004-03-15,true
+STN395,South Coast River Station 395,South Coast,WX,53.100,-0.900,480,upland,road,2005-08-22,true
+STN396,Western Hills Meadow Observatory 396,Western Hills,WX,53.470,-0.610,497,airport,health,2006-01-01,true
+STN397,North Coast Airfield Weather Site 397,North Coast,WX,53.840,-0.320,514,hydrology,climate,2007-06-08,true
+STN398,Central Valley Causeway Climate Mast 398,Central Valley,WX,54.210,-0.030,531,transport,marine,2008-11-15,true
+STN399,Highlands Reservoir Sensor Array 399,Highlands,WX,54.580,0.260,548,rural,resilience,2009-04-22,false
+STN400,East Plains Beacon Station 400,East Plains,WX,54.950,0.550,565,coastal,aviation,2010-09-01,true
+STN401,South Coast Ridge Observatory 401,South Coast,WX,55.320,0.840,582,urban,rail,2011-02-08,true
+STN402,Western Hills Harbor Weather Site 402,Western Hills,WX,55.690,1.130,599,upland,agriculture,2012-07-15,true
+STN403,North Coast Valley Climate Mast 403,North Coast,WX,56.060,1.420,616,airport,road,2013-12-22,true
+STN404,Central Valley Summit Sensor Array 404,Central Valley,WX,56.430,1.710,633,hydrology,health,2014-05-01,true
+STN405,Highlands River Station 405,Highlands,WX,56.800,2.000,650,transport,climate,2015-10-08,true
+STN406,East Plains Meadow Observatory 406,East Plains,WX,57.170,-6.110,667,rural,marine,2016-03-15,true
+STN407,South Coast Airfield Weather Site 407,South Coast,WX,57.540,-5.820,684,coastal,resilience,2017-08-22,true
+STN408,Western Hills Causeway Climate Mast 408,Western Hills,WX,57.910,-5.530,701,urban,aviation,2018-01-01,true
+STN409,North Coast Reservoir Sensor Array 409,North Coast,WX,49.880,-5.240,718,upland,rail,2019-06-08,true
+STN410,Central Valley Beacon Station 410,Central Valley,WX,50.250,-4.950,735,airport,agriculture,2020-11-15,true
+STN411,Highlands Ridge Observatory 411,Highlands,WX,50.620,-4.660,752,hydrology,road,2021-04-22,true
+STN412,East Plains Harbor Weather Site 412,East Plains,WX,50.990,-4.370,769,transport,health,2022-09-01,true
+STN413,South Coast Valley Climate Mast 413,South Coast,WX,51.360,-4.080,6,rural,climate,2023-02-08,true
+STN414,Western Hills Summit Sensor Array 414,Western Hills,WX,51.730,-3.790,23,coastal,marine,2024-07-15,true
+STN415,North Coast River Station 415,North Coast,WX,52.100,-3.500,40,urban,resilience,2025-12-22,true
+STN416,Central Valley Meadow Observatory 416,Central Valley,WX,52.470,-3.210,57,upland,aviation,2000-05-01,true
+STN417,Highlands Airfield Weather Site 417,Highlands,WX,52.840,-2.920,74,airport,rail,2001-10-08,true
+STN418,East Plains Causeway Climate Mast 418,East Plains,WX,53.210,-2.630,91,hydrology,agriculture,2002-03-15,false
+STN419,South Coast Reservoir Sensor Array 419,South Coast,WX,53.580,-2.340,108,transport,road,2003-08-22,true
+STN420,Western Hills Beacon Station 420,Western Hills,WX,53.950,-2.050,125,rural,health,2004-01-01,true
+STN421,North Coast Ridge Observatory 421,North Coast,WX,54.320,-1.760,142,coastal,climate,2005-06-08,true
+STN422,Central Valley Harbor Weather Site 422,Central Valley,WX,54.690,-1.470,159,urban,marine,2006-11-15,true
+STN423,Highlands Valley Climate Mast 423,Highlands,WX,55.060,-1.180,176,upland,resilience,2007-04-22,true
+STN424,East Plains Summit Sensor Array 424,East Plains,WX,55.430,-0.890,193,airport,aviation,2008-09-01,true
+STN425,South Coast River Station 425,South Coast,WX,55.800,-0.600,210,hydrology,rail,2009-02-08,true
+STN426,Western Hills Meadow Observatory 426,Western Hills,WX,56.170,-0.310,227,transport,agriculture,2010-07-15,true
+STN427,North Coast Airfield Weather Site 427,North Coast,WX,56.540,-0.020,244,rural,road,2011-12-22,true
+STN428,Central Valley Causeway Climate Mast 428,Central Valley,WX,56.910,0.270,261,coastal,health,2012-05-01,true
+STN429,Highlands Reservoir Sensor Array 429,Highlands,WX,57.280,0.560,278,urban,climate,2013-10-08,true
+STN430,East Plains Beacon Station 430,East Plains,WX,57.650,0.850,295,upland,marine,2014-03-15,true
+STN431,South Coast Ridge Observatory 431,South Coast,WX,58.020,1.140,312,airport,resilience,2015-08-22,true
+STN432,Western Hills Harbor Weather Site 432,Western Hills,WX,49.990,1.430,329,hydrology,aviation,2016-01-01,true
+STN433,North Coast Valley Climate Mast 433,North Coast,WX,50.360,1.720,346,transport,rail,2017-06-08,true
+STN434,Central Valley Summit Sensor Array 434,Central Valley,WX,50.730,2.010,363,rural,agriculture,2018-11-15,true
+STN435,Highlands River Station 435,Highlands,WX,51.100,-6.100,380,coastal,road,2019-04-22,true
+STN436,East Plains Meadow Observatory 436,East Plains,WX,51.470,-5.810,397,urban,health,2020-09-01,true
+STN437,South Coast Airfield Weather Site 437,South Coast,WX,51.840,-5.520,414,upland,climate,2021-02-08,false
+STN438,Western Hills Causeway Climate Mast 438,Western Hills,WX,52.210,-5.230,431,airport,marine,2022-07-15,true
+STN439,North Coast Reservoir Sensor Array 439,North Coast,WX,52.580,-4.940,448,hydrology,resilience,2023-12-22,true
+STN440,Central Valley Beacon Station 440,Central Valley,WX,52.950,-4.650,465,transport,aviation,2024-05-01,true
+STN441,Highlands Ridge Observatory 441,Highlands,WX,53.320,-4.360,482,rural,rail,2025-10-08,true
+STN442,East Plains Harbor Weather Site 442,East Plains,WX,53.690,-4.070,499,coastal,agriculture,2000-03-15,true
+STN443,South Coast Valley Climate Mast 443,South Coast,WX,54.060,-3.780,516,urban,road,2001-08-22,true
+STN444,Western Hills Summit Sensor Array 444,Western Hills,WX,54.430,-3.490,533,upland,health,2002-01-01,true
+STN445,North Coast River Station 445,North Coast,WX,54.800,-3.200,550,airport,climate,2003-06-08,true
+STN446,Central Valley Meadow Observatory 446,Central Valley,WX,55.170,-2.910,567,hydrology,marine,2004-11-15,true
+STN447,Highlands Airfield Weather Site 447,Highlands,WX,55.540,-2.620,584,transport,resilience,2005-04-22,true
+STN448,East Plains Causeway Climate Mast 448,East Plains,WX,55.910,-2.330,601,rural,aviation,2006-09-01,true
+STN449,South Coast Reservoir Sensor Array 449,South Coast,WX,56.280,-2.040,618,coastal,rail,2007-02-08,true
+STN450,Western Hills Beacon Station 450,Western Hills,WX,56.650,-1.750,635,urban,agriculture,2008-07-15,true
+STN451,North Coast Ridge Observatory 451,North Coast,WX,57.020,-1.460,652,upland,road,2009-12-22,true
+STN452,Central Valley Harbor Weather Site 452,Central Valley,WX,57.390,-1.170,669,airport,health,2010-05-01,true
+STN453,Highlands Valley Climate Mast 453,Highlands,WX,57.760,-0.880,686,hydrology,climate,2011-10-08,true
+STN454,East Plains Summit Sensor Array 454,East Plains,WX,58.130,-0.590,703,transport,marine,2012-03-15,true
+STN455,South Coast River Station 455,South Coast,WX,50.100,-0.300,720,rural,resilience,2013-08-22,true
+STN456,Western Hills Meadow Observatory 456,Western Hills,WX,50.470,-0.010,737,coastal,aviation,2014-01-01,false
+STN457,North Coast Airfield Weather Site 457,North Coast,WX,50.840,0.280,754,urban,rail,2015-06-08,true
+STN458,Central Valley Causeway Climate Mast 458,Central Valley,WX,51.210,0.570,771,upland,agriculture,2016-11-15,true
+STN459,Highlands Reservoir Sensor Array 459,Highlands,WX,51.580,0.860,8,airport,road,2017-04-22,true
+STN460,East Plains Beacon Station 460,East Plains,WX,51.950,1.150,25,hydrology,health,2018-09-01,true
+STN461,South Coast Ridge Observatory 461,South Coast,WX,52.320,1.440,42,transport,climate,2019-02-08,true
+STN462,Western Hills Harbor Weather Site 462,Western Hills,WX,52.690,1.730,59,rural,marine,2020-07-15,true
+STN463,North Coast Valley Climate Mast 463,North Coast,WX,53.060,2.020,76,coastal,resilience,2021-12-22,true
+STN464,Central Valley Summit Sensor Array 464,Central Valley,WX,53.430,-6.090,93,urban,aviation,2022-05-01,true
+STN465,Highlands River Station 465,Highlands,WX,53.800,-5.800,110,upland,rail,2023-10-08,true
+STN466,East Plains Meadow Observatory 466,East Plains,WX,54.170,-5.510,127,airport,agriculture,2024-03-15,true
+STN467,South Coast Airfield Weather Site 467,South Coast,WX,54.540,-5.220,144,hydrology,road,2025-08-22,true
+STN468,Western Hills Causeway Climate Mast 468,Western Hills,WX,54.910,-4.930,161,transport,health,2000-01-01,true
+STN469,North Coast Reservoir Sensor Array 469,North Coast,WX,55.280,-4.640,178,rural,climate,2001-06-08,true
+STN470,Central Valley Beacon Station 470,Central Valley,WX,55.650,-4.350,195,coastal,marine,2002-11-15,true
+STN471,Highlands Ridge Observatory 471,Highlands,WX,56.020,-4.060,212,urban,resilience,2003-04-22,true
+STN472,East Plains Harbor Weather Site 472,East Plains,WX,56.390,-3.770,229,upland,aviation,2004-09-01,true
+STN473,South Coast Valley Climate Mast 473,South Coast,WX,56.760,-3.480,246,airport,rail,2005-02-08,true
+STN474,Western Hills Summit Sensor Array 474,Western Hills,WX,57.130,-3.190,263,hydrology,agriculture,2006-07-15,true
+STN475,North Coast River Station 475,North Coast,WX,57.500,-2.900,280,transport,road,2007-12-22,false
+STN476,Central Valley Meadow Observatory 476,Central Valley,WX,57.870,-2.610,297,rural,health,2008-05-01,true
+STN477,Highlands Airfield Weather Site 477,Highlands,WX,49.840,-2.320,314,coastal,climate,2009-10-08,true
+STN478,East Plains Causeway Climate Mast 478,East Plains,WX,50.210,-2.030,331,urban,marine,2010-03-15,true
+STN479,South Coast Reservoir Sensor Array 479,South Coast,WX,50.580,-1.740,348,upland,resilience,2011-08-22,true
+STN480,Western Hills Beacon Station 480,Western Hills,WX,50.950,-1.450,365,airport,aviation,2012-01-01,true
+STN481,North Coast Ridge Observatory 481,North Coast,WX,51.320,-1.160,382,hydrology,rail,2013-06-08,true
+STN482,Central Valley Harbor Weather Site 482,Central Valley,WX,51.690,-0.870,399,transport,agriculture,2014-11-15,true
+STN483,Highlands Valley Climate Mast 483,Highlands,WX,52.060,-0.580,416,rural,road,2015-04-22,true
+STN484,East Plains Summit Sensor Array 484,East Plains,WX,52.430,-0.290,433,coastal,health,2016-09-01,true
+STN485,South Coast River Station 485,South Coast,WX,52.800,0.000,450,urban,climate,2017-02-08,true
+STN486,Western Hills Meadow Observatory 486,Western Hills,WX,53.170,0.290,467,upland,marine,2018-07-15,true
+STN487,North Coast Airfield Weather Site 487,North Coast,WX,53.540,0.580,484,airport,resilience,2019-12-22,true
+STN488,Central Valley Causeway Climate Mast 488,Central Valley,WX,53.910,0.870,501,hydrology,aviation,2020-05-01,true
+STN489,Highlands Reservoir Sensor Array 489,Highlands,WX,54.280,1.160,518,transport,rail,2021-10-08,true
+STN490,East Plains Beacon Station 490,East Plains,WX,54.650,1.450,535,rural,agriculture,2022-03-15,true
+STN491,South Coast Ridge Observatory 491,South Coast,WX,55.020,1.740,552,coastal,road,2023-08-22,true
+STN492,Western Hills Harbor Weather Site 492,Western Hills,WX,55.390,2.030,569,urban,health,2024-01-01,true
+STN493,North Coast Valley Climate Mast 493,North Coast,WX,55.760,-6.080,586,upland,climate,2025-06-08,true
+STN494,Central Valley Summit Sensor Array 494,Central Valley,WX,56.130,-5.790,603,airport,marine,2000-11-15,false
+STN495,Highlands River Station 495,Highlands,WX,56.500,-5.500,620,hydrology,resilience,2001-04-22,true
+STN496,East Plains Meadow Observatory 496,East Plains,WX,56.870,-5.210,637,transport,aviation,2002-09-01,true
+STN497,South Coast Airfield Weather Site 497,South Coast,WX,57.240,-4.920,654,rural,rail,2003-02-08,true
+STN498,Western Hills Causeway Climate Mast 498,Western Hills,WX,57.610,-4.630,671,coastal,agriculture,2004-07-15,true
+STN499,North Coast Reservoir Sensor Array 499,North Coast,WX,57.980,-4.340,688,urban,road,2005-12-22,true
+STN500,Central Valley Beacon Station 500,Central Valley,WX,49.950,-4.050,705,upland,health,2006-05-01,true
+STN501,Highlands Ridge Observatory 501,Highlands,WX,50.320,-3.760,722,airport,climate,2007-10-08,true
+STN502,East Plains Harbor Weather Site 502,East Plains,WX,50.690,-3.470,739,hydrology,marine,2008-03-15,true
+STN503,South Coast Valley Climate Mast 503,South Coast,WX,51.060,-3.180,756,transport,resilience,2009-08-22,true
+STN504,Western Hills Summit Sensor Array 504,Western Hills,WX,51.430,-2.890,773,rural,aviation,2010-01-01,true
+STN505,North Coast River Station 505,North Coast,WX,51.800,-2.600,10,coastal,rail,2011-06-08,true
+STN506,Central Valley Meadow Observatory 506,Central Valley,WX,52.170,-2.310,27,urban,agriculture,2012-11-15,true
+STN507,Highlands Airfield Weather Site 507,Highlands,WX,52.540,-2.020,44,upland,road,2013-04-22,true
+STN508,East Plains Causeway Climate Mast 508,East Plains,WX,52.910,-1.730,61,airport,health,2014-09-01,true
+STN509,South Coast Reservoir Sensor Array 509,South Coast,WX,53.280,-1.440,78,hydrology,climate,2015-02-08,true
+STN510,Western Hills Beacon Station 510,Western Hills,WX,53.650,-1.150,95,transport,marine,2016-07-15,true
+STN511,North Coast Ridge Observatory 511,North Coast,WX,54.020,-0.860,112,rural,resilience,2017-12-22,true
+STN512,Central Valley Harbor Weather Site 512,Central Valley,WX,54.390,-0.570,129,coastal,aviation,2018-05-01,true
+STN513,Highlands Valley Climate Mast 513,Highlands,WX,54.760,-0.280,146,urban,rail,2019-10-08,false
+STN514,East Plains Summit Sensor Array 514,East Plains,WX,55.130,0.010,163,upland,agriculture,2020-03-15,true
+STN515,South Coast River Station 515,South Coast,WX,55.500,0.300,180,airport,road,2021-08-22,true
+STN516,Western Hills Meadow Observatory 516,Western Hills,WX,55.870,0.590,197,hydrology,health,2022-01-01,true
+STN517,North Coast Airfield Weather Site 517,North Coast,WX,56.240,0.880,214,transport,climate,2023-06-08,true
+STN518,Central Valley Causeway Climate Mast 518,Central Valley,WX,56.610,1.170,231,rural,marine,2024-11-15,true
+STN519,Highlands Reservoir Sensor Array 519,Highlands,WX,56.980,1.460,248,coastal,resilience,2025-04-22,true
+STN520,East Plains Beacon Station 520,East Plains,WX,57.350,1.750,265,urban,aviation,2000-09-01,true
+STN521,South Coast Ridge Observatory 521,South Coast,WX,57.720,2.040,282,upland,rail,2001-02-08,true
+STN522,Western Hills Harbor Weather Site 522,Western Hills,WX,58.090,-6.070,299,airport,agriculture,2002-07-15,true
+STN523,North Coast Valley Climate Mast 523,North Coast,WX,50.060,-5.780,316,hydrology,road,2003-12-22,true
+STN524,Central Valley Summit Sensor Array 524,Central Valley,WX,50.430,-5.490,333,transport,health,2004-05-01,true
+STN525,Highlands River Station 525,Highlands,WX,50.800,-5.200,350,rural,climate,2005-10-08,true
+STN526,East Plains Meadow Observatory 526,East Plains,WX,51.170,-4.910,367,coastal,marine,2006-03-15,true
+STN527,South Coast Airfield Weather Site 527,South Coast,WX,51.540,-4.620,384,urban,resilience,2007-08-22,true
+STN528,Western Hills Causeway Climate Mast 528,Western Hills,WX,51.910,-4.330,401,upland,aviation,2008-01-01,true
+STN529,North Coast Reservoir Sensor Array 529,North Coast,WX,52.280,-4.040,418,airport,rail,2009-06-08,true
+STN530,Central Valley Beacon Station 530,Central Valley,WX,52.650,-3.750,435,hydrology,agriculture,2010-11-15,true
+STN531,Highlands Ridge Observatory 531,Highlands,WX,53.020,-3.460,452,transport,road,2011-04-22,true
+STN532,East Plains Harbor Weather Site 532,East Plains,WX,53.390,-3.170,469,rural,health,2012-09-01,false
+STN533,South Coast Valley Climate Mast 533,South Coast,WX,53.760,-2.880,486,coastal,climate,2013-02-08,true
+STN534,Western Hills Summit Sensor Array 534,Western Hills,WX,54.130,-2.590,503,urban,marine,2014-07-15,true
+STN535,North Coast River Station 535,North Coast,WX,54.500,-2.300,520,upland,resilience,2015-12-22,true
+STN536,Central Valley Meadow Observatory 536,Central Valley,WX,54.870,-2.010,537,airport,aviation,2016-05-01,true
+STN537,Highlands Airfield Weather Site 537,Highlands,WX,55.240,-1.720,554,hydrology,rail,2017-10-08,true
+STN538,East Plains Causeway Climate Mast 538,East Plains,WX,55.610,-1.430,571,transport,agriculture,2018-03-15,true
+STN539,South Coast Reservoir Sensor Array 539,South Coast,WX,55.980,-1.140,588,rural,road,2019-08-22,true
+STN540,Western Hills Beacon Station 540,Western Hills,WX,56.350,-0.850,605,coastal,health,2020-01-01,true
+STN541,North Coast Ridge Observatory 541,North Coast,WX,56.720,-0.560,622,urban,climate,2021-06-08,true
+STN542,Central Valley Harbor Weather Site 542,Central Valley,WX,57.090,-0.270,639,upland,marine,2022-11-15,true
+STN543,Highlands Valley Climate Mast 543,Highlands,WX,57.460,0.020,656,airport,resilience,2023-04-22,true
+STN544,East Plains Summit Sensor Array 544,East Plains,WX,57.830,0.310,673,hydrology,aviation,2024-09-01,true
+STN545,South Coast River Station 545,South Coast,WX,49.800,0.600,690,transport,rail,2025-02-08,true
+STN546,Western Hills Meadow Observatory 546,Western Hills,WX,50.170,0.890,707,rural,agriculture,2000-07-15,true
+STN547,North Coast Airfield Weather Site 547,North Coast,WX,50.540,1.180,724,coastal,road,2001-12-22,true
+STN548,Central Valley Causeway Climate Mast 548,Central Valley,WX,50.910,1.470,741,urban,health,2002-05-01,true
+STN549,Highlands Reservoir Sensor Array 549,Highlands,WX,51.280,1.760,758,upland,climate,2003-10-08,true
+STN550,East Plains Beacon Station 550,East Plains,WX,51.650,2.050,775,airport,marine,2004-03-15,true
+STN551,South Coast Ridge Observatory 551,South Coast,WX,52.020,-6.060,12,hydrology,resilience,2005-08-22,false
+STN552,Western Hills Harbor Weather Site 552,Western Hills,WX,52.390,-5.770,29,transport,aviation,2006-01-01,true
+STN553,North Coast Valley Climate Mast 553,North Coast,WX,52.760,-5.480,46,rural,rail,2007-06-08,true
+STN554,Central Valley Summit Sensor Array 554,Central Valley,WX,53.130,-5.190,63,coastal,agriculture,2008-11-15,true
+STN555,Highlands River Station 555,Highlands,WX,53.500,-4.900,80,urban,road,2009-04-22,true
+STN556,East Plains Meadow Observatory 556,East Plains,WX,53.870,-4.610,97,upland,health,2010-09-01,true
+STN557,South Coast Airfield Weather Site 557,South Coast,WX,54.240,-4.320,114,airport,climate,2011-02-08,true
+STN558,Western Hills Causeway Climate Mast 558,Western Hills,WX,54.610,-4.030,131,hydrology,marine,2012-07-15,true
+STN559,North Coast Reservoir Sensor Array 559,North Coast,WX,54.980,-3.740,148,transport,resilience,2013-12-22,true
+STN560,Central Valley Beacon Station 560,Central Valley,WX,55.350,-3.450,165,rural,aviation,2014-05-01,true
+STN561,Highlands Ridge Observatory 561,Highlands,WX,55.720,-3.160,182,coastal,rail,2015-10-08,true
+STN562,East Plains Harbor Weather Site 562,East Plains,WX,56.090,-2.870,199,urban,agriculture,2016-03-15,true
+STN563,South Coast Valley Climate Mast 563,South Coast,WX,56.460,-2.580,216,upland,road,2017-08-22,true
+STN564,Western Hills Summit Sensor Array 564,Western Hills,WX,56.830,-2.290,233,airport,health,2018-01-01,true
+STN565,North Coast River Station 565,North Coast,WX,57.200,-2.000,250,hydrology,climate,2019-06-08,true
+STN566,Central Valley Meadow Observatory 566,Central Valley,WX,57.570,-1.710,267,transport,marine,2020-11-15,true
+STN567,Highlands Airfield Weather Site 567,Highlands,WX,57.940,-1.420,284,rural,resilience,2021-04-22,true
+STN568,East Plains Causeway Climate Mast 568,East Plains,WX,49.910,-1.130,301,coastal,aviation,2022-09-01,true
+STN569,South Coast Reservoir Sensor Array 569,South Coast,WX,50.280,-0.840,318,urban,rail,2023-02-08,true
+STN570,Western Hills Beacon Station 570,Western Hills,WX,50.650,-0.550,335,upland,agriculture,2024-07-15,false
+STN571,North Coast Ridge Observatory 571,North Coast,WX,51.020,-0.260,352,airport,road,2025-12-22,true
+STN572,Central Valley Harbor Weather Site 572,Central Valley,WX,51.390,0.030,369,hydrology,health,2000-05-01,true
+STN573,Highlands Valley Climate Mast 573,Highlands,WX,51.760,0.320,386,transport,climate,2001-10-08,true
+STN574,East Plains Summit Sensor Array 574,East Plains,WX,52.130,0.610,403,rural,marine,2002-03-15,true
+STN575,South Coast River Station 575,South Coast,WX,52.500,0.900,420,coastal,resilience,2003-08-22,true
+STN576,Western Hills Meadow Observatory 576,Western Hills,WX,52.870,1.190,437,urban,aviation,2004-01-01,true
+STN577,North Coast Airfield Weather Site 577,North Coast,WX,53.240,1.480,454,upland,rail,2005-06-08,true
+STN578,Central Valley Causeway Climate Mast 578,Central Valley,WX,53.610,1.770,471,airport,agriculture,2006-11-15,true
+STN579,Highlands Reservoir Sensor Array 579,Highlands,WX,53.980,2.060,488,hydrology,road,2007-04-22,true
+STN580,East Plains Beacon Station 580,East Plains,WX,54.350,-6.050,505,transport,health,2008-09-01,true
+STN581,South Coast Ridge Observatory 581,South Coast,WX,54.720,-5.760,522,rural,climate,2009-02-08,true
+STN582,Western Hills Harbor Weather Site 582,Western Hills,WX,55.090,-5.470,539,coastal,marine,2010-07-15,true
+STN583,North Coast Valley Climate Mast 583,North Coast,WX,55.460,-5.180,556,urban,resilience,2011-12-22,true
+STN584,Central Valley Summit Sensor Array 584,Central Valley,WX,55.830,-4.890,573,upland,aviation,2012-05-01,true
+STN585,Highlands River Station 585,Highlands,WX,56.200,-4.600,590,airport,rail,2013-10-08,true
+STN586,East Plains Meadow Observatory 586,East Plains,WX,56.570,-4.310,607,hydrology,agriculture,2014-03-15,true
+STN587,South Coast Airfield Weather Site 587,South Coast,WX,56.940,-4.020,624,transport,road,2015-08-22,true
+STN588,Western Hills Causeway Climate Mast 588,Western Hills,WX,57.310,-3.730,641,rural,health,2016-01-01,true
+STN589,North Coast Reservoir Sensor Array 589,North Coast,WX,57.680,-3.440,658,coastal,climate,2017-06-08,false
+STN590,Central Valley Beacon Station 590,Central Valley,WX,58.050,-3.150,675,urban,marine,2018-11-15,true
+STN591,Highlands Ridge Observatory 591,Highlands,WX,50.020,-2.860,692,upland,resilience,2019-04-22,true
+STN592,East Plains Harbor Weather Site 592,East Plains,WX,50.390,-2.570,709,airport,aviation,2020-09-01,true
+STN593,South Coast Valley Climate Mast 593,South Coast,WX,50.760,-2.280,726,hydrology,rail,2021-02-08,true
+STN594,Western Hills Summit Sensor Array 594,Western Hills,WX,51.130,-1.990,743,transport,agriculture,2022-07-15,true
+STN595,North Coast River Station 595,North Coast,WX,51.500,-1.700,760,rural,road,2023-12-22,true
+STN596,Central Valley Meadow Observatory 596,Central Valley,WX,51.870,-1.410,777,coastal,health,2024-05-01,true
+STN597,Highlands Airfield Weather Site 597,Highlands,WX,52.240,-1.120,14,urban,climate,2025-10-08,true
+STN598,East Plains Causeway Climate Mast 598,East Plains,WX,52.610,-0.830,31,upland,marine,2000-03-15,true
+STN599,South Coast Reservoir Sensor Array 599,South Coast,WX,52.980,-0.540,48,airport,resilience,2001-08-22,true
+STN600,Western Hills Beacon Station 600,Western Hills,WX,53.350,-0.250,65,hydrology,aviation,2002-01-01,true
+STN601,North Coast Ridge Observatory 601,North Coast,WX,53.720,0.040,82,transport,rail,2003-06-08,true
+STN602,Central Valley Harbor Weather Site 602,Central Valley,WX,54.090,0.330,99,rural,agriculture,2004-11-15,true
+STN603,Highlands Valley Climate Mast 603,Highlands,WX,54.460,0.620,116,coastal,road,2005-04-22,true
+STN604,East Plains Summit Sensor Array 604,East Plains,WX,54.830,0.910,133,urban,health,2006-09-01,true
+STN605,South Coast River Station 605,South Coast,WX,55.200,1.200,150,upland,climate,2007-02-08,true
+STN606,Western Hills Meadow Observatory 606,Western Hills,WX,55.570,1.490,167,airport,marine,2008-07-15,true
+STN607,North Coast Airfield Weather Site 607,North Coast,WX,55.940,1.780,184,hydrology,resilience,2009-12-22,true
+STN608,Central Valley Causeway Climate Mast 608,Central Valley,WX,56.310,2.070,201,transport,aviation,2010-05-01,false
+STN609,Highlands Reservoir Sensor Array 609,Highlands,WX,56.680,-6.040,218,rural,rail,2011-10-08,true
+STN610,East Plains Beacon Station 610,East Plains,WX,57.050,-5.750,235,coastal,agriculture,2012-03-15,true
+STN611,South Coast Ridge Observatory 611,South Coast,WX,57.420,-5.460,252,urban,road,2013-08-22,true
+STN612,Western Hills Harbor Weather Site 612,Western Hills,WX,57.790,-5.170,269,upland,health,2014-01-01,true
+STN613,North Coast Valley Climate Mast 613,North Coast,WX,49.760,-4.880,286,airport,climate,2015-06-08,true
+STN614,Central Valley Summit Sensor Array 614,Central Valley,WX,50.130,-4.590,303,hydrology,marine,2016-11-15,true
+STN615,Highlands River Station 615,Highlands,WX,50.500,-4.300,320,transport,resilience,2017-04-22,true
+STN616,East Plains Meadow Observatory 616,East Plains,WX,50.870,-4.010,337,rural,aviation,2018-09-01,true
+STN617,South Coast Airfield Weather Site 617,South Coast,WX,51.240,-3.720,354,coastal,rail,2019-02-08,true
+STN618,Western Hills Causeway Climate Mast 618,Western Hills,WX,51.610,-3.430,371,urban,agriculture,2020-07-15,true
+STN619,North Coast Reservoir Sensor Array 619,North Coast,WX,51.980,-3.140,388,upland,road,2021-12-22,true
+STN620,Central Valley Beacon Station 620,Central Valley,WX,52.350,-2.850,405,airport,health,2022-05-01,true
+STN621,Highlands Ridge Observatory 621,Highlands,WX,52.720,-2.560,422,hydrology,climate,2023-10-08,true
+STN622,East Plains Harbor Weather Site 622,East Plains,WX,53.090,-2.270,439,transport,marine,2024-03-15,true
+STN623,South Coast Valley Climate Mast 623,South Coast,WX,53.460,-1.980,456,rural,resilience,2025-08-22,true
+STN624,Western Hills Summit Sensor Array 624,Western Hills,WX,53.830,-1.690,473,coastal,aviation,2000-01-01,true
+STN625,North Coast River Station 625,North Coast,WX,54.200,-1.400,490,urban,rail,2001-06-08,true
+STN626,Central Valley Meadow Observatory 626,Central Valley,WX,54.570,-1.110,507,upland,agriculture,2002-11-15,true
+STN627,Highlands Airfield Weather Site 627,Highlands,WX,54.940,-0.820,524,airport,road,2003-04-22,false
+STN628,East Plains Causeway Climate Mast 628,East Plains,WX,55.310,-0.530,541,hydrology,health,2004-09-01,true
+STN629,South Coast Reservoir Sensor Array 629,South Coast,WX,55.680,-0.240,558,transport,climate,2005-02-08,true
+STN630,Western Hills Beacon Station 630,Western Hills,WX,56.050,0.050,575,rural,marine,2006-07-15,true
+STN631,North Coast Ridge Observatory 631,North Coast,WX,56.420,0.340,592,coastal,resilience,2007-12-22,true
+STN632,Central Valley Harbor Weather Site 632,Central Valley,WX,56.790,0.630,609,urban,aviation,2008-05-01,true
+STN633,Highlands Valley Climate Mast 633,Highlands,WX,57.160,0.920,626,upland,rail,2009-10-08,true
+STN634,East Plains Summit Sensor Array 634,East Plains,WX,57.530,1.210,643,airport,agriculture,2010-03-15,true
+STN635,South Coast River Station 635,South Coast,WX,57.900,1.500,660,hydrology,road,2011-08-22,true
+STN636,Western Hills Meadow Observatory 636,Western Hills,WX,49.870,1.790,677,transport,health,2012-01-01,true
+STN637,North Coast Airfield Weather Site 637,North Coast,WX,50.240,2.080,694,rural,climate,2013-06-08,true
+STN638,Central Valley Causeway Climate Mast 638,Central Valley,WX,50.610,-6.030,711,coastal,marine,2014-11-15,true
+STN639,Highlands Reservoir Sensor Array 639,Highlands,WX,50.980,-5.740,728,urban,resilience,2015-04-22,true
+STN640,East Plains Beacon Station 640,East Plains,WX,51.350,-5.450,745,upland,aviation,2016-09-01,true
+STN641,South Coast Ridge Observatory 641,South Coast,WX,51.720,-5.160,762,airport,rail,2017-02-08,true
+STN642,Western Hills Harbor Weather Site 642,Western Hills,WX,52.090,-4.870,779,hydrology,agriculture,2018-07-15,true
+STN643,North Coast Valley Climate Mast 643,North Coast,WX,52.460,-4.580,16,transport,road,2019-12-22,true
+STN644,Central Valley Summit Sensor Array 644,Central Valley,WX,52.830,-4.290,33,rural,health,2020-05-01,true
+STN645,Highlands River Station 645,Highlands,WX,53.200,-4.000,50,coastal,climate,2021-10-08,true
+STN646,East Plains Meadow Observatory 646,East Plains,WX,53.570,-3.710,67,urban,marine,2022-03-15,false
+STN647,South Coast Airfield Weather Site 647,South Coast,WX,53.940,-3.420,84,upland,resilience,2023-08-22,true
+STN648,Western Hills Causeway Climate Mast 648,Western Hills,WX,54.310,-3.130,101,airport,aviation,2024-01-01,true
+STN649,North Coast Reservoir Sensor Array 649,North Coast,WX,54.680,-2.840,118,hydrology,rail,2025-06-08,true
+STN650,Central Valley Beacon Station 650,Central Valley,WX,55.050,-2.550,135,transport,agriculture,2000-11-15,true
+STN651,Highlands Ridge Observatory 651,Highlands,WX,55.420,-2.260,152,rural,road,2001-04-22,true
+STN652,East Plains Harbor Weather Site 652,East Plains,WX,55.790,-1.970,169,coastal,health,2002-09-01,true
+STN653,South Coast Valley Climate Mast 653,South Coast,WX,56.160,-1.680,186,urban,climate,2003-02-08,true
+STN654,Western Hills Summit Sensor Array 654,Western Hills,WX,56.530,-1.390,203,upland,marine,2004-07-15,true
+STN655,North Coast River Station 655,North Coast,WX,56.900,-1.100,220,airport,resilience,2005-12-22,true
+STN656,Central Valley Meadow Observatory 656,Central Valley,WX,57.270,-0.810,237,hydrology,aviation,2006-05-01,true
+STN657,Highlands Airfield Weather Site 657,Highlands,WX,57.640,-0.520,254,transport,rail,2007-10-08,true
+STN658,East Plains Causeway Climate Mast 658,East Plains,WX,58.010,-0.230,271,rural,agriculture,2008-03-15,true
+STN659,South Coast Reservoir Sensor Array 659,South Coast,WX,49.980,0.060,288,coastal,road,2009-08-22,true
+STN660,Western Hills Beacon Station 660,Western Hills,WX,50.350,0.350,305,urban,health,2010-01-01,true
+STN661,North Coast Ridge Observatory 661,North Coast,WX,50.720,0.640,322,upland,climate,2011-06-08,true
+STN662,Central Valley Harbor Weather Site 662,Central Valley,WX,51.090,0.930,339,airport,marine,2012-11-15,true
+STN663,Highlands Valley Climate Mast 663,Highlands,WX,51.460,1.220,356,hydrology,resilience,2013-04-22,true
+STN664,East Plains Summit Sensor Array 664,East Plains,WX,51.830,1.510,373,transport,aviation,2014-09-01,true
+STN665,South Coast River Station 665,South Coast,WX,52.200,1.800,390,rural,rail,2015-02-08,false
+STN666,Western Hills Meadow Observatory 666,Western Hills,WX,52.570,2.090,407,coastal,agriculture,2016-07-15,true
+STN667,North Coast Airfield Weather Site 667,North Coast,WX,52.940,-6.020,424,urban,road,2017-12-22,true
+STN668,Central Valley Causeway Climate Mast 668,Central Valley,WX,53.310,-5.730,441,upland,health,2018-05-01,true
+STN669,Highlands Reservoir Sensor Array 669,Highlands,WX,53.680,-5.440,458,airport,climate,2019-10-08,true
+STN670,East Plains Beacon Station 670,East Plains,WX,54.050,-5.150,475,hydrology,marine,2020-03-15,true
+STN671,South Coast Ridge Observatory 671,South Coast,WX,54.420,-4.860,492,transport,resilience,2021-08-22,true
+STN672,Western Hills Harbor Weather Site 672,Western Hills,WX,54.790,-4.570,509,rural,aviation,2022-01-01,true
+STN673,North Coast Valley Climate Mast 673,North Coast,WX,55.160,-4.280,526,coastal,rail,2023-06-08,true
+STN674,Central Valley Summit Sensor Array 674,Central Valley,WX,55.530,-3.990,543,urban,agriculture,2024-11-15,true
+STN675,Highlands River Station 675,Highlands,WX,55.900,-3.700,560,upland,road,2025-04-22,true
+STN676,East Plains Meadow Observatory 676,East Plains,WX,56.270,-3.410,577,airport,health,2000-09-01,true
+STN677,South Coast Airfield Weather Site 677,South Coast,WX,56.640,-3.120,594,hydrology,climate,2001-02-08,true
+STN678,Western Hills Causeway Climate Mast 678,Western Hills,WX,57.010,-2.830,611,transport,marine,2002-07-15,true
+STN679,North Coast Reservoir Sensor Array 679,North Coast,WX,57.380,-2.540,628,rural,resilience,2003-12-22,true
+STN680,Central Valley Beacon Station 680,Central Valley,WX,57.750,-2.250,645,coastal,aviation,2004-05-01,true
+STN681,Highlands Ridge Observatory 681,Highlands,WX,58.120,-1.960,662,urban,rail,2005-10-08,true
+STN682,East Plains Harbor Weather Site 682,East Plains,WX,50.090,-1.670,679,upland,agriculture,2006-03-15,true
+STN683,South Coast Valley Climate Mast 683,South Coast,WX,50.460,-1.380,696,airport,road,2007-08-22,true
+STN684,Western Hills Summit Sensor Array 684,Western Hills,WX,50.830,-1.090,713,hydrology,health,2008-01-01,false
+STN685,North Coast River Station 685,North Coast,WX,51.200,-0.800,730,transport,climate,2009-06-08,true
+STN686,Central Valley Meadow Observatory 686,Central Valley,WX,51.570,-0.510,747,rural,marine,2010-11-15,true
+STN687,Highlands Airfield Weather Site 687,Highlands,WX,51.940,-0.220,764,coastal,resilience,2011-04-22,true
+STN688,East Plains Causeway Climate Mast 688,East Plains,WX,52.310,0.070,781,urban,aviation,2012-09-01,true
+STN689,South Coast Reservoir Sensor Array 689,South Coast,WX,52.680,0.360,18,upland,rail,2013-02-08,true
+STN690,Western Hills Beacon Station 690,Western Hills,WX,53.050,0.650,35,airport,agriculture,2014-07-15,true
+STN691,North Coast Ridge Observatory 691,North Coast,WX,53.420,0.940,52,hydrology,road,2015-12-22,true
+STN692,Central Valley Harbor Weather Site 692,Central Valley,WX,53.790,1.230,69,transport,health,2016-05-01,true
+STN693,Highlands Valley Climate Mast 693,Highlands,WX,54.160,1.520,86,rural,climate,2017-10-08,true
+STN694,East Plains Summit Sensor Array 694,East Plains,WX,54.530,1.810,103,coastal,marine,2018-03-15,true
+STN695,South Coast River Station 695,South Coast,WX,54.900,2.100,120,urban,resilience,2019-08-22,true
+STN696,Western Hills Meadow Observatory 696,Western Hills,WX,55.270,-6.010,137,upland,aviation,2020-01-01,true
+STN697,North Coast Airfield Weather Site 697,North Coast,WX,55.640,-5.720,154,airport,rail,2021-06-08,true
+STN698,Central Valley Causeway Climate Mast 698,Central Valley,WX,56.010,-5.430,171,hydrology,agriculture,2022-11-15,true
+STN699,Highlands Reservoir Sensor Array 699,Highlands,WX,56.380,-5.140,188,transport,road,2023-04-22,true
+STN700,East Plains Beacon Station 700,East Plains,WX,56.750,-4.850,205,rural,health,2024-09-01,true
+STN701,South Coast Ridge Observatory 701,South Coast,WX,57.120,-4.560,222,coastal,climate,2025-02-08,true
+STN702,Western Hills Harbor Weather Site 702,Western Hills,WX,57.490,-4.270,239,urban,marine,2000-07-15,true
+STN703,North Coast Valley Climate Mast 703,North Coast,WX,57.860,-3.980,256,upland,resilience,2001-12-22,false
+STN704,Central Valley Summit Sensor Array 704,Central Valley,WX,49.830,-3.690,273,airport,aviation,2002-05-01,true
+STN705,Highlands River Station 705,Highlands,WX,50.200,-3.400,290,hydrology,rail,2003-10-08,true
+STN706,East Plains Meadow Observatory 706,East Plains,WX,50.570,-3.110,307,transport,agriculture,2004-03-15,true
+STN707,South Coast Airfield Weather Site 707,South Coast,WX,50.940,-2.820,324,rural,road,2005-08-22,true
+STN708,Western Hills Causeway Climate Mast 708,Western Hills,WX,51.310,-2.530,341,coastal,health,2006-01-01,true
+STN709,North Coast Reservoir Sensor Array 709,North Coast,WX,51.680,-2.240,358,urban,climate,2007-06-08,true
+STN710,Central Valley Beacon Station 710,Central Valley,WX,52.050,-1.950,375,upland,marine,2008-11-15,true
+STN711,Highlands Ridge Observatory 711,Highlands,WX,52.420,-1.660,392,airport,resilience,2009-04-22,true
+STN712,East Plains Harbor Weather Site 712,East Plains,WX,52.790,-1.370,409,hydrology,aviation,2010-09-01,true
+STN713,South Coast Valley Climate Mast 713,South Coast,WX,53.160,-1.080,426,transport,rail,2011-02-08,true
+STN714,Western Hills Summit Sensor Array 714,Western Hills,WX,53.530,-0.790,443,rural,agriculture,2012-07-15,true
+STN715,North Coast River Station 715,North Coast,WX,53.900,-0.500,460,coastal,road,2013-12-22,true
+STN716,Central Valley Meadow Observatory 716,Central Valley,WX,54.270,-0.210,477,urban,health,2014-05-01,true
+STN717,Highlands Airfield Weather Site 717,Highlands,WX,54.640,0.080,494,upland,climate,2015-10-08,true
+STN718,East Plains Causeway Climate Mast 718,East Plains,WX,55.010,0.370,511,airport,marine,2016-03-15,true
+STN719,South Coast Reservoir Sensor Array 719,South Coast,WX,55.380,0.660,528,hydrology,resilience,2017-08-22,true
+STN720,Western Hills Beacon Station 720,Western Hills,WX,55.750,0.950,545,transport,aviation,2018-01-01,true
+STN721,North Coast Ridge Observatory 721,North Coast,WX,56.120,1.240,562,rural,rail,2019-06-08,true
+STN722,Central Valley Harbor Weather Site 722,Central Valley,WX,56.490,1.530,579,coastal,agriculture,2020-11-15,false
+STN723,Highlands Valley Climate Mast 723,Highlands,WX,56.860,1.820,596,urban,road,2021-04-22,true
+STN724,East Plains Summit Sensor Array 724,East Plains,WX,57.230,2.110,613,upland,health,2022-09-01,true
+STN725,South Coast River Station 725,South Coast,WX,57.600,-6.000,630,airport,climate,2023-02-08,true
+STN726,Western Hills Meadow Observatory 726,Western Hills,WX,57.970,-5.710,647,hydrology,marine,2024-07-15,true
+STN727,North Coast Airfield Weather Site 727,North Coast,WX,49.940,-5.420,664,transport,resilience,2025-12-22,true
+STN728,Central Valley Causeway Climate Mast 728,Central Valley,WX,50.310,-5.130,681,rural,aviation,2000-05-01,true
+STN729,Highlands Reservoir Sensor Array 729,Highlands,WX,50.680,-4.840,698,coastal,rail,2001-10-08,true
+STN730,East Plains Beacon Station 730,East Plains,WX,51.050,-4.550,715,urban,agriculture,2002-03-15,true
+STN731,South Coast Ridge Observatory 731,South Coast,WX,51.420,-4.260,732,upland,road,2003-08-22,true
+STN732,Western Hills Harbor Weather Site 732,Western Hills,WX,51.790,-3.970,749,airport,health,2004-01-01,true
+STN733,North Coast Valley Climate Mast 733,North Coast,WX,52.160,-3.680,766,hydrology,climate,2005-06-08,true
+STN734,Central Valley Summit Sensor Array 734,Central Valley,WX,52.530,-3.390,783,transport,marine,2006-11-15,true
+STN735,Highlands River Station 735,Highlands,WX,52.900,-3.100,20,rural,resilience,2007-04-22,true
+STN736,East Plains Meadow Observatory 736,East Plains,WX,53.270,-2.810,37,coastal,aviation,2008-09-01,true
+STN737,South Coast Airfield Weather Site 737,South Coast,WX,53.640,-2.520,54,urban,rail,2009-02-08,true
+STN738,Western Hills Causeway Climate Mast 738,Western Hills,WX,54.010,-2.230,71,upland,agriculture,2010-07-15,true
+STN739,North Coast Reservoir Sensor Array 739,North Coast,WX,54.380,-1.940,88,airport,road,2011-12-22,true
+STN740,Central Valley Beacon Station 740,Central Valley,WX,54.750,-1.650,105,hydrology,health,2012-05-01,true
+STN741,Highlands Ridge Observatory 741,Highlands,WX,55.120,-1.360,122,transport,climate,2013-10-08,false
+STN742,East Plains Harbor Weather Site 742,East Plains,WX,55.490,-1.070,139,rural,marine,2014-03-15,true
+STN743,South Coast Valley Climate Mast 743,South Coast,WX,55.860,-0.780,156,coastal,resilience,2015-08-22,true
+STN744,Western Hills Summit Sensor Array 744,Western Hills,WX,56.230,-0.490,173,urban,aviation,2016-01-01,true
+STN745,North Coast River Station 745,North Coast,WX,56.600,-0.200,190,upland,rail,2017-06-08,true
+STN746,Central Valley Meadow Observatory 746,Central Valley,WX,56.970,0.090,207,airport,agriculture,2018-11-15,true
+STN747,Highlands Airfield Weather Site 747,Highlands,WX,57.340,0.380,224,hydrology,road,2019-04-22,true
+STN748,East Plains Causeway Climate Mast 748,East Plains,WX,57.710,0.670,241,transport,health,2020-09-01,true
+STN749,South Coast Reservoir Sensor Array 749,South Coast,WX,58.080,0.960,258,rural,climate,2021-02-08,true
+STN750,Western Hills Beacon Station 750,Western Hills,WX,50.050,1.250,275,coastal,marine,2022-07-15,true
+STN751,North Coast Ridge Observatory 751,North Coast,WX,50.420,1.540,292,urban,resilience,2023-12-22,true
+STN752,Central Valley Harbor Weather Site 752,Central Valley,WX,50.790,1.830,309,upland,aviation,2024-05-01,true
+STN753,Highlands Valley Climate Mast 753,Highlands,WX,51.160,2.120,326,airport,rail,2025-10-08,true
+STN754,East Plains Summit Sensor Array 754,East Plains,WX,51.530,-5.990,343,hydrology,agriculture,2000-03-15,true
+STN755,South Coast River Station 755,South Coast,WX,51.900,-5.700,360,transport,road,2001-08-22,true
+STN756,Western Hills Meadow Observatory 756,Western Hills,WX,52.270,-5.410,377,rural,health,2002-01-01,true
+STN757,North Coast Airfield Weather Site 757,North Coast,WX,52.640,-5.120,394,coastal,climate,2003-06-08,true
+STN758,Central Valley Causeway Climate Mast 758,Central Valley,WX,53.010,-4.830,411,urban,marine,2004-11-15,true
+STN759,Highlands Reservoir Sensor Array 759,Highlands,WX,53.380,-4.540,428,upland,resilience,2005-04-22,true
+STN760,East Plains Beacon Station 760,East Plains,WX,53.750,-4.250,445,airport,aviation,2006-09-01,false
+STN761,South Coast Ridge Observatory 761,South Coast,WX,54.120,-3.960,462,hydrology,rail,2007-02-08,true
+STN762,Western Hills Harbor Weather Site 762,Western Hills,WX,54.490,-3.670,479,transport,agriculture,2008-07-15,true
+STN763,North Coast Valley Climate Mast 763,North Coast,WX,54.860,-3.380,496,rural,road,2009-12-22,true
+STN764,Central Valley Summit Sensor Array 764,Central Valley,WX,55.230,-3.090,513,coastal,health,2010-05-01,true
+STN765,Highlands River Station 765,Highlands,WX,55.600,-2.800,530,urban,climate,2011-10-08,true
+STN766,East Plains Meadow Observatory 766,East Plains,WX,55.970,-2.510,547,upland,marine,2012-03-15,true
+STN767,South Coast Airfield Weather Site 767,South Coast,WX,56.340,-2.220,564,airport,resilience,2013-08-22,true
+STN768,Western Hills Causeway Climate Mast 768,Western Hills,WX,56.710,-1.930,581,hydrology,aviation,2014-01-01,true
+STN769,North Coast Reservoir Sensor Array 769,North Coast,WX,57.080,-1.640,598,transport,rail,2015-06-08,true
+STN770,Central Valley Beacon Station 770,Central Valley,WX,57.450,-1.350,615,rural,agriculture,2016-11-15,true
+STN771,Highlands Ridge Observatory 771,Highlands,WX,57.820,-1.060,632,coastal,road,2017-04-22,true
+STN772,East Plains Harbor Weather Site 772,East Plains,WX,49.790,-0.770,649,urban,health,2018-09-01,true
+STN773,South Coast Valley Climate Mast 773,South Coast,WX,50.160,-0.480,666,upland,climate,2019-02-08,true
+STN774,Western Hills Summit Sensor Array 774,Western Hills,WX,50.530,-0.190,683,airport,marine,2020-07-15,true
+STN775,North Coast River Station 775,North Coast,WX,50.900,0.100,700,hydrology,resilience,2021-12-22,true
+STN776,Central Valley Meadow Observatory 776,Central Valley,WX,51.270,0.390,717,transport,aviation,2022-05-01,true
+STN777,Highlands Airfield Weather Site 777,Highlands,WX,51.640,0.680,734,rural,rail,2023-10-08,true
+STN778,East Plains Causeway Climate Mast 778,East Plains,WX,52.010,0.970,751,coastal,agriculture,2024-03-15,true
+STN779,South Coast Reservoir Sensor Array 779,South Coast,WX,52.380,1.260,768,urban,road,2025-08-22,false
+STN780,Western Hills Beacon Station 780,Western Hills,WX,52.750,1.550,5,upland,health,2000-01-01,true
+STN781,North Coast Ridge Observatory 781,North Coast,WX,53.120,1.840,22,airport,climate,2001-06-08,true
+STN782,Central Valley Harbor Weather Site 782,Central Valley,WX,53.490,2.130,39,hydrology,marine,2002-11-15,true
+STN783,Highlands Valley Climate Mast 783,Highlands,WX,53.860,-5.980,56,transport,resilience,2003-04-22,true
+STN784,East Plains Summit Sensor Array 784,East Plains,WX,54.230,-5.690,73,rural,aviation,2004-09-01,true
+STN785,South Coast River Station 785,South Coast,WX,54.600,-5.400,90,coastal,rail,2005-02-08,true
+STN786,Western Hills Meadow Observatory 786,Western Hills,WX,54.970,-5.110,107,urban,agriculture,2006-07-15,true
+STN787,North Coast Airfield Weather Site 787,North Coast,WX,55.340,-4.820,124,upland,road,2007-12-22,true
+STN788,Central Valley Causeway Climate Mast 788,Central Valley,WX,55.710,-4.530,141,airport,health,2008-05-01,true
+STN789,Highlands Reservoir Sensor Array 789,Highlands,WX,56.080,-4.240,158,hydrology,climate,2009-10-08,true
+STN790,East Plains Beacon Station 790,East Plains,WX,56.450,-3.950,175,transport,marine,2010-03-15,true
+STN791,South Coast Ridge Observatory 791,South Coast,WX,56.820,-3.660,192,rural,resilience,2011-08-22,true
+STN792,Western Hills Harbor Weather Site 792,Western Hills,WX,57.190,-3.370,209,coastal,aviation,2012-01-01,true
+STN793,North Coast Valley Climate Mast 793,North Coast,WX,57.560,-3.080,226,urban,rail,2013-06-08,true
+STN794,Central Valley Summit Sensor Array 794,Central Valley,WX,57.930,-2.790,243,upland,agriculture,2014-11-15,true
+STN795,Highlands River Station 795,Highlands,WX,49.900,-2.500,260,airport,road,2015-04-22,true
+STN796,East Plains Meadow Observatory 796,East Plains,WX,50.270,-2.210,277,hydrology,health,2016-09-01,true
+STN797,South Coast Airfield Weather Site 797,South Coast,WX,50.640,-1.920,294,transport,climate,2017-02-08,true
+STN798,Western Hills Causeway Climate Mast 798,Western Hills,WX,51.010,-1.630,311,rural,marine,2018-07-15,false
+STN799,North Coast Reservoir Sensor Array 799,North Coast,WX,51.380,-1.340,328,coastal,resilience,2019-12-22,true
+STN800,Central Valley Beacon Station 800,Central Valley,WX,51.750,-1.050,345,urban,aviation,2020-05-01,true
+STN801,Highlands Ridge Observatory 801,Highlands,WX,52.120,-0.760,362,upland,rail,2021-10-08,true
+STN802,East Plains Harbor Weather Site 802,East Plains,WX,52.490,-0.470,379,airport,agriculture,2022-03-15,true
+STN803,South Coast Valley Climate Mast 803,South Coast,WX,52.860,-0.180,396,hydrology,road,2023-08-22,true
+STN804,Western Hills Summit Sensor Array 804,Western Hills,WX,53.230,0.110,413,transport,health,2024-01-01,true
+STN805,North Coast River Station 805,North Coast,WX,53.600,0.400,430,rural,climate,2025-06-08,true
+STN806,Central Valley Meadow Observatory 806,Central Valley,WX,53.970,0.690,447,coastal,marine,2000-11-15,true
+STN807,Highlands Airfield Weather Site 807,Highlands,WX,54.340,0.980,464,urban,resilience,2001-04-22,true
+STN808,East Plains Causeway Climate Mast 808,East Plains,WX,54.710,1.270,481,upland,aviation,2002-09-01,true
+STN809,South Coast Reservoir Sensor Array 809,South Coast,WX,55.080,1.560,498,airport,rail,2003-02-08,true
+STN810,Western Hills Beacon Station 810,Western Hills,WX,55.450,1.850,515,hydrology,agriculture,2004-07-15,true
+STN811,North Coast Ridge Observatory 811,North Coast,WX,55.820,2.140,532,transport,road,2005-12-22,true
+STN812,Central Valley Harbor Weather Site 812,Central Valley,WX,56.190,-5.970,549,rural,health,2006-05-01,true
+STN813,Highlands Valley Climate Mast 813,Highlands,WX,56.560,-5.680,566,coastal,climate,2007-10-08,true
+STN814,East Plains Summit Sensor Array 814,East Plains,WX,56.930,-5.390,583,urban,marine,2008-03-15,true
+STN815,South Coast River Station 815,South Coast,WX,57.300,-5.100,600,upland,resilience,2009-08-22,true
+STN816,Western Hills Meadow Observatory 816,Western Hills,WX,57.670,-4.810,617,airport,aviation,2010-01-01,true
+STN817,North Coast Airfield Weather Site 817,North Coast,WX,58.040,-4.520,634,hydrology,rail,2011-06-08,false
+STN818,Central Valley Causeway Climate Mast 818,Central Valley,WX,50.010,-4.230,651,transport,agriculture,2012-11-15,true
+STN819,Highlands Reservoir Sensor Array 819,Highlands,WX,50.380,-3.940,668,rural,road,2013-04-22,true
+STN820,East Plains Beacon Station 820,East Plains,WX,50.750,-3.650,685,coastal,health,2014-09-01,true
+STN821,South Coast Ridge Observatory 821,South Coast,WX,51.120,-3.360,702,urban,climate,2015-02-08,true
+STN822,Western Hills Harbor Weather Site 822,Western Hills,WX,51.490,-3.070,719,upland,marine,2016-07-15,true
+STN823,North Coast Valley Climate Mast 823,North Coast,WX,51.860,-2.780,736,airport,resilience,2017-12-22,true
+STN824,Central Valley Summit Sensor Array 824,Central Valley,WX,52.230,-2.490,753,hydrology,aviation,2018-05-01,true
+STN825,Highlands River Station 825,Highlands,WX,52.600,-2.200,770,transport,rail,2019-10-08,true
+STN826,East Plains Meadow Observatory 826,East Plains,WX,52.970,-1.910,7,rural,agriculture,2020-03-15,true
+STN827,South Coast Airfield Weather Site 827,South Coast,WX,53.340,-1.620,24,coastal,road,2021-08-22,true
+STN828,Western Hills Causeway Climate Mast 828,Western Hills,WX,53.710,-1.330,41,urban,health,2022-01-01,true
+STN829,North Coast Reservoir Sensor Array 829,North Coast,WX,54.080,-1.040,58,upland,climate,2023-06-08,true
+STN830,Central Valley Beacon Station 830,Central Valley,WX,54.450,-0.750,75,airport,marine,2024-11-15,true
+STN831,Highlands Ridge Observatory 831,Highlands,WX,54.820,-0.460,92,hydrology,resilience,2025-04-22,true
+STN832,East Plains Harbor Weather Site 832,East Plains,WX,55.190,-0.170,109,transport,aviation,2000-09-01,true
+STN833,South Coast Valley Climate Mast 833,South Coast,WX,55.560,0.120,126,rural,rail,2001-02-08,true
+STN834,Western Hills Summit Sensor Array 834,Western Hills,WX,55.930,0.410,143,coastal,agriculture,2002-07-15,true
+STN835,North Coast River Station 835,North Coast,WX,56.300,0.700,160,urban,road,2003-12-22,true
+STN836,Central Valley Meadow Observatory 836,Central Valley,WX,56.670,0.990,177,upland,health,2004-05-01,false
+STN837,Highlands Airfield Weather Site 837,Highlands,WX,57.040,1.280,194,airport,climate,2005-10-08,true
+STN838,East Plains Causeway Climate Mast 838,East Plains,WX,57.410,1.570,211,hydrology,marine,2006-03-15,true
+STN839,South Coast Reservoir Sensor Array 839,South Coast,WX,57.780,1.860,228,transport,resilience,2007-08-22,true
+STN840,Western Hills Beacon Station 840,Western Hills,WX,49.750,-6.250,245,rural,aviation,2008-01-01,true
+STN841,North Coast Ridge Observatory 841,North Coast,WX,50.120,-5.960,262,coastal,rail,2009-06-08,true
+STN842,Central Valley Harbor Weather Site 842,Central Valley,WX,50.490,-5.670,279,urban,agriculture,2010-11-15,true
+STN843,Highlands Valley Climate Mast 843,Highlands,WX,50.860,-5.380,296,upland,road,2011-04-22,true
+STN844,East Plains Summit Sensor Array 844,East Plains,WX,51.230,-5.090,313,airport,health,2012-09-01,true
+STN845,South Coast River Station 845,South Coast,WX,51.600,-4.800,330,hydrology,climate,2013-02-08,true
+STN846,Western Hills Meadow Observatory 846,Western Hills,WX,51.970,-4.510,347,transport,marine,2014-07-15,true
+STN847,North Coast Airfield Weather Site 847,North Coast,WX,52.340,-4.220,364,rural,resilience,2015-12-22,true
+STN848,Central Valley Causeway Climate Mast 848,Central Valley,WX,52.710,-3.930,381,coastal,aviation,2016-05-01,true
+STN849,Highlands Reservoir Sensor Array 849,Highlands,WX,53.080,-3.640,398,urban,rail,2017-10-08,true
+STN850,East Plains Beacon Station 850,East Plains,WX,53.450,-3.350,415,upland,agriculture,2018-03-15,true
+STN851,South Coast Ridge Observatory 851,South Coast,WX,53.820,-3.060,432,airport,road,2019-08-22,true
+STN852,Western Hills Harbor Weather Site 852,Western Hills,WX,54.190,-2.770,449,hydrology,health,2020-01-01,true
+STN853,North Coast Valley Climate Mast 853,North Coast,WX,54.560,-2.480,466,transport,climate,2021-06-08,true
+STN854,Central Valley Summit Sensor Array 854,Central Valley,WX,54.930,-2.190,483,rural,marine,2022-11-15,true
+STN855,Highlands River Station 855,Highlands,WX,55.300,-1.900,500,coastal,resilience,2023-04-22,false
+STN856,East Plains Meadow Observatory 856,East Plains,WX,55.670,-1.610,517,urban,aviation,2024-09-01,true
+STN857,South Coast Airfield Weather Site 857,South Coast,WX,56.040,-1.320,534,upland,rail,2025-02-08,true
+STN858,Western Hills Causeway Climate Mast 858,Western Hills,WX,56.410,-1.030,551,airport,agriculture,2000-07-15,true
+STN859,North Coast Reservoir Sensor Array 859,North Coast,WX,56.780,-0.740,568,hydrology,road,2001-12-22,true
+STN860,Central Valley Beacon Station 860,Central Valley,WX,57.150,-0.450,585,transport,health,2002-05-01,true
+STN861,Highlands Ridge Observatory 861,Highlands,WX,57.520,-0.160,602,rural,climate,2003-10-08,true
+STN862,East Plains Harbor Weather Site 862,East Plains,WX,57.890,0.130,619,coastal,marine,2004-03-15,true
+STN863,South Coast Valley Climate Mast 863,South Coast,WX,49.860,0.420,636,urban,resilience,2005-08-22,true
+STN864,Western Hills Summit Sensor Array 864,Western Hills,WX,50.230,0.710,653,upland,aviation,2006-01-01,true
+STN865,North Coast River Station 865,North Coast,WX,50.600,1.000,670,airport,rail,2007-06-08,true
+STN866,Central Valley Meadow Observatory 866,Central Valley,WX,50.970,1.290,687,hydrology,agriculture,2008-11-15,true
+STN867,Highlands Airfield Weather Site 867,Highlands,WX,51.340,1.580,704,transport,road,2009-04-22,true
+STN868,East Plains Causeway Climate Mast 868,East Plains,WX,51.710,1.870,721,rural,health,2010-09-01,true
+STN869,South Coast Reservoir Sensor Array 869,South Coast,WX,52.080,-6.240,738,coastal,climate,2011-02-08,true
+STN870,Western Hills Beacon Station 870,Western Hills,WX,52.450,-5.950,755,urban,marine,2012-07-15,true
+STN871,North Coast Ridge Observatory 871,North Coast,WX,52.820,-5.660,772,upland,resilience,2013-12-22,true
+STN872,Central Valley Harbor Weather Site 872,Central Valley,WX,53.190,-5.370,9,airport,aviation,2014-05-01,true
+STN873,Highlands Valley Climate Mast 873,Highlands,WX,53.560,-5.080,26,hydrology,rail,2015-10-08,true
+STN874,East Plains Summit Sensor Array 874,East Plains,WX,53.930,-4.790,43,transport,agriculture,2016-03-15,false
+STN875,South Coast River Station 875,South Coast,WX,54.300,-4.500,60,rural,road,2017-08-22,true
+STN876,Western Hills Meadow Observatory 876,Western Hills,WX,54.670,-4.210,77,coastal,health,2018-01-01,true
+STN877,North Coast Airfield Weather Site 877,North Coast,WX,55.040,-3.920,94,urban,climate,2019-06-08,true
+STN878,Central Valley Causeway Climate Mast 878,Central Valley,WX,55.410,-3.630,111,upland,marine,2020-11-15,true
+STN879,Highlands Reservoir Sensor Array 879,Highlands,WX,55.780,-3.340,128,airport,resilience,2021-04-22,true
+STN880,East Plains Beacon Station 880,East Plains,WX,56.150,-3.050,145,hydrology,aviation,2022-09-01,true
+STN881,South Coast Ridge Observatory 881,South Coast,WX,56.520,-2.760,162,transport,rail,2023-02-08,true
+STN882,Western Hills Harbor Weather Site 882,Western Hills,WX,56.890,-2.470,179,rural,agriculture,2024-07-15,true
+STN883,North Coast Valley Climate Mast 883,North Coast,WX,57.260,-2.180,196,coastal,road,2025-12-22,true
+STN884,Central Valley Summit Sensor Array 884,Central Valley,WX,57.630,-1.890,213,urban,health,2000-05-01,true
+STN885,Highlands River Station 885,Highlands,WX,58.000,-1.600,230,upland,climate,2001-10-08,true
+STN886,East Plains Meadow Observatory 886,East Plains,WX,49.970,-1.310,247,airport,marine,2002-03-15,true
+STN887,South Coast Airfield Weather Site 887,South Coast,WX,50.340,-1.020,264,hydrology,resilience,2003-08-22,true
+STN888,Western Hills Causeway Climate Mast 888,Western Hills,WX,50.710,-0.730,281,transport,aviation,2004-01-01,true
+STN889,North Coast Reservoir Sensor Array 889,North Coast,WX,51.080,-0.440,298,rural,rail,2005-06-08,true
+STN890,Central Valley Beacon Station 890,Central Valley,WX,51.450,-0.150,315,coastal,agriculture,2006-11-15,true
+STN891,Highlands Ridge Observatory 891,Highlands,WX,51.820,0.140,332,urban,road,2007-04-22,true
+STN892,East Plains Harbor Weather Site 892,East Plains,WX,52.190,0.430,349,upland,health,2008-09-01,true
+STN893,South Coast Valley Climate Mast 893,South Coast,WX,52.560,0.720,366,airport,climate,2009-02-08,false
+STN894,Western Hills Summit Sensor Array 894,Western Hills,WX,52.930,1.010,383,hydrology,marine,2010-07-15,true
+STN895,North Coast River Station 895,North Coast,WX,53.300,1.300,400,transport,resilience,2011-12-22,true
+STN896,Central Valley Meadow Observatory 896,Central Valley,WX,53.670,1.590,417,rural,aviation,2012-05-01,true
+STN897,Highlands Airfield Weather Site 897,Highlands,WX,54.040,1.880,434,coastal,rail,2013-10-08,true
+STN898,East Plains Causeway Climate Mast 898,East Plains,WX,54.410,-6.230,451,urban,agriculture,2014-03-15,true
+STN899,South Coast Reservoir Sensor Array 899,South Coast,WX,54.780,-5.940,468,upland,road,2015-08-22,true
+STN900,Western Hills Beacon Station 900,Western Hills,WX,55.150,-5.650,485,airport,health,2016-01-01,true
+STN901,North Coast Ridge Observatory 901,North Coast,WX,55.520,-5.360,502,hydrology,climate,2017-06-08,true
+STN902,Central Valley Harbor Weather Site 902,Central Valley,WX,55.890,-5.070,519,transport,marine,2018-11-15,true
+STN903,Highlands Valley Climate Mast 903,Highlands,WX,56.260,-4.780,536,rural,resilience,2019-04-22,true
+STN904,East Plains Summit Sensor Array 904,East Plains,WX,56.630,-4.490,553,coastal,aviation,2020-09-01,true
+STN905,South Coast River Station 905,South Coast,WX,57.000,-4.200,570,urban,rail,2021-02-08,true
+STN906,Western Hills Meadow Observatory 906,Western Hills,WX,57.370,-3.910,587,upland,agriculture,2022-07-15,true
+STN907,North Coast Airfield Weather Site 907,North Coast,WX,57.740,-3.620,604,airport,road,2023-12-22,true
+STN908,Central Valley Causeway Climate Mast 908,Central Valley,WX,58.110,-3.330,621,hydrology,health,2024-05-01,true
+STN909,Highlands Reservoir Sensor Array 909,Highlands,WX,50.080,-3.040,638,transport,climate,2025-10-08,true
+STN910,East Plains Beacon Station 910,East Plains,WX,50.450,-2.750,655,rural,marine,2000-03-15,true
+STN911,South Coast Ridge Observatory 911,South Coast,WX,50.820,-2.460,672,coastal,resilience,2001-08-22,true
+STN912,Western Hills Harbor Weather Site 912,Western Hills,WX,51.190,-2.170,689,urban,aviation,2002-01-01,false
+STN913,North Coast Valley Climate Mast 913,North Coast,WX,51.560,-1.880,706,upland,rail,2003-06-08,true
+STN914,Central Valley Summit Sensor Array 914,Central Valley,WX,51.930,-1.590,723,airport,agriculture,2004-11-15,true
+STN915,Highlands River Station 915,Highlands,WX,52.300,-1.300,740,hydrology,road,2005-04-22,true
+STN916,East Plains Meadow Observatory 916,East Plains,WX,52.670,-1.010,757,transport,health,2006-09-01,true
+STN917,South Coast Airfield Weather Site 917,South Coast,WX,53.040,-0.720,774,rural,climate,2007-02-08,true
+STN918,Western Hills Causeway Climate Mast 918,Western Hills,WX,53.410,-0.430,11,coastal,marine,2008-07-15,true
+STN919,North Coast Reservoir Sensor Array 919,North Coast,WX,53.780,-0.140,28,urban,resilience,2009-12-22,true
+STN920,Central Valley Beacon Station 920,Central Valley,WX,54.150,0.150,45,upland,aviation,2010-05-01,true
+STN921,Highlands Ridge Observatory 921,Highlands,WX,54.520,0.440,62,airport,rail,2011-10-08,true
+STN922,East Plains Harbor Weather Site 922,East Plains,WX,54.890,0.730,79,hydrology,agriculture,2012-03-15,true
+STN923,South Coast Valley Climate Mast 923,South Coast,WX,55.260,1.020,96,transport,road,2013-08-22,true
+STN924,Western Hills Summit Sensor Array 924,Western Hills,WX,55.630,1.310,113,rural,health,2014-01-01,true
+STN925,North Coast River Station 925,North Coast,WX,56.000,1.600,130,coastal,climate,2015-06-08,true
+STN926,Central Valley Meadow Observatory 926,Central Valley,WX,56.370,1.890,147,urban,marine,2016-11-15,true
+STN927,Highlands Airfield Weather Site 927,Highlands,WX,56.740,-6.220,164,upland,resilience,2017-04-22,true
+STN928,East Plains Causeway Climate Mast 928,East Plains,WX,57.110,-5.930,181,airport,aviation,2018-09-01,true
+STN929,South Coast Reservoir Sensor Array 929,South Coast,WX,57.480,-5.640,198,hydrology,rail,2019-02-08,true
+STN930,Western Hills Beacon Station 930,Western Hills,WX,57.850,-5.350,215,transport,agriculture,2020-07-15,true
+STN931,North Coast Ridge Observatory 931,North Coast,WX,49.820,-5.060,232,rural,road,2021-12-22,false
+STN932,Central Valley Harbor Weather Site 932,Central Valley,WX,50.190,-4.770,249,coastal,health,2022-05-01,true
+STN933,Highlands Valley Climate Mast 933,Highlands,WX,50.560,-4.480,266,urban,climate,2023-10-08,true
+STN934,East Plains Summit Sensor Array 934,East Plains,WX,50.930,-4.190,283,upland,marine,2024-03-15,true
+STN935,South Coast River Station 935,South Coast,WX,51.300,-3.900,300,airport,resilience,2025-08-22,true
+STN936,Western Hills Meadow Observatory 936,Western Hills,WX,51.670,-3.610,317,hydrology,aviation,2000-01-01,true
+STN937,North Coast Airfield Weather Site 937,North Coast,WX,52.040,-3.320,334,transport,rail,2001-06-08,true
+STN938,Central Valley Causeway Climate Mast 938,Central Valley,WX,52.410,-3.030,351,rural,agriculture,2002-11-15,true
+STN939,Highlands Reservoir Sensor Array 939,Highlands,WX,52.780,-2.740,368,coastal,road,2003-04-22,true
+STN940,East Plains Beacon Station 940,East Plains,WX,53.150,-2.450,385,urban,health,2004-09-01,true
+STN941,South Coast Ridge Observatory 941,South Coast,WX,53.520,-2.160,402,upland,climate,2005-02-08,true
+STN942,Western Hills Harbor Weather Site 942,Western Hills,WX,53.890,-1.870,419,airport,marine,2006-07-15,true
+STN943,North Coast Valley Climate Mast 943,North Coast,WX,54.260,-1.580,436,hydrology,resilience,2007-12-22,true
+STN944,Central Valley Summit Sensor Array 944,Central Valley,WX,54.630,-1.290,453,transport,aviation,2008-05-01,true
+STN945,Highlands River Station 945,Highlands,WX,55.000,-1.000,470,rural,rail,2009-10-08,true
+STN946,East Plains Meadow Observatory 946,East Plains,WX,55.370,-0.710,487,coastal,agriculture,2010-03-15,true
+STN947,South Coast Airfield Weather Site 947,South Coast,WX,55.740,-0.420,504,urban,road,2011-08-22,true
+STN948,Western Hills Causeway Climate Mast 948,Western Hills,WX,56.110,-0.130,521,upland,health,2012-01-01,true
+STN949,North Coast Reservoir Sensor Array 949,North Coast,WX,56.480,0.160,538,airport,climate,2013-06-08,true
+STN950,Central Valley Beacon Station 950,Central Valley,WX,56.850,0.450,555,hydrology,marine,2014-11-15,false
+STN951,Highlands Ridge Observatory 951,Highlands,WX,57.220,0.740,572,transport,resilience,2015-04-22,true
+STN952,East Plains Harbor Weather Site 952,East Plains,WX,57.590,1.030,589,rural,aviation,2016-09-01,true
+STN953,South Coast Valley Climate Mast 953,South Coast,WX,57.960,1.320,606,coastal,rail,2017-02-08,true
+STN954,Western Hills Summit Sensor Array 954,Western Hills,WX,49.930,1.610,623,urban,agriculture,2018-07-15,true
+STN955,North Coast River Station 955,North Coast,WX,50.300,1.900,640,upland,road,2019-12-22,true
+STN956,Central Valley Meadow Observatory 956,Central Valley,WX,50.670,-6.210,657,airport,health,2020-05-01,true
+STN957,Highlands Airfield Weather Site 957,Highlands,WX,51.040,-5.920,674,hydrology,climate,2021-10-08,true
+STN958,East Plains Causeway Climate Mast 958,East Plains,WX,51.410,-5.630,691,transport,marine,2022-03-15,true
+STN959,South Coast Reservoir Sensor Array 959,South Coast,WX,51.780,-5.340,708,rural,resilience,2023-08-22,true
+STN960,Western Hills Beacon Station 960,Western Hills,WX,52.150,-5.050,725,coastal,aviation,2024-01-01,true
+STN961,North Coast Ridge Observatory 961,North Coast,WX,52.520,-4.760,742,urban,rail,2025-06-08,true
+STN962,Central Valley Harbor Weather Site 962,Central Valley,WX,52.890,-4.470,759,upland,agriculture,2000-11-15,true
+STN963,Highlands Valley Climate Mast 963,Highlands,WX,53.260,-4.180,776,airport,road,2001-04-22,true
+STN964,East Plains Summit Sensor Array 964,East Plains,WX,53.630,-3.890,13,hydrology,health,2002-09-01,true
+STN965,South Coast River Station 965,South Coast,WX,54.000,-3.600,30,transport,climate,2003-02-08,true
+STN966,Western Hills Meadow Observatory 966,Western Hills,WX,54.370,-3.310,47,rural,marine,2004-07-15,true
+STN967,North Coast Airfield Weather Site 967,North Coast,WX,54.740,-3.020,64,coastal,resilience,2005-12-22,true
+STN968,Central Valley Causeway Climate Mast 968,Central Valley,WX,55.110,-2.730,81,urban,aviation,2006-05-01,true
+STN969,Highlands Reservoir Sensor Array 969,Highlands,WX,55.480,-2.440,98,upland,rail,2007-10-08,false
+STN970,East Plains Beacon Station 970,East Plains,WX,55.850,-2.150,115,airport,agriculture,2008-03-15,true
+STN971,South Coast Ridge Observatory 971,South Coast,WX,56.220,-1.860,132,hydrology,road,2009-08-22,true
+STN972,Western Hills Harbor Weather Site 972,Western Hills,WX,56.590,-1.570,149,transport,health,2010-01-01,true
+STN973,North Coast Valley Climate Mast 973,North Coast,WX,56.960,-1.280,166,rural,climate,2011-06-08,true
+STN974,Central Valley Summit Sensor Array 974,Central Valley,WX,57.330,-0.990,183,coastal,marine,2012-11-15,true
+STN975,Highlands River Station 975,Highlands,WX,57.700,-0.700,200,urban,resilience,2013-04-22,true
+STN976,East Plains Meadow Observatory 976,East Plains,WX,58.070,-0.410,217,upland,aviation,2014-09-01,true
+STN977,South Coast Airfield Weather Site 977,South Coast,WX,50.040,-0.120,234,airport,rail,2015-02-08,true
+STN978,Western Hills Causeway Climate Mast 978,Western Hills,WX,50.410,0.170,251,hydrology,agriculture,2016-07-15,true
+STN979,North Coast Reservoir Sensor Array 979,North Coast,WX,50.780,0.460,268,transport,road,2017-12-22,true
+STN980,Central Valley Beacon Station 980,Central Valley,WX,51.150,0.750,285,rural,health,2018-05-01,true
+STN981,Highlands Ridge Observatory 981,Highlands,WX,51.520,1.040,302,coastal,climate,2019-10-08,true
+STN982,East Plains Harbor Weather Site 982,East Plains,WX,51.890,1.330,319,urban,marine,2020-03-15,true
+STN983,South Coast Valley Climate Mast 983,South Coast,WX,52.260,1.620,336,upland,resilience,2021-08-22,true
+STN984,Western Hills Summit Sensor Array 984,Western Hills,WX,52.630,1.910,353,airport,aviation,2022-01-01,true
+STN985,North Coast River Station 985,North Coast,WX,53.000,-6.200,370,hydrology,rail,2023-06-08,true
+STN986,Central Valley Meadow Observatory 986,Central Valley,WX,53.370,-5.910,387,transport,agriculture,2024-11-15,true
+STN987,Highlands Airfield Weather Site 987,Highlands,WX,53.740,-5.620,404,rural,road,2025-04-22,true
+STN988,East Plains Causeway Climate Mast 988,East Plains,WX,54.110,-5.330,421,coastal,health,2000-09-01,false
+STN989,South Coast Reservoir Sensor Array 989,South Coast,WX,54.480,-5.040,438,urban,climate,2001-02-08,true
+STN990,Western Hills Beacon Station 990,Western Hills,WX,54.850,-4.750,455,upland,marine,2002-07-15,true
+STN991,North Coast Ridge Observatory 991,North Coast,WX,55.220,-4.460,472,airport,resilience,2003-12-22,true
+STN992,Central Valley Harbor Weather Site 992,Central Valley,WX,55.590,-4.170,489,hydrology,aviation,2004-05-01,true
+STN993,Highlands Valley Climate Mast 993,Highlands,WX,55.960,-3.880,506,transport,rail,2005-10-08,true
+STN994,East Plains Summit Sensor Array 994,East Plains,WX,56.330,-3.590,523,rural,agriculture,2006-03-15,true
+STN995,South Coast River Station 995,South Coast,WX,56.700,-3.300,540,coastal,road,2007-08-22,true
+STN996,Western Hills Meadow Observatory 996,Western Hills,WX,57.070,-3.010,557,urban,health,2008-01-01,true
+STN997,North Coast Airfield Weather Site 997,North Coast,WX,57.440,-2.720,574,upland,climate,2009-06-08,true
+STN998,Central Valley Causeway Climate Mast 998,Central Valley,WX,57.810,-2.430,591,airport,marine,2010-11-15,true
+STN999,Highlands Reservoir Sensor Array 999,Highlands,WX,49.780,-2.140,608,hydrology,resilience,2011-04-22,true
+STN1000,East Plains Beacon Station 1000,East Plains,WX,50.150,-1.850,625,transport,aviation,2012-09-01,true
