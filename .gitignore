@@ -13,3 +13,7 @@ crash.*.log
 *.tfplan
 *.tfvars
 *.tfvars.json
+renders/
+.venv/
+__pycache__/
+*.duckdb
