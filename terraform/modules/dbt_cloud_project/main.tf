@@ -114,7 +114,7 @@ resource "dbtcloud_job" "slim_ci" {
 
   dbt_version          = var.dbt_version
   environment_id       = dbtcloud_environment.ci.environment_id
-  execute_steps        = ["dbt build --select state:modified+"]
+  execute_steps        = ["dbt build --select state:modified+ config.access:public"]
   generate_docs        = true
   is_active            = true
   name                 = "Slim CI"
