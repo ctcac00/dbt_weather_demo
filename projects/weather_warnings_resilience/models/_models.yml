@@ -144,3 +144,138 @@ models:
           - dbt_expectations.expect_column_values_to_be_between:
               arguments:
                 min_value: 0
+
+  - name: daily_resilience_station_posture
+    description: "Station-day resilience posture base combining warning coverage with observed weather conditions."
+    config:
+      meta:
+        primary_key: station_daily_conditions_key
+    columns:
+      - name: station_daily_conditions_key
+        description: "Foundation station-day conditions surrogate key."
+        data_tests: [not_null, unique]
+      - name: station_id
+        description: "Station represented by the resilience posture record."
+        data_tests: [not_null]
+      - name: station_name
+        description: "Human-readable station name."
+      - name: region
+        description: "Operational weather-service region."
+        data_tests: [not_null]
+      - name: station_type
+        description: "Station operating context."
+      - name: sector_focus
+        description: "Primary sector supported by the station."
+      - name: posture_date
+        description: "Date of the resilience posture record."
+        data_tests: [not_null]
+      - name: observation_count
+        description: "Number of observations contributing to the station-day."
+        data_tests:
+          - dbt_expectations.expect_column_values_to_be_between:
+              arguments:
+                min_value: 1
+      - name: total_precipitation_mm
+        description: "Total observed precipitation in millimetres."
+        data_tests:
+          - dbt_expectations.expect_column_values_to_be_between:
+              arguments:
+                min_value: 0
+      - name: maximum_wind_gust_kph
+        description: "Maximum observed wind gust speed in kilometres per hour."
+      - name: minimum_visibility_km
+        description: "Minimum observed visibility in kilometres."
+      - name: precipitation_observed
+        description: "Whether precipitation was observed during the station-day."
+      - name: low_visibility_observed
+        description: "Whether low visibility was observed during the station-day."
+      - name: high_wind_observed
+        description: "Whether high wind was observed during the station-day."
+      - name: freezing_observed
+        description: "Whether freezing conditions were observed during the station-day."
+      - name: alert_count
+        description: "Alert count for the station-day."
+        data_tests:
+          - dbt_expectations.expect_column_values_to_be_between:
+              arguments:
+                min_value: 0
+      - name: observed_incidents
+        description: "Observed incidents associated with station-day alerts."
+        data_tests:
+          - dbt_expectations.expect_column_values_to_be_between:
+              arguments:
+                min_value: 0
+      - name: affected_population_estimate
+        description: "Estimated affected population associated with station-day alerts."
+        data_tests:
+          - dbt_expectations.expect_column_values_to_be_between:
+              arguments:
+                min_value: 0
+      - name: average_expected_impact_score
+        description: "Average expected impact score for station-day alerts."
+      - name: average_weighted_impact_score
+        description: "Average severity-weighted impact score for station-day alerts."
+      - name: maximum_weighted_impact_score
+        description: "Maximum severity-weighted impact score for station-day alerts."
+      - name: resilience_posture
+        description: "Operational response posture for resilience teams."
+        data_tests:
+          - accepted_values:
+              arguments:
+                values: ['standard_monitoring', 'enhanced_monitoring', 'major_incident_ready']
+
+  - name: daily_resilience_posture_report
+    description: "Daily resilience posture report by region, combining warning outcomes and observed conditions."
+    config:
+      meta:
+        primary_key: daily_resilience_posture_key
+    columns:
+      - name: daily_resilience_posture_key
+        description: "Surrogate key for posture date and region."
+        data_tests: [not_null, unique]
+      - name: posture_date
+        description: "Date of the resilience posture summary."
+        data_tests: [not_null]
+      - name: region
+        description: "Operational weather-service region."
+        data_tests: [not_null]
+      - name: station_count
+        description: "Number of distinct stations included in the posture summary."
+        data_tests:
+          - dbt_expectations.expect_column_values_to_be_between:
+              arguments:
+                min_value: 1
+      - name: observation_count
+        description: "Number of observations included in the posture summary."
+      - name: precipitation_station_count
+        description: "Stations with precipitation observed."
+      - name: low_visibility_station_count
+        description: "Stations with low visibility observed."
+      - name: high_wind_station_count
+        description: "Stations with high wind observed."
+      - name: freezing_station_count
+        description: "Stations with freezing conditions observed."
+      - name: alert_count
+        description: "Alert count in the posture summary."
+      - name: observed_incidents
+        description: "Observed incidents associated with alerts in the posture summary."
+      - name: affected_population_estimate
+        description: "Estimated affected population associated with alerts in the posture summary."
+      - name: average_expected_impact_score
+        description: "Average expected impact score across alerted station-days."
+      - name: average_weighted_impact_score
+        description: "Average severity-weighted impact score across alerted station-days."
+      - name: maximum_weighted_impact_score
+        description: "Maximum severity-weighted impact score in the posture summary."
+      - name: highest_resilience_posture
+        description: "Highest resilience response posture observed in the summary."
+        data_tests:
+          - accepted_values:
+              arguments:
+                values: ['standard_monitoring', 'enhanced_monitoring', 'major_incident_ready']
+      - name: incidents_per_100k_population
+        description: "Observed incidents per 100,000 affected residents."
+        data_tests:
+          - dbt_expectations.expect_column_values_to_be_between:
+              arguments:
+                min_value: 0
