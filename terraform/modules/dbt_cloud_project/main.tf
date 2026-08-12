@@ -115,12 +115,12 @@ resource "dbtcloud_job" "slim_ci" {
   dbt_version          = var.dbt_version
   environment_id       = dbtcloud_environment.ci.environment_id
   execute_steps        = ["dbt build --select state:modified+"]
-  generate_docs        = false
+  generate_docs        = true
   is_active            = true
   name                 = "Slim CI"
   num_threads          = var.threads
   project_id           = dbtcloud_project.this.id
-  run_generate_sources = false
+  run_generate_sources = true
   target_name          = "ci"
 
   deferring_environment_id = dbtcloud_environment.production.environment_id
