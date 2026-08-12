@@ -35,6 +35,17 @@ alert_risk as (
     where sector_focus in ('aviation', 'rail', 'road')
        or station_type in ('airport', 'transport')
     group by station_id, cast(valid_from as date)
+),
+
+data_service_adoption as (
+    select
+        region,
+        data_service_adoption_key,
+        active_subscription_count,
+        active_api_calls_30d,
+        alert_opt_in_rate,
+        adoption_band
+    from {{ ref('weather_climate_data_services', 'climate_data_service_adoption') }}
 )
 
 select
@@ -50,6 +61,11 @@ select
     forecast_risk.absolute_precipitation_error_mm,
     forecast_risk.absolute_wind_gust_error_kph,
     forecast_risk.forecast_uncertainty_score,
+    data_service_adoption.data_service_adoption_key,
+    data_service_adoption.active_subscription_count,
+    data_service_adoption.active_api_calls_30d,
+    data_service_adoption.alert_opt_in_rate,
+    data_service_adoption.adoption_band,
     coalesce(alert_risk.max_alert_severity_weight, 0) as max_alert_severity_weight,
     coalesce(alert_risk.max_weighted_impact_score, 0) as max_weighted_impact_score,
     forecast_risk.forecast_uncertainty_score + coalesce(alert_risk.max_alert_severity_weight, 0) as operating_risk_score
@@ -57,3 +73,5 @@ from forecast_risk
 left join alert_risk
     on forecast_risk.station_id = alert_risk.station_id
     and forecast_risk.forecast_valid_date = alert_risk.risk_date
+left join data_service_adoption
+    on forecast_risk.region = data_service_adoption.region

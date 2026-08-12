@@ -43,6 +43,20 @@ models:
               arguments:
                 min_value: 1
                 max_value: 3
+      - name: data_service_adoption_key
+        description: "Regional data-service adoption surrogate key from the data services project."
+      - name: active_subscription_count
+        description: "Active data-service subscriptions in the forecast region."
+      - name: active_api_calls_30d
+        description: "API calls from active subscriptions in the prior 30 days for the forecast region."
+      - name: alert_opt_in_rate
+        description: "Share of regional subscriptions opted into alert notifications."
+      - name: adoption_band
+        description: "Regional data-service adoption segment."
+        data_tests:
+          - accepted_values:
+              arguments:
+                values: ['developing_adoption', 'moderate_adoption', 'high_adoption']
       - name: max_alert_severity_weight
         description: "Maximum alert severity weight for the station and date."
         data_tests:
@@ -80,8 +94,22 @@ models:
           - accepted_values:
               arguments:
                 values: ['aviation', 'rail', 'road']
+      - name: data_service_adoption_key
+        description: "Regional data-service adoption surrogate key from the data services project."
       - name: station_count
         description: "Number of distinct stations included in the summary."
+      - name: active_subscription_count
+        description: "Active data-service subscriptions in the risk-summary region."
+      - name: active_api_calls_30d
+        description: "API calls from active subscriptions in the prior 30 days for the risk-summary region."
+      - name: alert_opt_in_rate
+        description: "Share of regional subscriptions opted into alert notifications."
+      - name: adoption_band
+        description: "Regional data-service adoption segment."
+        data_tests:
+          - accepted_values:
+              arguments:
+                values: ['developing_adoption', 'moderate_adoption', 'high_adoption']
       - name: average_temperature_error_c
         description: "Average absolute temperature forecast error in Celsius."
       - name: average_precipitation_error_mm

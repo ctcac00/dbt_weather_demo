@@ -75,16 +75,17 @@ resource "dbtcloud_environment" "ci" {
 resource "dbtcloud_job" "daily_production_build" {
   count = var.enable_daily_build ? 1 : 0
 
-  dbt_version          = var.dbt_version
-  environment_id       = dbtcloud_environment.production.environment_id
-  execute_steps        = ["dbt build"]
-  generate_docs        = true
-  is_active            = true
-  name                 = "Daily Production build"
-  num_threads          = var.threads
-  project_id           = dbtcloud_project.this.id
-  run_generate_sources = true
-  target_name          = "prod"
+  dbt_version                = var.dbt_version
+  cost_optimization_features = ["dbt_state"]
+  environment_id             = dbtcloud_environment.production.environment_id
+  execute_steps              = ["dbt build"]
+  generate_docs              = true
+  is_active                  = true
+  name                       = "Daily Production build"
+  num_threads                = var.threads
+  project_id                 = dbtcloud_project.this.id
+  run_generate_sources       = true
+  target_name                = "prod"
 
   triggers = {
     github_webhook       = false

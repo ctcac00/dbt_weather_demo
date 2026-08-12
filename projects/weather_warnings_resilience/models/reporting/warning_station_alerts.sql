@@ -1,3 +1,14 @@
+with data_service_adoption as (
+    select
+        region,
+        data_service_adoption_key,
+        active_subscription_count,
+        active_api_calls_30d,
+        alert_opt_in_rate,
+        adoption_band
+    from {{ ref('weather_climate_data_services', 'climate_data_service_adoption') }}
+)
+
 select
     alert.alert_impact_key,
     alert.alert_id,
@@ -18,8 +29,11 @@ select
     alert.observed_incidents,
     alert.affected_population_estimate,
     alert.incidents_per_100k_population,
-    alert.active_subscription_count,
-    alert.alert_opt_in_rate,
+    data_service_adoption.data_service_adoption_key,
+    data_service_adoption.active_subscription_count,
+    data_service_adoption.active_api_calls_30d,
+    data_service_adoption.alert_opt_in_rate,
+    data_service_adoption.adoption_band,
     alert.weighted_impact_score,
     case
         when alert.severity = 'red' or alert.weighted_impact_score >= 180 then 'major_incident_ready'
@@ -29,3 +43,5 @@ select
 from {{ ref('weather_foundation', 'fct_weather_alert_impact') }} as alert
 inner join {{ ref('weather_foundation', 'dim_station') }} as station
     on alert.station_id = station.station_id
+left join data_service_adoption
+    on station.region = data_service_adoption.region

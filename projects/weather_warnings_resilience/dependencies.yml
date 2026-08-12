@@ -6,3 +6,4 @@ packages:
 
 projects:
   - name: weather_foundation
+  - name: weather_climate_data_services

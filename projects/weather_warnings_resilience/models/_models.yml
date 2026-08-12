@@ -58,10 +58,20 @@ models:
         description: "Estimated population covered by the alert."
       - name: incidents_per_100k_population
         description: "Observed incidents per 100,000 affected residents."
+      - name: data_service_adoption_key
+        description: "Regional data-service adoption surrogate key from the data services project."
       - name: active_subscription_count
         description: "Active data-service subscriptions in the alert region."
+      - name: active_api_calls_30d
+        description: "API calls from active subscriptions in the prior 30 days for the alert region."
       - name: alert_opt_in_rate
         description: "Share of regional subscriptions opted into alert notifications."
+      - name: adoption_band
+        description: "Regional data-service adoption segment."
+        data_tests:
+          - accepted_values:
+              arguments:
+                values: ['developing_adoption', 'moderate_adoption', 'high_adoption']
       - name: weighted_impact_score
         description: "Expected impact score multiplied by severity weight."
       - name: resilience_response_tier
@@ -92,6 +102,8 @@ models:
           - accepted_values:
               arguments:
                 values: ['yellow', 'amber', 'red']
+      - name: data_service_adoption_key
+        description: "Regional data-service adoption surrogate key from the data services project."
       - name: alert_count
         description: "Number of alerts in the segment."
         data_tests:
@@ -104,6 +116,18 @@ models:
           - dbt_expectations.expect_column_values_to_be_between:
               arguments:
                 min_value: 1
+      - name: active_subscription_count
+        description: "Active data-service subscriptions in the warning-coverage region."
+      - name: active_api_calls_30d
+        description: "API calls from active subscriptions in the prior 30 days for the warning-coverage region."
+      - name: alert_opt_in_rate
+        description: "Share of regional subscriptions opted into alert notifications."
+      - name: adoption_band
+        description: "Regional data-service adoption segment."
+        data_tests:
+          - accepted_values:
+              arguments:
+                values: ['developing_adoption', 'moderate_adoption', 'high_adoption']
       - name: observed_incidents
         description: "Total observed incidents in the segment."
       - name: affected_population_estimate

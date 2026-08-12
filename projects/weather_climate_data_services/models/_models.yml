@@ -1,5 +1,11 @@
 version: 2
 
+groups:
+  - name: data_services
+    owner:
+      name: Weather Data Services Team
+      email: data-services@example.org
+
 models:
   - name: data_service_regional_adoption
     description: "Regional weather data-service adoption base built only from public foundation marts."
@@ -42,26 +48,40 @@ models:
 
   - name: climate_data_service_adoption
     description: "Final report for climate and data-service adoption by region."
+    latest_version: 1
     config:
       meta:
         primary_key: data_service_adoption_key
+      access: public
+      group: data_services
+      contract:
+        enforced: true
+    versions:
+      - v: 1
     columns:
       - name: data_service_adoption_key
         description: "Surrogate key for the region."
+        data_type: varchar
         data_tests: [not_null, unique]
       - name: region
         description: "Operational weather-service region."
+        data_type: varchar
         data_tests: [not_null, unique]
       - name: active_subscription_count
         description: "Active subscriptions in the region."
+        data_type: number(18, 0)
       - name: total_subscription_count
         description: "Total subscriptions in the region."
+        data_type: number(18, 0)
       - name: active_monthly_fee_units
         description: "Monthly service unit total for active subscriptions in the region."
+        data_type: number(18, 2)
       - name: active_api_calls_30d
         description: "API calls from active subscriptions in the prior 30 days."
+        data_type: number(18, 0)
       - name: alert_opt_in_rate
         description: "Share of regional subscriptions opted into alert notifications."
+        data_type: float
         data_tests:
           - dbt_expectations.expect_column_values_to_be_between:
               arguments:
@@ -69,16 +89,22 @@ models:
                 max_value: 1
       - name: alert_count
         description: "Number of alerts in the region."
+        data_type: number(18, 0)
       - name: station_count
         description: "Number of stations represented in the region."
+        data_type: number(18, 0)
       - name: average_temperature_error_c
         description: "Average absolute temperature forecast error in Celsius for the region."
+        data_type: float
       - name: average_precipitation_error_mm
         description: "Average absolute precipitation forecast error in millimetres for the region."
+        data_type: float
       - name: api_calls_per_active_subscription
         description: "API call volume divided by active subscription count."
+        data_type: float
       - name: adoption_band
         description: "Regional data-service adoption segment."
+        data_type: varchar
         data_tests:
           - accepted_values:
               arguments:
