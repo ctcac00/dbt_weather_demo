@@ -35,7 +35,7 @@ output "ci_credential_id" {
 
 output "daily_production_build_job_id" {
   description = "Daily Production dbt build job ID, if enabled."
-  value       = try(dbtcloud_job.daily_production_build[0].id, null)
+  value       = try(dbtcloud_job.daily_production_build[0].job_id, null)
 }
 
 output "slim_ci_job_id" {

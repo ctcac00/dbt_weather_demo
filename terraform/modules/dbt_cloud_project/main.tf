@@ -21,27 +21,27 @@ resource "dbtcloud_repository" "this" {
 # See references/adapters.md for the full adapter-specific credential fields
 # (auth type, user/token/private key, etc.) beyond environment routing.
 resource "dbtcloud_snowflake_credential" "production" {
-  project_id             = dbtcloud_project.this.id
-  auth_type              = "keypair"
-  user                   = var.snowflake_user
-  private_key_wo         = var.snowflake_private_key
-  private_key_wo_version = var.private_key_version
-  private_key_passphrase_wo = var.private_key_passphrase
+  project_id                        = dbtcloud_project.this.id
+  auth_type                         = "keypair"
+  user                              = var.snowflake_user
+  private_key_wo                    = var.snowflake_private_key
+  private_key_wo_version            = var.private_key_version
+  private_key_passphrase_wo         = var.private_key_passphrase
   private_key_passphrase_wo_version = var.private_key_passphrase == null ? null : var.passphrase_version
-  num_threads            = var.threads
-  schema                 = var.prod_schema
+  num_threads                       = var.threads
+  schema                            = var.prod_schema
 }
 
 resource "dbtcloud_snowflake_credential" "ci" {
-  project_id             = dbtcloud_project.this.id
-  auth_type              = "keypair"
-  user                   = var.snowflake_user
-  private_key_wo         = var.snowflake_private_key
-  private_key_wo_version = var.private_key_version
-  private_key_passphrase_wo = var.private_key_passphrase
+  project_id                        = dbtcloud_project.this.id
+  auth_type                         = "keypair"
+  user                              = var.snowflake_user
+  private_key_wo                    = var.snowflake_private_key
+  private_key_wo_version            = var.private_key_version
+  private_key_passphrase_wo         = var.private_key_passphrase
   private_key_passphrase_wo_version = var.private_key_passphrase == null ? null : var.passphrase_version
-  num_threads            = var.threads
-  schema                 = var.ci_schema
+  num_threads                       = var.threads
+  schema                            = var.ci_schema
 }
 
 resource "dbtcloud_environment" "development" {
@@ -97,6 +97,16 @@ resource "dbtcloud_job" "daily_production_build" {
   schedule_days  = var.daily_build_schedule_days
   schedule_type  = "days_of_week"
   schedule_hours = var.daily_build_schedule_hours
+
+  dynamic "job_completion_trigger_condition" {
+    for_each = var.upstream_production_trigger == null ? [] : [var.upstream_production_trigger]
+
+    content {
+      job_id     = job_completion_trigger_condition.value.job_id
+      project_id = job_completion_trigger_condition.value.project_id
+      statuses   = job_completion_trigger_condition.value.statuses
+    }
+  }
 }
 
 resource "dbtcloud_job" "slim_ci" {

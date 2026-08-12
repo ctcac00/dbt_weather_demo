@@ -87,6 +87,16 @@ variable "enable_daily_build" {
   default     = true
 }
 
+variable "upstream_production_trigger" {
+  description = "Optional upstream production job completion trigger for the Daily Production build job."
+  type = object({
+    job_id     = number
+    project_id = number
+    statuses   = optional(list(string), ["success"])
+  })
+  default = null
+}
+
 variable "daily_build_schedule_days" {
   description = "Days of week (0=Sunday) the Daily Production build runs."
   type        = list(number)

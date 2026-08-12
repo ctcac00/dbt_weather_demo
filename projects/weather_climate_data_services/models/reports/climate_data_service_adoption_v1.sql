@@ -10,7 +10,7 @@ select
     station_count,
     average_temperature_error_c,
     average_precipitation_error_mm,
-    api_calls_per_active_subscription,
+    cast(api_calls_per_active_subscription as float) as api_calls_per_active_subscription,
     case
         when alert_opt_in_rate >= 0.8 and active_api_calls_30d >= 150000 then 'high_adoption'
         when alert_opt_in_rate >= 0.5 then 'moderate_adoption'

@@ -53,21 +53,39 @@ resource "dbtcloud_global_connection" "snowflake" {
   }
 }
 
-module "dbt_cloud_projects" {
-  for_each = local.projects
+moved {
+  from = module.dbt_cloud_projects["weather_foundation"]
+  to   = module.weather_foundation
+}
 
+moved {
+  from = module.dbt_cloud_projects["weather_climate_data_services"]
+  to   = module.weather_climate_data_services
+}
+
+moved {
+  from = module.dbt_cloud_projects["weather_warnings_resilience"]
+  to   = module.weather_warnings_resilience
+}
+
+moved {
+  from = module.dbt_cloud_projects["weather_transport_aviation"]
+  to   = module.weather_transport_aviation
+}
+
+module "weather_foundation" {
   source = "./modules/dbt_cloud_project"
 
-  project_name           = each.key
-  project_subdirectory   = each.value.subdirectory
+  project_name           = "weather_foundation"
+  project_subdirectory   = local.projects.weather_foundation.subdirectory
   connection_id          = dbtcloud_global_connection.snowflake.id
   git_remote_url         = local.git_remote_url
   git_clone_strategy     = var.git_clone_strategy
   github_installation_id = var.github_installation_id
   dbt_version            = var.dbt_version
   threads                = var.dbt_threads
-  prod_schema            = each.value.prod_schema
-  ci_schema              = each.value.ci_schema
+  prod_schema            = local.projects.weather_foundation.prod_schema
+  ci_schema              = local.projects.weather_foundation.ci_schema
   snowflake_user         = var.snowflake_user
   snowflake_private_key  = file(var.snowflake_private_key_path)
   private_key_version    = var.snowflake_private_key_version
@@ -75,4 +93,88 @@ module "dbt_cloud_projects" {
   passphrase_version     = var.snowflake_private_key_passphrase_version
   enable_daily_build     = var.enable_daily_build
   enable_slim_ci         = var.enable_slim_ci
+}
+
+module "weather_climate_data_services" {
+  source = "./modules/dbt_cloud_project"
+
+  project_name           = "weather_climate_data_services"
+  project_subdirectory   = local.projects.weather_climate_data_services.subdirectory
+  connection_id          = dbtcloud_global_connection.snowflake.id
+  git_remote_url         = local.git_remote_url
+  git_clone_strategy     = var.git_clone_strategy
+  github_installation_id = var.github_installation_id
+  dbt_version            = var.dbt_version
+  threads                = var.dbt_threads
+  prod_schema            = local.projects.weather_climate_data_services.prod_schema
+  ci_schema              = local.projects.weather_climate_data_services.ci_schema
+  snowflake_user         = var.snowflake_user
+  snowflake_private_key  = file(var.snowflake_private_key_path)
+  private_key_version    = var.snowflake_private_key_version
+  private_key_passphrase = var.snowflake_private_key_passphrase
+  passphrase_version     = var.snowflake_private_key_passphrase_version
+  enable_daily_build     = var.enable_daily_build
+  enable_slim_ci         = var.enable_slim_ci
+
+  upstream_production_trigger = var.enable_daily_build ? {
+    job_id     = module.weather_foundation.daily_production_build_job_id
+    project_id = module.weather_foundation.project_id
+    statuses   = ["success"]
+  } : null
+}
+
+module "weather_warnings_resilience" {
+  source = "./modules/dbt_cloud_project"
+
+  project_name           = "weather_warnings_resilience"
+  project_subdirectory   = local.projects.weather_warnings_resilience.subdirectory
+  connection_id          = dbtcloud_global_connection.snowflake.id
+  git_remote_url         = local.git_remote_url
+  git_clone_strategy     = var.git_clone_strategy
+  github_installation_id = var.github_installation_id
+  dbt_version            = var.dbt_version
+  threads                = var.dbt_threads
+  prod_schema            = local.projects.weather_warnings_resilience.prod_schema
+  ci_schema              = local.projects.weather_warnings_resilience.ci_schema
+  snowflake_user         = var.snowflake_user
+  snowflake_private_key  = file(var.snowflake_private_key_path)
+  private_key_version    = var.snowflake_private_key_version
+  private_key_passphrase = var.snowflake_private_key_passphrase
+  passphrase_version     = var.snowflake_private_key_passphrase_version
+  enable_daily_build     = var.enable_daily_build
+  enable_slim_ci         = var.enable_slim_ci
+
+  upstream_production_trigger = var.enable_daily_build ? {
+    job_id     = module.weather_climate_data_services.daily_production_build_job_id
+    project_id = module.weather_climate_data_services.project_id
+    statuses   = ["success"]
+  } : null
+}
+
+module "weather_transport_aviation" {
+  source = "./modules/dbt_cloud_project"
+
+  project_name           = "weather_transport_aviation"
+  project_subdirectory   = local.projects.weather_transport_aviation.subdirectory
+  connection_id          = dbtcloud_global_connection.snowflake.id
+  git_remote_url         = local.git_remote_url
+  git_clone_strategy     = var.git_clone_strategy
+  github_installation_id = var.github_installation_id
+  dbt_version            = var.dbt_version
+  threads                = var.dbt_threads
+  prod_schema            = local.projects.weather_transport_aviation.prod_schema
+  ci_schema              = local.projects.weather_transport_aviation.ci_schema
+  snowflake_user         = var.snowflake_user
+  snowflake_private_key  = file(var.snowflake_private_key_path)
+  private_key_version    = var.snowflake_private_key_version
+  private_key_passphrase = var.snowflake_private_key_passphrase
+  passphrase_version     = var.snowflake_private_key_passphrase_version
+  enable_daily_build     = var.enable_daily_build
+  enable_slim_ci         = var.enable_slim_ci
+
+  upstream_production_trigger = var.enable_daily_build ? {
+    job_id     = module.weather_climate_data_services.daily_production_build_job_id
+    project_id = module.weather_climate_data_services.project_id
+    statuses   = ["success"]
+  } : null
 }
