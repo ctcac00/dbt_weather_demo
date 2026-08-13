@@ -1,0 +1,134 @@
+version: 2
+
+models:
+  - name: climate_data_service_engagement
+    description: "Final climate data-service engagement report by region, built from station readiness and regional service context."
+    latest_version: 1
+    semantic_model:
+      enabled: true
+      name: climate_data_service_engagement
+    agg_time_dimension: metric_date
+    config:
+      meta:
+        primary_key: climate_data_service_engagement_key
+      access: public
+      group: data_services
+      contract:
+        enforced: true
+    versions:
+      - v: 1
+    columns:
+      - name: climate_data_service_engagement_key
+        description: "Surrogate key for the region."
+        data_type: varchar
+        data_tests: [not_null, unique]
+        entity:
+          type: primary
+          name: climate_data_service_engagement
+      - name: metric_date
+        description: "Current date used as the reporting metric date."
+        data_type: date
+        granularity: day
+        dimension:
+          type: time
+      - name: region
+        description: "Operational weather-service region."
+        data_type: varchar
+        dimension:
+          type: categorical
+        data_tests: [not_null, unique]
+      - name: region_service_context_key
+        description: "Foundation regional service context surrogate key."
+        data_type: varchar
+      - name: service_context_band
+        description: "Regional service maturity band."
+        data_type: varchar
+        dimension:
+          type: categorical
+        data_tests:
+          - accepted_values:
+              arguments:
+                values: ['developing_service_context', 'scaling_service_context', 'mature_service_context']
+      - name: highest_engagement_sector
+        description: "Sector with the highest active API call volume in the region."
+        data_type: varchar
+        dimension:
+          type: categorical
+      - name: supported_sector_count
+        description: "Distinct station sector focuses represented in the region."
+        data_type: number(18, 0)
+      - name: subscribed_sector_count
+        description: "Distinct subscribed sectors represented in the region."
+        data_type: number(18, 0)
+      - name: active_subscription_count
+        description: "Active data-service subscriptions in the region."
+        data_type: number(18, 0)
+      - name: active_api_calls_30d
+        description: "API calls from active regional subscriptions over the prior 30 days."
+        data_type: number(18, 0)
+      - name: alert_opt_in_rate
+        description: "Share of regional subscriptions opted into alert notifications."
+        data_type: float
+        data_tests:
+          - dbt_expectations.expect_column_values_to_be_between:
+              arguments:
+                min_value: 0
+                max_value: 1
+      - name: readiness_day_count
+        description: "Readiness days represented in the report."
+        data_type: number(18, 0)
+      - name: station_day_count
+        description: "Station-day readiness records represented in the report."
+        data_type: number(18, 0)
+      - name: station_count
+        description: "Stations represented in the report."
+        data_type: number(18, 0)
+      - name: average_weather_readiness_score
+        description: "Average station weather readiness score."
+        data_type: float
+      - name: constrained_station_day_count
+        description: "Station-days in strained or critical readiness bands."
+        data_type: number(18, 0)
+      - name: alert_count
+        description: "Alerts represented in the report."
+        data_type: number(18, 0)
+      - name: forecast_count
+        description: "Forecasts represented in the report."
+        data_type: number(18, 0)
+      - name: temperature_accuracy_rate
+        description: "Average temperature accuracy rate across reported days."
+        data_type: float
+      - name: precipitation_event_accuracy_rate
+        description: "Average precipitation-event accuracy rate across reported days."
+        data_type: float
+      - name: api_calls_per_active_subscription
+        description: "Average API call volume divided by active subscription count."
+        data_type: float
+      - name: weather_engagement_band
+        description: "Data-service weather engagement band."
+        data_type: varchar
+        dimension:
+          type: categorical
+        data_tests:
+          - accepted_values:
+              arguments:
+                values: ['developing_engagement', 'moderate_engagement', 'high_engagement']
+    metrics:
+      - name: engagement_active_subscriptions
+        description: "Active subscriptions represented in engagement reports."
+        type: simple
+        label: "Engagement active subscriptions"
+        agg: sum
+        expr: active_subscription_count
+      - name: engagement_api_calls
+        description: "API calls from active subscriptions over the prior 30 days."
+        type: simple
+        label: "Engagement API calls"
+        agg: sum
+        expr: active_api_calls_30d
+      - name: average_weather_readiness_score
+        description: "Average weather readiness score across reported regions."
+        type: simple
+        label: "Average weather readiness score"
+        agg: average
+        expr: average_weather_readiness_score

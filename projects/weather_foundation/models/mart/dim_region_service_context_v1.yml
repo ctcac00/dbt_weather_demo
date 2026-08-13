@@ -1,0 +1,137 @@
+version: 2
+
+models:
+  - name: dim_region_service_context
+    description: "Public regional context dimension joining station coverage, subscription activity, observed conditions, forecasts, and alerts."
+    latest_version: 1
+    config:
+      meta:
+        primary_key: region_service_context_key
+      access: public
+      group: foundation
+      contract:
+        enforced: true
+    versions:
+      - v: 1
+    columns:
+      - name: region_service_context_key
+        description: "Surrogate key for the operational weather-service region."
+        data_type: varchar
+        data_tests: [not_null, unique]
+      - name: region
+        description: "Operational weather-service region."
+        data_type: varchar
+        data_tests: [not_null, unique]
+      - name: station_count
+        description: "Stations registered in the region."
+        data_type: number(18, 0)
+      - name: active_station_count
+        description: "Active stations in the region."
+        data_type: number(18, 0)
+      - name: supported_sector_count
+        description: "Distinct station sector focuses represented in the region."
+        data_type: number(18, 0)
+      - name: airport_station_count
+        description: "Airport station count in the region."
+        data_type: number(18, 0)
+      - name: transport_station_count
+        description: "Transport station count in the region."
+        data_type: number(18, 0)
+      - name: total_subscription_count
+        description: "Total data-service subscriptions in the region."
+        data_type: number(18, 0)
+      - name: active_subscription_count
+        description: "Active data-service subscriptions in the region."
+        data_type: number(18, 0)
+      - name: trial_subscription_count
+        description: "Trial data-service subscriptions in the region."
+        data_type: number(18, 0)
+      - name: subscribed_sector_count
+        description: "Distinct subscribed sectors represented in the region."
+        data_type: number(18, 0)
+      - name: active_monthly_fee_units
+        description: "Monthly service units from active regional subscriptions."
+        data_type: number(18, 2)
+      - name: active_api_calls_30d
+        description: "API calls from active regional subscriptions over the prior 30 days."
+        data_type: number(18, 0)
+      - name: alert_opt_in_rate
+        description: "Share of regional subscriptions opted into alert notifications."
+        data_type: float
+        data_tests:
+          - dbt_expectations.expect_column_values_to_be_between:
+              arguments:
+                min_value: 0
+                max_value: 1
+      - name: station_day_count
+        description: "Observed station-day records in the region."
+        data_type: number(18, 0)
+      - name: observed_station_count
+        description: "Stations with observed station-day coverage."
+        data_type: number(18, 0)
+      - name: first_observation_date
+        description: "Earliest observed station-day date in the region."
+        data_type: date
+      - name: last_observation_date
+        description: "Latest observed station-day date in the region."
+        data_type: date
+      - name: observation_count
+        description: "Observation records represented by regional station-day coverage."
+        data_type: number(18, 0)
+      - name: low_visibility_station_day_count
+        description: "Station-days with low visibility observed."
+        data_type: number(18, 0)
+      - name: high_wind_station_day_count
+        description: "Station-days with high wind observed."
+        data_type: number(18, 0)
+      - name: freezing_station_day_count
+        description: "Station-days with freezing conditions observed."
+        data_type: number(18, 0)
+      - name: forecast_count
+        description: "Forecast accuracy records in the region."
+        data_type: number(18, 0)
+      - name: forecast_station_count
+        description: "Stations with forecast accuracy records in the region."
+        data_type: number(18, 0)
+      - name: average_temperature_error_c
+        description: "Average absolute temperature forecast error in Celsius."
+        data_type: float
+      - name: average_precipitation_error_mm
+        description: "Average absolute precipitation forecast error in millimetres."
+        data_type: float
+      - name: average_wind_gust_error_kph
+        description: "Average absolute wind gust forecast error in kilometres per hour."
+        data_type: float
+      - name: precipitation_event_accuracy_rate
+        description: "Share of forecasts correctly predicting precipitation-event presence."
+        data_type: float
+        data_tests:
+          - dbt_expectations.expect_column_values_to_be_between:
+              arguments:
+                min_value: 0
+                max_value: 1
+      - name: alert_count
+        description: "Weather alerts issued in the region."
+        data_type: number(18, 0)
+      - name: alerted_station_count
+        description: "Stations with weather alerts in the region."
+        data_type: number(18, 0)
+      - name: observed_incidents
+        description: "Observed incidents across regional alerts."
+        data_type: number(18, 0)
+      - name: affected_population_estimate
+        description: "Estimated affected population across regional alerts."
+        data_type: number(18, 0)
+      - name: average_weighted_impact_score
+        description: "Average weighted alert impact score in the region."
+        data_type: float
+      - name: maximum_weighted_impact_score
+        description: "Maximum weighted alert impact score in the region."
+        data_type: float
+      - name: service_context_band
+        description: "Regional service maturity band based on subscriptions, station coverage, and forecast accuracy."
+        data_type: varchar
+        data_tests:
+          - accepted_values:
+              arguments:
+                values: ['developing_service_context', 'scaling_service_context', 'mature_service_context']

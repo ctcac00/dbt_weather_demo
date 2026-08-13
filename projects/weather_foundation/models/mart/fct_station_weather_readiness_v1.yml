@@ -1,0 +1,193 @@
+version: 2
+
+models:
+  - name: fct_station_weather_readiness
+    description: "Public station-day readiness fact joining observed conditions, forecast accuracy, alert impact, station context, and regional subscription activity."
+    latest_version: 1
+    config:
+      meta:
+        primary_key: station_weather_readiness_key
+      access: public
+      group: foundation
+      contract:
+        enforced: true
+    versions:
+      - v: 1
+    columns:
+      - name: station_weather_readiness_key
+        description: "Surrogate key for the station and readiness date."
+        data_type: varchar
+        data_tests: [not_null, unique]
+      - name: station_daily_conditions_key
+        description: "Foundation station-day conditions surrogate key."
+        data_type: varchar
+        data_tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('fct_station_daily_conditions')
+                field: station_daily_conditions_key
+      - name: station_key
+        description: "Foundation station surrogate key."
+        data_type: varchar
+        data_tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('dim_station')
+                field: station_key
+      - name: station_id
+        description: "Station represented by the readiness record."
+        data_type: varchar
+        data_tests: [not_null]
+      - name: station_name
+        description: "Human-readable station name."
+        data_type: varchar
+      - name: region
+        description: "Operational weather-service region."
+        data_type: varchar
+        data_tests: [not_null]
+      - name: station_type
+        description: "Station operating context."
+        data_type: varchar
+      - name: sector_focus
+        description: "Primary sector supported by the station."
+        data_type: varchar
+      - name: readiness_date
+        description: "Station-day readiness date."
+        data_type: date
+        data_tests: [not_null]
+      - name: observation_count
+        description: "Number of observations contributing to the station-day."
+        data_type: number(18, 0)
+        data_tests:
+          - dbt_expectations.expect_column_values_to_be_between:
+              arguments:
+                min_value: 1
+      - name: average_temperature_c
+        description: "Average observed air temperature in Celsius."
+        data_type: float
+      - name: total_precipitation_mm
+        description: "Total observed precipitation in millimetres."
+        data_type: float
+        data_tests:
+          - dbt_expectations.expect_column_values_to_be_between:
+              arguments:
+                min_value: 0
+      - name: maximum_wind_gust_kph
+        description: "Maximum observed wind gust speed in kilometres per hour."
+        data_type: float
+      - name: minimum_visibility_km
+        description: "Minimum observed visibility in kilometres."
+        data_type: float
+      - name: precipitation_observed
+        description: "Whether any precipitation was observed during the station-day."
+        data_type: boolean
+      - name: low_visibility_observed
+        description: "Whether low visibility was observed during the station-day."
+        data_type: boolean
+      - name: high_wind_observed
+        description: "Whether high wind was observed during the station-day."
+        data_type: boolean
+      - name: freezing_observed
+        description: "Whether freezing conditions were observed during the station-day."
+        data_type: boolean
+      - name: forecast_count
+        description: "Forecast records valid for the station-day."
+        data_type: number(18, 0)
+        data_tests:
+          - dbt_expectations.expect_column_values_to_be_between:
+              arguments:
+                min_value: 0
+      - name: average_temperature_error_c
+        description: "Average absolute temperature forecast error in Celsius."
+        data_type: float
+      - name: average_precipitation_error_mm
+        description: "Average absolute precipitation forecast error in millimetres."
+        data_type: float
+      - name: average_wind_gust_error_kph
+        description: "Average absolute wind gust forecast error in kilometres per hour."
+        data_type: float
+      - name: temperature_accuracy_rate
+        description: "Share of station-day forecasts within one degree Celsius."
+        data_type: float
+        data_tests:
+          - dbt_expectations.expect_column_values_to_be_between:
+              arguments:
+                min_value: 0
+                max_value: 1
+      - name: precipitation_event_accuracy_rate
+        description: "Share of station-day forecasts correctly predicting precipitation-event presence."
+        data_type: float
+        data_tests:
+          - dbt_expectations.expect_column_values_to_be_between:
+              arguments:
+                min_value: 0
+                max_value: 1
+      - name: precipitation_miss_observed
+        description: "Whether any precipitation event classification missed on the station-day."
+        data_type: boolean
+      - name: alert_count
+        description: "Alerts active from the station on the readiness date."
+        data_type: number(18, 0)
+        data_tests:
+          - dbt_expectations.expect_column_values_to_be_between:
+              arguments:
+                min_value: 0
+      - name: maximum_alert_severity_weight
+        description: "Maximum alert severity weight for the station-day."
+        data_type: number(10, 0)
+      - name: maximum_weighted_impact_score
+        description: "Maximum weighted alert impact score for the station-day."
+        data_type: float
+      - name: observed_incidents
+        description: "Observed incidents associated with station-day alerts."
+        data_type: number(18, 0)
+        data_tests:
+          - dbt_expectations.expect_column_values_to_be_between:
+              arguments:
+                min_value: 0
+      - name: affected_population_estimate
+        description: "Estimated affected population across station-day alerts."
+        data_type: number(18, 0)
+      - name: total_subscription_count
+        description: "Total subscriptions in the station region."
+        data_type: number(18, 0)
+      - name: active_subscription_count
+        description: "Active subscriptions in the station region."
+        data_type: number(18, 0)
+      - name: active_monthly_fee_units
+        description: "Monthly service units from active regional subscriptions."
+        data_type: number(18, 2)
+      - name: active_api_calls_30d
+        description: "API calls from active regional subscriptions over the prior 30 days."
+        data_type: number(18, 0)
+      - name: regional_alert_opt_in_rate
+        description: "Share of regional subscriptions opted into alert notifications."
+        data_type: float
+        data_tests:
+          - dbt_expectations.expect_column_values_to_be_between:
+              arguments:
+                min_value: 0
+                max_value: 1
+      - name: active_sector_subscription_count
+        description: "Active subscriptions in the station region and sector focus."
+        data_type: number(18, 0)
+      - name: active_sector_api_calls_30d
+        description: "API calls from active subscriptions in the station region and sector focus."
+        data_type: number(18, 0)
+      - name: weather_readiness_score
+        description: "Readiness score after weather, forecast, alert, and service-engagement adjustments."
+        data_type: float
+        data_tests:
+          - dbt_expectations.expect_column_values_to_be_between:
+              arguments:
+                min_value: 0
+                max_value: 100
+      - name: weather_readiness_band
+        description: "Named readiness band for station-day planning."
+        data_type: varchar
+        data_tests:
+          - accepted_values:
+              arguments:
+                values: ['ready', 'enhanced_monitoring', 'strained_readiness', 'critical_gap']

@@ -1,0 +1,114 @@
+version: 2
+
+models:
+  - name: transport_sector_readiness
+    description: "Final transport sector readiness report by date, region, and operating sector."
+    latest_version: 1
+    semantic_model:
+      enabled: true
+      name: transport_sector_readiness
+    agg_time_dimension: readiness_date
+    config:
+      meta:
+        primary_key: transport_sector_readiness_key
+    versions:
+      - v: 1
+    columns:
+      - name: transport_sector_readiness_key
+        description: "Surrogate key for readiness date, region, and operating sector."
+        data_tests: [not_null, unique]
+        entity:
+          type: primary
+          name: transport_sector_readiness
+      - name: readiness_date
+        description: "Date of the transport readiness summary."
+        granularity: day
+        dimension:
+          type: time
+        data_tests: [not_null]
+      - name: region
+        description: "Operational weather-service region."
+        dimension:
+          type: categorical
+        data_tests: [not_null]
+      - name: operating_sector
+        description: "Transport operating sector for the readiness summary."
+        dimension:
+          type: categorical
+        data_tests:
+          - accepted_values:
+              arguments:
+                values: ['aviation', 'rail', 'road']
+      - name: region_service_context_key
+        description: "Foundation regional service context surrogate key."
+      - name: service_context_band
+        description: "Regional service maturity band."
+      - name: station_count
+        description: "Stations included in the readiness summary."
+        data_tests:
+          - dbt_expectations.expect_column_values_to_be_between:
+              arguments:
+                min_value: 1
+      - name: observation_count
+        description: "Observations included in the readiness summary."
+      - name: forecast_count
+        description: "Forecasts represented in the readiness summary."
+      - name: alert_count
+        description: "Alerts represented in the readiness summary."
+      - name: observed_incidents
+        description: "Observed incidents associated with station-day alerts."
+      - name: active_subscription_count
+        description: "Active data-service subscriptions in the region."
+      - name: active_api_calls_30d
+        description: "API calls from active regional subscriptions over the prior 30 days."
+      - name: regional_alert_opt_in_rate
+        description: "Share of regional subscriptions opted into alert notifications."
+      - name: active_sector_subscription_count
+        description: "Active subscriptions in the represented station sectors."
+      - name: active_sector_api_calls_30d
+        description: "Active API calls in the represented station sectors."
+      - name: average_temperature_error_c
+        description: "Average absolute temperature forecast error in Celsius."
+      - name: average_precipitation_error_mm
+        description: "Average absolute precipitation forecast error in millimetres."
+      - name: average_wind_gust_error_kph
+        description: "Average absolute wind gust forecast error in kilometres per hour."
+      - name: maximum_wind_gust_kph
+        description: "Maximum observed wind gust speed in kilometres per hour."
+      - name: minimum_visibility_km
+        description: "Minimum observed visibility in kilometres."
+      - name: low_visibility_station_count
+        description: "Stations with low visibility observed."
+      - name: high_wind_station_count
+        description: "Stations with high wind observed."
+      - name: freezing_station_count
+        description: "Stations with freezing conditions observed."
+      - name: average_weather_readiness_score
+        description: "Average station weather readiness score."
+      - name: minimum_weather_readiness_score
+        description: "Minimum station weather readiness score."
+      - name: maximum_alert_severity_weight
+        description: "Maximum alert severity weight in the summary."
+      - name: highest_transport_readiness_status
+        description: "Highest station-level transport readiness status in the summary."
+      - name: transport_readiness_band
+        description: "Transport readiness band for operational planning."
+        dimension:
+          type: categorical
+        data_tests:
+          - accepted_values:
+              arguments:
+                values: ['normal_operations', 'operational_constraints', 'ground_stop_watch']
+    metrics:
+      - name: average_transport_weather_readiness
+        description: "Average weather readiness across transport sector summaries."
+        type: simple
+        label: "Average transport weather readiness"
+        agg: average
+        expr: average_weather_readiness_score
+      - name: transport_station_coverage
+        description: "Stations represented in transport readiness reporting."
+        type: simple
+        label: "Transport station coverage"
+        agg: sum
+        expr: station_count

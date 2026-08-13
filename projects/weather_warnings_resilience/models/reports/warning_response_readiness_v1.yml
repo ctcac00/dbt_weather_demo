@@ -1,0 +1,116 @@
+version: 2
+
+models:
+  - name: warning_response_readiness
+    description: "Final warning response readiness report by date, region, and resilience response tier."
+    latest_version: 1
+    semantic_model:
+      enabled: true
+      name: warning_response_readiness
+    agg_time_dimension: readiness_date
+    config:
+      meta:
+        primary_key: warning_response_readiness_key
+    versions:
+      - v: 1
+    columns:
+      - name: warning_response_readiness_key
+        description: "Surrogate key for readiness date, region, and response tier."
+        data_tests: [not_null, unique]
+        entity:
+          type: primary
+          name: warning_response_readiness
+      - name: readiness_date
+        description: "Date of the warning response readiness summary."
+        granularity: day
+        dimension:
+          type: time
+        data_tests: [not_null]
+      - name: region
+        description: "Operational weather-service region."
+        dimension:
+          type: categorical
+        data_tests: [not_null]
+      - name: resilience_response_tier
+        description: "Operational response tier for resilience teams."
+        dimension:
+          type: categorical
+        data_tests:
+          - accepted_values:
+              arguments:
+                values: ['standard_monitoring', 'enhanced_monitoring', 'major_incident_ready']
+      - name: region_service_context_key
+        description: "Foundation regional service context surrogate key."
+      - name: service_context_band
+        description: "Regional service maturity band."
+      - name: station_count
+        description: "Stations included in the response readiness summary."
+        data_tests:
+          - dbt_expectations.expect_column_values_to_be_between:
+              arguments:
+                min_value: 1
+      - name: observation_count
+        description: "Observations included in the readiness summary."
+      - name: forecast_count
+        description: "Forecasts represented in the readiness summary."
+      - name: alert_count
+        description: "Alerts represented in the readiness summary."
+      - name: observed_incidents
+        description: "Observed incidents associated with station-day alerts."
+      - name: affected_population_estimate
+        description: "Estimated affected population across station-day alerts."
+      - name: active_subscription_count
+        description: "Active data-service subscriptions in the region."
+      - name: active_api_calls_30d
+        description: "API calls from active regional subscriptions over the prior 30 days."
+      - name: regional_alert_opt_in_rate
+        description: "Share of regional subscriptions opted into alert notifications."
+      - name: active_sector_subscription_count
+        description: "Active subscriptions in represented resilience sectors."
+      - name: active_sector_api_calls_30d
+        description: "API calls from active subscriptions in represented resilience sectors."
+      - name: average_temperature_error_c
+        description: "Average absolute temperature forecast error in Celsius."
+      - name: average_precipitation_error_mm
+        description: "Average absolute precipitation forecast error in millimetres."
+      - name: average_wind_gust_error_kph
+        description: "Average absolute wind gust forecast error in kilometres per hour."
+      - name: precipitation_station_count
+        description: "Stations with precipitation observed."
+      - name: low_visibility_station_count
+        description: "Stations with low visibility observed."
+      - name: high_wind_station_count
+        description: "Stations with high wind observed."
+      - name: freezing_station_count
+        description: "Stations with freezing conditions observed."
+      - name: average_weather_readiness_score
+        description: "Average station weather readiness score."
+      - name: minimum_weather_readiness_score
+        description: "Minimum station weather readiness score."
+      - name: maximum_alert_severity_weight
+        description: "Maximum alert severity weight in the summary."
+      - name: maximum_weighted_impact_score
+        description: "Maximum weighted alert impact score in the summary."
+      - name: incidents_per_100k_population
+        description: "Observed incidents per 100,000 affected residents."
+      - name: warning_response_band
+        description: "Warning response readiness band."
+        dimension:
+          type: categorical
+        data_tests:
+          - accepted_values:
+              arguments:
+                values: ['watch_ready', 'response_ready', 'response_gap']
+    metrics:
+      - name: warning_response_station_coverage
+        description: "Stations represented in warning response readiness reporting."
+        type: simple
+        label: "Warning response station coverage"
+        agg: sum
+        expr: station_count
+      - name: average_warning_weather_readiness
+        description: "Average weather readiness across warning response summaries."
+        type: simple
+        label: "Average warning weather readiness"
+        agg: average
+        expr: average_weather_readiness_score

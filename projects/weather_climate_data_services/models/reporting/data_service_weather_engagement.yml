@@ -1,0 +1,76 @@
+version: 2
+
+models:
+  - name: data_service_weather_engagement
+    description: "Region-day weather engagement base joining station readiness, regional service context, and sector subscription activity."
+    config:
+      meta:
+        primary_key: data_service_weather_engagement_key
+    columns:
+      - name: data_service_weather_engagement_key
+        description: "Surrogate key for region and readiness date."
+        data_tests: [not_null, unique]
+      - name: region
+        description: "Operational weather-service region."
+        data_tests: [not_null]
+      - name: readiness_date
+        description: "Date of the engagement record."
+        data_tests: [not_null]
+      - name: station_day_count
+        description: "Station-day readiness records in the region-date."
+        data_tests:
+          - dbt_expectations.expect_column_values_to_be_between:
+              arguments:
+                min_value: 1
+      - name: station_count
+        description: "Stations represented in the region-date."
+      - name: average_weather_readiness_score
+        description: "Average station weather readiness score."
+        data_tests:
+          - dbt_expectations.expect_column_values_to_be_between:
+              arguments:
+                min_value: 0
+                max_value: 100
+      - name: constrained_station_day_count
+        description: "Station-days in strained or critical readiness bands."
+      - name: alert_count
+        description: "Alerts represented in the region-date."
+      - name: forecast_count
+        description: "Forecasts represented in the region-date."
+      - name: temperature_accuracy_rate
+        description: "Average temperature accuracy rate across station-days."
+      - name: precipitation_event_accuracy_rate
+        description: "Average precipitation-event accuracy rate across station-days."
+      - name: region_service_context_key
+        description: "Foundation regional service context surrogate key."
+        data_tests: [not_null]
+      - name: service_context_band
+        description: "Regional service maturity band."
+        data_tests:
+          - accepted_values:
+              arguments:
+                values: ['developing_service_context', 'scaling_service_context', 'mature_service_context']
+      - name: supported_sector_count
+        description: "Distinct station sector focuses represented in the region."
+      - name: subscribed_sector_count
+        description: "Distinct subscribed sectors represented in the region."
+      - name: active_subscription_count
+        description: "Active data-service subscriptions in the region."
+      - name: active_api_calls_30d
+        description: "API calls from active regional subscriptions over the prior 30 days."
+      - name: alert_opt_in_rate
+        description: "Share of regional subscriptions opted into alert notifications."
+      - name: highest_engagement_sector
+        description: "Sector with the highest active API call volume in the region."
+      - name: highest_sector_active_subscription_count
+        description: "Active subscriptions in the highest-engagement sector."
+      - name: highest_sector_api_calls_30d
+        description: "Active API calls in the highest-engagement sector."
+      - name: api_calls_per_active_subscription
+        description: "API call volume divided by active subscription count."
+      - name: weather_engagement_band
+        description: "Data-service weather engagement band."
+        data_tests:
+          - accepted_values:
+              arguments:
+                values: ['developing_engagement', 'moderate_engagement', 'high_engagement']
