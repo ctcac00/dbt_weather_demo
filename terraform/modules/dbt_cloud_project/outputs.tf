@@ -43,6 +43,11 @@ output "production_merge_build_job_id" {
   value       = dbtcloud_job.production_merge_build.job_id
 }
 
+output "production_full_refresh_job_id" {
+  description = "Manual Production full-refresh dbt build job ID."
+  value       = dbtcloud_job.production_full_refresh.job_id
+}
+
 output "slim_ci_job_id" {
   description = "Slim CI job ID, if enabled."
   value       = try(dbtcloud_job.slim_ci[0].id, null)

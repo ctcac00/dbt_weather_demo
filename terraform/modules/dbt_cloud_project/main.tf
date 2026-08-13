@@ -94,9 +94,9 @@ resource "dbtcloud_job" "daily_production_build" {
     on_merge             = false
   }
 
-  schedule_days  = var.daily_build_schedule_days
-  schedule_type  = "days_of_week"
-  schedule_hours = var.daily_build_schedule_hours
+  schedule_days     = var.daily_build_schedule_days
+  schedule_interval = var.daily_build_schedule_interval
+  schedule_type     = "interval_cron"
 
   dynamic "job_completion_trigger_condition" {
     for_each = var.upstream_production_trigger == null ? [] : [var.upstream_production_trigger]
@@ -127,6 +127,28 @@ resource "dbtcloud_job" "production_merge_build" {
     git_provider_webhook = false
     schedule             = false
     on_merge             = true
+  }
+}
+
+resource "dbtcloud_job" "production_full_refresh" {
+  dbt_version                = var.dbt_version
+  cost_optimization_features = []
+  environment_id             = dbtcloud_environment.production.environment_id
+  execute_steps              = ["dbt build --full-refresh"]
+  force_node_selection       = true
+  generate_docs              = true
+  is_active                  = true
+  name                       = "Production Full Refresh"
+  num_threads                = var.threads
+  project_id                 = dbtcloud_project.this.id
+  run_generate_sources       = true
+  target_name                = "prod"
+
+  triggers = {
+    github_webhook       = false
+    git_provider_webhook = false
+    schedule             = false
+    on_merge             = false
   }
 }
 

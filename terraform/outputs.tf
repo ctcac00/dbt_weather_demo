@@ -27,3 +27,13 @@ output "dbt_cloud_production_merge_build_job_ids" {
     weather_transport_aviation    = module.weather_transport_aviation.production_merge_build_job_id
   }
 }
+
+output "dbt_cloud_production_full_refresh_job_ids" {
+  description = "Manual Production full-refresh dbt build job IDs by project name."
+  value = {
+    weather_foundation            = module.weather_foundation.production_full_refresh_job_id
+    weather_climate_data_services = module.weather_climate_data_services.production_full_refresh_job_id
+    weather_warnings_resilience   = module.weather_warnings_resilience.production_full_refresh_job_id
+    weather_transport_aviation    = module.weather_transport_aviation.production_full_refresh_job_id
+  }
+}

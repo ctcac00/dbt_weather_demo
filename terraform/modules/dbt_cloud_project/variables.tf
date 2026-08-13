@@ -103,35 +103,10 @@ variable "daily_build_schedule_days" {
   default     = [0, 1, 2, 3, 4, 5, 6]
 }
 
-variable "daily_build_schedule_hours" {
-  description = "Hours of day the hourly Production build runs."
-  type        = list(number)
-  default = [
-    0,
-    1,
-    2,
-    3,
-    4,
-    5,
-    6,
-    7,
-    8,
-    9,
-    10,
-    11,
-    12,
-    13,
-    14,
-    15,
-    16,
-    17,
-    18,
-    19,
-    20,
-    21,
-    22,
-    23,
-  ]
+variable "daily_build_schedule_interval" {
+  description = "Hourly interval for the Production build schedule."
+  type        = number
+  default     = 1
 }
 
 variable "enable_slim_ci" {
