@@ -27,7 +27,7 @@ station_day as (
         avg(stg_observations.pressure_hpa) as average_pressure_hpa,
         max(case when stg_observations.precipitation_mm > 0 then 1 else 0 end) = 1 as precipitation_observed,
         max(case when stg_observations.visibility_km < 5 then 1 else 0 end) = 1 as low_visibility_observed,
-        max(case when stg_observations.wind_gust_kph >= 50 then 1 else 0 end) = 1 as high_wind_observed,
+        max(case when stg_observations.wind_gust_kph >= 40 then 1 else 0 end) = 1 as high_wind_observed,
         min(stg_observations.temperature_c) <= 0 as freezing_observed
     from stg_observations
     group by stg_observations.station_id, cast(stg_observations.observed_at as date)
