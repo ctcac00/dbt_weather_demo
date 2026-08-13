@@ -1,0 +1,152 @@
+title: "Semantic Service Adoption"
+description: "Weather data-service adoption metrics from the dbt Semantic Layer."
+source: weather
+
+queries:
+  service_kpis:
+    type: metricflow
+    description: "Returns single-row service adoption totals for KPI cards."
+    metrics:
+      - subscription_count
+      - active_subscription_count
+      - monthly_fee_units
+      - active_api_calls_30d
+
+  adoption_trend:
+    type: metricflow
+    description: "Returns monthly subscription and active subscription counts."
+    metrics:
+      - subscription_count
+      - active_subscription_count
+    time_grain: month
+
+  status_breakdown:
+    type: metricflow
+    description: "Returns service subscription metrics split by lifecycle status."
+    metrics:
+      - subscription_count
+      - monthly_fee_units
+    dimensions:
+      - service_subscription__status
+
+  region_activity:
+    type: metricflow
+    description: "Returns active API call volume split by service region."
+    metrics:
+      - active_api_calls_30d
+    dimensions:
+      - service_subscription__region
+
+  tier_breakdown:
+    type: metricflow
+    description: "Returns subscription and fee metrics split by service tier."
+    metrics:
+      - subscription_count
+      - active_subscription_count
+      - monthly_fee_units
+    dimensions:
+      - service_subscription__service_tier
+
+  sector_adoption:
+    type: metricflow
+    description: "Returns service adoption metrics split by customer sector."
+    metrics:
+      - subscription_count
+      - active_subscription_count
+      - monthly_fee_units
+      - active_api_calls_30d
+    dimensions:
+      - service_subscription__sector
+
+charts:
+  kpi_subscription_count:
+    type: kpi
+    query: service_kpis
+    description: "Shows total data-service subscriptions."
+    label: "Subscriptions"
+    value: subscription_count
+    style:
+      value:
+        format: integer
+
+  kpi_active_subscription_count:
+    type: kpi
+    query: service_kpis
+    description: "Shows subscriptions currently in active status."
+    label: "Active Subscriptions"
+    value: active_subscription_count
+    style:
+      value:
+        format: integer
+
+  kpi_monthly_fee_units:
+    type: kpi
+    query: service_kpis
+    description: "Shows monthly fee units across service subscriptions."
+    label: "Monthly Fee Units"
+    value: monthly_fee_units
+    style:
+      value:
+        format: compact
+
+  kpi_active_api_calls_30d:
+    type: kpi
+    query: service_kpis
+    description: "Shows active subscription API calls over the prior 30 days."
+    label: "Active API Calls 30d"
+    value: active_api_calls_30d
+    style:
+      value:
+        format: compact
+
+  adoption_trend:
+    type: line
+    query: adoption_trend
+    title: "Subscriptions by Start Month"
+    description: "Compares monthly subscription starts with active subscription starts."
+    x: metric_time__month
+    y:
+      - subscription_count
+      - active_subscription_count
+    style:
+      number_format: integer
+
+  status_fee_mix:
+    type: bar
+    query: status_breakdown
+    title: "Monthly Fee Units by Status"
+    description: "Shows fee-unit contribution by subscription lifecycle status."
+    x: service_subscription__status
+    y: monthly_fee_units
+    color: service_subscription__status
+    style:
+      number_format: compact
+
+  regional_api_activity:
+    type: bar
+    query: region_activity
+    title: "Active API Calls by Region"
+    description: "Ranks regions by active subscription API call volume."
+    x: service_subscription__region
+    y: active_api_calls_30d
+    color: service_subscription__region
+    style:
+      number_format: compact
+
+  sector_adoption_table:
+    type: table
+    query: sector_adoption
+    title: "Sector Adoption Detail"
+    description: "Lists subscription, fee, and API adoption metrics by sector."
+
+rows:
+  - cols:
+      - kpi_subscription_count
+      - kpi_active_subscription_count
+      - kpi_monthly_fee_units
+      - kpi_active_api_calls_30d
+  - adoption_trend
+  - cols:
+      - status_fee_mix
+      - regional_api_activity
+  - sector_adoption_table

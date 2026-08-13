@@ -1,0 +1,144 @@
+title: "Semantic Forecast Quality"
+description: "Forecast quality metrics from the dbt Semantic Layer."
+source: weather
+
+queries:
+  forecast_kpis:
+    type: metricflow
+    description: "Returns single-row forecast quality totals for KPI cards."
+    metrics:
+      - forecast_count
+      - average_temperature_error_c
+      - average_precipitation_error_mm
+
+  forecast_volume_trend:
+    type: metricflow
+    description: "Returns monthly forecast count for quality coverage review."
+    metrics:
+      - forecast_count
+    time_grain: month
+
+  temperature_error_trend:
+    type: metricflow
+    description: "Returns monthly average absolute temperature error."
+    metrics:
+      - average_temperature_error_c
+    time_grain: month
+
+  precipitation_error_trend:
+    type: metricflow
+    description: "Returns monthly average absolute precipitation error."
+    metrics:
+      - average_precipitation_error_mm
+    time_grain: month
+
+  region_quality:
+    type: metricflow
+    description: "Returns forecast quality metrics split by region."
+    metrics:
+      - forecast_count
+      - average_temperature_error_c
+      - average_precipitation_error_mm
+    dimensions:
+      - forecast_accuracy__region
+
+  horizon_quality:
+    type: metricflow
+    description: "Returns forecast quality metrics split by forecast horizon."
+    metrics:
+      - forecast_count
+      - average_temperature_error_c
+      - average_precipitation_error_mm
+    dimensions:
+      - forecast_accuracy__horizon_hours
+
+charts:
+  kpi_forecast_count:
+    type: kpi
+    query: forecast_kpis
+    description: "Shows total forecast accuracy records."
+    label: "Forecasts"
+    value: forecast_count
+    style:
+      value:
+        format: integer
+
+  kpi_average_temperature_error_c:
+    type: kpi
+    query: forecast_kpis
+    description: "Shows average absolute temperature forecast error in Celsius."
+    label: "Avg Temp Error (C)"
+    value: average_temperature_error_c
+    style:
+      value:
+        format: ".2f"
+
+  kpi_average_precipitation_error_mm:
+    type: kpi
+    query: forecast_kpis
+    description: "Shows average absolute precipitation forecast error in millimetres."
+    label: "Avg Precip Error (mm)"
+    value: average_precipitation_error_mm
+    style:
+      value:
+        format: ".2f"
+
+  forecast_volume_trend:
+    type: line
+    query: forecast_volume_trend
+    title: "Forecast Volume by Month"
+    description: "Shows monthly forecast coverage available for accuracy measurement."
+    x: metric_time__month
+    y: forecast_count
+    style:
+      number_format: integer
+
+  temperature_error_trend:
+    type: line
+    query: temperature_error_trend
+    title: "Temperature Error by Month"
+    description: "Tracks monthly average absolute temperature forecast error."
+    x: metric_time__month
+    y: average_temperature_error_c
+    style:
+      number_format: ".2f"
+
+  precipitation_error_trend:
+    type: line
+    query: precipitation_error_trend
+    title: "Precipitation Error by Month"
+    description: "Tracks monthly average absolute precipitation forecast error."
+    x: metric_time__month
+    y: average_precipitation_error_mm
+    style:
+      number_format: ".2f"
+
+  region_quality_table:
+    type: table
+    query: region_quality
+    title: "Regional Forecast Quality"
+    description: "Lists forecast volume and error metrics by region."
+
+  horizon_quality:
+    type: bar
+    query: horizon_quality
+    title: "Temperature Error by Horizon"
+    description: "Compares average temperature error across forecast horizons."
+    x: forecast_accuracy__horizon_hours
+    y: average_temperature_error_c
+    color: forecast_accuracy__horizon_hours
+    style:
+      number_format: ".2f"
+
+rows:
+  - cols:
+      - kpi_forecast_count
+      - kpi_average_temperature_error_c
+      - kpi_average_precipitation_error_mm
+  - cols:
+      - forecast_volume_trend
+      - temperature_error_trend
+  - cols:
+      - precipitation_error_trend
+      - horizon_quality
+  - region_quality_table

@@ -13,3 +13,10 @@
 #
 #   # dbt target override (defaults to DBT_TARGET env var, then profile default)
 #   # target: dev
+
+sources:
+  weather:
+    type: dbt_profile
+    profile: weather
+    profiles_dir: .
+    target: dev

@@ -11,5 +11,5 @@ select
     sum(active_api_calls_30d) as active_api_calls_30d,
     {{ safe_divide('sum(case when alert_opt_in then 1 else 0 end)', 'count(*)') }} as alert_opt_in_rate,
     {{ safe_divide('sum(active_api_calls_30d)', 'nullif(count_if(is_active_subscription), 0)') }} as api_calls_per_active_subscription
-from {{ ref('weather_foundation', 'fct_service_subscription_activity') }}
+from {{ ref('weather_foundation', 'fct_service_subscription_activity', v=1) }}
 group by sector, customer_segment, region

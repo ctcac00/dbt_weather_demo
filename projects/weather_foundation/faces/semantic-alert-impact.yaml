@@ -1,0 +1,144 @@
+title: "Semantic Alert Impact"
+description: "Weather alert impact metrics from the dbt Semantic Layer."
+source: weather
+
+queries:
+  alert_kpis:
+    type: metricflow
+    description: "Returns single-row alert impact totals for KPI cards."
+    metrics:
+      - alert_count
+      - incident_count
+      - affected_population
+      - weighted_impact
+
+  alert_trend:
+    type: metricflow
+    description: "Returns monthly alert and incident counts for trend monitoring."
+    metrics:
+      - alert_count
+      - incident_count
+    time_grain: month
+
+  severity_breakdown:
+    type: metricflow
+    description: "Returns alert impact metrics split by severity."
+    metrics:
+      - alert_count
+      - weighted_impact
+    dimensions:
+      - alert_impact__severity
+
+  region_breakdown:
+    type: metricflow
+    description: "Returns alert impact metrics split by region."
+    metrics:
+      - alert_count
+      - affected_population
+      - weighted_impact
+    dimensions:
+      - alert_impact__region
+
+  regional_impact:
+    type: metricflow
+    description: "Returns regional alert impact totals for operational review."
+    metrics:
+      - alert_count
+      - incident_count
+      - affected_population
+      - weighted_impact
+    dimensions:
+      - alert_impact__region
+
+charts:
+  kpi_alert_count:
+    type: kpi
+    query: alert_kpis
+    description: "Shows total weather alerts in the selected semantic scope."
+    label: "Alerts"
+    value: alert_count
+    style:
+      value:
+        format: integer
+
+  kpi_incident_count:
+    type: kpi
+    query: alert_kpis
+    description: "Shows observed incidents associated with weather alerts."
+    label: "Incidents"
+    value: incident_count
+    style:
+      value:
+        format: integer
+
+  kpi_affected_population:
+    type: kpi
+    query: alert_kpis
+    description: "Shows estimated population affected by weather alerts."
+    label: "Affected Population"
+    value: affected_population
+    style:
+      value:
+        format: compact
+
+  kpi_weighted_impact:
+    type: kpi
+    query: alert_kpis
+    description: "Shows severity-weighted expected alert impact."
+    label: "Weighted Impact"
+    value: weighted_impact
+    style:
+      value:
+        format: compact
+
+  alert_trend:
+    type: line
+    query: alert_trend
+    title: "Alerts and Incidents by Month"
+    description: "Compares monthly alert volume with observed incident counts."
+    x: metric_time__month
+    y:
+      - alert_count
+      - incident_count
+    style:
+      number_format: integer
+
+  severity_impact:
+    type: bar
+    query: severity_breakdown
+    title: "Weighted Impact by Severity"
+    description: "Ranks alert severities by weighted expected impact."
+    x: alert_impact__severity
+    y: weighted_impact
+    color: alert_impact__severity
+    style:
+      number_format: compact
+
+  regional_population:
+    type: bar
+    query: region_breakdown
+    title: "Affected Population by Region"
+    description: "Shows estimated affected population by region."
+    x: alert_impact__region
+    y: affected_population
+    color: alert_impact__region
+    style:
+      number_format: compact
+
+  regional_impact_table:
+    type: table
+    query: regional_impact
+    title: "Regional Impact Detail"
+    description: "Lists regional alert, incident, population, and impact totals."
+
+rows:
+  - cols:
+      - kpi_alert_count
+      - kpi_incident_count
+      - kpi_affected_population
+      - kpi_weighted_impact
+  - alert_trend
+  - cols:
+      - severity_impact
+      - regional_population
+  - regional_impact_table

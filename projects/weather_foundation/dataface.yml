@@ -1,0 +1,5 @@
+sources:
+  weather:
+    type: dbt_profile
+    profile: weather
+    target: dev
