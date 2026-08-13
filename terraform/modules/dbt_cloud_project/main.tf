@@ -109,6 +109,27 @@ resource "dbtcloud_job" "daily_production_build" {
   }
 }
 
+resource "dbtcloud_job" "production_merge_build" {
+  dbt_version                = var.dbt_version
+  cost_optimization_features = ["dbt_state"]
+  environment_id             = dbtcloud_environment.production.environment_id
+  execute_steps              = ["dbt build"]
+  generate_docs              = true
+  is_active                  = true
+  name                       = "Production Merge build"
+  num_threads                = var.threads
+  project_id                 = dbtcloud_project.this.id
+  run_generate_sources       = true
+  target_name                = "prod"
+
+  triggers = {
+    github_webhook       = false
+    git_provider_webhook = false
+    schedule             = false
+    on_merge             = true
+  }
+}
+
 resource "dbtcloud_job" "slim_ci" {
   count = var.enable_slim_ci ? 1 : 0
 

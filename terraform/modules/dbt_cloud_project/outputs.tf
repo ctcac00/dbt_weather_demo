@@ -38,6 +38,11 @@ output "daily_production_build_job_id" {
   value       = try(dbtcloud_job.daily_production_build[0].job_id, null)
 }
 
+output "production_merge_build_job_id" {
+  description = "Production merge-triggered dbt build job ID."
+  value       = dbtcloud_job.production_merge_build.job_id
+}
+
 output "slim_ci_job_id" {
   description = "Slim CI job ID, if enabled."
   value       = try(dbtcloud_job.slim_ci[0].id, null)
