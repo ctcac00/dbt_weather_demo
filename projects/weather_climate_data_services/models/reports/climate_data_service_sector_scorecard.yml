@@ -1,0 +1,68 @@
+version: 2
+
+models:
+  - name: climate_data_service_sector_scorecard
+    description: "Final sector and customer segment scorecard for climate data-service adoption."
+    semantic_model:
+      enabled: true
+      name: climate_data_service_sector_scorecard
+    agg_time_dimension: metric_date
+    config:
+      meta:
+        primary_key: sector_scorecard_key
+    columns:
+      - name: sector_scorecard_key
+        description: "Surrogate key for sector, customer segment, and region."
+        data_tests: [not_null, unique]
+        entity:
+          type: primary
+          name: sector_scorecard
+      - name: metric_date
+        description: "Current date used as the reporting metric date."
+        granularity: day
+        dimension:
+          type: time
+      - name: sector
+        description: "Sector served by the subscriptions."
+        dimension:
+          type: categorical
+        data_tests: [not_null]
+      - name: customer_segment
+        description: "Fictional customer segment receiving weather data services."
+        dimension:
+          type: categorical
+        data_tests: [not_null]
+      - name: region
+        description: "Primary service region for the subscriptions."
+        dimension:
+          type: categorical
+        data_tests: [not_null]
+      - name: subscription_count
+        description: "Total subscriptions in the scorecard segment."
+      - name: active_subscription_count
+        description: "Active subscriptions in the scorecard segment."
+      - name: trial_subscription_count
+        description: "Trial subscriptions in the scorecard segment."
+      - name: monthly_fee_units
+        description: "Monthly service units across all subscriptions."
+      - name: active_monthly_fee_units
+        description: "Monthly service units from active subscriptions."
+      - name: active_api_calls_30d
+        description: "API calls over the prior 30 days from active subscriptions."
+      - name: alert_opt_in_rate
+        description: "Share of subscriptions opted into alert notifications."
+        data_tests:
+          - dbt_expectations.expect_column_values_to_be_between:
+              arguments:
+                min_value: 0
+                max_value: 1
+      - name: api_calls_per_active_subscription
+        description: "Active API calls divided by active subscription count."
+      - name: service_engagement_band
+        description: "Engagement band based on opt-in rate, active subscriptions, and API usage."
+        dimension:
+          type: categorical
+        data_tests:
+          - accepted_values:
+              arguments:
+                values: ['developing_engagement', 'steady_engagement', 'high_engagement']
