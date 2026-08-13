@@ -82,13 +82,13 @@ variable "passphrase_version" {
 }
 
 variable "enable_daily_build" {
-  description = "Whether to create the scheduled Daily Production build job."
+  description = "Whether to create the scheduled Production build job."
   type        = bool
   default     = true
 }
 
 variable "upstream_production_trigger" {
-  description = "Optional upstream production job completion trigger for the Daily Production build job."
+  description = "Optional upstream production job completion trigger for the scheduled Production build job."
   type = object({
     job_id     = number
     project_id = number
@@ -98,15 +98,40 @@ variable "upstream_production_trigger" {
 }
 
 variable "daily_build_schedule_days" {
-  description = "Days of week (0=Sunday) the Daily Production build runs."
+  description = "Days of week (0=Sunday) the Production build runs."
   type        = list(number)
   default     = [0, 1, 2, 3, 4, 5, 6]
 }
 
 variable "daily_build_schedule_hours" {
-  description = "Hours of day the Daily Production build runs."
+  description = "Hours of day the hourly Production build runs."
   type        = list(number)
-  default     = [6]
+  default = [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+  ]
 }
 
 variable "enable_slim_ci" {

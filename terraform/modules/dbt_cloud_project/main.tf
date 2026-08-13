@@ -81,7 +81,7 @@ resource "dbtcloud_job" "daily_production_build" {
   execute_steps              = ["dbt build"]
   generate_docs              = true
   is_active                  = true
-  name                       = "Daily Production build"
+  name                       = "Hourly Production build"
   num_threads                = var.threads
   project_id                 = dbtcloud_project.this.id
   run_generate_sources       = true
