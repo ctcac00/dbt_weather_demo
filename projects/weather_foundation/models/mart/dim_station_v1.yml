@@ -1,0 +1,54 @@
+version: 2
+
+models:
+  - name: dim_station
+    description: "Public dimension of weather stations for mesh consumers."
+    latest_version: 1
+    config:
+      meta:
+        primary_key: station_key
+      access: public
+      group: foundation
+      contract:
+        enforced: true
+    versions:
+      - v: 1
+    columns:
+      - name: station_key
+        description: "Surrogate key for the station."
+        data_type: varchar
+        data_tests: [not_null, unique]
+      - name: station_id
+        description: "Stable station identifier."
+        data_type: varchar
+        data_tests: [not_null, unique]
+      - name: station_name
+        description: "Human-readable station name."
+        data_type: varchar
+      - name: region
+        description: "Operational weather-service region."
+        data_type: varchar
+      - name: country_code
+        description: "Fictional demo country code for the station."
+        data_type: varchar
+      - name: latitude
+        description: "Station latitude."
+        data_type: float
+      - name: longitude
+        description: "Station longitude."
+        data_type: float
+      - name: elevation_m
+        description: "Station elevation in metres."
+        data_type: number(10, 0)
+      - name: station_type
+        description: "Station operating context."
+        data_type: varchar
+      - name: sector_focus
+        description: "Primary sector supported by the station."
+        data_type: varchar
+      - name: opened_date
+        description: "Date the station opened."
+        data_type: date
+      - name: is_active
+        description: "Whether the station is active."
+        data_type: boolean

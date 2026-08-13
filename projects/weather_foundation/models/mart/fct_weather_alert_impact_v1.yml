@@ -1,0 +1,166 @@
+version: 2
+
+models:
+  - name: fct_weather_alert_impact
+    description: "Public alert impact fact at one row per issued weather alert."
+    latest_version: 1
+    semantic_model:
+      enabled: true
+      name: weather_alert_impact
+    agg_time_dimension: valid_from
+    config:
+      meta:
+        primary_key: alert_impact_key
+      access: public
+      group: foundation
+      contract:
+        enforced: true
+    versions:
+      - v: 1
+    columns:
+      - name: alert_impact_key
+        description: "Surrogate key for the alert impact record."
+        data_type: varchar
+        data_tests: [not_null, unique]
+        entity:
+          type: primary
+          name: alert_impact
+      - name: alert_id
+        description: "Stable alert identifier."
+        data_type: varchar
+        data_tests: [not_null, unique]
+      - name: station_id
+        description: "Station most directly associated with the alert."
+        data_type: varchar
+        entity:
+          type: foreign
+          name: station
+        data_tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('dim_station')
+                field: station_id
+      - name: station_name
+        description: "Human-readable station name."
+        data_type: varchar
+      - name: region
+        description: "Operational weather-service region."
+        data_type: varchar
+        dimension:
+          type: categorical
+      - name: station_type
+        description: "Station operating context."
+        data_type: varchar
+      - name: sector_focus
+        description: "Primary sector supported by the station."
+        data_type: varchar
+      - name: issued_at
+        description: "Timestamp the alert was issued."
+        data_type: timestamp_ntz
+      - name: valid_from
+        description: "Timestamp the alert validity window starts."
+        data_type: timestamp_ntz
+        granularity: day
+        dimension:
+          type: time
+      - name: valid_to
+        description: "Timestamp the alert validity window ends."
+        data_type: timestamp_ntz
+      - name: alert_duration_hours
+        description: "Alert validity duration in hours."
+        data_type: number(10, 0)
+      - name: severity
+        description: "Alert severity level."
+        data_type: varchar
+        dimension:
+          type: categorical
+        data_tests:
+          - accepted_values:
+              arguments:
+                values: ['yellow', 'amber', 'red']
+      - name: alert_type
+        description: "Alert hazard type."
+        data_type: varchar
+        dimension:
+          type: categorical
+      - name: status
+        description: "Current alert lifecycle status."
+        data_type: varchar
+        dimension:
+          type: categorical
+        data_tests:
+          - accepted_values:
+              arguments:
+                values: ['issued', 'expired', 'cancelled']
+      - name: expected_impact_score
+        description: "Expected service impact score."
+        data_type: float
+        data_tests:
+          - dbt_expectations.expect_column_values_to_be_between:
+              arguments:
+                min_value: 0
+      - name: observed_incidents
+        description: "Observed incident count associated with the alert."
+        data_type: number(10, 0)
+        data_tests:
+          - dbt_expectations.expect_column_values_to_be_between:
+              arguments:
+                min_value: 0
+      - name: affected_population_estimate
+        description: "Estimated population covered by the alert."
+        data_type: number(18, 0)
+      - name: incidents_per_100k_population
+        description: "Observed incidents per 100,000 affected residents."
+        data_type: float
+      - name: active_subscription_count
+        description: "Active data-service subscriptions in the alert region."
+        data_type: number(18, 0)
+      - name: total_subscription_count
+        description: "Total subscriptions in the alert region."
+        data_type: number(18, 0)
+      - name: active_monthly_fee_units
+        description: "Monthly service unit total for active subscriptions in the alert region."
+        data_type: number(18, 2)
+      - name: active_api_calls_30d
+        description: "API calls from active subscriptions in the prior 30 days."
+        data_type: number(18, 0)
+      - name: alert_opt_in_rate
+        description: "Share of regional subscriptions opted into alert notifications."
+        data_type: float
+        data_tests:
+          - dbt_expectations.expect_column_values_to_be_between:
+              arguments:
+                min_value: 0
+                max_value: 1
+      - name: severity_weight
+        description: "Numeric weight applied to alert severity."
+        data_type: number(10, 0)
+      - name: weighted_impact_score
+        description: "Expected impact score multiplied by severity weight."
+        data_type: float
+    metrics:
+      - name: alert_count
+        description: "Count of weather alerts."
+        type: simple
+        label: "Alert count"
+        agg: count
+        expr: alert_impact_key
+      - name: incident_count
+        description: "Observed incident count associated with weather alerts."
+        type: simple
+        label: "Incident count"
+        agg: sum
+        expr: observed_incidents
+      - name: affected_population
+        description: "Estimated population affected by weather alerts."
+        type: simple
+        label: "Affected population"
+        agg: sum
+        expr: affected_population_estimate
+      - name: weighted_impact
+        description: "Severity-weighted expected impact score."
+        type: simple
+        label: "Weighted impact"
+        agg: sum
+        expr: weighted_impact_score

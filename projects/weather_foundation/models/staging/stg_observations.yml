@@ -1,0 +1,58 @@
+version: 2
+
+models:
+  - name: stg_observations
+    description: "Typed station observations staged from raw telemetry seed data."
+    config:
+      meta:
+        primary_key: observation_id
+    columns:
+      - name: observation_id
+        description: "Stable observation identifier."
+        data_tests: [not_null, unique]
+      - name: station_id
+        description: "Station that produced the observation."
+        data_tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('stg_stations')
+                field: station_id
+      - name: observed_at
+        description: "Timestamp when the observation was recorded."
+        data_tests: [not_null]
+      - name: temperature_c
+        description: "Observed air temperature in Celsius."
+      - name: precipitation_mm
+        description: "Observed precipitation in millimetres."
+        data_tests:
+          - dbt_expectations.expect_column_values_to_be_between:
+              arguments:
+                min_value: 0
+      - name: wind_speed_kph
+        description: "Observed sustained wind speed in kilometres per hour."
+        data_tests:
+          - dbt_expectations.expect_column_values_to_be_between:
+              arguments:
+                min_value: 0
+      - name: wind_gust_kph
+        description: "Observed wind gust speed in kilometres per hour."
+        data_tests:
+          - dbt_expectations.expect_column_values_to_be_between:
+              arguments:
+                min_value: 0
+      - name: visibility_km
+        description: "Observed visibility in kilometres."
+        data_tests:
+          - dbt_expectations.expect_column_values_to_be_between:
+              arguments:
+                min_value: 0
+      - name: humidity_pct
+        description: "Observed relative humidity percentage."
+        data_tests:
+          - dbt_expectations.expect_column_values_to_be_between:
+              arguments:
+                min_value: 0
+                max_value: 100
+      - name: pressure_hpa
+        description: "Observed atmospheric pressure in hectopascals."

@@ -1,0 +1,103 @@
+version: 2
+
+models:
+  - name: transport_aviation_daily_operating_posture
+    description: "Daily transport and aviation operating posture report by region and operating sector."
+    semantic_model:
+      enabled: true
+      name: transport_aviation_daily_operating_posture
+    agg_time_dimension: posture_date
+    config:
+      meta:
+        primary_key: daily_operating_posture_key
+    columns:
+      - name: daily_operating_posture_key
+        description: "Surrogate key for posture date, region, and operating sector."
+        data_tests: [not_null, unique]
+        entity:
+          type: primary
+          name: daily_operating_posture
+      - name: posture_date
+        description: "Date of the operating posture summary."
+        granularity: day
+        dimension:
+          type: time
+        data_tests: [not_null]
+      - name: region
+        description: "Operational weather-service region."
+        dimension:
+          type: categorical
+        data_tests: [not_null]
+      - name: operating_sector
+        description: "Transport operating sector for the posture summary."
+        dimension:
+          type: categorical
+        data_tests:
+          - accepted_values:
+              arguments:
+                values: ['aviation', 'rail', 'road']
+      - name: station_count
+        description: "Number of distinct stations included in the posture summary."
+        data_tests:
+          - dbt_expectations.expect_column_values_to_be_between:
+              arguments:
+                min_value: 1
+      - name: observation_count
+        description: "Number of observations included in the posture summary."
+      - name: average_temperature_error_c
+        description: "Average absolute temperature forecast error in Celsius."
+      - name: average_precipitation_error_mm
+        description: "Average absolute precipitation forecast error in millimetres."
+      - name: average_wind_gust_error_kph
+        description: "Average absolute wind gust forecast error in kilometres per hour."
+      - name: maximum_wind_gust_kph
+        description: "Maximum observed wind gust speed in kilometres per hour."
+      - name: minimum_visibility_km
+        description: "Minimum observed visibility in kilometres."
+      - name: low_visibility_station_count
+        description: "Stations with low visibility observed."
+      - name: high_wind_station_count
+        description: "Stations with high wind observed."
+      - name: freezing_station_count
+        description: "Stations with freezing conditions observed."
+      - name: alert_count
+        description: "Alert count in the posture summary."
+      - name: observed_incidents
+        description: "Observed incidents associated with alerts in the posture summary."
+      - name: maximum_operating_posture_score
+        description: "Maximum station operating posture score in the summary."
+      - name: average_operating_posture_score
+        description: "Average station operating posture score in the summary."
+      - name: disruption_posture
+        description: "Named disruption posture for operational planning."
+        dimension:
+          type: categorical
+        data_tests:
+          - accepted_values:
+              arguments:
+                values: ['normal_operations', 'heightened_watch', 'disruption_likely']
+    metrics:
+      - name: average_operating_posture_score
+        description: "Average daily operating posture score."
+        type: simple
+        label: "Average operating posture score"
+        agg: average
+        expr: average_operating_posture_score
+      - name: maximum_operating_posture_score
+        description: "Maximum daily operating posture score."
+        type: simple
+        label: "Maximum operating posture score"
+        agg: max
+        expr: maximum_operating_posture_score
+      - name: station_coverage
+        description: "Stations represented in daily transport and aviation posture reporting."
+        type: simple
+        label: "Station coverage"
+        agg: sum
+        expr: station_count
+      - name: disruption_posture_count
+        description: "Count of daily posture segments for disruption posture analysis."
+        type: simple
+        label: "Disruption posture count"
+        agg: count
+        expr: daily_operating_posture_key

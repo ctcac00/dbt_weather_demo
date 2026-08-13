@@ -1,0 +1,108 @@
+version: 2
+
+models:
+  - name: fct_station_daily_conditions
+    description: "Public station-day fact of observed weather conditions enriched with station context."
+    latest_version: 1
+    config:
+      meta:
+        primary_key: station_daily_conditions_key
+      access: public
+      group: foundation
+      contract:
+        enforced: true
+    versions:
+      - v: 1
+    columns:
+      - name: station_daily_conditions_key
+        description: "Surrogate key for the station and observation date."
+        data_type: varchar
+        data_tests: [not_null, unique]
+      - name: station_id
+        description: "Station that produced the observations."
+        data_type: varchar
+        data_tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('dim_station')
+                field: station_id
+      - name: station_name
+        description: "Human-readable station name."
+        data_type: varchar
+      - name: region
+        description: "Operational weather-service region."
+        data_type: varchar
+      - name: station_type
+        description: "Station operating context."
+        data_type: varchar
+      - name: sector_focus
+        description: "Primary sector supported by the station."
+        data_type: varchar
+      - name: observation_date
+        description: "Date of the observed station conditions."
+        data_type: date
+        data_tests: [not_null]
+      - name: observation_count
+        description: "Number of observations contributing to the station-day."
+        data_type: number(18, 0)
+        data_tests:
+          - dbt_expectations.expect_column_values_to_be_between:
+              arguments:
+                min_value: 1
+      - name: average_temperature_c
+        description: "Average observed air temperature in Celsius."
+        data_type: float
+      - name: minimum_temperature_c
+        description: "Minimum observed air temperature in Celsius."
+        data_type: float
+      - name: maximum_temperature_c
+        description: "Maximum observed air temperature in Celsius."
+        data_type: float
+      - name: total_precipitation_mm
+        description: "Total observed precipitation in millimetres."
+        data_type: float
+        data_tests:
+          - dbt_expectations.expect_column_values_to_be_between:
+              arguments:
+                min_value: 0
+      - name: average_wind_speed_kph
+        description: "Average observed sustained wind speed in kilometres per hour."
+        data_type: float
+      - name: maximum_wind_gust_kph
+        description: "Maximum observed wind gust speed in kilometres per hour."
+        data_type: float
+        data_tests:
+          - dbt_expectations.expect_column_values_to_be_between:
+              arguments:
+                min_value: 0
+      - name: minimum_visibility_km
+        description: "Minimum observed visibility in kilometres."
+        data_type: float
+        data_tests:
+          - dbt_expectations.expect_column_values_to_be_between:
+              arguments:
+                min_value: 0
+      - name: average_humidity_pct
+        description: "Average observed relative humidity percentage."
+        data_type: float
+        data_tests:
+          - dbt_expectations.expect_column_values_to_be_between:
+              arguments:
+                min_value: 0
+                max_value: 100
+      - name: average_pressure_hpa
+        description: "Average observed atmospheric pressure in hectopascals."
+        data_type: float
+      - name: precipitation_observed
+        description: "Whether any precipitation was observed during the station-day."
+        data_type: boolean
+      - name: low_visibility_observed
+        description: "Whether visibility dropped below five kilometres during the station-day."
+        data_type: boolean
+      - name: high_wind_observed
+        description: "Whether a wind gust at or above 50 kph was observed during the station-day."
+        data_type: boolean
+      - name: freezing_observed
+        description: "Whether temperature reached freezing or below during the station-day."
+        data_type: boolean

@@ -1,0 +1,56 @@
+version: 2
+
+models:
+  - name: transport_aviation_operating_risk
+    description: "Final operating risk report for transport and aviation stakeholders."
+    config:
+      meta:
+        primary_key: operating_risk_key
+    columns:
+      - name: operating_risk_key
+        description: "Surrogate key for date, region, and sector."
+        data_tests: [not_null, unique]
+      - name: forecast_valid_date
+        description: "Forecast valid date for the risk summary."
+        data_tests: [not_null]
+      - name: region
+        description: "Operational weather-service region."
+        data_tests: [not_null]
+      - name: operating_sector
+        description: "Transport operating sector for the risk summary."
+        data_tests:
+          - accepted_values:
+              arguments:
+                values: ['aviation', 'rail', 'road']
+      - name: data_service_adoption_key
+        description: "Regional data-service adoption surrogate key from the data services project."
+      - name: station_count
+        description: "Number of distinct stations included in the summary."
+      - name: active_subscription_count
+        description: "Active data-service subscriptions in the risk-summary region."
+      - name: active_api_calls_30d
+        description: "API calls from active subscriptions in the prior 30 days for the risk-summary region."
+      - name: alert_opt_in_rate
+        description: "Share of regional subscriptions opted into alert notifications."
+      - name: adoption_band
+        description: "Regional data-service adoption segment."
+        data_tests:
+          - accepted_values:
+              arguments:
+                values: ['developing_adoption', 'moderate_adoption', 'high_adoption']
+      - name: average_temperature_error_c
+        description: "Average absolute temperature forecast error in Celsius."
+      - name: average_precipitation_error_mm
+        description: "Average absolute precipitation forecast error in millimetres."
+      - name: average_wind_gust_error_kph
+        description: "Average absolute wind gust forecast error in kilometres per hour."
+      - name: max_operating_risk_score
+        description: "Maximum operating risk score in the segment."
+      - name: average_operating_risk_score
+        description: "Average operating risk score in the segment."
+      - name: operating_risk_band
+        description: "Named risk band for operational planning."
+        data_tests:
+          - accepted_values:
+              arguments:
+                values: ['normal_operations', 'heightened_watch', 'disruption_likely']

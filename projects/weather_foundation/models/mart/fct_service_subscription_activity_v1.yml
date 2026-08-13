@@ -1,0 +1,135 @@
+version: 2
+
+models:
+  - name: fct_service_subscription_activity
+    description: "Public subscription-level service activity fact for weather data-service consumers."
+    latest_version: 1
+    semantic_model:
+      enabled: true
+      name: service_subscription_activity
+    agg_time_dimension: started_at
+    config:
+      meta:
+        primary_key: subscription_activity_key
+      access: public
+      group: foundation
+      contract:
+        enforced: true
+    versions:
+      - v: 1
+    columns:
+      - name: subscription_activity_key
+        description: "Surrogate key for the service subscription."
+        data_type: varchar
+        data_tests: [not_null, unique]
+        entity:
+          type: primary
+          name: service_subscription
+      - name: subscription_id
+        description: "Stable subscription identifier."
+        data_type: varchar
+        data_tests: [not_null, unique]
+      - name: customer_segment
+        description: "Fictional customer segment receiving weather data services."
+        data_type: varchar
+        dimension:
+          type: categorical
+        data_tests: [not_null]
+      - name: sector
+        description: "Sector served by the subscription."
+        data_type: varchar
+        dimension:
+          type: categorical
+        data_tests: [not_null]
+      - name: region
+        description: "Primary service region for the subscription."
+        data_type: varchar
+        dimension:
+          type: categorical
+        data_tests: [not_null]
+      - name: service_tier
+        description: "Subscription service tier."
+        data_type: varchar
+        dimension:
+          type: categorical
+        data_tests:
+          - accepted_values:
+              arguments:
+                values: ['standard', 'professional', 'enterprise']
+      - name: started_at
+        description: "Date the subscription started."
+        data_type: date
+        granularity: day
+        dimension:
+          type: time
+      - name: status
+        description: "Subscription lifecycle status."
+        data_type: varchar
+        dimension:
+          type: categorical
+        data_tests:
+          - accepted_values:
+              arguments:
+                values: ['active', 'paused', 'trial']
+      - name: is_active_subscription
+        description: "Whether the subscription is currently active."
+        data_type: boolean
+      - name: is_trial_subscription
+        description: "Whether the subscription is currently in trial."
+        data_type: boolean
+      - name: monthly_fee_units
+        description: "Monthly subscription fee in neutral demo service units."
+        data_type: number(12, 2)
+        data_tests:
+          - dbt_expectations.expect_column_values_to_be_between:
+              arguments:
+                min_value: 0
+      - name: api_calls_30d
+        description: "API call volume over the prior 30 days."
+        data_type: number(18, 0)
+        data_tests:
+          - dbt_expectations.expect_column_values_to_be_between:
+              arguments:
+                min_value: 0
+      - name: alert_opt_in
+        description: "Whether the subscription receives alert notifications."
+        data_type: boolean
+      - name: active_monthly_fee_units
+        description: "Monthly service units from active subscriptions only."
+        data_type: number(12, 2)
+        data_tests:
+          - dbt_expectations.expect_column_values_to_be_between:
+              arguments:
+                min_value: 0
+      - name: active_api_calls_30d
+        description: "API call volume from active subscriptions over the prior 30 days."
+        data_type: number(18, 0)
+        data_tests:
+          - dbt_expectations.expect_column_values_to_be_between:
+              arguments:
+                min_value: 0
+    metrics:
+      - name: subscription_count
+        description: "Count of service subscriptions."
+        type: simple
+        label: "Subscription count"
+        agg: count
+        expr: subscription_activity_key
+      - name: active_subscription_count
+        description: "Count of active service subscriptions."
+        type: simple
+        label: "Active subscription count"
+        agg: sum
+        expr: case when is_active_subscription then 1 else 0 end
+      - name: monthly_fee_units
+        description: "Monthly subscription fee units."
+        type: simple
+        label: "Monthly fee units"
+        agg: sum
+        expr: monthly_fee_units
+      - name: active_api_calls_30d
+        description: "API call volume from active subscriptions over the prior 30 days."
+        type: simple
+        label: "Active API calls 30d"
+        agg: sum
+        expr: active_api_calls_30d

@@ -1,0 +1,64 @@
+version: 2
+
+models:
+  - name: stg_forecasts
+    description: "Typed forecast outcomes paired to observed values."
+    config:
+      meta:
+        primary_key: forecast_id
+    columns:
+      - name: forecast_id
+        description: "Stable forecast identifier."
+        data_tests: [not_null, unique]
+      - name: station_id
+        description: "Station for the forecast point."
+        data_tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('stg_stations')
+                field: station_id
+      - name: issued_at
+        description: "Timestamp the forecast was issued."
+        data_tests: [not_null]
+      - name: valid_at
+        description: "Timestamp the forecast was valid for."
+        data_tests: [not_null]
+      - name: horizon_hours
+        description: "Forecast horizon in hours."
+        data_tests:
+          - dbt_expectations.expect_column_values_to_be_between:
+              arguments:
+                min_value: 1
+                max_value: 240
+      - name: forecast_temperature_c
+        description: "Forecast temperature in Celsius."
+      - name: observed_temperature_c
+        description: "Observed temperature in Celsius."
+      - name: forecast_precipitation_mm
+        description: "Forecast precipitation in millimetres."
+        data_tests:
+          - dbt_expectations.expect_column_values_to_be_between:
+              arguments:
+                min_value: 0
+      - name: observed_precipitation_mm
+        description: "Observed precipitation in millimetres."
+        data_tests:
+          - dbt_expectations.expect_column_values_to_be_between:
+              arguments:
+                min_value: 0
+      - name: forecast_wind_gust_kph
+        description: "Forecast wind gust speed in kilometres per hour."
+        data_tests:
+          - dbt_expectations.expect_column_values_to_be_between:
+              arguments:
+                min_value: 0
+      - name: observed_wind_gust_kph
+        description: "Observed wind gust speed in kilometres per hour."
+        data_tests:
+          - dbt_expectations.expect_column_values_to_be_between:
+              arguments:
+                min_value: 0
+      - name: model_run_id
+        description: "Weather forecast model run identifier."
+        data_tests: [not_null]

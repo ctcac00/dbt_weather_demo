@@ -1,0 +1,57 @@
+version: 2
+
+groups:
+  - name: foundation
+    owner:
+      name: Weather Data Platform Team
+      email: data-platform@example.org
+
+
+models:
+  - name: stg_stations
+    description: "Typed station inventory staged from raw seed data."
+    config:
+      meta:
+        primary_key: station_id
+    columns:
+      - name: station_id
+        description: "Stable station identifier."
+        data_tests: [not_null, unique]
+      - name: station_name
+        description: "Human-readable station name."
+        data_tests: [not_null]
+      - name: region
+        description: "Operational region served by the station."
+        data_tests: [not_null]
+      - name: country_code
+        description: "Fictional demo country code."
+        data_tests: [not_null]
+      - name: latitude
+        description: "Station latitude."
+        data_tests:
+          - dbt_expectations.expect_column_values_to_be_between:
+              arguments:
+                min_value: -90
+                max_value: 90
+      - name: longitude
+        description: "Station longitude."
+        data_tests:
+          - dbt_expectations.expect_column_values_to_be_between:
+              arguments:
+                min_value: -180
+                max_value: 180
+      - name: elevation_m
+        description: "Station elevation in metres."
+      - name: station_type
+        description: "Station operating context."
+        data_tests:
+          - accepted_values:
+              arguments:
+                values: ['coastal', 'urban', 'upland', 'airport', 'hydrology', 'transport', 'rural']
+      - name: sector_focus
+        description: "Primary sector supported by the station."
+        data_tests: [not_null]
+      - name: opened_date
+        description: "Date the station opened."
+      - name: is_active
+        description: "Whether the station currently participates in service reporting."

@@ -1,0 +1,111 @@
+version: 2
+
+models:
+  - name: warning_coverage_report
+    description: "Final report of alert coverage, incidents, and response posture by region, hazard, and severity."
+    semantic_model:
+      enabled: true
+      name: warning_coverage_report
+    agg_time_dimension: metric_date
+    config:
+      meta:
+        primary_key: warning_coverage_key
+    columns:
+      - name: warning_coverage_key
+        description: "Surrogate key for region, alert type, and severity."
+        data_tests: [not_null, unique]
+        entity:
+          type: primary
+          name: warning_coverage
+      - name: metric_date
+        description: "Current date used as the warning coverage metric date."
+        granularity: day
+        dimension:
+          type: time
+      - name: region
+        description: "Operational weather-service region."
+        dimension:
+          type: categorical
+        data_tests: [not_null]
+      - name: alert_type
+        description: "Alert hazard type."
+        dimension:
+          type: categorical
+        data_tests: [not_null]
+      - name: severity
+        description: "Alert severity level."
+        dimension:
+          type: categorical
+        data_tests:
+          - accepted_values:
+              arguments:
+                values: ['yellow', 'amber', 'red']
+      - name: data_service_adoption_key
+        description: "Regional data-service adoption surrogate key from the data services project."
+      - name: alert_count
+        description: "Number of alerts in the segment."
+        data_tests:
+          - dbt_expectations.expect_column_values_to_be_between:
+              arguments:
+                min_value: 1
+      - name: station_count
+        description: "Number of distinct stations covered by the segment."
+        data_tests:
+          - dbt_expectations.expect_column_values_to_be_between:
+              arguments:
+                min_value: 1
+      - name: active_subscription_count
+        description: "Active data-service subscriptions in the warning-coverage region."
+      - name: active_api_calls_30d
+        description: "API calls from active subscriptions in the prior 30 days for the warning-coverage region."
+      - name: alert_opt_in_rate
+        description: "Share of regional subscriptions opted into alert notifications."
+      - name: adoption_band
+        description: "Regional data-service adoption segment."
+        data_tests:
+          - accepted_values:
+              arguments:
+                values: ['developing_adoption', 'moderate_adoption', 'high_adoption']
+      - name: observed_incidents
+        description: "Total observed incidents in the segment."
+      - name: affected_population_estimate
+        description: "Estimated affected population across the segment."
+      - name: average_expected_impact_score
+        description: "Average expected impact score across alerts in the segment."
+      - name: average_weighted_impact_score
+        description: "Average severity-weighted impact score across alerts in the segment."
+      - name: highest_response_tier
+        description: "Highest response tier observed in the segment."
+        dimension:
+          type: categorical
+      - name: incidents_per_100k_population
+        description: "Observed incidents per 100,000 affected residents."
+        data_tests:
+          - dbt_expectations.expect_column_values_to_be_between:
+              arguments:
+                min_value: 0
+    metrics:
+      - name: warning_alert_count
+        description: "Count of warning alerts."
+        type: simple
+        label: "Warning alert count"
+        agg: sum
+        expr: alert_count
+      - name: warning_incident_count
+        description: "Observed incident count in warning reports."
+        type: simple
+        label: "Warning incident count"
+        agg: sum
+        expr: observed_incidents
+      - name: warning_affected_population
+        description: "Estimated affected population in warning reports."
+        type: simple
+        label: "Warning affected population"
+        agg: sum
+        expr: affected_population_estimate
+      - name: warning_weighted_impact
+        description: "Average weighted impact score in warning reports."
+        type: simple
+        label: "Warning weighted impact"
+        agg: average
+        expr: average_weighted_impact_score

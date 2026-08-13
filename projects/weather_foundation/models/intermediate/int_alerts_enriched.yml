@@ -1,0 +1,79 @@
+version: 2
+
+models:
+  - name: int_alerts_enriched
+    description: "Alert impact records enriched with station context and regional service adoption."
+    config:
+      meta:
+        primary_key: alert_id
+    columns:
+      - name: alert_id
+        description: "Stable alert identifier."
+        data_tests: [not_null, unique]
+      - name: station_id
+        description: "Station most directly associated with the alert."
+        data_tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('stg_stations')
+                field: station_id
+      - name: station_name
+        description: "Human-readable station name."
+      - name: region
+        description: "Operational weather-service region."
+      - name: station_type
+        description: "Station operating context."
+      - name: sector_focus
+        description: "Primary sector supported by the station."
+      - name: issued_at
+        description: "Timestamp the alert was issued."
+      - name: valid_from
+        description: "Timestamp the alert validity window starts."
+      - name: valid_to
+        description: "Timestamp the alert validity window ends."
+      - name: alert_duration_hours
+        description: "Alert validity duration in hours."
+        data_tests:
+          - dbt_expectations.expect_column_values_to_be_between:
+              arguments:
+                min_value: 0
+      - name: severity
+        description: "Alert severity level."
+        data_tests:
+          - accepted_values:
+              arguments:
+                values: ['yellow', 'amber', 'red']
+      - name: alert_type
+        description: "Alert hazard type."
+      - name: status
+        description: "Current alert lifecycle status."
+        data_tests:
+          - accepted_values:
+              arguments:
+                values: ['issued', 'expired', 'cancelled']
+      - name: expected_impact_score
+        description: "Expected service impact score."
+      - name: observed_incidents
+        description: "Observed incident count associated with the alert."
+      - name: affected_population_estimate
+        description: "Estimated population covered by the alert."
+      - name: incidents_per_100k_population
+        description: "Observed incidents per 100,000 affected residents."
+      - name: active_subscription_count
+        description: "Active data-service subscriptions in the alert region."
+      - name: total_subscription_count
+        description: "Total subscriptions in the alert region."
+      - name: active_monthly_fee_units
+        description: "Monthly service unit total for active subscriptions in the alert region."
+      - name: active_api_calls_30d
+        description: "API calls from active subscriptions in the prior 30 days."
+      - name: alert_opt_in_rate
+        description: "Share of regional subscriptions opted into alert notifications."
+      - name: severity_weight
+        description: "Numeric weight applied to alert severity."
+        data_tests:
+          - dbt_expectations.expect_column_values_to_be_between:
+              arguments:
+                min_value: 1
+                max_value: 3

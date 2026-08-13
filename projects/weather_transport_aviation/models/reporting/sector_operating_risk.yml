@@ -1,0 +1,74 @@
+version: 2
+
+models:
+  - name: sector_operating_risk
+    description: "Transport and aviation risk base built only from public foundation forecast and alert marts."
+    config:
+      meta:
+        primary_key: forecast_accuracy_key
+    columns:
+      - name: forecast_accuracy_key
+        description: "Foundation forecast accuracy surrogate key."
+        data_tests: [not_null, unique]
+      - name: station_id
+        description: "Station for the forecast point."
+        data_tests: [not_null]
+      - name: region
+        description: "Operational weather-service region."
+      - name: station_type
+        description: "Station operating context."
+      - name: sector_focus
+        description: "Primary sector supported by the station."
+      - name: operating_sector
+        description: "Transport operating sector inferred from station context."
+        data_tests:
+          - accepted_values:
+              arguments:
+                values: ['aviation', 'rail', 'road', 'general_transport']
+      - name: forecast_valid_date
+        description: "Forecast valid date for the risk record."
+        data_tests: [not_null]
+      - name: horizon_hours
+        description: "Forecast horizon in hours."
+      - name: absolute_temperature_error_c
+        description: "Absolute temperature forecast error in Celsius."
+      - name: absolute_precipitation_error_mm
+        description: "Absolute precipitation forecast error in millimetres."
+      - name: absolute_wind_gust_error_kph
+        description: "Absolute wind gust forecast error in kilometres per hour."
+      - name: forecast_uncertainty_score
+        description: "Risk score based on forecast uncertainty."
+        data_tests:
+          - dbt_expectations.expect_column_values_to_be_between:
+              arguments:
+                min_value: 1
+                max_value: 3
+      - name: data_service_adoption_key
+        description: "Regional data-service adoption surrogate key from the data services project."
+      - name: active_subscription_count
+        description: "Active data-service subscriptions in the forecast region."
+      - name: active_api_calls_30d
+        description: "API calls from active subscriptions in the prior 30 days for the forecast region."
+      - name: alert_opt_in_rate
+        description: "Share of regional subscriptions opted into alert notifications."
+      - name: adoption_band
+        description: "Regional data-service adoption segment."
+        data_tests:
+          - accepted_values:
+              arguments:
+                values: ['developing_adoption', 'moderate_adoption', 'high_adoption']
+      - name: max_alert_severity_weight
+        description: "Maximum alert severity weight for the station and date."
+        data_tests:
+          - dbt_expectations.expect_column_values_to_be_between:
+              arguments:
+                min_value: 0
+                max_value: 3
+      - name: max_weighted_impact_score
+        description: "Maximum weighted impact score for the station and date."
+      - name: operating_risk_score
+        description: "Combined forecast uncertainty and alert severity risk score."
+        data_tests:
+          - dbt_expectations.expect_column_values_to_be_between:
+              arguments:
+                min_value: 1

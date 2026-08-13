@@ -1,0 +1,65 @@
+version: 2
+
+models:
+  - name: stg_weather_alerts
+    description: "Typed weather alerts staged from operational alert seed data."
+    config:
+      meta:
+        primary_key: alert_id
+    columns:
+      - name: alert_id
+        description: "Stable alert identifier."
+        data_tests: [not_null, unique]
+      - name: station_id
+        description: "Station most directly associated with the alert."
+        data_tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('stg_stations')
+                field: station_id
+      - name: region
+        description: "Operational weather-service region for the alert."
+        data_tests: [not_null]
+      - name: issued_at
+        description: "Timestamp the alert was issued."
+        data_tests: [not_null]
+      - name: valid_from
+        description: "Timestamp the alert validity window starts."
+        data_tests: [not_null]
+      - name: valid_to
+        description: "Timestamp the alert validity window ends."
+        data_tests: [not_null]
+      - name: severity
+        description: "Alert severity level."
+        data_tests:
+          - accepted_values:
+              arguments:
+                values: ['yellow', 'amber', 'red']
+      - name: alert_type
+        description: "Alert hazard type."
+        data_tests: [not_null]
+      - name: status
+        description: "Current alert lifecycle status."
+        data_tests:
+          - accepted_values:
+              arguments:
+                values: ['issued', 'expired', 'cancelled']
+      - name: expected_impact_score
+        description: "Expected service impact score."
+        data_tests:
+          - dbt_expectations.expect_column_values_to_be_between:
+              arguments:
+                min_value: 0
+      - name: observed_incidents
+        description: "Observed incident count associated with the alert."
+        data_tests:
+          - dbt_expectations.expect_column_values_to_be_between:
+              arguments:
+                min_value: 0
+      - name: affected_population_estimate
+        description: "Estimated population covered by the alert."
+        data_tests:
+          - dbt_expectations.expect_column_values_to_be_between:
+              arguments:
+                min_value: 0

@@ -1,0 +1,49 @@
+version: 2
+
+models:
+  - name: stg_service_subscriptions
+    description: "Typed weather data-service subscription records."
+    config:
+      meta:
+        primary_key: subscription_id
+    columns:
+      - name: subscription_id
+        description: "Stable subscription identifier."
+        data_tests: [not_null, unique]
+      - name: customer_segment
+        description: "Fictional customer segment receiving weather data services."
+        data_tests: [not_null]
+      - name: sector
+        description: "Sector served by the subscription."
+        data_tests: [not_null]
+      - name: region
+        description: "Primary service region for the subscription."
+        data_tests: [not_null]
+      - name: service_tier
+        description: "Subscription service tier."
+        data_tests:
+          - accepted_values:
+              arguments:
+                values: ['standard', 'professional', 'enterprise']
+      - name: started_at
+        description: "Date the subscription started."
+      - name: status
+        description: "Subscription lifecycle status."
+        data_tests:
+          - accepted_values:
+              arguments:
+                values: ['active', 'paused', 'trial']
+      - name: monthly_fee_units
+        description: "Monthly subscription fee in neutral demo service units."
+        data_tests:
+          - dbt_expectations.expect_column_values_to_be_between:
+              arguments:
+                min_value: 0
+      - name: api_calls_30d
+        description: "API call volume over the prior 30 days."
+        data_tests:
+          - dbt_expectations.expect_column_values_to_be_between:
+              arguments:
+                min_value: 0
+      - name: alert_opt_in
+        description: "Whether the subscription receives alert notifications."

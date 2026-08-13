@@ -1,0 +1,43 @@
+version: 2
+
+models:
+  - name: int_service_adoption_by_region
+    description: "Regional rollup of active weather data-service subscriptions."
+    config:
+      meta:
+        primary_key: region
+    columns:
+      - name: region
+        description: "Operational region."
+        data_tests: [not_null, unique]
+      - name: active_subscription_count
+        description: "Active subscriptions in the region."
+        data_tests:
+          - dbt_expectations.expect_column_values_to_be_between:
+              arguments:
+                min_value: 0
+      - name: total_subscription_count
+        description: "Total subscriptions in the region."
+        data_tests:
+          - dbt_expectations.expect_column_values_to_be_between:
+              arguments:
+                min_value: 0
+      - name: active_monthly_fee_units
+        description: "Monthly service unit total for active subscriptions in the region."
+        data_tests:
+          - dbt_expectations.expect_column_values_to_be_between:
+              arguments:
+                min_value: 0
+      - name: active_api_calls_30d
+        description: "API call volume from active subscriptions over the prior 30 days."
+        data_tests:
+          - dbt_expectations.expect_column_values_to_be_between:
+              arguments:
+                min_value: 0
+      - name: alert_opt_in_rate
+        description: "Share of subscriptions that receive alert notifications."
+        data_tests:
+          - dbt_expectations.expect_column_values_to_be_between:
+              arguments:
+                min_value: 0
+                max_value: 1
